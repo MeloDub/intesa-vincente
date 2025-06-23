@@ -57,5 +57,3 @@ io.on("connection", (socket) => {
 });
 
 httpServer.listen(PORT);
-
-module.exports = app;
