@@ -23,8 +23,12 @@ body
   header(class="flex flex-col gap-10" + (mode ? " small" : ""))
     if gameID
       .flex.items-center
-        a.button.pill.back(href="/")
-          <ion-icon name="arrow-back-outline"></ion-icon>
+        if mode
+          a.button.pill.back(href="/game/" + gameID)
+            <ion-icon name="arrow-back-outline"></ion-icon>
+        else
+            a.button.pill.back(href="/")
+                <ion-icon name="arrow-back-outline"></ion-icon>
 
     h1.title.flex.flex-col.items-center
       span Intesa
