@@ -14,6 +14,11 @@ const passButton = document.getElementById("pass");
 const doubleButton = document.getElementById("double");
 const resetButton = document.getElementById("reset");
 
+const buttonAudio = document.getElementById("buttonAudio");
+const wrongAudio = document.getElementById("wrongAudio");
+const correctAudio = document.getElementById("correctAudio");
+const gongAudio = document.getElementById("gongAudio");
+
 let remainTime = DEFAULT_TIME;
 let totalScore = DEFAULT_SCORE;
 let remainPasses = passHearts.length;
@@ -60,6 +65,7 @@ function startTimer() {
     remainTimeStatus.innerText = remainTime;
     if (remainTime <= 0) {
       updateStatus("stopGame", null, true);
+      gongAudio.play();
     }
   }, 1000);
 }
@@ -152,15 +158,18 @@ playButton.addEventListener("click", () => {
     play();
   } else {
     updateStatus("stopGame", null, true);
+    buttonAudio.play();
   }
 });
 
 addPointButton.addEventListener("click", () => {
   updateStatus("addPoint", null, true);
+  correctAudio.play()
 });
 
 removePointButton.addEventListener("click", () => {
   updateStatus("removePoint", null, true);
+  wrongAudio.play();
 });
 
 passButton.addEventListener("click", () => {
