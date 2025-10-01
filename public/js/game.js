@@ -64,7 +64,7 @@ function startTimer() {
     setRemainTime(remainTime - 1);
     remainTimeStatus.innerText = remainTime;
     if (remainTime <= 0) {
-      updateStatus("stopGame", null, true);
+      updateStatus(IntVinCommands.STOP_GAME, null, true);
       gongAudio.play();
     }
   }, 1000);
@@ -110,7 +110,7 @@ function play(double = false) {
 
     const word = randomWord(wordWeight);
     updateStatus(
-      "newWord",
+      IntVinCommands.NEW_WORD,
       { word: word, weight: wordWeight, remainDoubles: remainDoubles },
       true,
     );
@@ -157,27 +157,27 @@ playButton.addEventListener("click", () => {
   if (!timerGoing) {
     play();
   } else {
-    updateStatus("stopGame", null, true);
+    updateStatus(IntVinCommands.STOP_GAME, null, true);
     buttonAudio.play();
   }
 });
 
 addPointButton.addEventListener("click", () => {
-  updateStatus("addPoint", null, true);
+  updateStatus(IntVinCommands.ADD_POINT, null, true);
   correctAudio.play()
 });
 
 removePointButton.addEventListener("click", () => {
-  updateStatus("removePoint", null, true);
+  updateStatus(IntVinCommands.REMOVE_POINT, null, true);
   wrongAudio.play();
 });
 
 passButton.addEventListener("click", () => {
-  updateStatus("passWord", null, true);
+  updateStatus(IntVinCommands.PASS_WORD, null, true);
 });
 
 resetButton.addEventListener("click", () => {
-  updateStatus("resetGame", null, true);
+  updateStatus(IntVinCommands.RESET_GAME, null, true);
 });
 
 doubleButton.addEventListener("click", () => {
@@ -185,69 +185,75 @@ doubleButton.addEventListener("click", () => {
 });
 
 function updateStatus(command, data = null, emit = false) {
-  if (command == "newWord") {
-    displayedWords.push(data.word);
-    currentWord = data.word;
-    currentWordPoints = data.weight;
-    wordStatus.innerText = data.word;
+  switch (command) {
+    case IntVinCommands.NEW_WORD:
+      displayedWords.push(data.word);
+      currentWord = data.word;
+      currentWordPoints = data.weight;
+      wordStatus.innerText = data.word;
 
-    setDoubles(data.remainDoubles);
-    updateDoubles(remainDoubles);
+      setDoubles(data.remainDoubles);
+      updateDoubles(remainDoubles);
 
-    startTimer();
-  }
+      startTimer();
+      break;
 
-  if (command == "stopGame") {
-    stopTimer();
-  }
-
-  if (command == "addPoint") {
-    if (canPerformActions) {
+    case IntVinCommands.STOP_GAME:
       stopTimer();
-      setScore(totalScore + currentWordPoints);
-      scoreStatus.innerText = totalScore;
-    }
-    canPerformActions = false;
-  }
+      break;
 
-  if (command == "removePoint") {
-    if (canPerformActions) {
-      stopTimer();
-      setScore(totalScore - currentWordPoints);
-      scoreStatus.innerText = totalScore;
-    }
-    canPerformActions = false;
-  }
-
-  if (command == "passWord") {
-    if (canPerformActions) {
-      stopTimer();
-      if (remainPasses > 0) {
-        setPasses(remainPasses - 1);
-        updatePasses(remainPasses);
-      } else {
-        updateStatus("removePoint");
+    case IntVinCommands.ADD_POINT:
+      if (canPerformActions) {
+        stopTimer();
+        setScore(totalScore + currentWordPoints);
+        scoreStatus.innerText = totalScore;
       }
-    }
-    canPerformActions = false;
-  }
+      canPerformActions = false;
+      break;
 
-  if (command == "resetGame") {
-    stopTimer();
+    case IntVinCommands.REMOVE_POINT:
+      if (canPerformActions) {
+        stopTimer();
+        setScore(totalScore - currentWordPoints);
+        scoreStatus.innerText = totalScore;
+      }
+      canPerformActions = false;
+      break;
 
-    setRemainTime(DEFAULT_TIME);
-    setScore(DEFAULT_SCORE);
-    currentWord = DEFAULT_WORD;
-    setPasses(passHearts.length);
-    setDoubles(doublePoints.length);
-    canPerformActions = false;
-    displayedWords = [];
+    case IntVinCommands.PASS_WORD:
+      if (canPerformActions) {
+        stopTimer();
+        if (remainPasses > 0) {
+          setPasses(remainPasses - 1);
+          updatePasses(remainPasses);
+        } else {
+          updateStatus(IntVinCommands.REMOVE_POINT);
+        }
+      }
+      canPerformActions = false;
+      break;
 
-    wordStatus.innerText = currentWord;
-    remainTimeStatus.innerText = remainTime;
-    scoreStatus.innerText = totalScore;
-    updatePasses(remainPasses);
-    updateDoubles(remainDoubles);
+    case IntVinCommands.RESET_GAME:
+      stopTimer();
+
+      setRemainTime(DEFAULT_TIME);
+      setScore(DEFAULT_SCORE);
+      currentWord = DEFAULT_WORD;
+      setPasses(passHearts.length);
+      setDoubles(doublePoints.length);
+      canPerformActions = false;
+      displayedWords = [];
+
+      wordStatus.innerText = currentWord;
+      remainTimeStatus.innerText = remainTime;
+      scoreStatus.innerText = totalScore;
+      updatePasses(remainPasses);
+      updateDoubles(remainDoubles);
+      break;
+
+    default:
+      console.error("Unknown command:", command);
+      return;
   }
 
   if (emit) {
