@@ -1,9 +1,14 @@
 let dictionary = [];
-wordCloud.forEach((word) => {
-  for (let num = 0; num < word.p; num++) {
-    dictionary.push(word);
-  }
-});
+
+fetch('https://raw.githubusercontent.com/MeloDub/intesa-vincente-words/refs/heads/main/words.json')
+    .then(response => response.json())
+    .then(data => {
+        data.forEach((word) => {
+        for (let num = 0; num < word.p; num++) {
+            dictionary.push(word);
+        }
+    });})
+    .catch(error => console.error('Errore nel caricamento di words.json:', error));
 
 let displayedWords = [];
 
