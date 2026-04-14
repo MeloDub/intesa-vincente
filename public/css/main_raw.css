@@ -23,6 +23,10 @@ body {
     active:shadow-none active:translate-x-[2px] active:translate-y-[5px];
 }
 
+.button:disabled {
+    @apply opacity-50 cursor-not-allowed;
+}
+
 .button.pill {
     @apply rounded-full;
 }
@@ -94,4 +98,121 @@ header.small .title {
 
 .button.big {
     @apply max-w-md w-full aspect-square text-6xl;
+}
+
+.game-card {
+    @apply flex flex-col items-center gap-4 p-6 bg-white rounded-xl border-2 border-transparent
+    transition-all hover:border-[#A760FF] hover:shadow-lg cursor-pointer;
+}
+
+.game-card .icon-wrapper {
+    @apply w-20 h-20 rounded-full flex items-center justify-center text-white text-4xl;
+}
+
+.game-card .icon-wrapper.bg-purple {
+    @apply bg-[#A760FF];
+}
+
+.game-card .icon-wrapper.bg-red {
+    @apply bg-[#EF4444];
+}
+
+.game-card h3 {
+    @apply text-xl font-bold;
+}
+
+.game-card p {
+    @apply text-sm text-gray-600;
+}
+
+.team-box {
+    @apply bg-white rounded-lg p-4 min-w-[120px] border-2;
+}
+
+.team-box.team-a {
+    @apply border-blue-500;
+}
+
+.team-box.team-b {
+    @apply border-red-500;
+}
+
+.team-box h3 {
+    @apply text-lg font-bold;
+}
+
+.team-box.team-a h3 {
+    @apply text-blue-500;
+}
+
+.team-box.team-b h3 {
+    @apply text-red-500;
+}
+
+.team-box .score {
+    @apply text-4xl font-bold;
+}
+
+.team-box.team-a .score {
+    @apply text-blue-500;
+}
+
+.team-box.team-b .score {
+    @apply text-red-500;
+}
+
+.word-display {
+    @apply bg-white rounded-xl px-8 py-4 border-4 border-gray-300 shadow-lg;
+}
+
+.taboo-list {
+    @apply bg-white rounded-lg p-4 border-2 border-red-400;
+}
+
+.taboo-list .subtitle {
+    @apply text-red-500 text-xl;
+}
+
+.taboo-word {
+    @apply bg-red-100 text-red-600 px-3 py-1 rounded-full font-bold text-lg;
+}
+
+.button.success {
+    @apply bg-green-500 shadow-green-600;
+}
+
+.button.error {
+    @apply bg-red-500 shadow-red-600;
+}
+
+.button.warning {
+    @apply bg-yellow-500 shadow-yellow-600 text-black;
+}
+
+.bg-team-a {
+    @apply bg-blue-500;
+}
+
+.bg-team-b {
+    @apply bg-red-500;
+}
+
+body.taboo .button {
+    @apply bg-red-500 shadow-red-400;
+}
+
+body.taboo header .title {
+    @apply text-red-500;
+}
+
+#timerDisplay {
+    @apply bg-white rounded-xl p-4 border-2 border-gray-300;
+}
+
+#controls {
+    @apply w-full max-w-lg;
+}
+
+#gameStatus {
+    @apply bg-white rounded-lg p-4 text-sm text-gray-600;
 }

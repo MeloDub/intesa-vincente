@@ -1,7 +1,7 @@
 {
   "name": "Intesa Vincente",
   "short_name": "Intesa Vincente",
-  "description": "WebApp del gioco Intesa Vincente.",
+  "description": "WebApp di giochi da tavolo: Intesa Vincente e Taboo.",
   "theme_color": "#fcecdd",
   "background_color": "#fcecdd",
   "display": "standalone",

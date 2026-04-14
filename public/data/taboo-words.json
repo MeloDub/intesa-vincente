@@ -1,0 +1,202 @@
+[
+  {
+    "word": "CASA",
+    "taboo": ["APPARTAMENTO", "MURO", "TETTO", "FINESTRA", "PORTA"]
+  },
+  {
+    "word": "CANE",
+    "taboo": ["BAU", "ANIMALE", "PELO", "GUINZAGLIO", "OSPEDALE"]
+  },
+  {
+    "word": "TELEFONO",
+    "taboo": ["CHIAMARE", "CELLULARE", "SUONARE", "VOCE", "MESSAGGIO"]
+  },
+  {
+    "word": "COMPUTER",
+    "taboo": ["SCHERMO", "TASTIERA", "INTERNET", "LAPTOP", "WINDOWS"]
+  },
+  {
+    "word": "MARE",
+    "taboo": ["ACQUA", "ONDE", "SABBIA", "SPIAGGIA", "PESCATORE"]
+  },
+  {
+    "word": "MONTAGNA",
+    "taboo": ["ALTO", "VETTE", "NEVE", "ESCURSIONE", "ROCCIA"]
+  },
+  {
+    "word": "AEREO",
+    "taboo": ["VOLARE", "CIELO", "PILOTA", "ALI", "DECOLLO"]
+  },
+  {
+    "word": "TRENO",
+    "taboo": ["BINARIO", "FERROVIA", "STAZIONE", "VIAGGIARE", "LOCOMOTIVA"]
+  },
+  {
+    "word": "PIZZA",
+    "taboo": ["ITALIA", "MOZZARELLA", "FORNO", "POMODORO", "BASILICO"]
+  },
+  {
+    "word": "CALCIO",
+    "taboo": ["PALLONE", "GOAL", "CALCIATORE", "STADIO", "CAMPIONATO"]
+  },
+  {
+    "word": "MUSICA",
+    "taboo": ["CANZONE", "NOTA", "CANTA", "STRUMENTO", "MELODIA"]
+  },
+  {
+    "word": "FILM",
+    "taboo": ["CINEMA", "ATTORE", "REGISTA", "SCENA", "PROIETTORE"]
+  },
+  {
+    "word": "LIBRO",
+    "taboo": ["PAGINA", "LETTURA", "AUTORE", "COPERTINA", "BIBLIOTECA"]
+  },
+  {
+    "word": "CIBO",
+    "taboo": ["MANGIARE", "CUCINA", "PIATTO", "FORCHETTA", "GOLA"]
+  },
+  {
+    "word": "ACQUA",
+    "taboo": ["BEVERE", "FREDDO", "GHIACCIO", "SETE", "BOTTIGLIA"]
+  },
+  {
+    "word": "FUOCO",
+    "taboo": ["CALDO", "FIAMMA", "BRUCIARE", "LEGNO", "ACCENDE"]
+  },
+  {
+    "word": "ALBERO",
+    "taboo": ["FOGLIA", "TRONCO", "RADICE", "LEGNO", "FORESTA"]
+  },
+  {
+    "word": "FIORE",
+    "taboo": ["PETALO", "PROFUMO", "GIARDINO", "PIANTA", "COLORE"]
+  },
+  {
+    "word": "SOLE",
+    "taboo": ["CALDO", "LUCE", "GIORNO", "STELLA", "RAGGI"]
+  },
+  {
+    "word": "LUNA",
+    "taboo": ["NOTTE", "STELLA", "CHILL", "PIENA", "CRESCENTE"]
+  },
+  {
+    "word": "TEMPO",
+    "taboo": ["OROLOGIO", "MINUTO", "ORA", "SECONDO", "SVEGLIA"]
+  },
+  {
+    "word": "DOLORE",
+    "taboo": ["MALE", "FERITA", "PIANTO", "SOFFERENZA", "MEDICO"]
+  },
+  {
+    "word": "BAMBINO",
+    "taboo": ["PICCOLO", "GIOCATTOLO", "GENITORE", "SCUOLA", "ETA"]
+  },
+  {
+    "word": "MORTE",
+    "taboo": ["MORIRE", "CIMITERO", "LUTTO", "FINE", "VITA"]
+  },
+  {
+    "word": "AMORE",
+    "taboo": ["CUORE", "BACIARE", "COPPIA", "SENTIMENTO", "CUPIDO"]
+  },
+  {
+    "word": "GUERRA",
+    "taboo": ["BATTAGLIA", "ESERCITO", "ARMI", "SOLDATO", "NEMICO"]
+  },
+  {
+    "word": "SOGNO",
+    "taboo": ["DORMIRE", "NOTTE", "IMMAGINE", "FANTASIA", "LETTO"]
+  },
+  {
+    "word": "VIAGGIO",
+    "taboo": ["PARTENZA", "DESTINAZIONE", "VACANZA", "VALIGIA", "AEROPORTO"]
+  },
+  {
+    "word": "SCUOLA",
+    "taboo": ["MAESTRO", "ALUNNO", "LEZIONE", "COMPITO", "BANCO"]
+  },
+  {
+    "word": "LAVORO",
+    "taboo": ["UFFICIO", "STIPENDIO", "CAPO", "IMPIEGATO", "CARRIERA"]
+  },
+  {
+    "word": "FESTA",
+    "taboo": ["COMPLEANNO", "TORTA", "PALLONCINI", "MUSICA", "REGALO"]
+  },
+  {
+    "word": "SPORT",
+    "taboo": ["PALLONE", "GIOCO", "CAMPIONATO", "ATLETA", "TIFOSO"]
+  },
+  {
+    "word": "DANZA",
+    "taboo": ["BALLO", "MUSICA", "PASSO", "BALLERINO", "COREOGRAFIA"]
+  },
+  {
+    "word": "FUMO",
+    "taboo": ["SIGARETTA", "FUMARE", "CANCRO", "PIRA", "SVAPO"]
+  },
+  {
+    "word": "COLPA",
+    "taboo": ["SBAGLIARE", "PECCATO", "PENSIERO", "DANNATO", "PECCATORE"]
+  },
+  {
+    "word": "POLIZIA",
+    "taboo": ["AGENTE", "MANETTE", "AUTO", "VOLANTE", "CRIMINALE"]
+  },
+  {
+    "word": "OMBRA",
+    "taboo": ["BUIO", "NOTTE", "FANTASMA", "Luce", "SEGUIRE"]
+  },
+  {
+    "word": "VELENO",
+    "taboo": ["MORIRE", "TOSSICO", "SERPE", "VITE", "DOSE"]
+  },
+  {
+    "word": "FORBICI",
+    "taboo": ["TAGLIARE", "CARTA", "CAPELLI", "LAMELLA", "CUCITO"]
+  },
+  {
+    "word": "SPUGNA",
+    "taboo": ["BAGNO", "ACQUA", "LAVARE", "CUCCIA", "POROSO"]
+  },
+  {
+    "word": "CANDELA",
+    "taboo": ["FIAMMA", "LUCE", "CERINO", "CERA", "SOFFIA"]
+  },
+  {
+    "word": "OCCHIALI",
+    "taboo": ["VEDERE", "LENTE", "NASO", "VISTA", "MONTATURA"]
+  },
+  {
+    "word": "PARAFULMINE",
+    "taboo": ["FULMINE", "SAETTA", "TUONO", "PUNTA", "SCARICA"]
+  },
+  {
+    "word": "BUSSOLA",
+    "taboo": ["NORD", "AGO", "DIREZIONE", "NORD", "CARTOGRAFO"]
+  },
+  {
+    "word": "SPECCHIO",
+    "taboo": ["RIFLESSO", "VETRO", "IMMAGINE", "VISO", "RIFLETTE"]
+  },
+  {
+    "word": "OMBRELLO",
+    "taboo": ["PIOGGIA", "APRIRE", "STOFFA", "GOCIA", "ACQUA"]
+  },
+  {
+    "word": "CALZINO",
+    "taboo": ["PIEDE", "SCARPA", "CALZATA", "BUCO", "PAIO"]
+  },
+  {
+    "word": "BURRONE",
+    "taboo": ["PROFONDITA", "PRECLIPIZIO", "CADUTA", "STRADA", "FRANA"]
+  },
+  {
+    "word": "CINTURA",
+    "taboo": ["PANTALONI", "FORO", "PUNTO", "VITA", "ALLACCIARE"]
+  },
+  {
+    "word": "GHIACCIO",
+    "taboo": ["FREDDO", "ACQUA", "CUBETTO", "GHIACCIAIO", "FONDO"]
+  }
+]

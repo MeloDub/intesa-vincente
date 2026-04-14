@@ -1,0 +1,19 @@
+include components/head
+
+main.flex.flex-col.items-center.gap-12
+  h2.subtitle Seleziona un gioco
+
+  .grid.grid-cols-1.md-grid-cols-2.gap-6.w-full.max-w-4xl.px-4
+    a.game-card(href="/game")
+      .icon-wrapper.bg-purple
+        <ion-icon name="chatbubbles-outline"></ion-icon>
+      h3 Intesa Vincente
+      p Gioca con 2-3 giocatori. Descrivi parole senza usare la parola stessa o sinonimi.
+
+    a.game-card(href="/taboo")
+      .icon-wrapper.bg-red
+        <ion-icon name="hand-left-outline"></ion-icon>
+      h3 Taboo
+      p Gioca con 4 giocatori in 2 squadre. Descrivi parole senza usare le parole taboo!
+
+include components/footer

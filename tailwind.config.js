@@ -9,6 +9,10 @@ module.exports = {
       boxShadow: {
         solid: "2px 5px 0px",
       },
+      colors: {
+        "team-a": "#3B82F6",
+        "team-b": "#EF4444",
+      },
     },
   },
   plugins: [],

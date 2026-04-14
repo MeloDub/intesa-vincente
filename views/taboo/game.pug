@@ -1,0 +1,89 @@
+doctype html
+html(lang="it")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    meta(name="description" content="WebApp del gioco Taboo.")
+    meta(name="keywords" content="taboo,gioco,webapp")
+    meta(name="author" content="Luca Martinelli")
+
+    title Taboo
+    link(rel="stylesheet" href="/css/main.css")
+
+    link(rel="icon" href="/images/icons/icon-72x72.png" type="image/png")
+    link(rel="manifest" href="/manifest.json")
+    script(src="/service.js")
+
+    script const GAME_ID = "#{gameID}";
+
+  body.taboo
+    header.flex.flex-col.gap-6.small
+      .flex.items-center.justify-between.w-full
+        a.button.pill.back(href="/")
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        h1.title Taboo
+
+    .flex-1.flex.flex-col.items-center
+      #lobbyArea
+        .flex.flex-col.items-center.gap-6.w-full.max-w-md.px-4
+          h2.subtitle Unisciti alla partita
+          
+          .flex.flex-col.items-center.gap-4.w-full
+            input#playerName.button.pill.w-full.text-center(type="text" placeholder="Il tuo nome" autocomplete="off")
+            
+            .flex.gap-4.w-full
+              button#teamA.button.pill.flex-1(disabled) Squadra A
+              button#teamB.button.pill.flex-1(disabled) Squadra B
+            
+            button#readyBtn.button.pill.w-full(disabled data-ready="false")
+              <ion-icon name="checkmark-outline"></ion-icon>
+              |  Pronto
+
+          #lobbyInfo.mt-6
+            h3.subtitle.text-lg Giocatori nella stanza
+            #playersList.flex.flex-col.gap-2.mt-3
+
+      #gameArea.hidden
+        .flex.flex-col.items-center.gap-6.w-full.max-w-2xl.px-4
+          .flex.gap-4.w-full.justify-center
+            .team-box.team-a
+              h3 Squadra A
+              .score#teamAScore 0
+            .team-box.team-b
+              h3 Squadra B
+              .score#teamBScore 0
+
+          #timerDisplay.text-center
+            h2.text-6xl.font-bold#time 60
+            p.text-lg#currentTurn Turno Squadra A
+
+          #roundInfo.text-gray-600 Round 1 di 3
+
+          #roleIndicator.text-xl.mt-4
+
+          #wordArea.text-center.mt-6
+            h2.word-display.text-7xl.font-bold.uppercase#word
+              span#wordText ??????
+            
+            .taboo-list.mt-6
+              h3.subtitle Parole Taboo
+              .taboo-words.flex.flex-wrap.gap-2.justify-center.mt-2
+                each _, i in Array(5)
+                  span.taboo-word(id="taboo" + i) --------
+
+          #controlsArea.mt-8
+
+    footer.mt-8.flex.flex-col.gap-2
+      p Condividi il link con gli altri giocatori:
+      .flex.items-center.gap-2.justify-center
+        code.bg-white.px-3.py-1.rounded.text-sm= "https://intesa-vincente.on.shiper.app/taboo/" + gameID
+      p.mt-2.text-sm
+        a.link.font-bold(href="/taboo/" + gameID) Clicca qui per aprire in un altro dispositivo
+
+    script(src="/socket.io/socket.io.min.js")
+    script(src="/js/taboo.js")
+
+    script(type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js")
+    script(nomodule, src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js")
