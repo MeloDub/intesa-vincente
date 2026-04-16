@@ -7,8 +7,8 @@ let myTeam = null;
 const elements = {};
 
 function initElements() {
-  elements.teamAScore = document.getElementById("teamAScore");
-  elements.teamBScore = document.getElementById("teamBScore");
+  elements.teamRossaScore = document.getElementById("teamRossaScore");
+  elements.teamBluScore = document.getElementById("teamBluScore");
   elements.time = document.getElementById("time");
   elements.currentTurn = document.getElementById("currentTurn");
   elements.word = document.getElementById("word");
@@ -26,13 +26,15 @@ function initElements() {
   elements.controlsArea = document.getElementById("controlsArea");
   elements.lobbyArea = document.getElementById("lobbyArea");
   elements.gameArea = document.getElementById("gameArea");
+  console.log('elements inizializzato:');
+  console.log(elements);
 }
 
 function updateUI() {
   if (!gameState) return;
 
-  if (elements.teamAScore) elements.teamAScore.textContent = gameState.teams.A.score;
-  if (elements.teamBScore) elements.teamBScore.textContent = gameState.teams.B.score;
+  if (elements.teamRossaScore) elements.teamRossaScore.textContent = gameState.teams.rossa.score;
+  if (elements.teamBluScore) elements.teamBluScore.textContent = gameState.teams.blu.score;
   if (elements.time) elements.time.textContent = gameState.timer || 60;
   if (elements.roundInfo) elements.roundInfo.textContent = `Round ${gameState.roundNumber} di ${gameState.totalRounds}`;
 
@@ -45,31 +47,31 @@ function updatePlayersList() {
 
   elements.playersList.innerHTML = "";
 
-  const teamA = gameState.teams.A.players;
-  const teamB = gameState.teams.B.players;
+  const squadraRossa = gameState.teams.rossa.players;
+  const squadrablu = gameState.teams.blu.players;
 
-  if (teamA && teamA.length > 0) {
-    const teamAContainer = document.createElement("div");
-    teamAContainer.className = "flex items-center gap-2 flex-wrap";
-    teamAContainer.innerHTML = `<span class="font-bold text-blue-500">Squadra A:</span>`;
-    teamA.forEach((p) => {
+  if (squadraRossa && squadraRossa.length > 0) {
+    const teamARossaContainer = document.createElement("div");
+    teamARossaContainer.className = "flex items-center gap-2 flex-wrap";
+    teamARossaContainer.innerHTML = `<span class="font-bold text-red-500">Squadra Rossa:</span>`;
+    squadraRossa.forEach((p) => {
       const player = gameState.players.find((pl) => pl.id === p.id);
       const readyMark = player?.ready ? " ✓" : "";
-      teamAContainer.innerHTML += `<span>${player?.name || "Giocatore"}${readyMark}</span>`;
+      teamARossaContainer.innerHTML += `<span>${player?.name || "Giocatore"}${readyMark}</span>`;
     });
-    elements.playersList.appendChild(teamAContainer);
+    elements.playersList.appendChild(teamARossaContainer);
   }
 
-  if (teamB && teamB.length > 0) {
-    const teamBContainer = document.createElement("div");
-    teamBContainer.className = "flex items-center gap-2 flex-wrap";
-    teamBContainer.innerHTML = `<span class="font-bold text-red-500">Squadra B:</span>`;
-    teamB.forEach((p) => {
+  if (squadrablu && squadrablu.length > 0) {
+    const teamABluContainer = document.createElement("div");
+    teamABluContainer.className = "flex items-center gap-2 flex-wrap";
+    teamABluContainer.innerHTML = `<span class="font-bold text-blue-500">Squadra Blu:</span>`;
+    squadrablu.forEach((p) => {
       const player = gameState.players.find((pl) => pl.id === p.id);
       const readyMark = player?.ready ? " ✓" : "";
-      teamBContainer.innerHTML += `<span>${player?.name || "Giocatore"}${readyMark}</span>`;
+      teamABluContainer.innerHTML += `<span>${player?.name || "Giocatore"}${readyMark}</span>`;
     });
-    elements.playersList.appendChild(teamBContainer);
+    elements.playersList.appendChild(teamABluContainer);
   }
 
   const readyCount = gameState.players.filter((p) => p.ready).length;
@@ -95,10 +97,9 @@ function updateGameView() {
   if (!gameState.currentWord) return;
 
   if (elements.currentTurn) {
-    elements.currentTurn.textContent = gameState.currentTurn;
-    elements.currentTurn.parentElement.className = gameState.currentTurn === "A" 
-      ? "text-lg Turno Squadra A" 
-      : "text-lg Turno Squadra B";
+    elements.currentTurn.textContent = gameState.currentTurn === "rossa"
+        ? "Turno Squadra Rossa"
+        : "Turno Squadra Blu";
   }
 
   if (elements.wordArea) {
@@ -246,33 +247,35 @@ function handleNextTurn() {
 }
 
 function setupLobby() {
+  console.log('Chiamata setupLobby()');
   if (!elements.playerName) return;
 
   elements.playerName.addEventListener("change", () => {
+    console.log('chiamato evento change su playerName')
     const name = elements.playerName.value.trim() || "Giocatore";
     socket.emit("tabooSetName", GAME_ID, name);
     elements.teamA.disabled = false;
     elements.teamB.disabled = false;
   });
 
+  console.log('Definito evento change su playerName');
+
   elements.teamA.addEventListener("click", () => {
     if (elements.teamA.disabled) return;
-    socket.emit("tabooSetTeam", GAME_ID, "A");
-    myTeam = "A";
+    socket.emit("tabooSetTeam", GAME_ID, "rossa");
+    myTeam = "rossa";
     elements.teamA.classList.add("bg-blue-500");
     elements.teamB.classList.remove("bg-red-500");
-    updateReadyButton();
   });
 
   elements.teamB.addEventListener("click", () => {
     if (elements.teamB.disabled) return;
-    socket.emit("tabooSetTeam", GAME_ID, "B");
-    myTeam = "B";
+    socket.emit("tabooSetTeam", GAME_ID, "blu");
+    myTeam = "blu";
     elements.teamB.classList.add("bg-red-500");
     elements.teamA.classList.remove("bg-blue-500");
-    updateReadyButton();
   });
-
+  
   socket.emit("tabooJoinRoom", GAME_ID);
 }
 
@@ -280,7 +283,7 @@ function updateReadyButton() {
   if (!elements.readyBtn) return;
 
   if (myTeam && gameState) {
-    const teamPlayers = myTeam === "A" ? gameState.teams.A.players : gameState.teams.B.players;
+    const teamPlayers = myTeam === "rossa" ? gameState.teams.rossa.players : gameState.teams.blu.players;
     const teamPlayerCount = teamPlayers ? teamPlayers.length : 0;
 
     if (teamPlayerCount < 2) {
@@ -318,11 +321,17 @@ function setupReadyButton() {
 
 socket.on("connect", () => {
   mySocketId = socket.id;
-  setupLobby();
+  // setupLobby();
 });
 
 socket.on("tabooRoomJoined", (data) => {
   mySocketId = data.socketId;
+});
+
+// Handler per la conferma dell'assegnazione della squadra
+socket.on("tabooSetTeamResponse", (team) => {
+  myTeam = team;
+  updateReadyButton();
 });
 
 socket.on("tabooUpdateState", (state) => {
@@ -345,22 +354,16 @@ socket.on("tabooGameStarted", (state) => {
 
 socket.on("tabooWordSolved", (data) => {
   gameState.currentWord = data.word;
-  gameState.teams.A.score = data.teamAScore;
-  gameState.teams.B.score = data.teamBScore;
+  gameState.teams.rossa.score = data.rossaScore;
+  gameState.teams.blu.score = data.bluScore;
   gameState.timer = data.timer;
   updateUI();
   playSound("correct");
 });
 
-socket.on("tabooWordSkipped", (data) => {
-  gameState.currentWord = data.word;
-  gameState.timer = data.timer;
-  updateUI();
-});
-
 socket.on("tabooTabooSignaled", (data) => {
-  gameState.teams.A.score = data.teamAScore;
-  gameState.teams.B.score = data.teamBScore;
+  gameState.teams.rossa.score = data.rossaScore;
+  gameState.teams.blu.score = data.bluScore;
   gameState.currentWord = data.word;
   updateUI();
   playSound("wrong");
@@ -395,13 +398,13 @@ socket.on("tabooGameEnded", (state) => {
   updateUI();
   playSound("gong");
 
-  const winner = state.teams.A.score > state.teams.B.score 
-    ? "Squadra A" 
-    : state.teams.B.score > state.teams.A.score 
-      ? "Squadra B" 
+  const winner = state.teams.rossa.score > state.teams.blu.score 
+    ? "Squadra Rossa" 
+    : state.teams.blu.score > state.teams.rossa.score 
+      ? "Squadra Blu" 
       : "Pareggio";
 
-  alert(`Partita terminata!\n\nSquadra A: ${state.teams.A.score} punti\nSquadra B: ${state.teams.B.score} punti\n\n${winner} vince!`);
+  alert(`Partita terminata!\n\nSquadra Rossa: ${state.teams.rossa.score} punti\nSquadra Blu: ${state.teams.blu.score} punti\n\n${winner} vince!`);
 });
 
 socket.on("tabooError", (message) => {
@@ -409,7 +412,9 @@ socket.on("tabooError", (message) => {
 });
 
 document.addEventListener("DOMContentLoaded", async () => {
+  console.log('chiamato DOMContentLoaded')
   initElements();
+  setupLobby();
   setupReadyButton();
   socket.emit("tabooJoinRoom", GAME_ID);
 });

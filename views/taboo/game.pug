@@ -19,8 +19,7 @@ html(lang="it")
     script const GAME_ID = "#{gameID}";
 
   body.taboo
-    header.flex.flex-col.gap-6.small
-      .flex.items-center.justify-between.w-full
+    header.flex.flex-col.gap-10.small
         a.button.pill.back(href="/")
           <ion-icon name="arrow-back-outline"></ion-icon>
         h1.title Taboo
@@ -34,8 +33,8 @@ html(lang="it")
             input#playerName.button.pill.w-full.text-center(type="text" placeholder="Il tuo nome" autocomplete="off")
             
             .flex.gap-4.w-full
-              button#teamA.button.pill.flex-1(disabled) Squadra A
-              button#teamB.button.pill.flex-1(disabled) Squadra B
+              button#teamA.button.pill.flex-1(disabled) Squadra Rossa
+              button#teamB.button.pill.flex-1(disabled) Squadra Blu
             
             button#readyBtn.button.pill.w-full(disabled data-ready="false")
               <ion-icon name="checkmark-outline"></ion-icon>
@@ -48,18 +47,18 @@ html(lang="it")
       #gameArea.hidden
         .flex.flex-col.items-center.gap-6.w-full.max-w-2xl.px-4
           .flex.gap-4.w-full.justify-center
-            .team-box.team-a
-              h3 Squadra A
-              .score#teamAScore 0
-            .team-box.team-b
-              h3 Squadra B
-              .score#teamBScore 0
+            .team-box.team-rossa
+              h3 Squadra Rossa
+              .score#teamRossaScore 0
+            .team-box.team-blu
+              h3 Squadra Blu
+              .score#teamBluScore 0
 
           #timerDisplay.text-center
             h2.text-6xl.font-bold#time 60
-            p.text-lg#currentTurn Turno Squadra A
+            p.text-lg#currentTurn Turno Squadra Rossa
 
-          #roundInfo.text-gray-600 Round 1 di 3
+          #roundInfo.text-gray-600 Round 1 di 4
 
           #roleIndicator.text-xl.mt-4
 
@@ -75,12 +74,13 @@ html(lang="it")
 
           #controlsArea.mt-8
 
-    footer.mt-8.flex.flex-col.gap-2
-      p Condividi il link con gli altri giocatori:
-      .flex.items-center.gap-2.justify-center
-        code.bg-white.px-3.py-1.rounded.text-sm= "https://intesa-vincente.on.shiper.app/taboo/" + gameID
-      p.mt-2.text-sm
-        a.link.font-bold(href="/taboo/" + gameID) Clicca qui per aprire in un altro dispositivo
+    .mt-16.flex-1.flex.flex-col.items-center
+      footer.mt-16.text-left.box
+        h2.subtitle 📢 Condividi il link!
+        .flex.items-center.gap-2.justify-center
+          img.qrcode(src="https://api.qrserver.com/v1/create-qr-code/?ecc=M&margin=10&data=" + baseSite + "/taboo/" + gameID, alt=gameID)
+        p.mt-4.flex.justify-center
+          a.link.font-bold(href="/taboo/" + gameID) Clicca qui per aprire in un altro dispositivo
 
     script(src="/socket.io/socket.io.min.js")
     script(src="/js/taboo.js")

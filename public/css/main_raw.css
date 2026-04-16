@@ -129,11 +129,11 @@ header.small .title {
     @apply bg-white rounded-lg p-4 min-w-[120px] border-2;
 }
 
-.team-box.team-a {
+.team-box.team-blu {
     @apply border-blue-500;
 }
 
-.team-box.team-b {
+.team-box.team-rossa {
     @apply border-red-500;
 }
 

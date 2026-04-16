@@ -48,6 +48,14 @@ app.use("/taboo/:uuid/", (req, res) => {
   res.render("taboo/game", { gameID: req.params.uuid });
 });
 
+// Route per la schermata di vittoria
+app.use("/taboo/victory/:uuid/:winner", (req, res) => {
+  res.render("taboo/victory", { 
+    gameID: req.params.uuid,
+    winner: decodeURIComponent(req.params.winner)
+  });
+});
+
 app.use("/taboo", (_, res) => {
   const roomID = uuidv4();
   res.redirect("/taboo/" + roomID);
@@ -71,15 +79,15 @@ function initializeTabooRoom(roomID) {
     roomID,
     players: [],
     teams: {
-      A: { score: 0, descriptorIndex: 0, players: [] },
-      B: { score: 0, descriptorIndex: 0, players: [] }
+      rossa: { score: 0, descriptorIndex: 0, players: [] },
+      blu: { score: 0, descriptorIndex: 0, players: [] }
     },
-    currentTurn: "A",
+    currentTurn: "rossa",
     currentDescriptorId: null,
     currentWord: null,
     usedWords: [],
     roundNumber: 1,
-    totalRounds: 3,
+    totalRounds: 4,
     timer: 60,
     timerInterval: null,
     gameState: "lobby"
@@ -106,8 +114,8 @@ function serializeRoom(room) {
     roomID: room.roomID,
     players: room.players.map((p) => ({ id: p.id, name: p.name, team: p.team, ready: p.ready })),
     teams: {
-      A: { score: room.teams.A.score, players: room.teams.A.players.map((p) => ({ id: p.id, name: p.name, team: p.team, ready: p.ready })) },
-      B: { score: room.teams.B.score, players: room.teams.B.players.map((p) => ({ id: p.id, name: p.name, team: p.team, ready: p.ready })) }
+      rossa: { score: room.teams.rossa.score, players: room.teams.rossa.players.map((p) => ({ id: p.id, name: p.name, team: p.team, ready: p.ready })) },
+      blu: { score: room.teams.blu.score, players: room.teams.blu.players.map((p) => ({ id: p.id, name: p.name, team: p.team, ready: p.ready })) }
     },
     currentTurn: room.currentTurn,
     currentDescriptorId: room.currentDescriptorId,
@@ -161,16 +169,32 @@ function handleTurnEnd(roomID) {
   if (!room) return;
 
   const previousTurn = room.currentTurn;
-  room.currentTurn = previousTurn === "A" ? "B" : "A";
+  room.currentTurn = previousTurn === "rossa" ? "blu" : "rossa";
 
-  if (previousTurn === "B") {
-    room.teams.A.descriptorIndex = (room.teams.A.descriptorIndex + 1) % room.teams.A.players.length;
-    room.teams.B.descriptorIndex = (room.teams.B.descriptorIndex + 1) % room.teams.B.players.length;
+  if (previousTurn === "blu") {
+    room.teams.rossa.descriptorIndex = (room.teams.rossa.descriptorIndex + 1) % room.teams.rossa.players.length;
+    room.teams.blu.descriptorIndex = (room.teams.blu.descriptorIndex + 1) % room.teams.blu.players.length;
     room.roundNumber++;
 
     if (room.roundNumber > room.totalRounds) {
       room.gameState = "ended";
-      io.to(roomID).emit("tabooGameEnded", serializeRoom(room));
+      
+      const winner = room.teams.rossa.score > room.teams.blu.score 
+        ? encodeURIComponent("Squadra Rossa") 
+        : room.teams.blu.score > room.teams.rossa.score 
+          ? encodeURIComponent("Squadra Blu") 
+          : encodeURIComponent("Pareggio");
+
+      // Reindirizza alla schermata di vittoria
+      io.to(roomID).emit("tabooGameEnded", {
+        ...serializeRoom(room),
+        winner: winner,
+        rossaScore: room.teams.rossa.score,
+        bluScore: room.teams.blu.score
+      });
+      
+      // Reindirizza tutti i giocatori nella stanza alla schermata di vittoria
+      io.to(roomID).emit("tabooRedirectVictory", `/taboo/victory/${room.roomID}/${winner}`);
       return;
     }
   }
@@ -188,10 +212,10 @@ function checkCanStartGame(room) {
   if (room.players.length !== 4) return false;
 
   const allReady = room.players.every((p) => p.ready);
-  const teamACount = room.teams.A.players.length;
-  const teamBCount = room.teams.B.players.length;
+  const rossaCount = room.teams.rossa.players.length;
+  const bluCount = room.teams.blu.players.length;
 
-  return allReady && teamACount === 2 && teamBCount === 2;
+  return allReady && rossaCount === 2 && bluCount === 2;
 }
 
 io.on("connection", (socket) => {
@@ -258,6 +282,9 @@ io.on("connection", (socket) => {
     room.teams[team].players.push(player);
 
     io.to(roomID).emit("tabooUpdateState", serializeRoom(room));
+    
+    // Invia la squadra assegnata al client per aggiornare myTeam
+    socket.emit("tabooSetTeamResponse", team);
   });
 
   socket.on("tabooSetReady", (roomID, ready) => {
@@ -290,8 +317,8 @@ io.on("connection", (socket) => {
 
     io.to(roomID).emit("tabooWordSolved", {
       word: word,
-      teamAScore: room.teams.A.score,
-      teamBScore: room.teams.B.score,
+      rossaScore: room.teams.rossa.score,
+      bluScore: room.teams.blu.score,
       timer: room.timer
     });
   });
@@ -320,8 +347,8 @@ io.on("connection", (socket) => {
 
     io.to(roomID).emit("tabooTabooSignaled", {
       word: word,
-      teamAScore: room.teams.A.score,
-      teamBScore: room.teams.B.score
+      rossaScore: room.teams.rossa.score,
+      bluScore: room.teams.blu.score
     });
   });
 

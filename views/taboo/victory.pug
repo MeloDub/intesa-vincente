@@ -1,0 +1,59 @@
+doctype html
+html(lang="it")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    meta(name="description" content="WebApp del gioco Taboo.")
+    meta(name="keywords" content="taboo,gioco,vittoria,webapp")
+    meta(name="author" content="Luca Martinelli")
+
+    title Vittoria - Taboo
+    link(rel="stylesheet" href="/css/main.css")
+
+    link(rel="icon" href="/images/icons/icon-72x72.png" type="image/png")
+    link(rel="manifest" href="/manifest.json")
+    script(src="/service.js")
+
+  body.taboo.victory
+    header.flex.flex-col.gap-6.small
+      .flex.items-center.justify-between.w-full
+        a.button.pill.back(href="/")
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        h1.title Vittoria!
+
+    .flex-1.flex.flex-col.items-center
+      #victoryArea
+        .flex.flex-col.items-center.gap-8.w-full.max-w-md.px-4
+          
+          .winner-animation
+            h2.subtitle.text-5xl.font-bold.mt-8
+              |  Partita Completata!
+            
+          .score-display.flex.flex-col.gap-6.mt-8
+            .team-score.team-rossa
+              h3.text-2xl.font-bold Squadra Rossa
+              p.score#victoryRossaScore.text-4xl.font-bold.text-blue-500 0
+            .team-score.team-blu
+              h3.text-2xl.font-bold Squadra Blu
+              p.score#victoryBluScore.text-4xl.font-bold.text-red-500 0
+            
+          .winner-text.mt-6
+            h1.text-6xl.font-bold
+              #winnerText
+                |  Vittoria!
+            
+          .final-stats.mt-8.p-6.bg-gray-100.rounded-lg.max-w-md
+            p.text-center.text-lg Giocatori nella stanza:
+            #playersListInVictory.flex.flex-col.gap-2.mt-3
+            
+          .btn-container.mt-8
+            button#restartBtn.button.primary.pill.w-full.text-xl
+              <ion-icon name="refresh-outline"></ion-icon> Nuova Partita
+
+    script(src="/socket.io/socket.io.min.js")
+    script(src="/js/taboo.js")
+
+    script(type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js")
+    script(nomodule, src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js")
