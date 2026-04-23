@@ -48,13 +48,13 @@ app.use("/taboo/:uuid/", (req, res) => {
   res.render("taboo/game", { gameID: req.params.uuid });
 });
 
-// Route per la schermata di vittoria
-app.use("/taboo/victory/:uuid/:winner", (req, res) => {
-  res.render("taboo/victory", { 
-    gameID: req.params.uuid,
-    winner: decodeURIComponent(req.params.winner)
-  });
-});
+// // Route per la schermata di vittoria
+// app.use("/taboo/victory/:uuid/:winner", (req, res) => {
+//   res.render("taboo/victory", {
+//     gameID: req.params.uuid,
+//     winner: decodeURIComponent(req.params.winner)
+//   });
+// });
 
 app.use("/taboo", (_, res) => {
   const roomID = uuidv4();

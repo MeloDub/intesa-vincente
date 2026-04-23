@@ -26,8 +26,11 @@ function initElements() {
   elements.controlsArea = document.getElementById("controlsArea");
   elements.lobbyArea = document.getElementById("lobbyArea");
   elements.gameArea = document.getElementById("gameArea");
-  console.log('elements inizializzato:');
-  console.log(elements);
+  elements.victoryArea = document.getElementById("victoryArea");
+  elements.victoryRossaScore = document.getElementById("victoryRossaScore");
+  elements.victoryBluScore = document.getElementById("victoryBluScore");
+  elements.winnerText = document.getElementById("winnerText");
+  elements.restartBtn = document.getElementById("restartBtn");
 }
 
 function updateUI() {
@@ -88,6 +91,14 @@ function updateGameView() {
   if (gameState.gameState === "lobby") {
     if (elements.lobbyArea) elements.lobbyArea.classList.remove("hidden");
     if (elements.gameArea) elements.gameArea.classList.add("hidden");
+    return;
+  }
+
+  if (gameState.gameState === "ended") {
+    if (elements.gameArea) elements.gameArea.classList.add("hidden");
+    if (elements.victoryArea) elements.victoryArea.classList.remove("hidden");
+    elements.victoryRossaScore.textContent = gameState.rossaScore;
+    elements.victoryBluScore.textContent = gameState.bluScore;
     return;
   }
 
@@ -247,18 +258,14 @@ function handleNextTurn() {
 }
 
 function setupLobby() {
-  console.log('Chiamata setupLobby()');
   if (!elements.playerName) return;
 
   elements.playerName.addEventListener("change", () => {
-    console.log('chiamato evento change su playerName')
     const name = elements.playerName.value.trim() || "Giocatore";
     socket.emit("tabooSetName", GAME_ID, name);
     elements.teamA.disabled = false;
     elements.teamB.disabled = false;
   });
-
-  console.log('Definito evento change su playerName');
 
   elements.teamA.addEventListener("click", () => {
     if (elements.teamA.disabled) return;
@@ -397,14 +404,6 @@ socket.on("tabooGameEnded", (state) => {
   gameState = state;
   updateUI();
   playSound("gong");
-
-  const winner = state.teams.rossa.score > state.teams.blu.score 
-    ? "Squadra Rossa" 
-    : state.teams.blu.score > state.teams.rossa.score 
-      ? "Squadra Blu" 
-      : "Pareggio";
-
-  alert(`Partita terminata!\n\nSquadra Rossa: ${state.teams.rossa.score} punti\nSquadra Blu: ${state.teams.blu.score} punti\n\n${winner} vince!`);
 });
 
 socket.on("tabooError", (message) => {
@@ -412,7 +411,6 @@ socket.on("tabooError", (message) => {
 });
 
 document.addEventListener("DOMContentLoaded", async () => {
-  console.log('chiamato DOMContentLoaded')
   initElements();
   setupLobby();
   setupReadyButton();
