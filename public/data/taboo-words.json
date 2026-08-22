@@ -1,202 +1,10078 @@
 [
   {
-    "word": "CASA",
-    "taboo": ["APPARTAMENTO", "MURO", "TETTO", "FINESTRA", "PORTA"]
+    "word": "ABBRACCIARE",
+    "taboo": [
+      "Stringere",
+      "Comprendere",
+      "Includere",
+      "Affetto",
+      "Coccolare"
+    ]
   },
   {
-    "word": "CANE",
-    "taboo": ["BAU", "ANIMALE", "PELO", "GUINZAGLIO", "OSPEDALE"]
+    "word": "ZIPPARE",
+    "taboo": [
+      "Ridurre",
+      "Comprimere",
+      "Dimenarsi",
+      "Diminuire",
+      "File"
+    ]
   },
   {
-    "word": "TELEFONO",
-    "taboo": ["CHIAMARE", "CELLULARE", "SUONARE", "VOCE", "MESSAGGIO"]
+    "word": "ACCESSIBILE",
+    "taboo": [
+      "Raggiungibile",
+      "Entrare",
+      "Possibile",
+      "Divieto",
+      "Avvicinabile"
+    ]
   },
   {
-    "word": "COMPUTER",
-    "taboo": ["SCHERMO", "TASTIERA", "INTERNET", "LAPTOP", "WINDOWS"]
+    "word": "ZIZZANIA",
+    "taboo": [
+      "Sgorgare",
+      "Seminare",
+      "Lieto",
+      "Mettere",
+      "Pianta"
+    ]
   },
   {
-    "word": "MARE",
-    "taboo": ["ACQUA", "ONDE", "SABBIA", "SPIAGGIA", "PESCATORE"]
+    "word": "ACCIPICCHIA!",
+    "taboo": [
+      "Accidenti!",
+      "Per la miseria!",
+      "Acciderbola!",
+      "Caspita!",
+      "Meraviglia"
+    ]
   },
   {
-    "word": "MONTAGNA",
-    "taboo": ["ALTO", "VETTE", "NEVE", "ESCURSIONE", "ROCCIA"]
+    "word": "ACCIDIA",
+    "taboo": [
+      "Indolenza",
+      "Invidia",
+      "Inerzia",
+      "Pigrizia",
+      "Vizio"
+    ]
   },
   {
-    "word": "AEREO",
-    "taboo": ["VOLARE", "CIELO", "PILOTA", "ALI", "DECOLLO"]
+    "word": "ACCONSENTIRE",
+    "taboo": [
+      "Assecondare",
+      "Negare",
+      "Approvare",
+      "Concordare",
+      "Concedere"
+    ]
   },
   {
-    "word": "TRENO",
-    "taboo": ["BINARIO", "FERROVIA", "STAZIONE", "VIAGGIARE", "LOCOMOTIVA"]
+    "word": "ACCOMMODARE",
+    "taboo": [
+      "Aggiustare",
+      "Prego",
+      "Guastare",
+      "Riparare",
+      "Rompere"
+    ]
   },
   {
-    "word": "PIZZA",
-    "taboo": ["ITALIA", "MOZZARELLA", "FORNO", "POMODORO", "BASILICO"]
+    "word": "AFFASCINARE",
+    "taboo": [
+      "Ammaliare",
+      "Conquistare",
+      "Charme",
+      "Incantare",
+      "Attrarre"
+    ]
   },
   {
-    "word": "CALCIO",
-    "taboo": ["PALLONE", "GOAL", "CALCIATORE", "STADIO", "CAMPIONATO"]
+    "word": "ADRENALINA",
+    "taboo": [
+      "Ormone",
+      "Scarica",
+      "Emozione",
+      "Paura",
+      "Nervosismo"
+    ]
   },
   {
-    "word": "MUSICA",
-    "taboo": ["CANZONE", "NOTA", "CANTA", "STRUMENTO", "MELODIA"]
+    "word": "AGIO",
+    "taboo": [
+      "Benessere",
+      "Lusso",
+      "Comodità",
+      "Distensione",
+      "Essere"
+    ]
   },
   {
-    "word": "FILM",
-    "taboo": ["CINEMA", "ATTORE", "REGISTA", "SCENA", "PROIETTORE"]
+    "word": "AFFIANCARE",
+    "taboo": [
+      "Collaborare",
+      "Lato",
+      "Accanto",
+      "Accompagnare",
+      "Aiutare"
+    ]
   },
   {
-    "word": "LIBRO",
-    "taboo": ["PAGINA", "LETTURA", "AUTORE", "COPERTINA", "BIBLIOTECA"]
+    "word": "ALBICOCCO",
+    "taboo": [
+      "Albero",
+      "Frutta",
+      "Arancione",
+      "Susina",
+      "Pianta"
+    ]
   },
   {
-    "word": "CIBO",
-    "taboo": ["MANGIARE", "CUCINA", "PIATTO", "FORCHETTA", "GOLA"]
+    "word": "AITANTE",
+    "taboo": [
+      "Prestante",
+      "Uomo",
+      "Attraente",
+      "Bello",
+      "Fisico"
+    ]
   },
   {
-    "word": "ACQUA",
-    "taboo": ["BEVERE", "FREDDO", "GHIACCIO", "SETE", "BOTTIGLIA"]
+    "word": "ALLEGARE",
+    "taboo": [
+      "Unire",
+      "Produrre",
+      "Accludere",
+      "Pagina",
+      "Documento"
+    ]
   },
   {
-    "word": "FUOCO",
-    "taboo": ["CALDO", "FIAMMA", "BRUCIARE", "LEGNO", "ACCENDE"]
+    "word": "ALLAGARE",
+    "taboo": [
+      "Bagnare",
+      "Liquido",
+      "Inondare",
+      "Mare",
+      "Acqua"
+    ]
   },
   {
-    "word": "ALBERO",
-    "taboo": ["FOGLIA", "TRONCO", "RADICE", "LEGNO", "FORESTA"]
+    "word": "ALTER EGO",
+    "taboo": [
+      "Sostituto",
+      "Vice",
+      "Persona",
+      "In vece",
+      "Mansione"
+    ]
   },
   {
-    "word": "FIORE",
-    "taboo": ["PETALO", "PROFUMO", "GIARDINO", "PIANTA", "COLORE"]
+    "word": "ALTA FEDELTÀ",
+    "taboo": [
+      "Riproduzione",
+      "Amplificazione",
+      "Suono",
+      "Stereo",
+      "Hi-fi"
+    ]
   },
   {
-    "word": "SOLE",
-    "taboo": ["CALDO", "LUCE", "GIORNO", "STELLA", "RAGGI"]
+    "word": "LEGA",
+    "taboo": [
+      "Coesione",
+      "Amalgama",
+      "Fusione",
+      "Unione",
+      "Insieme"
+    ]
   },
   {
-    "word": "LUNA",
-    "taboo": ["NOTTE", "STELLA", "CHILL", "PIENA", "CRESCENTE"]
+    "word": "ALTERNANZA",
+    "taboo": [
+      "Turnover",
+      "Sostituzione",
+      "Cambio",
+      "Rotazione",
+      "Avvicendamento"
+    ]
   },
   {
-    "word": "TEMPO",
-    "taboo": ["OROLOGIO", "MINUTO", "ORA", "SECONDO", "SVEGLIA"]
+    "word": "AMMAINARE",
+    "taboo": [
+      "Bandiera",
+      "Vela",
+      "Scendere",
+      "Abbassare",
+      "Ripiegare"
+    ]
   },
   {
-    "word": "DOLORE",
-    "taboo": ["MALE", "FERITA", "PIANTO", "SOFFERENZA", "MEDICO"]
+    "word": "AMMAESTRARE",
+    "taboo": [
+      "Foca",
+      "Circo",
+      "Addestrare",
+      "Cane",
+      "Pulce"
+    ]
   },
   {
-    "word": "BAMBINO",
-    "taboo": ["PICCOLO", "GIOCATTOLO", "GENITORE", "SCUOLA", "ETA"]
+    "word": "ANAGRAMMA",
+    "taboo": [
+      "Lettere",
+      "Gioco",
+      "Enigmistico",
+      "Settimana",
+      "Cambiare"
+    ]
   },
   {
-    "word": "MORTE",
-    "taboo": ["MORIRE", "CIMITERO", "LUTTO", "FINE", "VITA"]
+    "word": "AMPIEZZA",
+    "taboo": [
+      "Estensione",
+      "Grandezza",
+      "Dimensione",
+      "Larghezza",
+      "Vasto"
+    ]
   },
   {
-    "word": "AMORE",
-    "taboo": ["CUORE", "BACIARE", "COPPIA", "SENTIMENTO", "CUPIDO"]
+    "word": "ANNOTARE",
+    "taboo": [
+      "Scrivere",
+      "Appunto",
+      "Numero",
+      "Nome",
+      "Segnare"
+    ]
   },
   {
-    "word": "GUERRA",
-    "taboo": ["BATTAGLIA", "ESERCITO", "ARMI", "SOLDATO", "NEMICO"]
+    "word": "ANNIVERSARIO",
+    "taboo": [
+      "Celebrare",
+      "Auguri",
+      "Matrimonio",
+      "Compleanno",
+      "Ricorrenza"
+    ]
   },
   {
-    "word": "SOGNO",
-    "taboo": ["DORMIRE", "NOTTE", "IMMAGINE", "FANTASIA", "LETTO"]
+    "word": "ANTIDOTO",
+    "taboo": [
+      "Veleno",
+      "Rimedio",
+      "Conforto",
+      "Medicina",
+      "Cura"
+    ]
   },
   {
-    "word": "VIAGGIO",
-    "taboo": ["PARTENZA", "DESTINAZIONE", "VACANZA", "VALIGIA", "AEROPORTO"]
+    "word": "ANTICIPO",
+    "taboo": [
+      "Cauzione",
+      "Arrivare",
+      "Prima",
+      "Presto",
+      "Ritardo"
+    ]
   },
   {
-    "word": "SCUOLA",
-    "taboo": ["MAESTRO", "ALUNNO", "LEZIONE", "COMPITO", "BANCO"]
+    "word": "RIMMEL",
+    "taboo": [
+      "Trucco",
+      "Ciglia",
+      "Cosmetico",
+      "Allungare",
+      "De Gregori"
+    ]
   },
   {
-    "word": "LAVORO",
-    "taboo": ["UFFICIO", "STIPENDIO", "CAPO", "IMPIEGATO", "CARRIERA"]
+    "word": "ANTRACITE",
+    "taboo": [
+      "Nero",
+      "Colore",
+      "Carbone",
+      "Fossile",
+      "Grigio"
+    ]
   },
   {
-    "word": "FESTA",
-    "taboo": ["COMPLEANNO", "TORTA", "PALLONCINI", "MUSICA", "REGALO"]
+    "word": "APNEA",
+    "taboo": [
+      "Palombaro",
+      "Bombole",
+      "Immersione",
+      "Respirare",
+      "Sommozzatore"
+    ]
   },
   {
-    "word": "SPORT",
-    "taboo": ["PALLONE", "GIOCO", "CAMPIONATO", "ATLETA", "TIFOSO"]
+    "word": "APICE",
+    "taboo": [
+      "Cima",
+      "Punta",
+      "Vertice",
+      "Culmine",
+      "Massimo"
+    ]
   },
   {
-    "word": "DANZA",
-    "taboo": ["BALLO", "MUSICA", "PASSO", "BALLERINO", "COREOGRAFIA"]
+    "word": "APPELLO",
+    "taboo": [
+      "Scuola",
+      "Presente",
+      "Assente",
+      "Corte",
+      "Esame"
+    ]
   },
   {
-    "word": "FUMO",
-    "taboo": ["SIGARETTA", "FUMARE", "CANCRO", "PIRA", "SVAPO"]
+    "word": "APPARTAMENTO",
+    "taboo": [
+      "Acquistare",
+      "Abitazione",
+      "Affitto",
+      "Stanza",
+      "Casa"
+    ]
   },
   {
-    "word": "COLPA",
-    "taboo": ["SBAGLIARE", "PECCATO", "PENSIERO", "DANNATO", "PECCATORE"]
+    "word": "ARACHIDE",
+    "taboo": [
+      "Nocciolina",
+      "Americana",
+      "Superpippo",
+      "Tostato",
+      "Olio"
+    ]
   },
   {
-    "word": "POLIZIA",
-    "taboo": ["AGENTE", "MANETTE", "AUTO", "VOLANTE", "CRIMINALE"]
+    "word": "AQUILA",
+    "taboo": [
+      "Uccello",
+      "Vista",
+      "Intelligente",
+      "Rapace",
+      "Condor"
+    ]
   },
   {
-    "word": "OMBRA",
-    "taboo": ["BUIO", "NOTTE", "FANTASMA", "Luce", "SEGUIRE"]
+    "word": "ARCIPELAGO",
+    "taboo": [
+      "Antille",
+      "Isole",
+      "Gruppo",
+      "Mare",
+      "Eolie"
+    ]
   },
   {
-    "word": "VELENO",
-    "taboo": ["MORIRE", "TOSSICO", "SERPE", "VITE", "DOSE"]
+    "word": "SCOOP",
+    "taboo": [
+      "Notizia",
+      "Giornalista",
+      "Rivista",
+      "Colpo",
+      "Sensazionale"
+    ]
   },
   {
-    "word": "FORBICI",
-    "taboo": ["TAGLIARE", "CARTA", "CAPELLI", "LAMELLA", "CUCITO"]
+    "word": "ARGUTO",
+    "taboo": [
+      "Avveduto",
+      "Fine",
+      "Ingegnoso",
+      "Sottile",
+      "Osservazione"
+    ]
   },
   {
-    "word": "SPUGNA",
-    "taboo": ["BAGNO", "ACQUA", "LAVARE", "CUCCIA", "POROSO"]
+    "word": "PIETRA POMICE",
+    "taboo": [
+      "Roccia",
+      "Porosa",
+      "Piedi",
+      "Creta",
+      "Ceramica"
+    ]
   },
   {
-    "word": "CANDELA",
-    "taboo": ["FIAMMA", "LUCE", "CERINO", "CERA", "SOFFIA"]
+    "word": "SEMOLINO",
+    "taboo": [
+      "Brodo",
+      "Minestra",
+      "Farina",
+      "Riso",
+      "Neonato"
+    ]
   },
   {
-    "word": "OCCHIALI",
-    "taboo": ["VEDERE", "LENTE", "NASO", "VISTA", "MONTATURA"]
+    "word": "ARNESE",
+    "taboo": [
+      "Attrezzo",
+      "Strumento",
+      "Lavoro",
+      "Mestiere",
+      "Utensile"
+    ]
   },
   {
-    "word": "PARAFULMINE",
-    "taboo": ["FULMINE", "SAETTA", "TUONO", "PUNTA", "SCARICA"]
+    "word": "ARROTINO",
+    "taboo": [
+      "Affilare",
+      "Mestiere",
+      "Lama",
+      "Coltello",
+      "Forbice"
+    ]
   },
   {
-    "word": "BUSSOLA",
-    "taboo": ["NORD", "AGO", "DIREZIONE", "NORD", "CARTOGRAFO"]
+    "word": "SEMAFORO",
+    "taboo": [
+      "Fermarsi",
+      "Rosso",
+      "Verde",
+      "Arancione",
+      "Incrocio"
+    ]
   },
   {
-    "word": "SPECCHIO",
-    "taboo": ["RIFLESSO", "VETRO", "IMMAGINE", "VISO", "RIFLETTE"]
+    "word": "SOGGIORNO",
+    "taboo": [
+      "Viaggio",
+      "Permanenza",
+      "Salone",
+      "Azienda",
+      "Obbligato"
+    ]
   },
   {
-    "word": "OMBRELLO",
-    "taboo": ["PIOGGIA", "APRIRE", "STOFFA", "GOCIA", "ACQUA"]
+    "word": "ASCIUGAMANO",
+    "taboo": [
+      "Tela",
+      "Spugna",
+      "Acqua",
+      "Bagno",
+      "Accappatoio"
+    ]
   },
   {
-    "word": "CALZINO",
-    "taboo": ["PIEDE", "SCARPA", "CALZATA", "BUCO", "PAIO"]
+    "word": "INSIEME",
+    "taboo": [
+      "Con",
+      "Stare",
+      "Riunire",
+      "Gruppo",
+      "Tutti"
+    ]
   },
   {
-    "word": "BURRONE",
-    "taboo": ["PROFONDITA", "PRECLIPIZIO", "CADUTA", "STRADA", "FRANA"]
+    "word": "ASSAI",
+    "taboo": [
+      "Tanto",
+      "Abbastanza",
+      "Te voglio bene",
+      "Molto",
+      "Quantità"
+    ]
   },
   {
-    "word": "CINTURA",
-    "taboo": ["PANTALONI", "FORO", "PUNTO", "VITA", "ALLACCIARE"]
+    "word": "ATTIMO",
+    "taboo": [
+      "Cogliere",
+      "Carpe diem",
+      "Fuggente",
+      "Istante",
+      "Aspettare"
+    ]
   },
   {
-    "word": "GHIACCIO",
-    "taboo": ["FREDDO", "ACQUA", "CUBETTO", "GHIACCIAIO", "FONDO"]
+    "word": "ATTICO",
+    "taboo": [
+      "Edificio",
+      "Sopra",
+      "Casa",
+      "Ultimo piano",
+      "Abitazione"
+    ]
+  },
+  {
+    "word": "AUGE",
+    "taboo": [
+      "Essere in",
+      "Apice",
+      "Culmine",
+      "Successo",
+      "Fama"
+    ]
+  },
+  {
+    "word": "AUDIENCE",
+    "taboo": [
+      "Televisione",
+      "Ascolti",
+      "Auditel",
+      "Share",
+      "Spettatori"
+    ]
+  },
+  {
+    "word": "AUMENTARE",
+    "taboo": [
+      "Crescere",
+      "Tasse",
+      "Incrementare",
+      "Maggiore",
+      "Quantità"
+    ]
+  },
+  {
+    "word": "ROMEO",
+    "taboo": [
+      "Gigli",
+      "Innamorato",
+      "Giulietta",
+      "Shakespeare",
+      "Verona"
+    ]
+  },
+  {
+    "word": "AUSTRALIANO",
+    "taboo": [
+      "Continente",
+      "Abitante",
+      "Canguro",
+      "Isola",
+      "Sydney"
+    ]
+  },
+  {
+    "word": "AUTOCERTIFICAZIONE",
+    "taboo": [
+      "Ufficio pubblico",
+      "Attestazione",
+      "Anagrafe",
+      "Dichiarazione",
+      "Documenti"
+    ]
+  },
+  {
+    "word": "AUTORIZZAZIONE",
+    "taboo": [
+      "Licenza",
+      "OK",
+      "Concessione",
+      "Proibizione",
+      "Permesso"
+    ]
+  },
+  {
+    "word": "AUTOSTOPPISTA",
+    "taboo": [
+      "Fermare",
+      "Passaggio",
+      "Pollice",
+      "Gratis",
+      "Viaggiare"
+    ]
+  },
+  {
+    "word": "AVANCE",
+    "taboo": [
+      "Approccio",
+      "Proposta",
+      "Donna",
+      "Fare",
+      "Respingere"
+    ]
+  },
+  {
+    "word": "AVANZARE",
+    "taboo": [
+      "Indietreggiare",
+      "Andare",
+      "Avanti",
+      "Inoltrarsi",
+      "Rimanere"
+    ]
+  },
+  {
+    "word": "INFEDELTÀ",
+    "taboo": [
+      "Coppia",
+      "Matrimonio",
+      "Tradimento",
+      "Coniugale",
+      "Corna"
+    ]
+  },
+  {
+    "word": "BACKUP",
+    "taboo": [
+      "Computer",
+      "Dati",
+      "Hard disk",
+      "Ripristino",
+      "Copia"
+    ]
+  },
+  {
+    "word": "SCOOTER",
+    "taboo": [
+      "Motocicletta",
+      "Due ruote",
+      "Vespa",
+      "Ciclomotore",
+      "Traffico"
+    ]
+  },
+  {
+    "word": "BAGLIORE",
+    "taboo": [
+      "Luce",
+      "Baleno",
+      "Fulgore",
+      "Faro",
+      "Lampada"
+    ]
+  },
+  {
+    "word": "BALERA",
+    "taboo": [
+      "Discoteca",
+      "Ballo",
+      "Liscio",
+      "Musica",
+      "Danzare"
+    ]
+  },
+  {
+    "word": "BALILLA",
+    "taboo": [
+      "Fascista",
+      "Giovinezza",
+      "Calcio",
+      "Automobile",
+      "Divisa"
+    ]
+  },
+  {
+    "word": "BALOCCO",
+    "taboo": [
+      "Profumo",
+      "Giocattolo",
+      "Canzone",
+      "Bambino",
+      "Passatempo"
+    ]
+  },
+  {
+    "word": "STRAMBO",
+    "taboo": [
+      "Strampalato",
+      "Strano",
+      "Stravagante",
+      "Originale",
+      "Idea"
+    ]
+  },
+  {
+    "word": "BANCOMAT",
+    "taboo": [
+      "Prelievo",
+      "Automatico",
+      "Sportello",
+      "Carta di credito",
+      "Banca"
+    ]
+  },
+  {
+    "word": "SCROCCARE",
+    "taboo": [
+      "Ufo",
+      "Gratis",
+      "Non pagare",
+      "Pranzo",
+      "Cena"
+    ]
+  },
+  {
+    "word": "BARBECUE",
+    "taboo": [
+      "Griglia",
+      "Carne",
+      "Brace",
+      "Cucinare",
+      "Giardino"
+    ]
+  },
+  {
+    "word": "BARELLA",
+    "taboo": [
+      "Letto",
+      "Trasportare",
+      "Ferito",
+      "Ambulanza",
+      "Ammalato"
+    ]
+  },
+  {
+    "word": "BARRIRE",
+    "taboo": [
+      "Verso",
+      "Elefante",
+      "Animale",
+      "Annibale",
+      "Proboscide"
+    ]
+  },
+  {
+    "word": "BARZELLETTA",
+    "taboo": [
+      "Freddura",
+      "Storiella",
+      "Ridere",
+      "Raccontatore",
+      "Carabiniere"
+    ]
+  },
+  {
+    "word": "BAVAGLINO",
+    "taboo": [
+      "Saliva",
+      "Bocca",
+      "Bebé",
+      "Sporcare",
+      "Cibo"
+    ]
+  },
+  {
+    "word": "BEIGE",
+    "taboo": [
+      "Colore",
+      "Creme",
+      "Chiaro",
+      "Nocciola",
+      "Marrone"
+    ]
+  },
+  {
+    "word": "BERMUDA",
+    "taboo": [
+      "Isola",
+      "Triangolo",
+      "Aerei",
+      "Sparire",
+      "Pantaloni"
+    ]
+  },
+  {
+    "word": "BEST SELLER",
+    "taboo": [
+      "Libro",
+      "Disco",
+      "Venduto",
+      "Classifiche",
+      "Primo"
+    ]
+  },
+  {
+    "word": "BIGIOTTERIA",
+    "taboo": [
+      "Gioielli",
+      "Finti",
+      "Collane",
+      "Orecchini",
+      "Anelli"
+    ]
+  },
+  {
+    "word": "BIGLIETTERIA",
+    "taboo": [
+      "Teatro",
+      "Stazione",
+      "Acquistare",
+      "Vendere",
+      "Comprare"
+    ]
+  },
+  {
+    "word": "OPEN SPACE",
+    "taboo": [
+      "Ufficio",
+      "Stanze",
+      "Muri",
+      "Pareti",
+      "Loft"
+    ]
+  },
+  {
+    "word": "BILINGUE",
+    "taboo": [
+      "Poliglotta",
+      "Due",
+      "Lingua",
+      "Parlare",
+      "Tradurre"
+    ]
+  },
+  {
+    "word": "OPERETTA",
+    "taboo": [
+      "Genere",
+      "Musica",
+      "Teatro",
+      "Leggero",
+      "La vedova allegra"
+    ]
+  },
+  {
+    "word": "BISBETICO",
+    "taboo": [
+      "Brontolone",
+      "Litigioso",
+      "Domato",
+      "Irritabile",
+      "Carattere"
+    ]
+  },
+  {
+    "word": "OVVIO",
+    "taboo": [
+      "Sicuro",
+      "Evidente",
+      "Chiaro",
+      "Logico",
+      "Certo"
+    ]
+  },
+  {
+    "word": "BISCA",
+    "taboo": [
+      "Gioco",
+      "Azzardo",
+      "Clandestino",
+      "Illegale",
+      "Locale"
+    ]
+  },
+  {
+    "word": "BISTECCA",
+    "taboo": [
+      "Carne",
+      "Cotta",
+      "Fiorentina",
+      "Svizzera",
+      "Al sangue"
+    ]
+  },
+  {
+    "word": "BLASFEMO",
+    "taboo": [
+      "Irriverente",
+      "Miscredente",
+      "Bestemmiatore",
+      "Offendere",
+      "Religione"
+    ]
+  },
+  {
+    "word": "BLOODY MARY",
+    "taboo": [
+      "Cocktail",
+      "Succo",
+      "Pomodoro",
+      "Vodka",
+      "Limone"
+    ]
+  },
+  {
+    "word": "BLUE JEANS",
+    "taboo": [
+      "Diesel",
+      "Wrangler",
+      "Tela",
+      "Pantaloni",
+      "Levi's"
+    ]
+  },
+  {
+    "word": "SCONFORTO",
+    "taboo": [
+      "Afflizione",
+      "Avvilimento",
+      "Scoramento",
+      "Tristezza",
+      "Abbattimento"
+    ]
+  },
+  {
+    "word": "BOSCAIOLO",
+    "taboo": [
+      "Foresta",
+      "Alberi",
+      "Tagliare",
+      "Contadino",
+      "Legna"
+    ]
+  },
+  {
+    "word": "BOTANICA",
+    "taboo": [
+      "Orto",
+      "Fiori",
+      "Scienza",
+      "Piante",
+      "Vegetali"
+    ]
+  },
+  {
+    "word": "BOUQUET",
+    "taboo": [
+      "Mazzo",
+      "Fiori",
+      "Sposa",
+      "Lanciare",
+      "Matrimonio"
+    ]
+  },
+  {
+    "word": "BRAINSTORMING",
+    "taboo": [
+      "Idee",
+      "Proposte",
+      "Problema",
+      "Soluzione",
+      "Riunione"
+    ]
+  },
+  {
+    "word": "BREVI MANU",
+    "taboo": [
+      "Consegna",
+      "Di persona",
+      "Lettera",
+      "Pacco",
+      "Dare"
+    ]
+  },
+  {
+    "word": "BRIEF",
+    "taboo": [
+      "Spot",
+      "Documento",
+      "Lancio",
+      "Prodotto",
+      "Campagna pubblicitaria"
+    ]
+  },
+  {
+    "word": "BRIGADIERE",
+    "taboo": [
+      "Carabiniere",
+      "Ufficiale",
+      "Appuntato",
+      "Sicurezza",
+      "Finanza"
+    ]
+  },
+  {
+    "word": "ILLUSIONE",
+    "taboo": [
+      "Ottica",
+      "Errore",
+      "Sbaglio",
+      "Speranza",
+      "Inganno"
+    ]
+  },
+  {
+    "word": "BRISCOLA",
+    "taboo": [
+      "Gioco",
+      "Due",
+      "Seme",
+      "Asso",
+      "Carte"
+    ]
+  },
+  {
+    "word": "BRITANNICO",
+    "taboo": [
+      "Inglese",
+      "Londra",
+      "Isola",
+      "Abitante",
+      "Popolazione"
+    ]
+  },
+  {
+    "word": "BRODO",
+    "taboo": [
+      "Cibo",
+      "Zuppa",
+      "Liquido",
+      "Primordiale",
+      "Vegetale"
+    ]
+  },
+  {
+    "word": "BRONTOLARE",
+    "taboo": [
+      "Protestare",
+      "Lagnarsi",
+      "Malcontento",
+      "Borbottare",
+      "Contestare"
+    ]
+  },
+  {
+    "word": "BRONZO",
+    "taboo": [
+      "Metallo",
+      "Lega",
+      "Rame",
+      "Stagno",
+      "Riace"
+    ]
+  },
+  {
+    "word": "BROWSER",
+    "taboo": [
+      "Navigare",
+      "Internet",
+      "Web",
+      "Explorer",
+      "Netscape"
+    ]
+  },
+  {
+    "word": "BRUCIAPELO",
+    "taboo": [
+      "Improvviso",
+      "Inaspettato",
+      "Domandare",
+      "Sorpresa",
+      "Vicino"
+    ]
+  },
+  {
+    "word": "BRUNCH",
+    "taboo": [
+      "Domenica",
+      "Prima colazione",
+      "Mattino",
+      "Pranzo",
+      "Mangiare"
+    ]
+  },
+  {
+    "word": "BUDDHA",
+    "taboo": [
+      "Divinità",
+      "Dio",
+      "Religione",
+      "India",
+      "Seduto"
+    ]
+  },
+  {
+    "word": "BUIO",
+    "taboo": [
+      "Oscuro",
+      "Luce",
+      "Notte",
+      "Nero",
+      "Fitto"
+    ]
+  },
+  {
+    "word": "BUG",
+    "taboo": [
+      "Computer",
+      "Millenium",
+      "Difetto",
+      "Duemila",
+      "Sistema"
+    ]
+  },
+  {
+    "word": "BUSSARE",
+    "taboo": [
+      "Porta",
+      "Toc toc",
+      "Campanello",
+      "Percuotere",
+      "Battere"
+    ]
+  },
+  {
+    "word": "BUONISMO",
+    "taboo": [
+      "Comportamento",
+      "Politica",
+      "Tolleranza",
+      "Atteggiamento",
+      "Demagogia"
+    ]
+  },
+  {
+    "word": "BUSINESS CLASS",
+    "taboo": [
+      "Aerei",
+      "Viaggiare",
+      "Economy",
+      "Turistica",
+      "Prima"
+    ]
+  },
+  {
+    "word": "CABARET",
+    "taboo": [
+      "Liza Minnelli",
+      "Spettacolo",
+      "Varietà",
+      "Locale",
+      "Divertente"
+    ]
+  },
+  {
+    "word": "GRIFFE",
+    "taboo": [
+      "Firma",
+      "Stilista",
+      "Vestito",
+      "Marca",
+      "Moda"
+    ]
+  },
+  {
+    "word": "CACHEMIRE",
+    "taboo": [
+      "India",
+      "Lana",
+      "Pregiata",
+      "Maglione",
+      "Inglese"
+    ]
+  },
+  {
+    "word": "CAICCO",
+    "taboo": [
+      "Imbarcazione",
+      "Antica",
+      "Remi",
+      "Turca",
+      "Tipica"
+    ]
+  },
+  {
+    "word": "CAINO",
+    "taboo": [
+      "Abele",
+      "Figlio",
+      "Adamo",
+      "Fratello",
+      "Assassino"
+    ]
+  },
+  {
+    "word": "SINTONIA",
+    "taboo": [
+      "Accordo",
+      "Frequenza",
+      "Radio",
+      "Concordanza",
+      "Canale"
+    ]
+  },
+  {
+    "word": "CALAMAIO",
+    "taboo": [
+      "Inchiostro",
+      "Penna",
+      "Scrivere",
+      "Intingere",
+      "Carta"
+    ]
+  },
+  {
+    "word": "GERUNDIO",
+    "taboo": [
+      "Modo",
+      "Verbo",
+      "Participio",
+      "Presente",
+      "Passato"
+    ]
+  },
+  {
+    "word": "CALABRONE",
+    "taboo": [
+      "Volo",
+      "Nero",
+      "Insetto",
+      "Pungiglione",
+      "Ronzare"
+    ]
+  },
+  {
+    "word": "GHIRO",
+    "taboo": [
+      "Mammifero",
+      "Roditore",
+      "Dormire",
+      "Letargo",
+      "Pelliccia"
+    ]
+  },
+  {
+    "word": "CALCIO-MERCATO",
+    "taboo": [
+      "Comprare",
+      "Vendere",
+      "Giocatori",
+      "Procuratori",
+      "Squadre"
+    ]
+  },
+  {
+    "word": "DOSARE",
+    "taboo": [
+      "Soppesare",
+      "Valutare",
+      "Pesare",
+      "Bilanciare",
+      "Misurino"
+    ]
+  },
+  {
+    "word": "CALLE",
+    "taboo": [
+      "Vicolo",
+      "Strada",
+      "Stretta",
+      "Venezia",
+      "Via"
+    ]
+  },
+  {
+    "word": "SLAVINA",
+    "taboo": [
+      "Valanga",
+      "Neve",
+      "Cadere",
+      "Montagna",
+      "Rotolare"
+    ]
+  },
+  {
+    "word": "SLEGARE",
+    "taboo": [
+      "Sciogliere",
+      "Fune",
+      "Coda",
+      "Liberare",
+      "Nodo"
+    ]
+  },
+  {
+    "word": "CAMBIALE",
+    "taboo": [
+      "Debito",
+      "Pagare",
+      "Scadenza",
+      "Anticipo",
+      "Bollo"
+    ]
+  },
+  {
+    "word": "PONY EXPRESS",
+    "taboo": [
+      "Fattorino",
+      "Recapito",
+      "Espresso",
+      "Urgente",
+      "Portare"
+    ]
+  },
+  {
+    "word": "CAMEO",
+    "taboo": [
+      "Ruolo",
+      "Gemma",
+      "Profilo",
+      "Pietra",
+      "Ciondolo"
+    ]
+  },
+  {
+    "word": "POMATA",
+    "taboo": [
+      "Crema",
+      "Unguento",
+      "Preparazione",
+      "Farmaceutica",
+      "Medicina"
+    ]
+  },
+  {
+    "word": "CAMUFFARE",
+    "taboo": [
+      "Mutare",
+      "Cambiare",
+      "Sembianze",
+      "Travestire",
+      "Mascherare"
+    ]
+  },
+  {
+    "word": "LIMOUSINE",
+    "taboo": [
+      "Grande",
+      "Autovettura",
+      "Macchina",
+      "Lusso",
+      "Vip"
+    ]
+  },
+  {
+    "word": "CANCAN",
+    "taboo": [
+      "Chiasso",
+      "Café Chantant",
+      "Francia",
+      "Ballo",
+      "Crazy Horse"
+    ]
+  },
+  {
+    "word": "CANAGLIA",
+    "taboo": [
+      "Persona",
+      "Cattivo",
+      "Furfante",
+      "Birbante",
+      "Scherzo"
+    ]
+  },
+  {
+    "word": "CANASTA",
+    "taboo": [
+      "Gioco",
+      "Carte",
+      "Bridge",
+      "Poker",
+      "Mazzo"
+    ]
+  },
+  {
+    "word": "MICROSCOPIO",
+    "taboo": [
+      "Strumento",
+      "Ingrandire",
+      "Ottico",
+      "Laboratorio",
+      "Osservare"
+    ]
+  },
+  {
+    "word": "PIROMANE",
+    "taboo": [
+      "Appicare",
+      "Fuoco",
+      "Incendio",
+      "Fiamme",
+      "Nerone"
+    ]
+  },
+  {
+    "word": "CANDELABRO",
+    "taboo": [
+      "Supporto",
+      "Sostegno",
+      "Lampada",
+      "Olio",
+      "Luce"
+    ]
+  },
+  {
+    "word": "CANOA",
+    "taboo": [
+      "Imbarcazione",
+      "Abbagnale",
+      "Fiume",
+      "Pagaia",
+      "Remo"
+    ]
+  },
+  {
+    "word": "PIT STOP",
+    "taboo": [
+      "Pausa",
+      "Box",
+      "Rifornimento",
+      "Fermata",
+      "Automobilismo"
+    ]
+  },
+  {
+    "word": "PITAGORA",
+    "taboo": [
+      "Tabelline",
+      "Teorema",
+      "Filosofo",
+      "Tavola",
+      "Moltiplicazione"
+    ]
+  },
+  {
+    "word": "CANTILENA",
+    "taboo": [
+      "Canzone",
+      "Nenia",
+      "Ninna Nanna",
+      "Filastrocca",
+      "Ripetitivo"
+    ]
+  },
+  {
+    "word": "CHIOCCIOLA",
+    "taboo": [
+      "Lumaca",
+      "Striscia",
+      "At",
+      "E-mail",
+      "Internet"
+    ]
+  },
+  {
+    "word": "EDERA",
+    "taboo": [
+      "Pianta",
+      "Sempreverde",
+      "Rampicante",
+      "Avvinto",
+      "Muro"
+    ]
+  },
+  {
+    "word": "CICALA",
+    "taboo": [
+      "Insetto",
+      "Frinire",
+      "Favola",
+      "Formica",
+      "Previdente"
+    ]
+  },
+  {
+    "word": "PARMIGIANO",
+    "taboo": [
+      "Reggiano",
+      "Grana",
+      "Formaggio",
+      "Grattugiato",
+      "Abitante"
+    ]
+  },
+  {
+    "word": "SMINUIRE",
+    "taboo": [
+      "Poco",
+      "Piccolo",
+      "Valore",
+      "Minore",
+      "Ridurre"
+    ]
+  },
+  {
+    "word": "PART-TIME",
+    "taboo": [
+      "Lavoro",
+      "Orario",
+      "Occupazione",
+      "Riduzione",
+      "Tempo pieno"
+    ]
+  },
+  {
+    "word": "PASTORE",
+    "taboo": [
+      "Campagna",
+      "Pecore",
+      "Cane",
+      "Buon",
+      "Anime"
+    ]
+  },
+  {
+    "word": "SMETTERE",
+    "taboo": [
+      "Interrrompere",
+      "Fumare",
+      "Finire",
+      "Continuare",
+      "Fermarsi"
+    ]
+  },
+  {
+    "word": "CILINDRO",
+    "taboo": [
+      "Solido",
+      "Coniglio",
+      "Cappello",
+      "Tuba",
+      "Geometrico"
+    ]
+  },
+  {
+    "word": "NAVETTA",
+    "taboo": [
+      "Spaziale",
+      "Trasporto",
+      "Shuttle",
+      "Breve",
+      "Spola"
+    ]
+  },
+  {
+    "word": "MOUSSE",
+    "taboo": [
+      "Tonno",
+      "Fegato",
+      "Freddo",
+      "Cioccolato",
+      "Budino"
+    ]
+  },
+  {
+    "word": "CINEFORUM",
+    "taboo": [
+      "Film",
+      "Proiezione",
+      "Discussione",
+      "Dibattito",
+      "Commento"
+    ]
+  },
+  {
+    "word": "CROCCHETTA",
+    "taboo": [
+      "Impanata",
+      "Uovo",
+      "Fritta",
+      "Patate",
+      "Riso"
+    ]
+  },
+  {
+    "word": "DIVA",
+    "taboo": [
+      "Stella",
+      "Famosa",
+      "Cinema",
+      "Canzone",
+      "Attrice"
+    ]
+  },
+  {
+    "word": "EDICOLA",
+    "taboo": [
+      "Chiosco",
+      "Vendere",
+      "Giornali",
+      "Quotidiani",
+      "Riviste"
+    ]
+  },
+  {
+    "word": "CUOIO",
+    "taboo": [
+      "Pelle",
+      "Conciare",
+      "Borsa",
+      "Scarpa",
+      "Valigia"
+    ]
+  },
+  {
+    "word": "TELEPATIA",
+    "taboo": [
+      "Trasmissione",
+      "Pensiero",
+      "Comunicare",
+      "Parapsicologia",
+      "Mente"
+    ]
+  },
+  {
+    "word": "DVD",
+    "taboo": [
+      "Compact",
+      "Film",
+      "Dati",
+      "Lingua",
+      "Videocassetta"
+    ]
+  },
+  {
+    "word": "E-MAIL",
+    "taboo": [
+      "Elettronico",
+      "Internet",
+      "Messaggio",
+      "Indirizzo",
+      "Posta"
+    ]
+  },
+  {
+    "word": "DEPOSITO",
+    "taboo": [
+      "Bagagli",
+      "Magazzino",
+      "Conservare",
+      "Pacco",
+      "Bancario"
+    ]
+  },
+  {
+    "word": "SCRUPOLOSO",
+    "taboo": [
+      "Meticoloso",
+      "Coscienzioso",
+      "Preciso",
+      "Accurato",
+      "Diligente"
+    ]
+  },
+  {
+    "word": "TEMPERINO",
+    "taboo": [
+      "Coltello",
+      "Lama",
+      "Tagliare",
+      "Svizzero",
+      "Piccolo"
+    ]
+  },
+  {
+    "word": "TERMOMETRO",
+    "taboo": [
+      "Febbre",
+      "Misurare",
+      "Mercurio",
+      "Gradi",
+      "Malattia"
+    ]
+  },
+  {
+    "word": "DNA",
+    "taboo": [
+      "Acido",
+      "Desossiribonucleico",
+      "Ereditario",
+      "Cellula",
+      "Cromosomi"
+    ]
+  },
+  {
+    "word": "SCRUTINIO",
+    "taboo": [
+      "Esame",
+      "Segreto",
+      "Pagelle",
+      "Spoglio",
+      "Voti"
+    ]
+  },
+  {
+    "word": "SEDE",
+    "taboo": [
+      "Residenza",
+      "Dimora",
+      "Apostolica",
+      "Legale",
+      "Luogo"
+    ]
+  },
+  {
+    "word": "EFFERVESCENTE",
+    "taboo": [
+      "Acqua",
+      "Bollicine",
+      "Gassata",
+      "Liscia",
+      "Ferrarelle"
+    ]
+  },
+  {
+    "word": "ELMO",
+    "taboo": [
+      "Armatura",
+      "Protezione",
+      "Testa",
+      "Casco",
+      "Scipione"
+    ]
+  },
+  {
+    "word": "SDRAIO",
+    "taboo": [
+      "Sedile",
+      "Disteso",
+      "Orizzontale",
+      "Spiaggia",
+      "Abbronzarsi"
+    ]
+  },
+  {
+    "word": "ENCICLOPEDIA",
+    "taboo": [
+      "Opera",
+      "Libri",
+      "Volumi",
+      "Britannica",
+      "Treccani"
+    ]
+  },
+  {
+    "word": "ENOTECA",
+    "taboo": [
+      "Locale",
+      "Cantina",
+      "Degustazione",
+      "Vini",
+      "Bottiglia"
+    ]
+  },
+  {
+    "word": "EQUIVOCO",
+    "taboo": [
+      "Losco",
+      "Ambiguo",
+      "Confusione",
+      "Sbaglio",
+      "Qui pro quo"
+    ]
+  },
+  {
+    "word": "PORCOSPINO",
+    "taboo": [
+      "Animale",
+      "Istrice",
+      "Riccio",
+      "Spine",
+      "Aculei"
+    ]
+  },
+  {
+    "word": "GENUINO",
+    "taboo": [
+      "Autentico",
+      "Vero",
+      "Naturale",
+      "Spontaneo",
+      "Contraffatto"
+    ]
+  },
+  {
+    "word": "ERETICO",
+    "taboo": [
+      "Ateo",
+      "Miscredente",
+      "Religione",
+      "Dottrina",
+      "Contrario"
+    ]
+  },
+  {
+    "word": "ERGASTOLO",
+    "taboo": [
+      "Carcere",
+      "Prigione",
+      "Detenzione",
+      "Reclusione",
+      "A vita"
+    ]
+  },
+  {
+    "word": "SCIUSCIÀ",
+    "taboo": [
+      "De Sica",
+      "Lustrascarpe",
+      "Pulire",
+      "Scugnizzo",
+      "Film"
+    ]
+  },
+  {
+    "word": "SCIVOLARE",
+    "taboo": [
+      "Cadere",
+      "Ghiaccio",
+      "Scorrere",
+      "Inciampare",
+      "Buccia di banana"
+    ]
+  },
+  {
+    "word": "INTONACO",
+    "taboo": [
+      "Bianco",
+      "Muro",
+      "Soffitto",
+      "Ricoprire",
+      "Malta"
+    ]
+  },
+  {
+    "word": "ESTINTORE",
+    "taboo": [
+      "Spegnere",
+      "Fuoco",
+      "Incendio",
+      "Obbligatorio",
+      "Rosso"
+    ]
+  },
+  {
+    "word": "FABBRICA",
+    "taboo": [
+      "Officina",
+      "Stabilimento",
+      "Industria",
+      "Impresa",
+      "Produzione"
+    ]
+  },
+  {
+    "word": "POLVERIERA",
+    "taboo": [
+      "Magazzino",
+      "Deposito",
+      "Sparo",
+      "Pericolo",
+      "Esplodere"
+    ]
+  },
+  {
+    "word": "EXIT POLL",
+    "taboo": [
+      "Sondaggio",
+      "Elezioni",
+      "Voto",
+      "Seggio",
+      "Urna"
+    ]
+  },
+  {
+    "word": "RUFFIANO",
+    "taboo": [
+      "Accoppiare",
+      "Ingraziarsi",
+      "Leccapiedi",
+      "Adulare",
+      "Falso"
+    ]
+  },
+  {
+    "word": "SCHERZO",
+    "taboo": [
+      "Burla",
+      "Beffa",
+      "A parte",
+      "Ridere",
+      "Facile"
+    ]
+  },
+  {
+    "word": "RULLO",
+    "taboo": [
+      "Cilindro",
+      "Girare",
+      "Compressore",
+      "Rotolo",
+      "Fotografico"
+    ]
+  },
+  {
+    "word": "FALEGNAME",
+    "taboo": [
+      "Mestiere",
+      "Lavoro",
+      "Artigiano",
+      "Geppetto",
+      "S. Giuseppe"
+    ]
+  },
+  {
+    "word": "RUOLO",
+    "taboo": [
+      "Iscrizione",
+      "Gioco",
+      "Funzione",
+      "Ricoprire",
+      "Attore"
+    ]
+  },
+  {
+    "word": "FANTOZZI",
+    "taboo": [
+      "Paolo Villaggio",
+      "Ragioniere",
+      "Imbranato",
+      "Impacciato",
+      "Fracchia"
+    ]
+  },
+  {
+    "word": "LUNATICO",
+    "taboo": [
+      "Volubile",
+      "Incostante",
+      "Umorale",
+      "Mutevole",
+      "Variabile"
+    ]
+  },
+  {
+    "word": "TEOLOGO",
+    "taboo": [
+      "Prete",
+      "Dio",
+      "Studioso",
+      "Religioso",
+      "Esperto"
+    ]
+  },
+  {
+    "word": "TERGICRISTALLO",
+    "taboo": [
+      "Parabrezza",
+      "Pioggia",
+      "Automobile",
+      "Spazzola",
+      "Macchina"
+    ]
+  },
+  {
+    "word": "FATALE",
+    "taboo": [
+      "Letale",
+      "Attrazione",
+      "Mortale",
+      "Fascino",
+      "Femme"
+    ]
+  },
+  {
+    "word": "FERTILE",
+    "taboo": [
+      "Donna",
+      "Terreno",
+      "Riproduzione",
+      "Fecondo",
+      "Sterile"
+    ]
+  },
+  {
+    "word": "SPICCHIO",
+    "taboo": [
+      "Porzione",
+      "Parte",
+      "Fetta",
+      "Arancio",
+      "Formaggio"
+    ]
+  },
+  {
+    "word": "FIACCOLA",
+    "taboo": [
+      "Accendere",
+      "Luce",
+      "Fuoco",
+      "Olimpica",
+      "Torcia"
+    ]
+  },
+  {
+    "word": "SPIGA",
+    "taboo": [
+      "Grano",
+      "Frumento",
+      "Pannocchia",
+      "Mais",
+      "Parquet"
+    ]
+  },
+  {
+    "word": "FIORETTO",
+    "taboo": [
+      "Arma",
+      "Scherma",
+      "Sciabola",
+      "Voto",
+      "Sacrificio"
+    ]
+  },
+  {
+    "word": "FILTRO",
+    "taboo": [
+      "Aria",
+      "Olio",
+      "Bevanda",
+      "Magia",
+      "Pozione"
+    ]
+  },
+  {
+    "word": "RIVERBERO",
+    "taboo": [
+      "Eco",
+      "Suono",
+      "Luce",
+      "Riflesso",
+      "Sole"
+    ]
+  },
+  {
+    "word": "FISCO",
+    "taboo": [
+      "Stato",
+      "Erario",
+      "Tasse",
+      "Imposte",
+      "Amministrazione"
+    ]
+  },
+  {
+    "word": "FONDAZIONE",
+    "taboo": [
+      "Ente",
+      "Associazione",
+      "No profit",
+      "Culturale",
+      "Lucro"
+    ]
+  },
+  {
+    "word": "SUFFRAGIO",
+    "taboo": [
+      "Messa",
+      "Elezione",
+      "Voto",
+      "Consenso",
+      "Universale"
+    ]
+  },
+  {
+    "word": "SUITE",
+    "taboo": [
+      "Albergo",
+      "Lusso",
+      "Appartamento",
+      "Musica",
+      "Stanza"
+    ]
+  },
+  {
+    "word": "FORESTA",
+    "taboo": [
+      "Bosco",
+      "Alberi",
+      "Tarzan",
+      "Nera",
+      "Pluviale"
+    ]
+  },
+  {
+    "word": "ZAVORRA",
+    "taboo": [
+      "Peso",
+      "Nave",
+      "Sabbia",
+      "Freno",
+      "Sacco"
+    ]
+  },
+  {
+    "word": "FORMAT",
+    "taboo": [
+      "Modello",
+      "Schema",
+      "Testo",
+      "Acquistare",
+      "Programma"
+    ]
+  },
+  {
+    "word": "FRANCHISING",
+    "taboo": [
+      "Catena",
+      "Esercizi",
+      "McDonald's",
+      "Blockbusters",
+      "Benetton"
+    ]
+  },
+  {
+    "word": "RITRATTO",
+    "taboo": [
+      "Quadro",
+      "Pittore",
+      "Raffigurazione",
+      "Descrizione",
+      "Fotografia"
+    ]
+  },
+  {
+    "word": "FRANGETTA",
+    "taboo": [
+      "Pettinatura",
+      "Capelli",
+      "Corti",
+      "Fronte",
+      "Tagliare"
+    ]
+  },
+  {
+    "word": "KETCHUP",
+    "taboo": [
+      "Salsa",
+      "Pomodoro",
+      "Agrodolce",
+      "Aceto",
+      "Patatine"
+    ]
+  },
+  {
+    "word": "SCIÀ",
+    "taboo": [
+      "Regnante",
+      "Persia",
+      "Iran",
+      "Capo",
+      "Presidente"
+    ]
+  },
+  {
+    "word": "FRAPPÈ",
+    "taboo": [
+      "Latte",
+      "Fragola",
+      "Menta",
+      "Ghiaccio",
+      "Frullato"
+    ]
+  },
+  {
+    "word": "RISENTIMENTO",
+    "taboo": [
+      "Astio",
+      "Rancore",
+      "Sentimento",
+      "Ostilità",
+      "Sofferenza"
+    ]
+  },
+  {
+    "word": "FRASTUONO",
+    "taboo": [
+      "Rumore",
+      "Suono",
+      "Forte",
+      "Fracasso",
+      "Baccano"
+    ]
+  },
+  {
+    "word": "RITENUTA",
+    "taboo": [
+      "Trattenuta",
+      "Detrazione",
+      "Imposta",
+      "Reddito",
+      "D'acconto"
+    ]
+  },
+  {
+    "word": "FRENETICO",
+    "taboo": [
+      "Stressato",
+      "Ritmo",
+      "Convulso",
+      "Irrequieto",
+      "Sfrenato"
+    ]
+  },
+  {
+    "word": "FRISBEE",
+    "taboo": [
+      "Disco",
+      "Lanciare",
+      "Prendere",
+      "Cerchio",
+      "Piatto"
+    ]
+  },
+  {
+    "word": "SPALANCATO",
+    "taboo": [
+      "Braccia",
+      "Finestre",
+      "Porte",
+      "Imposte",
+      "Aperto"
+    ]
+  },
+  {
+    "word": "FRIGOBAR",
+    "taboo": [
+      "Albergo",
+      "Consumare",
+      "Freddo",
+      "Bevande",
+      "Fresco"
+    ]
+  },
+  {
+    "word": "SCIAME",
+    "taboo": [
+      "Moltitudine",
+      "Gruppo",
+      "Numeroso",
+      "Api",
+      "Miele"
+    ]
+  },
+  {
+    "word": "FRIVOLO",
+    "taboo": [
+      "Discorso",
+      "Leggero",
+      "Superficiale",
+      "Serio",
+      "Grave"
+    ]
+  },
+  {
+    "word": "SPARLARE",
+    "taboo": [
+      "Cattiveria",
+      "Male",
+      "Spalle",
+      "Spettegolare",
+      "Sproposito"
+    ]
+  },
+  {
+    "word": "MORSE",
+    "taboo": [
+      "Alfabeto",
+      "Punto",
+      "Linea",
+      "Codice",
+      "Messaggi"
+    ]
+  },
+  {
+    "word": "SPARTANO",
+    "taboo": [
+      "Austero",
+      "Città",
+      "Grecia",
+      "Sparta",
+      "Educazione"
+    ]
+  },
+  {
+    "word": "FULCRO",
+    "taboo": [
+      "Leva",
+      "Appoggio",
+      "Cardine",
+      "Perno",
+      "Centro"
+    ]
+  },
+  {
+    "word": "GABIBBO",
+    "taboo": [
+      "Pupazzo",
+      "Rosso",
+      "Canale 5",
+      "Besugo",
+      "Striscia la notizia"
+    ]
+  },
+  {
+    "word": "MAGGIOLINO",
+    "taboo": [
+      "Coccinella",
+      "Portafortuna",
+      "Coleottero",
+      "Insetto",
+      "Volkswagen"
+    ]
+  },
+  {
+    "word": "FUSTINO",
+    "taboo": [
+      "Detersivo",
+      "Polvere",
+      "Dash",
+      "Dixan",
+      "Recipiente"
+    ]
+  },
+  {
+    "word": "MAI DIRE GOL",
+    "taboo": [
+      "Gialappa's",
+      "Italia Uno",
+      "Calcio",
+      "Trasmissione",
+      "Televisiva"
+    ]
+  },
+  {
+    "word": "GADGET",
+    "taboo": [
+      "Oggetto",
+      "Piccolo",
+      "Regalo",
+      "Omaggio",
+      "Promozione"
+    ]
+  },
+  {
+    "word": "GANCIO",
+    "taboo": [
+      "Uncino",
+      "Traino",
+      "Metallo",
+      "Appendere",
+      "Pugno"
+    ]
+  },
+  {
+    "word": "MALPENSA",
+    "taboo": [
+      "Aeroporto",
+      "Milano",
+      "Varese",
+      "Scalo",
+      "Linate"
+    ]
+  },
+  {
+    "word": "GIANDUIOTTO",
+    "taboo": [
+      "Cioccolatino",
+      "Torino",
+      "Nocciola",
+      "Caffarel",
+      "Dolce"
+    ]
+  },
+  {
+    "word": "ZOTICO",
+    "taboo": [
+      "Rozzo",
+      "Incolto",
+      "Persona",
+      "Grossolano",
+      "Maleducato"
+    ]
+  },
+  {
+    "word": "GIROTONDO",
+    "taboo": [
+      "Cerchio",
+      "Gioco",
+      "Bambini",
+      "Canzone",
+      "Filastrocca"
+    ]
+  },
+  {
+    "word": "PATIBOLO",
+    "taboo": [
+      "Ghigliottina",
+      "Impiccagione",
+      "Forca",
+      "Decapitazione",
+      "Boia"
+    ]
+  },
+  {
+    "word": "SORDINA",
+    "taboo": [
+      "Udito",
+      "Di nascosto",
+      "Musica",
+      "Tromba",
+      "Attutire"
+    ]
+  },
+  {
+    "word": "GLOBULO",
+    "taboo": [
+      "Bianco",
+      "Rosso",
+      "Sangue",
+      "Emoglobina",
+      "Organismo"
+    ]
+  },
+  {
+    "word": "GO-KART",
+    "taboo": [
+      "Macchina",
+      "Autoveicolo",
+      "Monoposto",
+      "Gara",
+      "Pista"
+    ]
+  },
+  {
+    "word": "PRIMADONNA",
+    "taboo": [
+      "Star",
+      "Eccentrica",
+      "Egocentrica",
+      "Opera",
+      "Attrice"
+    ]
+  },
+  {
+    "word": "GOLOSO",
+    "taboo": [
+      "Ghiotto",
+      "Cibo",
+      "Dolci",
+      "Mangiare",
+      "Abbuffarsi"
+    ]
+  },
+  {
+    "word": "PRIMIERA",
+    "taboo": [
+      "Carte",
+      "Gioco",
+      "Punti",
+      "Scopa",
+      "Sette"
+    ]
+  },
+  {
+    "word": "GRATTARE",
+    "taboo": [
+      "Graffiare",
+      "Unghie",
+      "Prurito",
+      "Pancia",
+      "Vincere"
+    ]
+  },
+  {
+    "word": "HACKER",
+    "taboo": [
+      "Computer",
+      "Internet",
+      "Pirata",
+      "Crack",
+      "Sito"
+    ]
+  },
+  {
+    "word": "CACHE",
+    "taboo": [
+      "Memoria",
+      "Computer",
+      "Transito",
+      "Dati",
+      "Richiamare"
+    ]
+  },
+  {
+    "word": "RUBRICA",
+    "taboo": [
+      "Quaderno",
+      "Lettere",
+      "Indirizzi",
+      "Elenco",
+      "Telefonica"
+    ]
+  },
+  {
+    "word": "GRISSINO",
+    "taboo": [
+      "Pane",
+      "Cracker",
+      "Bastoncino",
+      "Croccante",
+      "Torinese"
+    ]
+  },
+  {
+    "word": "RUBINETTO",
+    "taboo": [
+      "Perdere",
+      "Chiudere",
+      "Acqua",
+      "Gas",
+      "Aprire"
+    ]
+  },
+  {
+    "word": "IGLOO",
+    "taboo": [
+      "Freddo",
+      "Ghiaccio",
+      "Polo nord",
+      "Eschimese",
+      "Casa"
+    ]
+  },
+  {
+    "word": "HELP",
+    "taboo": [
+      "Istruzioni",
+      "Chiarimenti",
+      "Informazioni",
+      "Supporto",
+      "Beatles"
+    ]
+  },
+  {
+    "word": "IDILLIACO",
+    "taboo": [
+      "Ideale",
+      "Serenità",
+      "Calmo",
+      "Quieto",
+      "Visione"
+    ]
+  },
+  {
+    "word": "HANUKKAH",
+    "taboo": [
+      "Festa",
+      "Religiosa",
+      "Ebraica",
+      "Luci",
+      "Dicembre"
+    ]
+  },
+  {
+    "word": "INCROCIO",
+    "taboo": [
+      "Strade",
+      "Traffico",
+      "Semaforo",
+      "Precedenza",
+      "Animale"
+    ]
+  },
+  {
+    "word": "HUSKY",
+    "taboo": [
+      "Cane",
+      "Bianco",
+      "Slitta",
+      "Giacca",
+      "Barbour"
+    ]
+  },
+  {
+    "word": "FAZIOSO",
+    "taboo": [
+      "Parziale",
+      "Fanatico",
+      "Giudizio",
+      "Obiettivo",
+      "Moderato"
+    ]
+  },
+  {
+    "word": "INDAGINE",
+    "taboo": [
+      "Ricerca",
+      "Poliziesca",
+      "Caso",
+      "Colpevole",
+      "Studio"
+    ]
+  },
+  {
+    "word": "ZUPPO",
+    "taboo": [
+      "Bagnato",
+      "Intriso",
+      "Acqua",
+      "Fradicio",
+      "Pioggia"
+    ]
+  },
+  {
+    "word": "INDESCRIVIBILE",
+    "taboo": [
+      "Ineffabile",
+      "Inenarrabile",
+      "Indicibile",
+      "Inspiegabile",
+      "Nulla"
+    ]
+  },
+  {
+    "word": "FEDERALISMO",
+    "taboo": [
+      "Federazione",
+      "Politica",
+      "Regioni",
+      "Autonomia",
+      "Stato"
+    ]
+  },
+  {
+    "word": "INERZIA",
+    "taboo": [
+      "Inoperosità",
+      "Oziosità",
+      "Forza",
+      "Quiete",
+      "Moto uniforme"
+    ]
+  },
+  {
+    "word": "INFLUENTE",
+    "taboo": [
+      "Personaggio",
+      "Potente",
+      "Prestigioso",
+      "Autorevole",
+      "Conoscenza"
+    ]
+  },
+  {
+    "word": "LLOYDS",
+    "taboo": [
+      "Armatori",
+      "Assicuratori",
+      "Londra",
+      "Inghilterra",
+      "Compagnia"
+    ]
+  },
+  {
+    "word": "SENATORE",
+    "taboo": [
+      "Camera",
+      "Eletto",
+      "Anziano",
+      "Votare",
+      "Parlamento"
+    ]
+  },
+  {
+    "word": "INQUILINO",
+    "taboo": [
+      "Affitto",
+      "Abitare",
+      "Casa",
+      "Palazzo",
+      "Condomino"
+    ]
+  },
+  {
+    "word": "SENAPE",
+    "taboo": [
+      "Salsa",
+      "Piccante",
+      "Mostarda",
+      "Colore",
+      "Giallo"
+    ]
+  },
+  {
+    "word": "URBI ET ORBI",
+    "taboo": [
+      "Papa",
+      "Benedizione",
+      "Santa Sede",
+      "Fedeli",
+      "Vaticano"
+    ]
+  },
+  {
+    "word": "URGENTE",
+    "taboo": [
+      "Importante",
+      "Pressante",
+      "Immediato",
+      "Telefonata",
+      "Bisogno"
+    ]
+  },
+  {
+    "word": "INVOLUCRO",
+    "taboo": [
+      "Rivestimento",
+      "Protezione",
+      "Esterno",
+      "Confenzione",
+      "Guscio"
+    ]
+  },
+  {
+    "word": "URLARE",
+    "taboo": [
+      "Strillare",
+      "Gridare",
+      "Alta",
+      "Voce",
+      "Paura"
+    ]
+  },
+  {
+    "word": "IPPICO",
+    "taboo": [
+      "Cavallo",
+      "Concorso",
+      "Equitazione",
+      "Trofeo",
+      "Darsi"
+    ]
+  },
+  {
+    "word": "TALPA",
+    "taboo": [
+      "Animale",
+      "Cieco",
+      "Tana",
+      "Sotto",
+      "Vedere"
+    ]
+  },
+  {
+    "word": "USURA",
+    "taboo": [
+      "Logorio",
+      "Utilizzo",
+      "Prestito",
+      "Interessi",
+      "Reato"
+    ]
+  },
+  {
+    "word": "SPETTABILE",
+    "taboo": [
+      "Ditta",
+      "Stimabile",
+      "Egregio",
+      "Lettera",
+      "Società"
+    ]
+  },
+  {
+    "word": "TANGENZIALE",
+    "taboo": [
+      "Autostrada",
+      "Strada",
+      "Svincolo",
+      "Raccordo",
+      "Città"
+    ]
+  },
+  {
+    "word": "JET LAG",
+    "taboo": [
+      "Sfasamento",
+      "Viaggio",
+      "Aereo",
+      "Malessere",
+      "Fuso orario"
+    ]
+  },
+  {
+    "word": "TANTRA",
+    "taboo": [
+      "Libro",
+      "Sacro",
+      "Induismo",
+      "Testo",
+      "Buddismo"
+    ]
+  },
+  {
+    "word": "TALISMANO",
+    "taboo": [
+      "Felicità",
+      "Portafortuna",
+      "Amuleto",
+      "Magia",
+      "Toccasana"
+    ]
+  },
+  {
+    "word": "SPIGOLO",
+    "taboo": [
+      "Punta",
+      "Lato",
+      "Angolo",
+      "Acuminato",
+      "Urtare"
+    ]
+  },
+  {
+    "word": "TALK SHOW",
+    "taboo": [
+      "Programma",
+      "Televisivo",
+      "Ospiti",
+      "Maurizio Costanzo",
+      "Anchor man"
+    ]
+  },
+  {
+    "word": "MANUBRIO",
+    "taboo": [
+      "Bicicletta",
+      "Motocicletta",
+      "Volante",
+      "Impugnatura",
+      "Sterzo"
+    ]
+  },
+  {
+    "word": "ANTEPRIMA",
+    "taboo": [
+      "Visione",
+      "Anticipazione",
+      "Film",
+      "Esclusiva",
+      "Proiezione"
+    ]
+  },
+  {
+    "word": "VIGNETTA",
+    "taboo": [
+      "Forattini",
+      "Satira",
+      "Caricatura",
+      "Politica",
+      "Disegno"
+    ]
+  },
+  {
+    "word": "TUBETTO",
+    "taboo": [
+      "Idraulico",
+      "Dentrifico",
+      "Catodico",
+      "Saldare",
+      "Scarico"
+    ]
+  },
+  {
+    "word": "INGANNO",
+    "taboo": [
+      "Frode",
+      "Imbroglio",
+      "Astuzia",
+      "Raggiro",
+      "Abbaglio"
+    ]
+  },
+  {
+    "word": "METAFORA",
+    "taboo": [
+      "Analogia",
+      "Retorica",
+      "Paragone",
+      "Allegoria",
+      "Il Postino"
+    ]
+  },
+  {
+    "word": "TUCANO",
+    "taboo": [
+      "Uccello",
+      "Grande",
+      "Becco",
+      "Colorato",
+      "Volatile"
+    ]
+  },
+  {
+    "word": "LOGARITMO",
+    "taboo": [
+      "Matematica",
+      "Aritmetica",
+      "Numero",
+      "Esponente",
+      "Decimale"
+    ]
+  },
+  {
+    "word": "VERIFICARE",
+    "taboo": [
+      "Controllare",
+      "Accertare",
+      "Provare",
+      "Dimostrare",
+      "Validità"
+    ]
+  },
+  {
+    "word": "LP",
+    "taboo": [
+      "Disco",
+      "Vinile",
+      "CD",
+      "Musica",
+      "Trentatre giri"
+    ]
+  },
+  {
+    "word": "MISERABILE",
+    "taboo": [
+      "Povero",
+      "Infelice",
+      "Victor Hugo",
+      "Esiguo",
+      "Spregevole"
+    ]
+  },
+  {
+    "word": "ASOCIALE",
+    "taboo": [
+      "Mondano",
+      "Uscire",
+      "Vita notturna",
+      "Casa",
+      "Solitudine"
+    ]
+  },
+  {
+    "word": "TAVERNA",
+    "taboo": [
+      "Mangiare",
+      "Trattoria",
+      "Ristorante",
+      "Rustico",
+      "Osteria"
+    ]
+  },
+  {
+    "word": "LUNGO",
+    "taboo": [
+      "Distanza",
+      "Corto",
+      "Abito",
+      "Passo",
+      "Lento"
+    ]
+  },
+  {
+    "word": "VETERINARIO",
+    "taboo": [
+      "Medico",
+      "Dottore",
+      "Animali",
+      "Curare",
+      "Ammalato"
+    ]
+  },
+  {
+    "word": "SONDAGGIO",
+    "taboo": [
+      "Indagine",
+      "Ricerca",
+      "Elettorale",
+      "Exit Poll",
+      "Inchiesta"
+    ]
+  },
+  {
+    "word": "MACISTE",
+    "taboo": [
+      "Uomo",
+      "Forte",
+      "Muscoloso",
+      "Ercole",
+      "Sansone"
+    ]
+  },
+  {
+    "word": "SONNAMBULO",
+    "taboo": [
+      "Ipnosi",
+      "Dormire",
+      "Svegliarsi",
+      "Camminare",
+      "Inconscio"
+    ]
+  },
+  {
+    "word": "MADRINA",
+    "taboo": [
+      "Battesimo",
+      "Cresima",
+      "Padrino",
+      "Donna",
+      "Figlio"
+    ]
+  },
+  {
+    "word": "TATTO",
+    "taboo": [
+      "Senso",
+      "Delicatezza",
+      "Garbo",
+      "Mano",
+      "Toccare"
+    ]
+  },
+  {
+    "word": "MENU",
+    "taboo": [
+      "Turistico",
+      "Lista",
+      "Cibi",
+      "Vini",
+      "Ristoranti"
+    ]
+  },
+  {
+    "word": "MIRRA",
+    "taboo": [
+      "Oro",
+      "Incenso",
+      "Re magi",
+      "Doni",
+      "Profumo"
+    ]
+  },
+  {
+    "word": "GIRAFFA",
+    "taboo": [
+      "Collo",
+      "Mammifero",
+      "Alta",
+      "Lungo",
+      "Microfono"
+    ]
+  },
+  {
+    "word": "CIOCCOLATO",
+    "taboo": [
+      "Latte",
+      "Cacao",
+      "Fondente",
+      "Dolce",
+      "Energetico"
+    ]
+  },
+  {
+    "word": "ON THE ROAD",
+    "taboo": [
+      "Jack Kerouac",
+      "Easy Rider",
+      "Racconto",
+      "America",
+      "Film"
+    ]
+  },
+  {
+    "word": "LUCCIO",
+    "taboo": [
+      "Pesce",
+      "Grande",
+      "Mare",
+      "Acqua",
+      "Vorace"
+    ]
+  },
+  {
+    "word": "SMEMORATO",
+    "taboo": [
+      "Perdere",
+      "Collegno",
+      "Sbadato",
+      "Distratto",
+      "Dimenticare"
+    ]
+  },
+  {
+    "word": "MITTENTE",
+    "taboo": [
+      "Spedire",
+      "Inviare",
+      "Lettera",
+      "Destinatario",
+      "Firma"
+    ]
+  },
+  {
+    "word": "GIGLIO",
+    "taboo": [
+      "Fiore",
+      "Bianco",
+      "Puro",
+      "Candido",
+      "Firenze"
+    ]
+  },
+  {
+    "word": "MUTA",
+    "taboo": [
+      "Pelle",
+      "Cani",
+      "Sub",
+      "Tuta",
+      "Parlare"
+    ]
+  },
+  {
+    "word": "CIONDOLO",
+    "taboo": [
+      "Oggetto",
+      "Pendente",
+      "Cello",
+      "Catenella",
+      "Gioiello"
+    ]
+  },
+  {
+    "word": "NOMENKLATURA",
+    "taboo": [
+      "Unione sovietica",
+      "Incarichi",
+      "Comunismo",
+      "Dirigenti",
+      "Potere"
+    ]
+  },
+  {
+    "word": "SOMARO",
+    "taboo": [
+      "Asino",
+      "Mulo",
+      "Ignorante",
+      "Ragliare",
+      "Quadrupede"
+    ]
+  },
+  {
+    "word": "BOOMERANG",
+    "taboo": [
+      "Indietro",
+      "Tornare",
+      "Lanciare",
+      "Arma",
+      "Australia"
+    ]
+  },
+  {
+    "word": "MUTUA",
+    "taboo": [
+      "Reciprocca",
+      "Cassa",
+      "Assistenza",
+      "Sanità",
+      "Malattia"
+    ]
+  },
+  {
+    "word": "OMONIMO",
+    "taboo": [
+      "Stesso",
+      "Uguale",
+      "Identico",
+      "Cognome",
+      "Nome"
+    ]
+  },
+  {
+    "word": "PANETTONE",
+    "taboo": [
+      "Dolce",
+      "Natale",
+      "Milano",
+      "Uva passa",
+      "Canditi"
+    ]
+  },
+  {
+    "word": "MANTO",
+    "taboo": [
+      "Cappa",
+      "Stradale",
+      "Coltre",
+      "Erba",
+      "Neve"
+    ]
+  },
+  {
+    "word": "SOMMARIO",
+    "taboo": [
+      "Sbrigativo",
+      "Impreciso",
+      "Sintesi",
+      "Indice",
+      "Riassunto"
+    ]
+  },
+  {
+    "word": "OLOGRAMMA",
+    "taboo": [
+      "Immagine",
+      "Disegno",
+      "Fotografia",
+      "Tridimensionale",
+      "Movimento"
+    ]
+  },
+  {
+    "word": "NO PROFIT",
+    "taboo": [
+      "Utile",
+      "Associazione",
+      "Ente",
+      "Fondazione",
+      "Beneficenza"
+    ]
+  },
+  {
+    "word": "MENESTRELLO",
+    "taboo": [
+      "Giullare",
+      "Corte",
+      "Cantastorie",
+      "Musica",
+      "Recitare"
+    ]
+  },
+  {
+    "word": "SOMMELIER",
+    "taboo": [
+      "Esperto",
+      "Degustatore",
+      "Vino",
+      "Enologo",
+      "Provare"
+    ]
+  },
+  {
+    "word": "GARGARISMO",
+    "taboo": [
+      "Gola",
+      "Collutorio",
+      "Bocca",
+      "Sciacqui",
+      "Infezione"
+    ]
+  },
+  {
+    "word": "OPACO",
+    "taboo": [
+      "Trasparente",
+      "Luce",
+      "Corpo",
+      "Oscuro",
+      "Lente"
+    ]
+  },
+  {
+    "word": "OZIO",
+    "taboo": [
+      "Inattività",
+      "Inoperosità",
+      "Pigizia",
+      "Riposo",
+      "Vizi"
+    ]
+  },
+  {
+    "word": "PALINDROMO",
+    "taboo": [
+      "Parola",
+      "Frase",
+      "Bifronte",
+      "Leggere",
+      "Contrario"
+    ]
+  },
+  {
+    "word": "SORTEGGIO",
+    "taboo": [
+      "Estrazione",
+      "Casuale",
+      "Arbitrale",
+      "Lotteria",
+      "Concorso"
+    ]
+  },
+  {
+    "word": "ZOMBIE",
+    "taboo": [
+      "Morto vivente",
+      "Romero",
+      "Spirito",
+      "Resuscitare",
+      "Cadavere"
+    ]
+  },
+  {
+    "word": "BONSAI",
+    "taboo": [
+      "Giappone",
+      "Giardino",
+      "Coltivazione",
+      "Piccolo",
+      "Radici"
+    ]
+  },
+  {
+    "word": "PAPIRO",
+    "taboo": [
+      "Pergamena",
+      "Foglio",
+      "Documento",
+      "Carta",
+      "Egitto"
+    ]
+  },
+  {
+    "word": "PARABOLA",
+    "taboo": [
+      "Satellite",
+      "Traiettoria",
+      "Antenna",
+      "Buon samaritano",
+      "Stream"
+    ]
+  },
+  {
+    "word": "ZONZO",
+    "taboo": [
+      "Vagare",
+      "Senza meta",
+      "Andare",
+      "Qua e là",
+      "Oziare"
+    ]
+  },
+  {
+    "word": "PARAPENDIO",
+    "taboo": [
+      "Sport",
+      "Paracadute",
+      "Lanciarsi",
+      "Planare",
+      "Montagna"
+    ]
+  },
+  {
+    "word": "CORDLESS",
+    "taboo": [
+      "Batteria",
+      "Fili",
+      "Telefono",
+      "Infrarossi",
+      "Distanza"
+    ]
+  },
+  {
+    "word": "REGGAE",
+    "taboo": [
+      "Musica",
+      "Calipso",
+      "Giamaica",
+      "Bob Marley",
+      "Rasta"
+    ]
+  },
+  {
+    "word": "PARERE",
+    "taboo": [
+      "Sembrare",
+      "Consiglio",
+      "Consulto",
+      "Opinione",
+      "Chiedere"
+    ]
+  },
+  {
+    "word": "PATTEGGIARE",
+    "taboo": [
+      "Concordare",
+      "Conciliare",
+      "Accordarsi",
+      "Fisco",
+      "Trattativa"
+    ]
+  },
+  {
+    "word": "TIZZONE",
+    "taboo": [
+      "Fuoco",
+      "Legno",
+      "Ardente",
+      "Bruciare",
+      "Spento"
+    ]
+  },
+  {
+    "word": "CALZAMAGLIA",
+    "taboo": [
+      "Freddo",
+      "Collant",
+      "Lana",
+      "Cotone",
+      "Stretta"
+    ]
+  },
+  {
+    "word": "PEGNO",
+    "taboo": [
+      "Pagare",
+      "Dare",
+      "Banco",
+      "Garanzia",
+      "Ipoteca"
+    ]
+  },
+  {
+    "word": "PELLICOLA",
+    "taboo": [
+      "Film",
+      "Trasparente",
+      "Sottile",
+      "Rullino",
+      "Fotografica"
+    ]
+  },
+  {
+    "word": "ERGONOMICO",
+    "taboo": [
+      "Forma",
+      "Naurale",
+      "Design",
+      "Mouuse",
+      "Tastiera"
+    ]
+  },
+  {
+    "word": "PIROETTA",
+    "taboo": [
+      "Danza",
+      "Capriola",
+      "Ruotare",
+      "Giravolta",
+      "Ballerino"
+    ]
+  },
+  {
+    "word": "PIUMINO",
+    "taboo": [
+      "D'oca",
+      "Giubbotto",
+      "Cuscino",
+      "Coperta",
+      "Caldo"
+    ]
+  },
+  {
+    "word": "PORCHETTA",
+    "taboo": [
+      "Maiale",
+      "Forno",
+      "Spiedo",
+      "Ripieno",
+      "Panino"
+    ]
+  },
+  {
+    "word": "GUELFO",
+    "taboo": [
+      "Papa",
+      "Chiesa",
+      "Teocrazia",
+      "Toscana",
+      "Ghibellino"
+    ]
+  },
+  {
+    "word": "POZZANGHERA",
+    "taboo": [
+      "Acqua",
+      "Bagnata",
+      "Sporca",
+      "Pioggia",
+      "Fango"
+    ]
+  },
+  {
+    "word": "ANFIBIO",
+    "taboo": [
+      "Animale",
+      "Terra",
+      "Acqua",
+      "Scarpone",
+      "Veicolo"
+    ]
+  },
+  {
+    "word": "PROLETARIATO",
+    "taboo": [
+      "Classe",
+      "Sociale",
+      "Dittatura",
+      "Marxismo",
+      "Comunismo"
+    ]
+  },
+  {
+    "word": "TATUAGGIO",
+    "taboo": [
+      "Applicazione",
+      "Incisione",
+      "Pelle",
+      "Permanente",
+      "Corpo"
+    ]
+  },
+  {
+    "word": "REQUIEM",
+    "taboo": [
+      "Messa",
+      "Funerale",
+      "Musica",
+      "Preghiera",
+      "Mozart"
+    ]
+  },
+  {
+    "word": "POLAROID",
+    "taboo": [
+      "Macchina",
+      "Fotografica",
+      "Sviluppo",
+      "Immediato",
+      "Istantaneo"
+    ]
+  },
+  {
+    "word": "RICOVERARE",
+    "taboo": [
+      "Ospedale",
+      "Clinica",
+      "Ferito",
+      "Ammalato",
+      "Curare"
+    ]
+  },
+  {
+    "word": "PROPAGANDA",
+    "taboo": [
+      "Pubblicità",
+      "Diffusione",
+      "Elettorale",
+      "Politica",
+      "Commerciale"
+    ]
+  },
+  {
+    "word": "PROPOSTA",
+    "taboo": [
+      "Offerta",
+      "Presentare",
+      "Lavoro",
+      "Legge",
+      "Respingere"
+    ]
+  },
+  {
+    "word": "TRAMPOLINO",
+    "taboo": [
+      "Tuffo",
+      "Sci",
+      "Salto",
+      "Elastico",
+      "Pedana"
+    ]
+  },
+  {
+    "word": "PULP",
+    "taboo": [
+      "Romanzo",
+      "Scrittore",
+      "Splatter",
+      "Film",
+      "Fiction"
+    ]
+  },
+  {
+    "word": "POKÉMON",
+    "taboo": [
+      "Gioco",
+      "Personaggio",
+      "Pikachu",
+      "Allenatore",
+      "Gettone"
+    ]
+  },
+  {
+    "word": "PUNGIGLIONE",
+    "taboo": [
+      "Vespa",
+      "Zanzara",
+      "Ape",
+      "Insetto",
+      "Aculeo"
+    ]
+  },
+  {
+    "word": "RINNEGARE",
+    "taboo": [
+      "Figlio",
+      "Amico",
+      "Cambiare",
+      "Passato",
+      "Disconoscere"
+    ]
+  },
+  {
+    "word": "FRONTALINO",
+    "taboo": [
+      "Autoradio",
+      "Asportare",
+      "Togliere",
+      "Stereo",
+      "Mettere"
+    ]
+  },
+  {
+    "word": "PURGATORIO",
+    "taboo": [
+      "Paradiso",
+      "Inferno",
+      "Anima",
+      "Dante",
+      "Divina Commedia"
+    ]
+  },
+  {
+    "word": "RATA",
+    "taboo": [
+      "Pagare",
+      "Mutuo",
+      "Mensile",
+      "Annuale",
+      "Frazione"
+    ]
+  },
+  {
+    "word": "SETTENTRIONALE",
+    "taboo": [
+      "Nord",
+      "Meridionale",
+      "Centro",
+      "Dante",
+      "Italia"
+    ]
+  },
+  {
+    "word": "SEVERO",
+    "taboo": [
+      "Rigoroso",
+      "Educazione",
+      "Austero",
+      "Serio",
+      "Padre"
+    ]
+  },
+  {
+    "word": "ANZI",
+    "taboo": [
+      "Peraltro",
+      "Invece",
+      "Opposto",
+      "Tutto",
+      "Rafforzativo"
+    ]
+  },
+  {
+    "word": "SCADENZA",
+    "taboo": [
+      "Termine",
+      "Data",
+      "Tempo",
+      "Pagamento",
+      "Cibo"
+    ]
+  },
+  {
+    "word": "RINOCERONTE",
+    "taboo": [
+      "Grande",
+      "Muso",
+      "Corna",
+      "Mammifero",
+      "Pelle"
+    ]
+  },
+  {
+    "word": "FRONDA",
+    "taboo": [
+      "Frasca",
+      "Ornamento",
+      "Alloro",
+      "Ribellione",
+      "Opposizione"
+    ]
+  },
+  {
+    "word": "PULCINELLA",
+    "taboo": [
+      "Maschera",
+      "Napoletana",
+      "Seghero",
+      "Buffone",
+      "Alighiero"
+    ]
+  },
+  {
+    "word": "ROMBO",
+    "taboo": [
+      "Quadrilatero",
+      "Equilatero",
+      "Pesce",
+      "Geometria",
+      "Trapezio"
+    ]
+  },
+  {
+    "word": "SBANDIERARE",
+    "taboo": [
+      "Evidenziare",
+      "Ostentare",
+      "Esibire",
+      "Sventolare",
+      "Tricolore"
+    ]
+  },
+  {
+    "word": "ROYALTY",
+    "taboo": [
+      "Percentuale",
+      "Utile",
+      "Fatturato",
+      "Sfruttamento",
+      "Autore"
+    ]
+  },
+  {
+    "word": "FADO",
+    "taboo": [
+      "Musica",
+      "Portogallo",
+      "Lisbona",
+      "Malinconia",
+      "Amalia Rodrigues"
+    ]
+  },
+  {
+    "word": "MANCIA",
+    "taboo": [
+      "Dare",
+      "Ricevere",
+      "Lasciare",
+      "Conto",
+      "Ristorante"
+    ]
+  },
+  {
+    "word": "SBARAGLIARE",
+    "taboo": [
+      "Nemico",
+      "Eliminare",
+      "Annientare",
+      "Sconfiggere",
+      "Trovare"
+    ]
+  },
+  {
+    "word": "SCARABOCCHIO",
+    "taboo": [
+      "Macchia",
+      "Inchiostro",
+      "Nero",
+      "Disegno",
+      "Sgorbio"
+    ]
+  },
+  {
+    "word": "TELECOMANDO",
+    "taboo": [
+      "Cambiare",
+      "Canale",
+      "Zapping",
+      "Pulsante",
+      "Onde"
+    ]
+  },
+  {
+    "word": "MANCHE",
+    "taboo": [
+      "Parte",
+      "Prima",
+      "Seconda",
+      "Slalom",
+      "Sci"
+    ]
+  },
+  {
+    "word": "SCARLATTINA",
+    "taboo": [
+      "Malattia",
+      "Morbillo",
+      "Contagio",
+      "Febbre",
+      "Rosolia"
+    ]
+  },
+  {
+    "word": "TELENOVELA",
+    "taboo": [
+      "Beautiful",
+      "Televisione",
+      "Sentieri",
+      "Puntate",
+      "Soap Opera"
+    ]
+  },
+  {
+    "word": "ZERBINOTTO",
+    "taboo": [
+      "Tappeto",
+      "Storno",
+      "Entrata",
+      "Ingresso",
+      "Emporio"
+    ]
+  },
+  {
+    "word": "YO-YO",
+    "taboo": [
+      "Giocattolo",
+      "Filo",
+      "Su e giù",
+      "Rotella",
+      "Spago"
+    ]
+  },
+  {
+    "word": "ZEN",
+    "taboo": [
+      "Ari",
+      "Budda",
+      "Religione",
+      "Giapponese",
+      "Gingrone"
+    ]
+  },
+  {
+    "word": "TARANTELLA",
+    "taboo": [
+      "Ballo",
+      "Danza",
+      "Napoli",
+      "Canzone",
+      "Tamburello"
+    ]
+  },
+  {
+    "word": "EPOPEA",
+    "taboo": [
+      "Finzione",
+      "Marenovolo",
+      "Miano Meroiola",
+      "Teatro",
+      "Resistenza"
+    ]
+  },
+  {
+    "word": "SPOT",
+    "taboo": [
+      "Televisione",
+      "Canale 5",
+      "Obiettivo",
+      "Consumatore",
+      "Pubblicità"
+    ]
+  },
+  {
+    "word": "SCHIFOSO",
+    "taboo": [
+      "Disgustoso",
+      "Pessimo",
+      "Repellente",
+      "Ripugnante",
+      "Cattivissimo"
+    ]
+  },
+  {
+    "word": "MANGANELLO",
+    "taboo": [
+      "Sfollagente",
+      "Bastone",
+      "Randello",
+      "Ferire",
+      "Polizia"
+    ]
+  },
+  {
+    "word": "SCHIVO",
+    "taboo": [
+      "Riservato",
+      "Timido",
+      "Asociale",
+      "Taciturno",
+      "Discreto"
+    ]
+  },
+  {
+    "word": "MANGIME",
+    "taboo": [
+      "Cibo",
+      "Alimento",
+      "Nutrizione",
+      "Animale",
+      "Semi"
+    ]
+  },
+  {
+    "word": "SCIATTO",
+    "taboo": [
+      "Trasandato",
+      "Vestire",
+      "Trascinato",
+      "Abbandonato",
+      "Distratto"
+    ]
+  },
+  {
+    "word": "SCIOLTO",
+    "taboo": [
+      "Liquefatto",
+      "Liberato",
+      "Svincolato",
+      "Disinvolto",
+      "Sfuso"
+    ]
+  },
+  {
+    "word": "VISCIDO",
+    "taboo": [
+      "Falso",
+      "Subdolo",
+      "Sfuggente",
+      "Anguilla",
+      "Persona"
+    ]
+  },
+  {
+    "word": "EURO",
+    "taboo": [
+      "Moneta",
+      "Valuta",
+      "Divisa",
+      "Cambio",
+      "Millenovecentotrentasei"
+    ]
+  },
+  {
+    "word": "VISPO",
+    "taboo": [
+      "Allegro",
+      "Vivace",
+      "Azzurro",
+      "Veloce",
+      "Terso"
+    ]
+  },
+  {
+    "word": "LASER",
+    "taboo": [
+      "Fascio",
+      "Raggio",
+      "Luce",
+      "CD",
+      "Stampante"
+    ]
+  },
+  {
+    "word": "SORVEGLIARE",
+    "taboo": [
+      "Vigilare",
+      "Controllare",
+      "Videosorveglianza",
+      "Polizia",
+      "Sicurezza"
+    ]
+  },
+  {
+    "word": "TAROCCO",
+    "taboo": [
+      "Cartomanzia",
+      "Futuro",
+      "Falso",
+      "Destino",
+      "Predire"
+    ]
+  },
+  {
+    "word": "MINUTO",
+    "taboo": [
+      "Secondo",
+      "Ora",
+      "Lancetta",
+      "Tempo",
+      "Piccolo"
+    ]
+  },
+  {
+    "word": "XENOFOBO",
+    "taboo": [
+      "Detestare",
+      "Odiare",
+      "Straniero",
+      "Nazione",
+      "Estero"
+    ]
+  },
+  {
+    "word": "AMPERE",
+    "taboo": [
+      "Misura",
+      "Intensità",
+      "Corrente",
+      "Elettricità",
+      "Conduttore"
+    ]
+  },
+  {
+    "word": "WINDSURF",
+    "taboo": [
+      "Tavola",
+      "Onde",
+      "Sport",
+      "Mare",
+      "Oceano"
+    ]
+  },
+  {
+    "word": "SCOMUNICARE",
+    "taboo": [
+      "Chiesa",
+      "Papa",
+      "Peccatore",
+      "Censurare",
+      "Escludere"
+    ]
+  },
+  {
+    "word": "BORSELLINO",
+    "taboo": [
+      "Giudice",
+      "Falcone",
+      "Portamonete",
+      "Portafoglio",
+      "Tasca"
+    ]
+  },
+  {
+    "word": "SCONTRINO",
+    "taboo": [
+      "Cassa",
+      "Biglietto",
+      "Fiscale",
+      "Pagamento",
+      "Battere"
+    ]
+  },
+  {
+    "word": "BAGARINO",
+    "taboo": [
+      "Biglietto",
+      "Mercato nero",
+      "Stadio",
+      "Rivendere",
+      "Prezzo"
+    ]
+  },
+  {
+    "word": "SEGGIOVIA",
+    "taboo": [
+      "Piste",
+      "Salire",
+      "Trasporto",
+      "Impianto"
+    ]
+  },
+  {
+    "word": "INCOMPIUTO",
+    "taboo": [
+      "Sinfonia",
+      "Incompleto",
+      "Terminato",
+      "Finito",
+      "Completato"
+    ]
+  },
+  {
+    "word": "RIGIDO",
+    "taboo": [
+      "Duro",
+      "Inverno",
+      "Impossibile",
+      "Freddo",
+      "Piegare"
+    ]
+  },
+  {
+    "word": "PIZZERIA",
+    "taboo": [
+      "Ristorante",
+      "Mangiare",
+      "Margherita",
+      "Quattro Stagioni",
+      "Forno a legna"
+    ]
+  },
+  {
+    "word": "SELVAGGINA",
+    "taboo": [
+      "Cacciagione",
+      "Preda",
+      "Amore",
+      "Uccello",
+      "Mangiare"
+    ]
+  },
+  {
+    "word": "REPUTAZIONE",
+    "taboo": [
+      "Fama",
+      "Buona",
+      "Cattiva",
+      "Opinione",
+      "Considerazione"
+    ]
+  },
+  {
+    "word": "IPOCONDRIA",
+    "taboo": [
+      "Molière",
+      "Finto",
+      "Immaginaria",
+      "Malattia",
+      "Autosuggestione"
+    ]
+  },
+  {
+    "word": "SENTINELLA",
+    "taboo": [
+      "Guardia",
+      "Soldato",
+      "Vigilare",
+      "Custodire",
+      "Avvistare"
+    ]
+  },
+  {
+    "word": "TINTORERIA",
+    "taboo": [
+      "Abbonzatura",
+      "Colore",
+      "Scatdurare",
+      "Luna",
+      "Sole"
+    ]
+  },
+  {
+    "word": "TOP MODEL",
+    "taboo": [
+      "Naomi Campbell",
+      "Sfilata",
+      "Passerella",
+      "Donna",
+      "Claudia Schiffer"
+    ]
+  },
+  {
+    "word": "SERENATA",
+    "taboo": [
+      "Cantare",
+      "Amore",
+      "Musica",
+      "Balcone",
+      "Sposa"
+    ]
+  },
+  {
+    "word": "SERENITÀ",
+    "taboo": [
+      "Calma",
+      "Cielo",
+      "Tranquillità",
+      "Limpidezza",
+      "Equilibrio"
+    ]
+  },
+  {
+    "word": "IGNIFUGO",
+    "taboo": [
+      "Fuoco",
+      "Calore",
+      "Incendio",
+      "Pompiere",
+      "Tutto"
+    ]
+  },
+  {
+    "word": "MP3",
+    "taboo": [
+      "Musica",
+      "Scaricare",
+      "Internet",
+      "Files",
+      "Compressione"
+    ]
+  },
+  {
+    "word": "REPLICANTE",
+    "taboo": [
+      "Blade Runner",
+      "Uomo",
+      "Identico",
+      "Uguale",
+      "Simile"
+    ]
+  },
+  {
+    "word": "TRASPARENTE",
+    "taboo": [
+      "Vedere",
+      "Attraverso",
+      "Vetro",
+      "Luce",
+      "Opaco"
+    ]
+  },
+  {
+    "word": "SETE",
+    "taboo": [
+      "Acqua",
+      "Bere",
+      "Caldo",
+      "Lingua",
+      "Arsura"
+    ]
+  },
+  {
+    "word": "NOUVELLE CUISINE",
+    "taboo": [
+      "Gastronomia",
+      "Francese",
+      "Creativa",
+      "Raffinata",
+      "Leggera"
+    ]
+  },
+  {
+    "word": "SFIZIO",
+    "taboo": [
+      "Soddisfazione",
+      "Divertimento",
+      "Voglia",
+      "Togliersi",
+      "Capriccio"
+    ]
+  },
+  {
+    "word": "TOPLESS",
+    "taboo": [
+      "Seno",
+      "Nudo",
+      "Costume",
+      "Monokini",
+      "Spiaggia"
+    ]
+  },
+  {
+    "word": "SFONDARE",
+    "taboo": [
+      "Irrompere",
+      "Aprire",
+      "Spallancare",
+      "Porta",
+      "Successo"
+    ]
+  },
+  {
+    "word": "ULTRAVIOLETTO",
+    "taboo": [
+      "Raggio",
+      "Radiazione",
+      "Elettromagnetico",
+      "Lampada",
+      "Onda"
+    ]
+  },
+  {
+    "word": "SGONFIARE",
+    "taboo": [
+      "Togliere",
+      "Aria",
+      "Ridurre",
+      "Pneumatico",
+      "Pallone"
+    ]
+  },
+  {
+    "word": "UNA TANTUM",
+    "taboo": [
+      "Volta",
+      "Finanziaria",
+      "Tassa",
+      "Imposta",
+      "Pagare"
+    ]
+  },
+  {
+    "word": "SGUARDO",
+    "taboo": [
+      "Vipia",
+      "Primo",
+      "Occhiata",
+      "Degnare",
+      "Lentura"
+    ]
+  },
+  {
+    "word": "PAVONE",
+    "taboo": [
+      "Uccello",
+      "Coda",
+      "Ruota",
+      "Piume",
+      "Colorato"
+    ]
+  },
+  {
+    "word": "SICARIO",
+    "taboo": [
+      "Assassino",
+      "Uccidere",
+      "Killer",
+      "Imbasciare",
+      "Mandante"
+    ]
+  },
+  {
+    "word": "YES MAN",
+    "taboo": [
+      "Leccapiedi",
+      "Accondiscendente",
+      "Capo",
+      "Remissivo",
+      "Servile"
+    ]
+  },
+  {
+    "word": "IMPRONTA",
+    "taboo": [
+      "Orma",
+      "Piede",
+      "Pianta",
+      "Suola",
+      "Terreno"
+    ]
+  },
+  {
+    "word": "TURNOVER",
+    "taboo": [
+      "Sostituzione",
+      "Calciatore",
+      "Giro di affari",
+      "Fatturato",
+      "Avvicendamento"
+    ]
+  },
+  {
+    "word": "SIGARO",
+    "taboo": [
+      "Avana",
+      "Cuba",
+      "Toscano",
+      "Tabacco",
+      "Fumare"
+    ]
+  },
+  {
+    "word": "SILENZIOSO",
+    "taboo": [
+      "Quieto",
+      "Riservato",
+      "Rumore",
+      "Taciturno",
+      "Parlare"
+    ]
+  },
+  {
+    "word": "ANTENNA",
+    "taboo": [
+      "Portarola",
+      "Teatro",
+      "Confirazzione",
+      "Canali",
+      "Centrale"
+    ]
+  },
+  {
+    "word": "SINCERO",
+    "taboo": [
+      "Onesto",
+      "Vero",
+      "Leale",
+      "Falso",
+      "Bugiardo"
+    ]
+  },
+  {
+    "word": "SINTOMO",
+    "taboo": [
+      "Segno",
+      "Spia",
+      "Causa",
+      "Malato",
+      "Significato"
+    ]
+  },
+  {
+    "word": "SIMULTANEA",
+    "taboo": [
+      "Istante",
+      "Stesso",
+      "Tempo",
+      "Contemporaneo",
+      "Traduzione"
+    ]
+  },
+  {
+    "word": "VIDEOMESSAGGIO",
+    "taboo": [
+      "Film",
+      "Registrare",
+      "Vedere",
+      "Inviare",
+      "Blockbuster"
+    ]
+  },
+  {
+    "word": "SMART CARD",
+    "taboo": [
+      "Pay TV",
+      "Decodificatore",
+      "Programmi",
+      "Scheda",
+      "Canale"
+    ]
+  },
+  {
+    "word": "TEGAMINO",
+    "taboo": [
+      "Pentola",
+      "Piccolo",
+      "Cucinare",
+      "Uova",
+      "Friggere"
+    ]
+  },
+  {
+    "word": "MULETTO",
+    "taboo": [
+      "Asino",
+      "Carrello",
+      "Ruote",
+      "Macchina",
+      "Sollevare"
+    ]
+  },
+  {
+    "word": "TEGOLA",
+    "taboo": [
+      "Cadere",
+      "Disgrazia",
+      "Mattone",
+      "Tetto",
+      "Fotovoltaica"
+    ]
+  },
+  {
+    "word": "SOFFICE",
+    "taboo": [
+      "Morbido",
+      "Dolce",
+      "Tenero",
+      "Lana",
+      "Letto"
+    ]
+  },
+  {
+    "word": "SOFFOCARE",
+    "taboo": [
+      "Uccidere",
+      "Aria",
+      "Respirare",
+      "Reprimere",
+      "Cuscino"
+    ]
+  },
+  {
+    "word": "SOLCO",
+    "taboo": [
+      "Aratro",
+      "Tracciare",
+      "Terreno",
+      "Segno",
+      "Impronta"
+    ]
+  },
+  {
+    "word": "SOLDATINO",
+    "taboo": [
+      "Milite",
+      "Plombolo",
+      "Giocattolo",
+      "Piombo",
+      "Collezione"
+    ]
+  },
+  {
+    "word": "SOLUZIONE",
+    "taboo": [
+      "Problema",
+      "Composto",
+      "Sciogliere",
+      "Miscela",
+      "Risposta"
+    ]
+  },
+  {
+    "word": "MANGA",
+    "taboo": [
+      "Fumetto",
+      "Cartoon giappones",
+      "Corrotto amminto",
+      "Erosmo",
+      "Sexy"
+    ]
+  },
+  {
+    "word": "SORTILEGIO",
+    "taboo": [
+      "Magia",
+      "Incantesimo",
+      "Stregoneria",
+      "Fata",
+      "Spezzare"
+    ]
+  },
+  {
+    "word": "PALESTRA",
+    "taboo": [
+      "Pesi",
+      "Esercizi",
+      "Forma",
+      "Attrezzi",
+      "Ginnastica"
+    ]
+  },
+  {
+    "word": "TARZAN",
+    "taboo": [
+      "Film",
+      "Giungla",
+      "Liana",
+      "Scimmie",
+      "Jane"
+    ]
+  },
+  {
+    "word": "SOTTOFONDO",
+    "taboo": [
+      "Terreno",
+      "Musichetta",
+      "Guizcondo",
+      "Comaneno",
+      "Stricio"
+    ]
+  },
+  {
+    "word": "TRIUMVIRATO",
+    "taboo": [
+      "Roma",
+      "Tre",
+      "Cesare",
+      "Pompeo",
+      "Crasso"
+    ]
+  },
+  {
+    "word": "SOTTOTITOLO",
+    "taboo": [
+      "Didascalia",
+      "Film",
+      "Non udente",
+      "Giomale",
+      "Gomitolo"
+    ]
+  },
+  {
+    "word": "TRONO",
+    "taboo": [
+      "Re",
+      "Sedia",
+      "Altare",
+      "Imperatore",
+      "Sovrano"
+    ]
+  },
+  {
+    "word": "SOVVERSIVO",
+    "taboo": [
+      "Rivoluzionario",
+      "Ribelle",
+      "Arcaico",
+      "Sovvertire",
+      "Anarchico"
+    ]
+  },
+  {
+    "word": "SPARTITRAFFICO",
+    "taboo": [
+      "Banchina",
+      "Strada",
+      "Corsia",
+      "Autostrada",
+      "Guardrail"
+    ]
+  },
+  {
+    "word": "MADONNA",
+    "taboo": [
+      "Cantante",
+      "Diva",
+      "Musica",
+      "Settimo cielo",
+      "Divo"
+    ]
+  },
+  {
+    "word": "ULCERA",
+    "taboo": [
+      "Malattia",
+      "Gastrite",
+      "Duodenale",
+      "Rodere",
+      "Stomaco"
+    ]
+  },
+  {
+    "word": "VULNERARE",
+    "taboo": [
+      "Offendere",
+      "Ledere",
+      "Ferire",
+      "Danneggiare",
+      "Fare male"
+    ]
+  },
+  {
+    "word": "MIMETIZZARE",
+    "taboo": [
+      "Nascondere",
+      "Adattare",
+      "Mascherare",
+      "Colore",
+      "Camaleonte"
+    ]
+  },
+  {
+    "word": "SPAVENTO",
+    "taboo": [
+      "Paura",
+      "Timore",
+      "Soprassalto",
+      "Incute",
+      "Provare"
+    ]
+  },
+  {
+    "word": "SPEAKER",
+    "taboo": [
+      "Voce",
+      "Attore",
+      "Doppiare",
+      "Annunciatore",
+      "Stadio"
+    ]
+  },
+  {
+    "word": "MIAO",
+    "taboo": [
+      "Miagolare",
+      "Felino",
+      "Gatto",
+      "Animale",
+      "Domestico"
+    ]
+  },
+  {
+    "word": "SPEDIZIONE",
+    "taboo": [
+      "Vasco Rossi",
+      "Paura",
+      "Temerario",
+      "Rischio",
+      "Vita"
+    ]
+  },
+  {
+    "word": "METROPOLITANA",
+    "taboo": [
+      "Treno",
+      "Sotterranea",
+      "Linea",
+      "Rotaie",
+      "Trasporto"
+    ]
+  },
+  {
+    "word": "VODKA",
+    "taboo": [
+      "Russia",
+      "Bevanda",
+      "Alcolica",
+      "Absolut",
+      "Acquavite"
+    ]
+  },
+  {
+    "word": "SPIRALE",
+    "taboo": [
+      "Anticoncezionale",
+      "Molle",
+      "Curva",
+      "Cervello",
+      "Violenta"
+    ]
+  },
+  {
+    "word": "MANGO",
+    "taboo": [
+      "Frutto",
+      "Tropicale",
+      "Polpa",
+      "Esotico",
+      "Cantante"
+    ]
+  },
+  {
+    "word": "SPRUZZARE",
+    "taboo": [
+      "Acqua",
+      "Getto",
+      "Collona",
+      "Bagnare",
+      "Spargere"
+    ]
+  },
+  {
+    "word": "ZIBALDONE",
+    "taboo": [
+      "Quaderno",
+      "Appunti",
+      "Pensieri",
+      "Note",
+      "Leopardi"
+    ]
+  },
+  {
+    "word": "SQUATTER",
+    "taboo": [
+      "Anarchico",
+      "Invasore",
+      "Occupare",
+      "Abusivo",
+      "Casa"
+    ]
+  },
+  {
+    "word": "ZINCO",
+    "taboo": [
+      "Elemento",
+      "Metallo",
+      "Grigio",
+      "Protettivo",
+      "Carbone"
+    ]
+  },
+  {
+    "word": "SQUITTIRE",
+    "taboo": [
+      "Emblema",
+      "Verso",
+      "Topo",
+      "Roditore",
+      "Acuto"
+    ]
+  },
+  {
+    "word": "SRADICARE",
+    "taboo": [
+      "Albero",
+      "Pianta",
+      "Vegetale",
+      "Tagliare",
+      "Estrarre"
+    ]
+  },
+  {
+    "word": "VOLT",
+    "taboo": [
+      "Potenziale",
+      "Tensione",
+      "Elettricità",
+      "Misura",
+      "Alessandro"
+    ]
+  },
+  {
+    "word": "TAILLEUR",
+    "taboo": [
+      "Giacca",
+      "Gonna",
+      "Vestito",
+      "Donna",
+      "Femminile"
+    ]
+  },
+  {
+    "word": "MINUETTO",
+    "taboo": [
+      "Musica",
+      "Danza",
+      "Sonata",
+      "Movimento",
+      "Haydn"
+    ]
+  },
+  {
+    "word": "STANTUFFO",
+    "taboo": [
+      "Su",
+      "Giù",
+      "Cilindro",
+      "Motore",
+      "Biella"
+    ]
+  },
+  {
+    "word": "VOLUBILE",
+    "taboo": [
+      "Cambiare",
+      "Variabile",
+      "Mutabile",
+      "Instabile",
+      "Incostante"
+    ]
+  },
+  {
+    "word": "STIMOLO",
+    "taboo": [
+      "Motivo",
+      "Incentivo",
+      "Pungolo",
+      "Interesse",
+      "Sprone"
+    ]
+  },
+  {
+    "word": "VOLVO",
+    "taboo": [
+      "Marcia",
+      "Automobile",
+      "Macchina",
+      "Svedese",
+      "Station wagon"
+    ]
+  },
+  {
+    "word": "STONARE",
+    "taboo": [
+      "Stardire",
+      "Cantare",
+      "Nota",
+      "Suonare",
+      "Steccare"
+    ]
+  },
+  {
+    "word": "CELESTE",
+    "taboo": [
+      "Azzurro",
+      "Aria",
+      "Cielo",
+      "Nuvole",
+      "Puro"
+    ]
+  },
+  {
+    "word": "STORYBOARD",
+    "taboo": [
+      "Bozzetto",
+      "Pubblicità",
+      "Sequenza",
+      "Immagini",
+      "Spot"
+    ]
+  },
+  {
+    "word": "STRABISMO",
+    "taboo": [
+      "Deviazione",
+      "Occhi",
+      "Vista",
+      "Sguardo",
+      "Convergente"
+    ]
+  },
+  {
+    "word": "PAY TV",
+    "taboo": [
+      "Telepiù",
+      "Abbonamento",
+      "Decodificatore",
+      "Criptare",
+      "Decoder"
+    ]
+  },
+  {
+    "word": "MIMO",
+    "taboo": [
+      "Attore",
+      "Muore",
+      "Gesti",
+      "Imitare",
+      "Marcel Marceau"
+    ]
+  },
+  {
+    "word": "STRIZZACERVELLI",
+    "taboo": [
+      "Psicologo",
+      "Psichiatra",
+      "Psicanalista",
+      "Medico",
+      "Psicoterapeuta"
+    ]
+  },
+  {
+    "word": "STRUZZO",
+    "taboo": [
+      "Grosso",
+      "Uccello",
+      "Testa",
+      "Sabbia",
+      "Piume"
+    ]
+  },
+  {
+    "word": "TECNO",
+    "taboo": [
+      "Musica",
+      "Ballo",
+      "Discoteca",
+      "Rave",
+      "Ecstasy"
+    ]
+  },
+  {
+    "word": "SUPERGIGANTE",
+    "taboo": [
+      "Discesa Libera",
+      "Specialità",
+      "Slalom",
+      "Neve",
+      "Sci"
+    ]
+  },
+  {
+    "word": "VIVAVOCE",
+    "taboo": [
+      "Telefono",
+      "Parlare",
+      "Senza",
+      "Cornetta",
+      "Amplificare"
+    ]
+  },
+  {
+    "word": "SUPPORRE",
+    "taboo": [
+      "Immaginare",
+      "Pensare",
+      "Ritenere",
+      "Presumere",
+      "Innocenza"
+    ]
+  },
+  {
+    "word": "AFFERRARE",
+    "taboo": [
+      "Prendere",
+      "Carpire",
+      "Ghermire",
+      "Cogliere",
+      "Capire"
+    ]
+  },
+  {
+    "word": "AFFATTO",
+    "taboo": [
+      "Niente",
+      "Tutto",
+      "Mai!",
+      "Nulla",
+      "Negare"
+    ]
+  },
+  {
+    "word": "MERINGA",
+    "taboo": [
+      "Dolce",
+      "Chiara",
+      "Uovo",
+      "Zucchero",
+      "Bianca"
+    ]
+  },
+  {
+    "word": "ACCESSORIO",
+    "taboo": [
+      "Principale",
+      "Essenziale",
+      "Contorno",
+      "Secondario",
+      "Aggiungere"
+    ]
+  },
+  {
+    "word": "ACCOLTELLARE",
+    "taboo": [
+      "Ferire",
+      "Uccidere",
+      "Posata",
+      "Lama",
+      "Omicidio"
+    ]
+  },
+  {
+    "word": "ACCIUGA",
+    "taboo": [
+      "Sottile",
+      "Magro",
+      "Pesce",
+      "Sardina",
+      "Striscia"
+    ]
+  },
+  {
+    "word": "ADDORMENTARSI",
+    "taboo": [
+      "Sonno",
+      "Letto",
+      "Sogno",
+      "Notte",
+      "Svegliarsi"
+    ]
+  },
+  {
+    "word": "ACCUDIRE",
+    "taboo": [
+      "Casa",
+      "Dedica",
+      "Curare",
+      "Badora",
+      "Assistere"
+    ]
+  },
+  {
+    "word": "ABBANDONARE",
+    "taboo": [
+      "Lasciare",
+      "Solo",
+      "Rifiuto",
+      "Cedere",
+      "Gara"
+    ]
+  },
+  {
+    "word": "SOLETTA",
+    "taboo": [
+      "Terra",
+      "Puzzetto",
+      "Pregatina",
+      "Quadrettino",
+      "Zucchero"
+    ]
+  },
+  {
+    "word": "AGRODOLCE",
+    "taboo": [
+      "Sapore",
+      "Aceto",
+      "Cinese",
+      "Limone",
+      "Amaro"
+    ]
+  },
+  {
+    "word": "AGRARIO",
+    "taboo": [
+      "Campagna",
+      "Universale",
+      "Coltivazione",
+      "Agricoltura",
+      "Consorzio"
+    ]
+  },
+  {
+    "word": "ALLACCIAMENTO",
+    "taboo": [
+      "Telefono",
+      "Luce",
+      "Fune",
+      "Connessione",
+      "Rete"
+    ]
+  },
+  {
+    "word": "ALIENO",
+    "taboo": [
+      "Estraneo",
+      "Extraterrestre",
+      "Fantascienza",
+      "E.T.",
+      "Vendere"
+    ]
+  },
+  {
+    "word": "ALMANACCO",
+    "taboo": [
+      "Raccolta",
+      "Annuario",
+      "Calendario",
+      "Fatti",
+      "Notizie"
+    ]
+  },
+  {
+    "word": "ALLENARE",
+    "taboo": [
+      "Preparare",
+      "Esercitare",
+      "Atleta",
+      "Preparazione",
+      "Tecnico"
+    ]
+  },
+  {
+    "word": "LITIGIO",
+    "taboo": [
+      "Alterco",
+      "Violento",
+      "Insulto",
+      "Contrasto",
+      "Contesa"
+    ]
+  },
+  {
+    "word": "ALTERARE",
+    "taboo": [
+      "Modificare",
+      "Cambiare",
+      "Innamorato",
+      "Ployboy",
+      "Irritarsi"
+    ]
+  },
+  {
+    "word": "AMBIDESTRO",
+    "taboo": [
+      "Sinistra",
+      "Mano",
+      "Ambivalente",
+      "Mancino",
+      "Indifferente"
+    ]
+  },
+  {
+    "word": "LATIN LOVER",
+    "taboo": [
+      "Dongiovanni",
+      "Sechutore",
+      "Amatore",
+      "Innamorato",
+      "Playboy"
+    ]
+  },
+  {
+    "word": "SPELLING",
+    "taboo": [
+      "Sillabare",
+      "Lettere",
+      "Separare",
+      "Competare",
+      "Lentamente"
+    ]
+  },
+  {
+    "word": "AMMICCARE",
+    "taboo": [
+      "Strizzare",
+      "Occhito",
+      "Cenno",
+      "Infesta",
+      "Aludere"
+    ]
+  },
+  {
+    "word": "ANALOGIA",
+    "taboo": [
+      "Somiglianza",
+      "Paragone",
+      "Affinità",
+      "Corrispondenza",
+      "Uguale"
+    ]
+  },
+  {
+    "word": "ANALOGICO",
+    "taboo": [
+      "Farmaco",
+      "Antidolorifico",
+      "Analgesico",
+      "Medicina",
+      "Male"
+    ]
+  },
+  {
+    "word": "ANTECEDENTE",
+    "taboo": [
+      "Precedente",
+      "Prima",
+      "Successivo",
+      "Conseguente",
+      "Dopo"
+    ]
+  },
+  {
+    "word": "LINK",
+    "taboo": [
+      "Collegamento",
+      "Ipertesto",
+      "HTML",
+      "Internet",
+      "Cliccare"
+    ]
+  },
+  {
+    "word": "ALLARME",
+    "taboo": [
+      "Auto",
+      "Casa",
+      "Sirena",
+      "Ladro",
+      "Suonare"
+    ]
+  },
+  {
+    "word": "ANTIMAFIA",
+    "taboo": [
+      "Commissione",
+      "Combattere",
+      "Repressione",
+      "Legge",
+      "Camorra"
+    ]
+  },
+  {
+    "word": "APATIA",
+    "taboo": [
+      "Indifferenza",
+      "Volontà",
+      "Interesse",
+      "Sentimento",
+      "Emozione"
+    ]
+  },
+  {
+    "word": "AORTA",
+    "taboo": [
+      "Ventricolo",
+      "Vene",
+      "Sangue",
+      "Arteria",
+      "Cuore"
+    ]
+  },
+  {
+    "word": "LAND ROVER",
+    "taboo": [
+      "Jeep",
+      "Fuori strada",
+      "Autovettura",
+      "Macchina",
+      "Ruote motrici"
+    ]
+  },
+  {
+    "word": "APPARENZA",
+    "taboo": [
+      "Esistere",
+      "Forma",
+      "Sembianza",
+      "Sostanza",
+      "Apparire"
+    ]
+  },
+  {
+    "word": "AQUAPLANING",
+    "taboo": [
+      "Asfalto",
+      "Bagnato",
+      "Auto",
+      "Aderenza",
+      "Strada"
+    ]
+  },
+  {
+    "word": "APPRENDERE",
+    "taboo": [
+      "Capire",
+      "Conoscere",
+      "Imparare",
+      "Concetto",
+      "Notizia"
+    ]
+  },
+  {
+    "word": "ARCA",
+    "taboo": [
+      "Imbarcazione",
+      "Noè",
+      "Diluvio Universale",
+      "Acqua",
+      "Animali"
+    ]
+  },
+  {
+    "word": "ARBITRO",
+    "taboo": [
+      "Calcio",
+      "Guardalinee",
+      "Fischietto",
+      "Rigore",
+      "Fischio"
+    ]
+  },
+  {
+    "word": "ARETINO",
+    "taboo": [
+      "Arezzo",
+      "Pietro",
+      "Poeta",
+      "Città",
+      "Toscana"
+    ]
+  },
+  {
+    "word": "ARDENTE",
+    "taboo": [
+      "Caldo",
+      "Sole",
+      "Sabbia",
+      "Deserto",
+      "Bruciante"
+    ]
+  },
+  {
+    "word": "FRUSTRAZIONE",
+    "taboo": [
+      "Complesso",
+      "Depressione",
+      "Insoddisfazione",
+      "Insuccesso",
+      "Problema"
+    ]
+  },
+  {
+    "word": "ARITMETICA",
+    "taboo": [
+      "Matematica",
+      "Numeri",
+      "Scuola",
+      "Operazione",
+      "Algebra"
+    ]
+  },
+  {
+    "word": "ARPA",
+    "taboo": [
+      "Strumento",
+      "Musicale",
+      "Corda",
+      "Celtica",
+      "Pizzicare"
+    ]
+  },
+  {
+    "word": "AROMA",
+    "taboo": [
+      "Fragranza",
+      "Sapore",
+      "Odore",
+      "Olfatto",
+      "Intenso"
+    ]
+  },
+  {
+    "word": "ARTICO",
+    "taboo": [
+      "Circolo",
+      "Polo",
+      "Nord",
+      "Calotta",
+      "Ghiaccio"
+    ]
+  },
+  {
+    "word": "ART DIRECTOR",
+    "taboo": [
+      "Pubblicità",
+      "Disegno",
+      "Copywriter",
+      "Agenzia",
+      "Grafica"
+    ]
+  },
+  {
+    "word": "IPERTESTO",
+    "taboo": [
+      "Informazioni",
+      "Collegamenti",
+      "Computer",
+      "Link",
+      "Internet"
+    ]
+  },
+  {
+    "word": "SARTORIA",
+    "taboo": [
+      "Areesa",
+      "Lavoratore",
+      "Artigiano",
+      "Moda",
+      "Scortoia"
+    ]
+  },
+  {
+    "word": "ATTESTATO",
+    "taboo": [
+      "Dimostrazione",
+      "Documento",
+      "Partecipazione",
+      "Dichiarazione",
+      "Prova"
+    ]
+  },
+  {
+    "word": "ATELIER",
+    "taboo": [
+      "Storia",
+      "Artista",
+      "Lavoro",
+      "Artigiano",
+      "Mostra"
+    ]
+  },
+  {
+    "word": "AUDACE",
+    "taboo": [
+      "Pericolo",
+      "Coraggioso",
+      "Osare",
+      "Difficoltà",
+      "Fortuna"
+    ]
+  },
+  {
+    "word": "ATTIRARE",
+    "taboo": [
+      "Calamita",
+      "Polarità",
+      "Magnete",
+      "Fisica",
+      "Forte"
+    ]
+  },
+  {
+    "word": "AULA",
+    "taboo": [
+      "Magna",
+      "Scuola",
+      "Universitaria",
+      "Studiare",
+      "Classe"
+    ]
+  },
+  {
+    "word": "BACKGROUND",
+    "taboo": [
+      "Sfondo",
+      "Musicale",
+      "Situazione",
+      "Substrato",
+      "Dietro"
+    ]
+  },
+  {
+    "word": "AUREOLA",
+    "taboo": [
+      "Santo",
+      "Luce",
+      "Cerchio",
+      "Corona",
+      "Splendore"
+    ]
+  },
+  {
+    "word": "AUTOVETTURE",
+    "taboo": [
+      "Macchine",
+      "Inquinamento",
+      "Benzina",
+      "Limitazione",
+      "Austerity"
+    ]
+  },
+  {
+    "word": "SNOB",
+    "taboo": [
+      "Cielo",
+      "Elevato",
+      "Sociale",
+      "Nobiltà",
+      "Guanti"
+    ]
+  },
+  {
+    "word": "AUTOCONTROLLO",
+    "taboo": [
+      "Dominio",
+      "Calma",
+      "Perdere",
+      "Rabbia",
+      "Mantenere"
+    ]
+  },
+  {
+    "word": "AVAMBRACCIO",
+    "taboo": [
+      "Arto",
+      "Corpo",
+      "Gomito",
+      "Mano",
+      "Polso"
+    ]
+  },
+  {
+    "word": "AUTOVELOX",
+    "taboo": [
+      "Rilevare",
+      "Velocità",
+      "Massima",
+      "Multa",
+      "Fotografia"
+    ]
+  },
+  {
+    "word": "BABELE",
+    "taboo": [
+      "Torre",
+      "Caos",
+      "Lingue",
+      "Disordine",
+      "Assiri"
+    ]
+  },
+  {
+    "word": "BABBUCCIA",
+    "taboo": [
+      "Calzature",
+      "Scarpa",
+      "Comoda",
+      "Pelle",
+      "Pantofola"
+    ]
+  },
+  {
+    "word": "BADGE",
+    "taboo": [
+      "Placchetta",
+      "Tessera",
+      "Cartellino",
+      "Riconoscimento",
+      "Distintivo"
+    ]
+  },
+  {
+    "word": "SEGHERIA",
+    "taboo": [
+      "Falegnameria",
+      "Legno",
+      "Segnale",
+      "Stabilimento",
+      "Troco"
+    ]
+  },
+  {
+    "word": "BALDORIA",
+    "taboo": [
+      "Schiamazzare",
+      "Allegria",
+      "Baccano",
+      "Rumore",
+      "Confusione"
+    ]
+  },
+  {
+    "word": "BAGNACAUDA",
+    "taboo": [
+      "Antipasto",
+      "Piemonte",
+      "Acciughe",
+      "Aglio",
+      "Olio"
+    ]
+  },
+  {
+    "word": "BALNEARE",
+    "taboo": [
+      "Mare",
+      "Spiaggia",
+      "Stabilimento",
+      "Bagno",
+      "Divieto"
+    ]
+  },
+  {
+    "word": "BALLOTTAGGIO",
+    "taboo": [
+      "Elezioni",
+      "Testa a testa",
+      "Scrutinio",
+      "Maggioritario",
+      "Scrutinio"
+    ]
+  },
+  {
+    "word": "RAGAZZO",
+    "taboo": [
+      "Bambino",
+      "Uomo",
+      "Piccolo",
+      "Figlio",
+      "Sesso maschile"
+    ]
+  },
+  {
+    "word": "BALSAMICO",
+    "taboo": [
+      "Aceto",
+      "Olio",
+      "Medicinale",
+      "Shampoo",
+      "Aromatico"
+    ]
+  },
+  {
+    "word": "BARATRO",
+    "taboo": [
+      "Abisso",
+      "Precipizio",
+      "Piombare",
+      "Cadere",
+      "Basso"
+    ]
+  },
+  {
+    "word": "BARARE",
+    "taboo": [
+      "Imbrogliare",
+      "Frodare",
+      "Care",
+      "Poker",
+      "Ingannare"
+    ]
+  },
+  {
+    "word": "BAROMETRO",
+    "taboo": [
+      "Misurare",
+      "Pressione",
+      "Atmosferica",
+      "Mercurio",
+      "Colonnina"
+    ]
+  },
+  {
+    "word": "BAROLO",
+    "taboo": [
+      "Vino",
+      "Rosso",
+      "Piemontese",
+      "Bere",
+      "Pregiato"
+    ]
+  },
+  {
+    "word": "BATUFFOLO",
+    "taboo": [
+      "Lana",
+      "Cotone",
+      "Ovatta",
+      "Soffice",
+      "Piccolo"
+    ]
+  },
+  {
+    "word": "BASSOTTO",
+    "taboo": [
+      "Piccolo",
+      "Cane",
+      "Basso",
+      "Corto",
+      "Johnny"
+    ]
+  },
+  {
+    "word": "BERGAMASCO",
+    "taboo": [
+      "Dialetto",
+      "Lombardia",
+      "Città",
+      "Atalanta",
+      "Serio"
+    ]
+  },
+  {
+    "word": "BENVENUTO",
+    "taboo": [
+      "Ospite",
+      "Saluto",
+      "Introduzione",
+      "Nuovo",
+      "Accoglienza"
+    ]
+  },
+  {
+    "word": "BIGAMO",
+    "taboo": [
+      "Due",
+      "Moglie",
+      "Infedele",
+      "Fedifrago",
+      "Matrimonio"
+    ]
+  },
+  {
+    "word": "BETA",
+    "taboo": [
+      "Greco",
+      "Alfa",
+      "Lettera",
+      "Alfabeto",
+      "Seconda"
+    ]
+  },
+  {
+    "word": "MOUSE",
+    "taboo": [
+      "Muovere",
+      "Schermo",
+      "Cursore",
+      "Puntatore",
+      "Computer"
+    ]
+  },
+  {
+    "word": "BILICO",
+    "taboo": [
+      "Instabile",
+      "Equilibrio",
+      "Fili",
+      "Incertezza",
+      "Ondeggiare"
+    ]
+  },
+  {
+    "word": "BIODEGRADABILE",
+    "taboo": [
+      "Ecologia",
+      "Inquinamento",
+      "Verde",
+      "Composto",
+      "Decomponibile"
+    ]
+  },
+  {
+    "word": "BILOCALE",
+    "taboo": [
+      "Vano",
+      "Casa",
+      "Due",
+      "Sistema",
+      "Abitare"
+    ]
+  },
+  {
+    "word": "ORTO",
+    "taboo": [
+      "Botanico",
+      "Coltivare",
+      "Terreno",
+      "Ortaggi",
+      "Zappare"
+    ]
+  },
+  {
+    "word": "OPPOSIZIONE",
+    "taboo": [
+      "Minoranza",
+      "Govemo",
+      "Maggioranza",
+      "Contrasto",
+      "Contrario"
+    ]
+  },
+  {
+    "word": "BISCIONE",
+    "taboo": [
+      "Canale 5",
+      "Serpe",
+      "Milano",
+      "Stemma",
+      "Visconti"
+    ]
+  },
+  {
+    "word": "BISCHERO",
+    "taboo": [
+      "Grullo",
+      "Stupido",
+      "Sciocco",
+      "Stolto",
+      "Semplice"
+    ]
+  },
+  {
+    "word": "BLOCCASTERZO",
+    "taboo": [
+      "Antifurto",
+      "Volante",
+      "Automobile",
+      "Ladro",
+      "Macchina"
+    ]
+  },
+  {
+    "word": "BLOB",
+    "taboo": [
+      "Sostanza",
+      "Rai",
+      "Televisiva",
+      "Trasmissione",
+      "Spezzoni"
+    ]
+  },
+  {
+    "word": "BORGO",
+    "taboo": [
+      "Piccolo",
+      "Paese",
+      "Medievale",
+      "Quartiere",
+      "Marinaio"
+    ]
+  },
+  {
+    "word": "BOREALE",
+    "taboo": [
+      "Settembrionale",
+      "Polo Nord",
+      "Aurora",
+      "Equatore",
+      "Emisfero"
+    ]
+  },
+  {
+    "word": "GABBIANO",
+    "taboo": [
+      "Volto",
+      "Uccello",
+      "Mare",
+      "Pesce",
+      "J. Livingstone"
+    ]
+  },
+  {
+    "word": "HARE KRISHNA",
+    "taboo": [
+      "Indiana",
+      "Religione",
+      "Arancione",
+      "India",
+      "Setta"
+    ]
+  },
+  {
+    "word": "BRAILLE",
+    "taboo": [
+      "Cieco",
+      "Non vedente",
+      "Alfabeto",
+      "Scrittura",
+      "Lettura"
+    ]
+  },
+  {
+    "word": "BRACCO",
+    "taboo": [
+      "Poliziotto",
+      "Caccia",
+      "Bello",
+      "Quadrupede",
+      "Cane"
+    ]
+  },
+  {
+    "word": "BRICOLAGE",
+    "taboo": [
+      "Fare da sé",
+      "Lavoro",
+      "Casa",
+      "Riparazioni",
+      "Falegnameria"
+    ]
+  },
+  {
+    "word": "BREZZA",
+    "taboo": [
+      "Vento",
+      "Mare",
+      "Terra",
+      "Debole",
+      "Leggero"
+    ]
+  },
+  {
+    "word": "BRINDISI",
+    "taboo": [
+      "Città",
+      "Puglia",
+      "Calici",
+      "Cic cin",
+      "Augurale"
+    ]
+  },
+  {
+    "word": "BRILLANTANTE",
+    "taboo": [
+      "Lucido",
+      "Pulire",
+      "Luccichio",
+      "Detergente",
+      "Bicchieri"
+    ]
+  },
+  {
+    "word": "IMPRUDENTE",
+    "taboo": [
+      "Temerario",
+      "Sventato",
+      "Sbadato",
+      "Incauto",
+      "Azzardato"
+    ]
+  },
+  {
+    "word": "ILLEGITTIMO",
+    "taboo": [
+      "Illegale",
+      "Figlio",
+      "Valido",
+      "Illegale",
+      "Cessare"
+    ]
+  },
+  {
+    "word": "BRONCHITE",
+    "taboo": [
+      "Raffreddore",
+      "Tossire",
+      "Starnutire",
+      "Polmoni",
+      "Acuta"
+    ]
+  },
+  {
+    "word": "BROKER",
+    "taboo": [
+      "Intermediario",
+      "Assicurazioni",
+      "Mediatore",
+      "Affari",
+      "Borsa"
+    ]
+  },
+  {
+    "word": "POSTERO",
+    "taboo": [
+      "Futuro",
+      "Generazione",
+      "Dopo",
+      "Successivo",
+      "Ardua sentenza"
+    ]
+  },
+  {
+    "word": "POSTER",
+    "taboo": [
+      "Cartellone",
+      "Appendere",
+      "Foto",
+      "Cantante",
+      "Calciatore"
+    ]
+  },
+  {
+    "word": "POST-IT",
+    "taboo": [
+      "3M",
+      "Memo",
+      "Adesivo",
+      "Foglietto",
+      "Rimovibile"
+    ]
+  },
+  {
+    "word": "BRUFOLO",
+    "taboo": [
+      "Pelle",
+      "Anche",
+      "Foruncolo",
+      "Nero",
+      "Neo"
+    ]
+  },
+  {
+    "word": "BUFFET",
+    "taboo": [
+      "Tavolo",
+      "Cibo",
+      "Ristorante",
+      "Mangiare",
+      "In piedi"
+    ]
+  },
+  {
+    "word": "BUFFA",
+    "taboo": [
+      "Tempesta",
+      "Raffica",
+      "Temporale",
+      "Vento",
+      "Pioggia"
+    ]
+  },
+  {
+    "word": "DIETETICA",
+    "taboo": [
+      "Ingrassare",
+      "Mangiare",
+      "Malattia",
+      "Cibo",
+      "Anoressia"
+    ]
+  },
+  {
+    "word": "BUNGALOW",
+    "taboo": [
+      "Hotel",
+      "Capanna",
+      "Turista",
+      "Villino",
+      "Campeggio"
+    ]
+  },
+  {
+    "word": "SCORTESE",
+    "taboo": [
+      "Maleducato",
+      "Villano",
+      "Zoticco",
+      "Comportarsi",
+      "Signorile"
+    ]
+  },
+  {
+    "word": "BUTTAFUORI",
+    "taboo": [
+      "Locali",
+      "Discoteche",
+      "Entrata",
+      "Estromettere",
+      "Cacciare"
+    ]
+  },
+  {
+    "word": "CACAO",
+    "taboo": [
+      "Pianta",
+      "Cioccolato",
+      "Burro",
+      "Amaro",
+      "Dolce"
+    ]
+  },
+  {
+    "word": "CABINA",
+    "taboo": [
+      "Nave",
+      "Docia",
+      "Vano",
+      "Telefonica",
+      "Elettorale"
+    ]
+  },
+  {
+    "word": "INFORCARE",
+    "taboo": [
+      "Forca",
+      "Strada",
+      "Prendere",
+      "Slalom",
+      "Paletto"
+    ]
+  },
+  {
+    "word": "CACTUS",
+    "taboo": [
+      "Pianta",
+      "Spine",
+      "Grasso",
+      "Sempreverde",
+      "Deserto"
+    ]
+  },
+  {
+    "word": "CAIO",
+    "taboo": [
+      "Tizio",
+      "Sempronio",
+      "Nome",
+      "Persona",
+      "Indeterminata"
+    ]
+  },
+  {
+    "word": "SIRTAKI",
+    "taboo": [
+      "Zorba",
+      "Greco",
+      "Bolla",
+      "Danza",
+      "Musica"
+    ]
+  },
+  {
+    "word": "CALAMARO",
+    "taboo": [
+      "Fritto",
+      "Mollusco",
+      "Mangiare",
+      "Liquido",
+      "Totano"
+    ]
+  },
+  {
+    "word": "SISMA",
+    "taboo": [
+      "Scossa",
+      "Tellurico",
+      "Terremoto",
+      "Merelli",
+      "Ternate"
+    ]
+  },
+  {
+    "word": "CALCESTRUZZO",
+    "taboo": [
+      "Costruzione",
+      "Materiale",
+      "Cemento",
+      "Acqua",
+      "Ghiaia"
+    ]
+  },
+  {
+    "word": "SLOT MACCHINE",
+    "taboo": [
+      "Solidi",
+      "Gettone",
+      "Gioco",
+      "Casinò",
+      "Moneta"
+    ]
+  },
+  {
+    "word": "GIAMBURRASCA",
+    "taboo": [
+      "Monello",
+      "Giornalino",
+      "Colleggio",
+      "Rita Pavone",
+      "Pappa col pomodoro"
+    ]
+  },
+  {
+    "word": "CALEIDOSCOPIO",
+    "taboo": [
+      "Tubo",
+      "Girare",
+      "Cillindro",
+      "Specchietto",
+      "Luce"
+    ]
+  },
+  {
+    "word": "CALMA",
+    "taboo": [
+      "Serenità",
+      "Tranquillo",
+      "Agitato",
+      "Sangue freddo",
+      "Quiete"
+    ]
+  },
+  {
+    "word": "CALLIGRAFIA",
+    "taboo": [
+      "Bella",
+      "Scrittura",
+      "Brutta",
+      "Struttura",
+      "Illeggabile"
+    ]
+  },
+  {
+    "word": "POP ART",
+    "taboo": [
+      "Pittura",
+      "Scultura",
+      "Americana",
+      "Consumo",
+      "Andy Warhol"
+    ]
+  },
+  {
+    "word": "CALUNNIA",
+    "taboo": [
+      "Infamia",
+      "Incollure",
+      "Guerere",
+      "Reatto",
+      "Diffamare"
+    ]
+  },
+  {
+    "word": "PONENTE",
+    "taboo": [
+      "Levante",
+      "Riviera",
+      "Orizzonte",
+      "Tramonto",
+      "Occidente"
+    ]
+  },
+  {
+    "word": "CAMELIA",
+    "taboo": [
+      "Signora",
+      "Rosso",
+      "Bianco",
+      "Pianta",
+      "Fiore"
+    ]
+  },
+  {
+    "word": "CAMERAMAN",
+    "taboo": [
+      "Cinepresa",
+      "Girare",
+      "Riprendere",
+      "Operatore",
+      "Televisivo"
+    ]
+  },
+  {
+    "word": "CAMELLO",
+    "taboo": [
+      "Gobba",
+      "Animale",
+      "Deserto",
+      "Dormitore",
+      "Bere"
+    ]
+  },
+  {
+    "word": "RICOTTA",
+    "taboo": [
+      "Formaggio",
+      "Latte",
+      "Pecora",
+      "Salata",
+      "Mangiare"
+    ]
+  },
+  {
+    "word": "MICRORGANISMO",
+    "taboo": [
+      "Batterio",
+      "Microganismo",
+      "Infezione",
+      "Inferioro",
+      "Battifoglio"
+    ]
+  },
+  {
+    "word": "CANAPA",
+    "taboo": [
+      "Tessuto",
+      "Fibra",
+      "Cappello",
+      "Indiana",
+      "Stoffa"
+    ]
+  },
+  {
+    "word": "RICONOSCERE",
+    "taboo": [
+      "Distinguere",
+      "Identificare",
+      "Inferire",
+      "Ammmentare",
+      "Persona"
+    ]
+  },
+  {
+    "word": "CANDEGGINA",
+    "taboo": [
+      "Lavare",
+      "Macchia",
+      "Biancare",
+      "Ace",
+      "Varecchina"
+    ]
+  },
+  {
+    "word": "CANDIOTO",
+    "taboo": [
+      "Dinamite",
+      "Fumogeno",
+      "Lacrimogeno",
+      "Gas",
+      "Stadio"
+    ]
+  },
+  {
+    "word": "RESTITUIRE",
+    "taboo": [
+      "Ridare",
+      "Rendere",
+      "Prestare",
+      "Maltolto",
+      "Favore"
+    ]
+  },
+  {
+    "word": "CANDID CAMERA",
+    "taboo": [
+      "Specchio Segreto",
+      "Televisione",
+      "Scherzo",
+      "Nervy Loi",
+      "Nascolare"
+    ]
+  },
+  {
+    "word": "CANOTTIERA",
+    "taboo": [
+      "Maglietta",
+      "Bianca",
+      "Salute",
+      "Lana",
+      "Cotone"
+    ]
+  },
+  {
+    "word": "CANONE",
+    "taboo": [
+      "Rai",
+      "Abbonamento",
+      "Periodico",
+      "Pagare",
+      "Equo"
+    ]
+  },
+  {
+    "word": "NAIF",
+    "taboo": [
+      "Quadro",
+      "Pittura",
+      "Ligabue",
+      "Arte",
+      "Ingenuo"
+    ]
+  },
+  {
+    "word": "CAPOLOVORO",
+    "taboo": [
+      "Opera",
+      "Migliore",
+      "Eccellente",
+      "Preferito",
+      "Perfetto"
+    ]
+  },
+  {
+    "word": "CIAMBELLA",
+    "taboo": [
+      "Dolce",
+      "Zucchero",
+      "Anello",
+      "Buco",
+      "Salvagente"
+    ]
+  },
+  {
+    "word": "SMENTIRE",
+    "taboo": [
+      "Disobbedire",
+      "Falso",
+      "Sbghiardare",
+      "Disturbare",
+      "Contraddire"
+    ]
+  },
+  {
+    "word": "CICATRICE",
+    "taboo": [
+      "Ferita",
+      "Pelle",
+      "Traccia",
+      "Segno",
+      "Taglio"
+    ]
+  },
+  {
+    "word": "NARICE",
+    "taboo": [
+      "Due",
+      "Odorare",
+      "Respirare",
+      "Naso",
+      "Starnutire"
+    ]
+  },
+  {
+    "word": "TORTELLINO",
+    "taboo": [
+      "Bolognese",
+      "Prosciutto",
+      "Raviolo",
+      "Parmigiano",
+      "Brodo"
+    ]
+  },
+  {
+    "word": "PASSERELLA",
+    "taboo": [
+      "Stilista",
+      "Moda",
+      "Teatro",
+      "Pedana",
+      "Ponte"
+    ]
+  },
+  {
+    "word": "CICLOPE",
+    "taboo": [
+      "Occhio",
+      "Mostro",
+      "Mitologia",
+      "Polifemo",
+      "Ulisse"
+    ]
+  },
+  {
+    "word": "PATAGONIA",
+    "taboo": [
+      "America",
+      "Argentina",
+      "Agostino",
+      "Reglione",
+      "Vento"
+    ]
+  },
+  {
+    "word": "MOUNTAIN BIKE",
+    "taboo": [
+      "Cambio",
+      "Telaio",
+      "Salite",
+      "Fuori strada",
+      "Sterrato"
+    ]
+  },
+  {
+    "word": "MOTIVARE",
+    "taboo": [
+      "Spiegare",
+      "Giustificare",
+      "Causare",
+      "Incoraggiare",
+      "Stimolare"
+    ]
+  },
+  {
+    "word": "MOVIOLA",
+    "taboo": [
+      "Rallentatore",
+      "Calcio",
+      "Rivedere",
+      "Domenica",
+      "Carlo Sassi"
+    ]
+  },
+  {
+    "word": "CRISI",
+    "taboo": [
+      "Isterica",
+      "Nervi",
+      "Entrare",
+      "Supersare",
+      "Depresssione"
+    ]
+  },
+  {
+    "word": "CROCIERA",
+    "taboo": [
+      "Nave",
+      "Vacanza",
+      "Mare",
+      "Costa",
+      "Velocità"
+    ]
+  },
+  {
+    "word": "DADO",
+    "taboo": [
+      "Faccce",
+      "Cubo",
+      "Lanciare",
+      "Nummeri",
+      "Brodo"
+    ]
+  },
+  {
+    "word": "CURRY",
+    "taboo": [
+      "Spezia",
+      "Condimento",
+      "India",
+      "Riso",
+      "Pollo"
+    ]
+  },
+  {
+    "word": "CURRICULUM VITAE",
+    "taboo": [
+      "Carriera",
+      "Lavoro",
+      "Professionale",
+      "Dati personali",
+      "Studi"
+    ]
+  },
+  {
+    "word": "TENTACOLO",
+    "taboo": [
+      "Piovra",
+      "Polipo",
+      "Mollusco",
+      "Preda",
+      "Invertebrati"
+    ]
+  },
+  {
+    "word": "TENEREZZA",
+    "taboo": [
+      "Dolcezza",
+      "Morbidezza",
+      "Viaggio di",
+      "Coccole",
+      "Affetto"
+    ]
+  },
+  {
+    "word": "DIVANO",
+    "taboo": [
+      "Sofà",
+      "Poltrona",
+      "Cuscino",
+      "Imbottito",
+      "Letto"
+    ]
+  },
+  {
+    "word": "TELESCOPIO",
+    "taboo": [
+      "Cielo",
+      "Luna",
+      "Stelle",
+      "Astronomico",
+      "Cannocchiale"
+    ]
+  },
+  {
+    "word": "DIVORZIO",
+    "taboo": [
+      "Matrimonio",
+      "Separazione",
+      "Scligimento",
+      "Referendum",
+      "All'italiana"
+    ]
+  },
+  {
+    "word": "TENEBRE",
+    "taboo": [
+      "Buio",
+      "Nero",
+      "Oscuro",
+      "Pieno",
+      "Abisso"
+    ]
+  },
+  {
+    "word": "DUAL SIM",
+    "taboo": [
+      "Cellulare",
+      "Telefonino",
+      "Frequenza",
+      "GSM",
+      "Segnale"
+    ]
+  },
+  {
+    "word": "LUDOTECA",
+    "taboo": [
+      "Divertimento",
+      "Gioco",
+      "Passeggtime",
+      "Ritrovo",
+      "Svago"
+    ]
+  },
+  {
+    "word": "ELICOTTERO",
+    "taboo": [
+      "Volo",
+      "Elica",
+      "Pale",
+      "Fermo",
+      "Aereo"
+    ]
+  },
+  {
+    "word": "SCUOLA GUIDA",
+    "taboo": [
+      "Automobile",
+      "Esame",
+      "Patente",
+      "Foglio rosa",
+      "Imparare"
+    ]
+  },
+  {
+    "word": "SECESSIONE",
+    "taboo": [
+      "Divisione",
+      "Indipendenza",
+      "Regionalismo",
+      "Separazione",
+      "Guerra"
+    ]
+  },
+  {
+    "word": "EMBARGO",
+    "taboo": [
+      "Blocco",
+      "Divieto",
+      "Commerciale",
+      "Economico",
+      "Cuba"
+    ]
+  },
+  {
+    "word": "GENESI",
+    "taboo": [
+      "Bibbia",
+      "Origine",
+      "Principio",
+      "Inizio",
+      "Nascita"
+    ]
+  },
+  {
+    "word": "EPOCA",
+    "taboo": [
+      "Era",
+      "Storia",
+      "Tempo",
+      "Periodo",
+      "Passaggio"
+    ]
+  },
+  {
+    "word": "EQUO",
+    "taboo": [
+      "Giusto",
+      "Onesto",
+      "Equilibrio",
+      "Compenso",
+      "Canone"
+    ]
+  },
+  {
+    "word": "INSAZIABILE",
+    "taboo": [
+      "Goloso",
+      "Avide",
+      "Mangiare",
+      "Fame",
+      "Indigestione"
+    ]
+  },
+  {
+    "word": "POSSESSO",
+    "taboo": [
+      "Detenzione",
+      "Proprietà",
+      "Dominio",
+      "Disponibilità",
+      "Potere"
+    ]
+  },
+  {
+    "word": "INSONNIA",
+    "taboo": [
+      "Difficoltà",
+      "Dormire",
+      "Sveglia",
+      "Notte",
+      "Soffrire"
+    ]
+  },
+  {
+    "word": "ERUZIONE",
+    "taboo": [
+      "Lava",
+      "Vulcano",
+      "Cratere",
+      "Vesuvio",
+      "Etna"
+    ]
+  },
+  {
+    "word": "FACHIRO",
+    "taboo": [
+      "Religione",
+      "India",
+      "Trance",
+      "Autoipnosi",
+      "Catalessi"
+    ]
+  },
+  {
+    "word": "POLE POSITION",
+    "taboo": [
+      "Posizione",
+      "Prima Fila",
+      "Partenza",
+      "Automobilismo",
+      "Tempo"
+    ]
+  },
+  {
+    "word": "ESCURSIONE",
+    "taboo": [
+      "Viaggio",
+      "Gioco",
+      "Ampiezza",
+      "Differenza",
+      "Termica"
+    ]
+  },
+  {
+    "word": "ESTRADARE",
+    "taboo": [
+      "Consegnare",
+      "Colpevole",
+      "Stato",
+      "Internazionale",
+      "Procedere"
+    ]
+  },
+  {
+    "word": "INTRATTENIMENTO",
+    "taboo": [
+      "Severo",
+      "Imterreore",
+      "Compromesso",
+      "Rigido",
+      "Elastico"
+    ]
+  },
+  {
+    "word": "FACOLTA'",
+    "taboo": [
+      "Potere",
+      "Libertà",
+      "Parola",
+      "Università",
+      "Beni"
+    ]
+  },
+  {
+    "word": "LUCERTOLA",
+    "taboo": [
+      "Piccolo",
+      "Verde",
+      "Coda",
+      "Pelle",
+      "Rettile"
+    ]
+  },
+  {
+    "word": "SCHIACCIANOCI",
+    "taboo": [
+      "Rompere",
+      "Guscio",
+      "Aprire",
+      "Balletto",
+      "Ciaikowsky"
+    ]
+  },
+  {
+    "word": "TENUTA",
+    "taboo": [
+      "Possesso",
+      "Campagna",
+      "Proprietà",
+      "Campagna",
+      "Buono"
+    ]
+  },
+  {
+    "word": "FANTACALCIO",
+    "taboo": [
+      "Gioco",
+      "Simulazione",
+      "Campionato",
+      "Lega",
+      "Gazzetta dello Sport"
+    ]
+  },
+  {
+    "word": "LUNA PARK",
+    "taboo": [
+      "Attractioni",
+      "Giostra",
+      "Montagne russe",
+      "Divertimento",
+      "Giostre"
+    ]
+  },
+  {
+    "word": "FAR WEST",
+    "taboo": [
+      "America",
+      "Film",
+      "Sceriffo",
+      "Cowboy",
+      "Saloon"
+    ]
+  },
+  {
+    "word": "SCHIACCIARE",
+    "taboo": [
+      "Premere",
+      "Basso",
+      "Comprimere",
+      "Piatto",
+      "Tennis"
+    ]
+  },
+  {
+    "word": "FASCICOLO",
+    "taboo": [
+      "Documento",
+      "Pratica",
+      "Settimanale",
+      "Pubblicazione",
+      "Enciclopedia"
+    ]
+  },
+  {
+    "word": "COCKTAIL",
+    "taboo": [
+      "Liquegire",
+      "Mescolare",
+      "Buon buon",
+      "Alcolico",
+      "Bere"
+    ]
+  },
+  {
+    "word": "FATTORIA",
+    "taboo": [
+      "Vecchia",
+      "Animali",
+      "Agricoltura",
+      "Campagna",
+      "Zio Tobia"
+    ]
+  },
+  {
+    "word": "BLATTA",
+    "taboo": [
+      "Sotto",
+      "Sedie",
+      "Pallola",
+      "Zolla",
+      "Ragno"
+    ]
+  },
+  {
+    "word": "FEUDO",
+    "taboo": [
+      "Medievale",
+      "Territorio",
+      "Concessione",
+      "Beneficio",
+      "Potere"
+    ]
+  },
+  {
+    "word": "SPICCIOLO",
+    "taboo": [
+      "Moneta",
+      "Resto",
+      "Cambiare",
+      "Solidi",
+      "Lire"
+    ]
+  },
+  {
+    "word": "FILIGRANA",
+    "taboo": [
+      "Banconota",
+      "Francobollo",
+      "Marchio",
+      "Controluce",
+      "Autenticità"
+    ]
+  },
+  {
+    "word": "FIASCO",
+    "taboo": [
+      "Recipiente",
+      "Vetro",
+      "Vino",
+      "Fischi",
+      "Vasellame"
+    ]
+  },
+  {
+    "word": "FISARMONICA",
+    "taboo": [
+      "Strumento",
+      "Musica",
+      "Suonare",
+      "Soffietto",
+      "Tastiera"
+    ]
+  },
+  {
+    "word": "FIRMA",
+    "taboo": [
+      "Autografo",
+      "Sottoscrivere",
+      "Nome",
+      "Riconoscere",
+      "Giornalistica"
+    ]
+  },
+  {
+    "word": "FOCOLARE",
+    "taboo": [
+      "Camino",
+      "Calore",
+      "Casa",
+      "Famiglia",
+      "Angelo"
+    ]
+  },
+  {
+    "word": "FOCACCIA",
+    "taboo": [
+      "Pane",
+      "Genovese",
+      "Liguria",
+      "Sottile",
+      "Forno"
+    ]
+  },
+  {
+    "word": "RIVALE",
+    "taboo": [
+      "Antagonista",
+      "Nemico",
+      "Concorrente",
+      "Gara",
+      "Competere"
+    ]
+  },
+  {
+    "word": "FORCHETTA",
+    "taboo": [
+      "Coltello",
+      "Cucchiaio",
+      "Posata",
+      "Mangiare",
+      "Buona"
+    ]
+  },
+  {
+    "word": "SUMMIT",
+    "taboo": [
+      "Incontro",
+      "Politico",
+      "Vertice",
+      "Riunione",
+      "Presidenti"
+    ]
+  },
+  {
+    "word": "FORFAIT",
+    "taboo": [
+      "Comprensivo",
+      "Compagno",
+      "Pagamento",
+      "Circa",
+      "Chifa"
+    ]
+  },
+  {
+    "word": "ZECCA",
+    "taboo": [
+      "Acaro",
+      "Parassita",
+      "Coniare",
+      "Moneta",
+      "Nuovo"
+    ]
+  },
+  {
+    "word": "FORREST GUMP",
+    "taboo": [
+      "Film",
+      "Oscar",
+      "Tom Hanks",
+      "Panchina",
+      "Americo"
+    ]
+  },
+  {
+    "word": "FRANCOBOLLO",
+    "taboo": [
+      "Posta",
+      "Lettera",
+      "Cartolina",
+      "Affrancatura",
+      "Filatelia"
+    ]
+  },
+  {
+    "word": "RISARCIMENTO",
+    "taboo": [
+      "Ricompensa",
+      "Danno",
+      "Morale",
+      "Compagno",
+      "Assicurazione"
+    ]
+  },
+  {
+    "word": "KOALA",
+    "taboo": [
+      "Orsacchiotto",
+      "Marsupio",
+      "Australiano",
+      "Albero",
+      "Erbivoro"
+    ]
+  },
+  {
+    "word": "RISCHIO",
+    "taboo": [
+      "Pericolo",
+      "Danno",
+      "Correre",
+      "Improvviso"
+    ]
+  },
+  {
+    "word": "KUNG FU",
+    "taboo": [
+      "Combattimento",
+      "Arte marziale",
+      "Cinese",
+      "Karate",
+      "Bruce Lee"
+    ]
+  },
+  {
+    "word": "FRASE",
+    "taboo": [
+      "Espressione",
+      "Periodo",
+      "Fatti",
+      "Soggetto",
+      "Principale"
+    ]
+  },
+  {
+    "word": "SCIACQUETTA",
+    "taboo": [
+      "Donna",
+      "Ragazza",
+      "Banale",
+      "Insignificante",
+      "Frivola"
+    ]
+  },
+  {
+    "word": "FREELANCE",
+    "taboo": [
+      "Autonomo",
+      "Indipendente",
+      "Consulente",
+      "Professionista",
+      "Lavoratore"
+    ]
+  },
+  {
+    "word": "MOLOTOV",
+    "taboo": [
+      "Bomba",
+      "Bottiglia",
+      "Lanciare",
+      "Esplosione",
+      "Benzina"
+    ]
+  },
+  {
+    "word": "FREQUENTARE",
+    "taboo": [
+      "Andare",
+      "Scuola",
+      "Seccare",
+      "Università",
+      "Persone"
+    ]
+  },
+  {
+    "word": "FUGACE",
+    "taboo": [
+      "Passeggero",
+      "Breve",
+      "Effimero",
+      "Durevole",
+      "Attimo"
+    ]
+  },
+  {
+    "word": "FRINGE BENEFIT",
+    "taboo": [
+      "Azienda",
+      "Automobile",
+      "Consenso",
+      "Compenso",
+      "Telefonino"
+    ]
+  },
+  {
+    "word": "DENTE",
+    "taboo": [
+      "Molare",
+      "Posteriore",
+      "Incisivo",
+      "Canino",
+      "Giudizio"
+    ]
+  },
+  {
+    "word": "FRITTURA",
+    "taboo": [
+      "Fritta",
+      "Bollente",
+      "Olio",
+      "Pesce",
+      "Mista"
+    ]
+  },
+  {
+    "word": "MONTGOMERY",
+    "taboo": [
+      "Generale",
+      "Cappotto",
+      "Giaccone",
+      "Cappuccio",
+      "Indossare"
+    ]
+  },
+  {
+    "word": "ONOMATOPEICO",
+    "taboo": [
+      "Parola",
+      "Suono",
+      "Significato",
+      "Riprodurre",
+      "D'amanzo"
+    ]
+  },
+  {
+    "word": "FUCSIA",
+    "taboo": [
+      "Pianta",
+      "Fiore",
+      "Colore",
+      "Rosa",
+      "Viola"
+    ]
+  },
+  {
+    "word": "GABBIANO",
+    "taboo": [
+      "Bianco",
+      "Uccello",
+      "Mare",
+      "Volo",
+      "Jonathan Livingstone"
+    ]
+  },
+  {
+    "word": "FURTO",
+    "taboo": [
+      "Ladro",
+      "Rubare",
+      "Sottrarre",
+      "Reato",
+      "Scasso"
+    ]
+  },
+  {
+    "word": "ON-LINE",
+    "taboo": [
+      "Internet",
+      "Connesso",
+      "Computer",
+      "Telefono",
+      "Collegato"
+    ]
+  },
+  {
+    "word": "ZOOM",
+    "taboo": [
+      "Primo Piano",
+      "Vicino",
+      "Ingrandire",
+      "Cinepresa",
+      "Foto"
+    ]
+  },
+  {
+    "word": "ONOMASTICO",
+    "taboo": [
+      "Giorno",
+      "Festeggiare",
+      "Ricorrenza",
+      "Auguri",
+      "Sembra"
+    ]
+  },
+  {
+    "word": "ZOPPICARE",
+    "taboo": [
+      "Camminare",
+      "Claudicare",
+      "Gamba",
+      "Piede",
+      "Instabile"
+    ]
+  },
+  {
+    "word": "GAFFE",
+    "taboo": [
+      "Sbaglio",
+      "Battere inferte",
+      "Intempestiva",
+      "Inopportune",
+      "Errore"
+    ]
+  },
+  {
+    "word": "GERARCHIA",
+    "taboo": [
+      "Struttura",
+      "Potere",
+      "Organigramma",
+      "Subordinato",
+      "Supremazia"
+    ]
+  },
+  {
+    "word": "PATITO",
+    "taboo": [
+      "Soffrire",
+      "Deferito",
+      "Sicupolo",
+      "Tifoso",
+      "Appassionato"
+    ]
+  },
+  {
+    "word": "GIAVELLOTTO",
+    "taboo": [
+      "Arma",
+      "Lancio",
+      "Asta",
+      "Sport",
+      "Atletica"
+    ]
+  },
+  {
+    "word": "PATATINA",
+    "taboo": [
+      "Frita",
+      "Ketchup",
+      "Croccante",
+      "Sgocciolato",
+      "Sgarrnoccchiare"
+    ]
+  },
+  {
+    "word": "PREVIDENZA",
+    "taboo": [
+      "Prudenza",
+      "Assistenza",
+      "Sociale",
+      "Pensione",
+      "Assicurazione"
+    ]
+  },
+  {
+    "word": "SORCIO",
+    "taboo": [
+      "Ratto",
+      "Topo",
+      "Roditore",
+      "Verde",
+      "Renato Zero"
+    ]
+  },
+  {
+    "word": "SOPRALLUOGO",
+    "taboo": [
+      "Indagine",
+      "Visita",
+      "Ispezione",
+      "Polizia",
+      "Delitto"
+    ]
+  },
+  {
+    "word": "GOFFO",
+    "taboo": [
+      "Maldestro",
+      "Impacciato",
+      "Imbarazzato",
+      "Sgraziato",
+      "Movimento"
+    ]
+  },
+  {
+    "word": "GOLDEN GOL",
+    "taboo": [
+      "Decisivo",
+      "Vittoria",
+      "Partita",
+      "Finale",
+      "Tempi supplementari"
+    ]
+  },
+  {
+    "word": "RUOLA",
+    "taboo": [
+      "Erba",
+      "Aromatica",
+      "Insalata",
+      "Verdura",
+      "Epoca"
+    ]
+  },
+  {
+    "word": "GRAN PREMIO",
+    "taboo": [
+      "Corsa",
+      "Automobilismo",
+      "Motociclismo",
+      "Formula 1",
+      "Circuito"
+    ]
+  },
+  {
+    "word": "PROGRESSO",
+    "taboo": [
+      "Miglioramento",
+      "Avanzamento",
+      "Evoluzione",
+      "Società",
+      "Terminologica"
+    ]
+  },
+  {
+    "word": "GREGGIO",
+    "taboo": [
+      "Naturale",
+      "Metallo",
+      "Pietra",
+      "Petrolio",
+      "Ezio"
+    ]
+  },
+  {
+    "word": "HARAKIRI",
+    "taboo": [
+      "Suicidio",
+      "Spada",
+      "Ventre",
+      "Giapponese",
+      "Samurai"
+    ]
+  },
+  {
+    "word": "GRIMALDELLO",
+    "taboo": [
+      "Aprire",
+      "Scassinare",
+      "Serrature",
+      "Strumento",
+      "Attrezzo"
+    ]
+  },
+  {
+    "word": "HALLOWEEN",
+    "taboo": [
+      "Notte",
+      "Scherzi",
+      "Festa",
+      "Zucche",
+      "Revenant"
+    ]
+  },
+  {
+    "word": "GPS",
+    "taboo": [
+      "Telefono",
+      "Taxis",
+      "Omnitel",
+      "Tim",
+      "Banda"
+    ]
+  },
+  {
+    "word": "GURU",
+    "taboo": [
+      "Capo",
+      "Indio",
+      "Carismatico",
+      "Spirituale",
+      "Soprane"
+    ]
+  },
+  {
+    "word": "SERRATURA",
+    "taboo": [
+      "Porta",
+      "Aprire",
+      "Chiudere",
+      "Chiave",
+      "Buco"
+    ]
+  },
+  {
+    "word": "HARD DISCOUNT",
+    "taboo": [
+      "Supermercato",
+      "Marcio",
+      "Economico",
+      "Prezzi",
+      "Risparmiare"
+    ]
+  },
+  {
+    "word": "SERIAL KILLER",
+    "taboo": [
+      "Uccidere",
+      "Assassino",
+      "Omicidio",
+      "Criminale",
+      "Hannibal Lecter"
+    ]
+  },
+  {
+    "word": "HOBBY",
+    "taboo": [
+      "Passatempo",
+      "Sport",
+      "Sfogo",
+      "Tempo libero",
+      "Lettura"
+    ]
+  },
+  {
+    "word": "FAX",
+    "taboo": [
+      "Trasmissione",
+      "Documento",
+      "Fotocopia",
+      "Inviare",
+      "Ricevere"
+    ]
+  },
+  {
+    "word": "SERVOSTERZO",
+    "taboo": [
+      "Automobile",
+      "Macchina",
+      "Volante",
+      "Ottional",
+      "Parcheggiare"
+    ]
+  },
+  {
+    "word": "LISCA",
+    "taboo": [
+      "Pesce",
+      "Spina",
+      "Pulire",
+      "Togliere",
+      "Colonna vertebrale"
+    ]
+  },
+  {
+    "word": "INDIGENTE",
+    "taboo": [
+      "Povero",
+      "Bisognoso",
+      "Misero",
+      "Bisogno",
+      "Denaro"
+    ]
+  },
+  {
+    "word": "LIVREA",
+    "taboo": [
+      "Divisa",
+      "Uniforme",
+      "Autista",
+      "Cameriere",
+      "Maggiordomo"
+    ]
+  },
+  {
+    "word": "INDOLE",
+    "taboo": [
+      "Temperamento",
+      "Tendenza",
+      "Natura",
+      "Inclinazione",
+      "Carattere"
+    ]
+  },
+  {
+    "word": "SENSITIVO",
+    "taboo": [
+      "Vegente",
+      "Percezione",
+      "Facoltà",
+      "Medium",
+      "Sentire"
+    ]
+  },
+  {
+    "word": "INFElice",
+    "taboo": [
+      "Triste",
+      "Sventurato",
+      "Depresso",
+      "Avvilito",
+      "Sfortunato"
+    ]
+  },
+  {
+    "word": "LOCANDINA",
+    "taboo": [
+      "Manifesto",
+      "Cinema",
+      "Teatro",
+      "Spettacolo",
+      "Pubblicità"
+    ]
+  },
+  {
+    "word": "CAFFEINA",
+    "taboo": [
+      "Sostanza",
+      "Caffè",
+      "Alcaloide",
+      "Hg",
+      "Stimolante"
+    ]
+  },
+  {
+    "word": "INVOLTINO",
+    "taboo": [
+      "Carne",
+      "Ripieno",
+      "Arrotolato",
+      "Farcito",
+      "Primavera"
+    ]
+  },
+  {
+    "word": "INTRIGO",
+    "taboo": [
+      "Macchinazione",
+      "Trama",
+      "Segreto",
+      "Rivale",
+      "Macchinazione"
+    ]
+  },
+  {
+    "word": "TRULLO",
+    "taboo": [
+      "Casa",
+      "Abitazione",
+      "Puglia",
+      "Alberobello",
+      "Pietra"
+    ]
+  },
+  {
+    "word": "KARMA",
+    "taboo": [
+      "Indi",
+      "Buddhismo",
+      "Religione",
+      "Reincarnazione",
+      "Vita"
+    ]
+  },
+  {
+    "word": "LAMBRETTA",
+    "taboo": [
+      "Motocicletta",
+      "Ruote",
+      "Vespa",
+      "Scooter",
+      "Fuori commercio"
+    ]
+  },
+  {
+    "word": "ASPIRAPOLVERE",
+    "taboo": [
+      "Elettrodomestico",
+      "Pulire",
+      "Aspirare",
+      "Pavimento",
+      "Sacco"
+    ]
+  },
+  {
+    "word": "ITACA",
+    "taboo": [
+      "Ulisse",
+      "Isola",
+      "Grecia",
+      "Odissea",
+      "Penelope"
+    ]
+  },
+  {
+    "word": "SPESSORE",
+    "taboo": [
+      "Dimensione",
+      "Profondità",
+      "Distesa",
+      "Consistenza",
+      "Culturale"
+    ]
+  },
+  {
+    "word": "JACUZZI",
+    "taboo": [
+      "Vasca",
+      "Idromassaggio",
+      "Bolle",
+      "Relax",
+      "Lusso"
+    ]
+  },
+  {
+    "word": "IVA",
+    "taboo": [
+      "Percentuale",
+      "Zanicchi",
+      "Pagare",
+      "Aliquota",
+      "Scaricare"
+    ]
+  },
+  {
+    "word": "FARI",
+    "taboo": [
+      "Luci",
+      "Cielo",
+      "Strada",
+      "Abbaglianti",
+      "Segnalare"
+    ]
+  },
+  {
+    "word": "UTOPIA",
+    "taboo": [
+      "Sogno",
+      "Thomas Moore",
+      "Immagine",
+      "Idea",
+      "Modello"
+    ]
+  },
+  {
+    "word": "KAMIKAZE",
+    "taboo": [
+      "Pilota",
+      "Giapponese",
+      "Sacrificio",
+      "Missione",
+      "Guerra mondiale"
+    ]
+  },
+  {
+    "word": "LAMBADA",
+    "taboo": [
+      "Danza",
+      "Sudamericana",
+      "Danza",
+      "Sensuale",
+      "Balla"
+    ]
+  },
+  {
+    "word": "LAPALISSIANO",
+    "taboo": [
+      "Vero",
+      "Ovvio",
+      "Chiaro",
+      "Evidente",
+      "Inequivocabile"
+    ]
+  },
+  {
+    "word": "T-SHIRT",
+    "taboo": [
+      "America",
+      "Maniche corte",
+      "Maglietta",
+      "Cotone",
+      "Fruit of the Loom"
+    ]
+  },
+  {
+    "word": "MARZAPANE",
+    "taboo": [
+      "Dolce",
+      "Pasta",
+      "Mandorle",
+      "Zucchero",
+      "Forno"
+    ]
+  },
+  {
+    "word": "LARDO",
+    "taboo": [
+      "Grasso",
+      "Maiale",
+      "Pancetta",
+      "Salume",
+      "Sottile"
+    ]
+  },
+  {
+    "word": "INFORTUNIO",
+    "taboo": [
+      "Calciatore",
+      "Lavoro",
+      "Disgrazia",
+      "Errore",
+      "Sbaglio"
+    ]
+  },
+  {
+    "word": "SGUINZAGLIARE",
+    "taboo": [
+      "Cane",
+      "Sciogliere",
+      "Inseguire",
+      "Liberare",
+      "Ricercare"
+    ]
+  },
+  {
+    "word": "INOFFENSIVO",
+    "taboo": [
+      "Innocuo",
+      "Innocente",
+      "Buono",
+      "Benevolo",
+      "Non pericoloso"
+    ]
+  },
+  {
+    "word": "SHIATSU",
+    "taboo": [
+      "Massaggio",
+      "Mani",
+      "Orientale",
+      "Pressione",
+      "Terapia"
+    ]
+  },
+  {
+    "word": "LOFT",
+    "taboo": [
+      "Spazio",
+      "Magazzino",
+      "Alto",
+      "Abitazione",
+      "Ristrutturato"
+    ]
+  },
+  {
+    "word": "SIAMESE",
+    "taboo": [
+      "Fratello",
+      "Gemello",
+      "Giallo",
+      "Felino",
+      "Gatto"
+    ]
+  },
+  {
+    "word": "VESSILLO",
+    "taboo": [
+      "Bandiera",
+      "Stoffa",
+      "Insegna",
+      "Simbolo",
+      "Stendardo"
+    ]
+  },
+  {
+    "word": "LOGORIO",
+    "taboo": [
+      "Consumare",
+      "Usare",
+      "Consumo",
+      "Consumare",
+      "Tempo"
+    ]
+  },
+  {
+    "word": "SOGGEZIONE",
+    "taboo": [
+      "Dipendenza",
+      "Sudditanza",
+      "Subordinazione",
+      "Avere",
+      "Riguardo"
+    ]
+  },
+  {
+    "word": "MACHO",
+    "taboo": [
+      "Maschile",
+      "Uomo",
+      "Sexy",
+      "Energumeno",
+      "Virile"
+    ]
+  },
+  {
+    "word": "SOGGHIGNO",
+    "taboo": [
+      "Espressione",
+      "Viso",
+      "Maligno",
+      "Disprezzo",
+      "Ironico"
+    ]
+  },
+  {
+    "word": "NEW AGE",
+    "taboo": [
+      "Cultura",
+      "Musica",
+      "Natura",
+      "Filosofia",
+      "Uomo"
+    ]
+  },
+  {
+    "word": "SONAGLIO",
+    "taboo": [
+      "Berretto",
+      "Serpente",
+      "Campanellino",
+      "Tintinnare",
+      "Suonare"
+    ]
+  },
+  {
+    "word": "LUSTRO",
+    "taboo": [
+      "Anni",
+      "Cinque",
+      "Lucente",
+      "Pulire",
+      "Dare"
+    ]
+  },
+  {
+    "word": "NERAZZURRO",
+    "taboo": [
+      "Colore",
+      "Maglie",
+      "Strisce",
+      "Inter",
+      "Atalanta"
+    ]
+  },
+  {
+    "word": "TAVUTOLOGIA",
+    "taboo": [
+      "Ripetizione",
+      "Parola",
+      "Concetto",
+      "Ridondanza",
+      "Significato"
+    ]
+  },
+  {
+    "word": "TASSO",
+    "taboo": [
+      "Animale",
+      "Interesse",
+      "Sconto",
+      "Torquato",
+      "Dormire"
+    ]
+  },
+  {
+    "word": "MENSOLA",
+    "taboo": [
+      "Appoggio",
+      "Legno",
+      "Assse",
+      "Riposo",
+      "Supporto"
+    ]
+  },
+  {
+    "word": "METAL DETECTOR",
+    "taboo": [
+      "Aeroporti",
+      "Suonare",
+      "Ferro",
+      "Controllo",
+      "Valigie"
+    ]
+  },
+  {
+    "word": "ACCIDENTALE",
+    "taboo": [
+      "Casuale",
+      "Fortuito",
+      "Imprevisto",
+      "Sfortuna",
+      "Principale"
+    ]
+  },
+  {
+    "word": "ROVO",
+    "taboo": [
+      "Frutto",
+      "Bosco",
+      "Lampone",
+      "Mora",
+      "Marmellata"
+    ]
+  },
+  {
+    "word": "GIN-TONIC",
+    "taboo": [
+      "Long drink",
+      "Limone",
+      "Frizzante",
+      "Acqua Tonica",
+      "Ginepro"
+    ]
+  },
+  {
+    "word": "LUBRIFICANTE",
+    "taboo": [
+      "Olio",
+      "Grasso",
+      "Attrito",
+      "Movimento",
+      "Serratura"
+    ]
+  },
+  {
+    "word": "MISERERE",
+    "taboo": [
+      "Perdono",
+      "Zucchero",
+      "Pavarotti",
+      "Latino",
+      "Salmo"
+    ]
+  },
+  {
+    "word": "CIOCIARO",
+    "taboo": [
+      "Roma",
+      "Lazio",
+      "Dialetto",
+      "Stornello",
+      "Sofia Loren"
+    ]
+  },
+  {
+    "word": "NOLEGGIO",
+    "taboo": [
+      "Affitto",
+      "Gioco",
+      "Locazione",
+      "Film",
+      "Videocassetta"
+    ]
+  },
+  {
+    "word": "SMOG",
+    "taboo": [
+      "Inquinamento",
+      "Scarico",
+      "Auto",
+      "Nebbia",
+      "Combustione"
+    ]
+  },
+  {
+    "word": "MOSCA CIECA",
+    "taboo": [
+      "Bambini",
+      "Ragazzi",
+      "Bendati",
+      "Cercare",
+      "Rincorrersi"
+    ]
+  },
+  {
+    "word": "CODINO",
+    "taboo": [
+      "Treccia",
+      "Capelli",
+      "Cavallo",
+      "Baggio",
+      "Fiorello"
+    ]
+  },
+  {
+    "word": "SMORFIA",
+    "taboo": [
+      "Viso",
+      "Faccia",
+      "Numeri",
+      "Lotto",
+      "Fare"
+    ]
+  },
+  {
+    "word": "COLBACCO",
+    "taboo": [
+      "Cappello",
+      "Copricapo",
+      "Russo",
+      "Pelliccia",
+      "Caldo"
+    ]
+  },
+  {
+    "word": "ONIRICO",
+    "taboo": [
+      "Dormire",
+      "Sogno",
+      "Sonno",
+      "Sogni",
+      "Freud"
+    ]
+  },
+  {
+    "word": "SOMATIZZARE",
+    "taboo": [
+      "Malattia",
+      "Psicosomatico",
+      "Condizionamento",
+      "Sintomo",
+      "Corpo"
+    ]
+  },
+  {
+    "word": "NEMESI",
+    "taboo": [
+      "Vendetta",
+      "Giustizia",
+      "Vendicarsi",
+      "Suprema",
+      "Caduta"
+    ]
+  },
+  {
+    "word": "BOND",
+    "taboo": [
+      "Obbligazione",
+      "James",
+      "007",
+      "Sean Connery",
+      "Roger Moore"
+    ]
+  },
+  {
+    "word": "MODEM",
+    "taboo": [
+      "Computer",
+      "Telefono",
+      "Collegare",
+      "Internet",
+      "ISDN"
+    ]
+  },
+  {
+    "word": "MENAGRAMO",
+    "taboo": [
+      "Male",
+      "Sfortuna",
+      "Iettatore",
+      "Iella",
+      "Superstizione"
+    ]
+  },
+  {
+    "word": "GEOLOGIA",
+    "taboo": [
+      "Scienza",
+      "Terra",
+      "Crosta",
+      "Rocce",
+      "Movimenti"
+    ]
+  },
+  {
+    "word": "PACHIDERMA",
+    "taboo": [
+      "Mammifero",
+      "Elefante",
+      "Rinoceronte",
+      "Ippopotamo",
+      "Grosso"
+    ]
+  },
+  {
+    "word": "GAZZETTA",
+    "taboo": [
+      "Giornale",
+      "Quotidiano",
+      "Sport",
+      "Rosa",
+      "Mezzogiorno"
+    ]
+  },
+  {
+    "word": "OCCHIATA",
+    "taboo": [
+      "Sguardo",
+      "Veloce",
+      "Controllare",
+      "Dolce",
+      "Intesa"
+    ]
+  },
+  {
+    "word": "MENISCO",
+    "taboo": [
+      "Carffigine",
+      "Legamento",
+      "Ginocchiote",
+      "Operazione",
+      "Calciatore"
+    ]
+  },
+  {
+    "word": "BON TON",
+    "taboo": [
+      "Buone maniere",
+      "Educazione",
+      "Comportamento",
+      "Eleganza",
+      "Classe"
+    ]
+  },
+  {
+    "word": "SORSO",
+    "taboo": [
+      "Bere",
+      "Poco",
+      "Piccolo",
+      "Liquido",
+      "Tutti"
+    ]
+  },
+  {
+    "word": "PANINO",
+    "taboo": [
+      "Tramezzino",
+      "Mangiare",
+      "Hamburger",
+      "McDonald's",
+      "Imbottito"
+    ]
+  },
+  {
+    "word": "BOA",
+    "taboo": [
+      "Rettile",
+      "Serpente",
+      "Galleggiante",
+      "Strisciare",
+      "Segnalare"
+    ]
+  },
+  {
+    "word": "CRAC",
+    "taboo": [
+      "Rumore",
+      "Rovina",
+      "Fallimento",
+      "Tracollo",
+      "Finanziario"
+    ]
+  },
+  {
+    "word": "BOLGIA",
+    "taboo": [
+      "Infemo",
+      "Cacia",
+      "Pressa",
+      "Folla",
+      "Confustione"
+    ]
+  },
+  {
+    "word": "TIFO",
+    "taboo": [
+      "Raffreddore",
+      "Basso",
+      "Debole",
+      "Partita",
+      "Stadio"
+    ]
+  },
+  {
+    "word": "PAR CONDICIO",
+    "taboo": [
+      "Legge",
+      "Politica",
+      "Elegante",
+      "Uggagliosma",
+      "Perdita"
+    ]
+  },
+  {
+    "word": "RETTANGOL",
+    "taboo": [
+      "Protests",
+      "Lamentela",
+      "Contestazione",
+      "Lamente",
+      "Presentatore"
+    ]
+  },
+  {
+    "word": "CALZATURA",
+    "taboo": [
+      "Scarpa",
+      "Piede",
+      "Pianoforte",
+      "Stivale",
+      "Sandalo"
+    ]
+  },
+  {
+    "word": "ZULU",
+    "taboo": [
+      "Popolazione",
+      "Africana",
+      "Bantu",
+      "Primitivo",
+      "Incivile"
+    ]
+  },
+  {
+    "word": "PARECCHIA",
+    "taboo": [
+      "Professionista",
+      "Onorario",
+      "Pagare",
+      "Fattura",
+      "Competenza"
+    ]
+  },
+  {
+    "word": "STREPITOSO",
+    "taboo": [
+      "Straordinario",
+      "Eccezionale",
+      "Clamoroso",
+      "Fantastico",
+      "Successo"
+    ]
+  },
+  {
+    "word": "INDEBITA",
+    "taboo": [
+      "Tradimento",
+      "Moglie",
+      "Coppia",
+      "Mezza verità",
+      "Amore"
+    ]
+  },
+  {
+    "word": "PEDAGGIO",
+    "taboo": [
+      "Pagare",
+      "Autostrada",
+      "Casello",
+      "Dazio",
+      "Tassa"
+    ]
+  },
+  {
+    "word": "PAVESE",
+    "taboo": [
+      "Provincia",
+      "Padano",
+      "Piemonte",
+      "Lombardia",
+      "Case"
+    ]
+  },
+  {
+    "word": "TIP TAP",
+    "taboo": [
+      "Ballo",
+      "Danza",
+      "Rumore",
+      "Fred Astaire",
+      "Ginger Rogers"
+    ]
+  },
+  {
+    "word": "STRATEGGEMMA",
+    "taboo": [
+      "Soluzione",
+      "Scappatoio",
+      "Accorgimento",
+      "Escamotage",
+      "Astuzia"
+    ]
+  },
+  {
+    "word": "TIRCHIO",
+    "taboo": [
+      "Avaro",
+      "Spilorcio",
+      "Taccagno",
+      "Soldi",
+      "Mani bucate"
+    ]
+  },
+  {
+    "word": "PENALE",
+    "taboo": [
+      "Civile",
+      "Diritto",
+      "Pagare",
+      "Codice",
+      "Fedina"
+    ]
+  },
+  {
+    "word": "CALIPSO",
+    "taboo": [
+      "Ballo",
+      "Canzone",
+      "Antille",
+      "Reggae",
+      "Harry Belafonte"
+    ]
+  },
+  {
+    "word": "PODISTA",
+    "taboo": [
+      "Atletica",
+      "Correre",
+      "Maratoneta",
+      "Sprint",
+      "Sport"
+    ]
+  },
+  {
+    "word": "GUINNESS",
+    "taboo": [
+      "Alec",
+      "Birra",
+      "Record",
+      "Primati",
+      "Libro"
+    ]
+  },
+  {
+    "word": "POTARE",
+    "taboo": [
+      "Pianta",
+      "Alberi",
+      "Rami",
+      "Tagliare",
+      "Primavera"
+    ]
+  },
+  {
+    "word": "GUGLIA",
+    "taboo": [
+      "Cono",
+      "Piramide",
+      "Chiesa",
+      "Campanile",
+      "Duomo"
+    ]
+  },
+  {
+    "word": "PRANZOTERAPIA",
+    "taboo": [
+      "Calore",
+      "Mani",
+      "Guarire",
+      "Malato",
+      "Energia"
+    ]
+  },
+  {
+    "word": "ANATROCCOLO",
+    "taboo": [
+      "Brutto",
+      "Cigno",
+      "Favola",
+      "Uccello",
+      "Anatra"
+    ]
+  },
+  {
+    "word": "PROLOGO",
+    "taboo": [
+      "Premessa",
+      "Preambolo",
+      "Prima",
+      "Introduzione",
+      "Epilogo"
+    ]
+  },
+  {
+    "word": "PRONOSTICO",
+    "taboo": [
+      "Previsione",
+      "Vincitore",
+      "Gara",
+      "Favore",
+      "Predire"
+    ]
+  },
+  {
+    "word": "ANGELETTO",
+    "taboo": [
+      "Beato",
+      "Puro",
+      "Dolce",
+      "Viso",
+      "Aii!"
+    ]
+  },
+  {
+    "word": "TRAINING",
+    "taboo": [
+      "Preparazione",
+      "Addestramento",
+      "Formazione",
+      "Corso",
+      "Autogeno"
+    ]
+  },
+  {
+    "word": "RICREAZIONE",
+    "taboo": [
+      "Puasa",
+      "Interrvalla",
+      "Scuola",
+      "Svuoto",
+      "Distrazione"
+    ]
+  },
+  {
+    "word": "QUERCIA",
+    "taboo": [
+      "Albero",
+      "Sequoia",
+      "Sempreverde",
+      "Sughero",
+      "P.D.S."
+    ]
+  },
+  {
+    "word": "PROTEGGERE",
+    "taboo": [
+      "Difendere",
+      "Coprire",
+      "Favorire",
+      "Presentare",
+      "Riparare"
+    ]
+  },
+  {
+    "word": "QUIZ",
+    "taboo": [
+      "Gioco",
+      "Premi",
+      "Domanda",
+      "Televisione",
+      "Mike Bongiorno"
+    ]
+  },
+  {
+    "word": "PUMA",
+    "taboo": [
+      "Felino",
+      "Gatto",
+      "Snello",
+      "Felope",
+      "Cacciatore"
+    ]
+  },
+  {
+    "word": "QUORUM",
+    "taboo": [
+      "Maggioranza",
+      "Elezione",
+      "Voti",
+      "Raggiungere",
+      "Assemblea"
+    ]
+  },
+  {
+    "word": "PIOTTA",
+    "taboo": [
+      "Moneta",
+      "Quattrino",
+      "Roma",
+      "Er",
+      "Cento Lire"
+    ]
+  },
+  {
+    "word": "PIRANHA",
+    "taboo": [
+      "Vorace",
+      "Carnivoro",
+      "Predatore",
+      "Tigre",
+      "Pesce"
+    ]
+  },
+  {
+    "word": "RAGIONAMENTO",
+    "taboo": [
+      "Logica",
+      "Riflessione",
+      "Dimostrazione",
+      "Argomentazione",
+      "Razionale"
+    ]
+  },
+  {
+    "word": "PIOVRA",
+    "taboo": [
+      "Mafia",
+      "Mollusco",
+      "Polipo",
+      "Michele Placido",
+      "Film TV"
+    ]
+  },
+  {
+    "word": "RATTO",
+    "taboo": [
+      "Topo",
+      "Rapina",
+      "Sequestri",
+      "Topi",
+      "Velenoso"
+    ]
+  },
+  {
+    "word": "SFINGE",
+    "taboo": [
+      "Mitologia",
+      "Statua",
+      "Leone",
+      "Ali",
+      "Enigma"
+    ]
+  },
+  {
+    "word": "RINNOVARE",
+    "taboo": [
+      "Ristrutturare",
+      "Abbonamento",
+      "Confermato",
+      "Ripetere",
+      "Modernizzare"
+    ]
+  },
+  {
+    "word": "PROVARE",
+    "taboo": [
+      "Cercare",
+      "Tentare",
+      "Assaggiare",
+      "Credere",
+      "Dimostrare"
+    ]
+  },
+  {
+    "word": "FRODE",
+    "taboo": [
+      "Cavallo",
+      "Imbroglio",
+      "Truffa",
+      "Fiscale",
+      "Illegale"
+    ]
+  },
+  {
+    "word": "FALANGE",
+    "taboo": [
+      "Dita",
+      "Mano",
+      "Formazione",
+      "Militare",
+      "Armata"
+    ]
+  },
+  {
+    "word": "RITMO",
+    "taboo": [
+      "Musica",
+      "Suono",
+      "Successione",
+      "Fiar",
+      "Cadenza"
+    ]
+  },
+  {
+    "word": "MANAGER",
+    "taboo": [
+      "Dirigente",
+      "Direttore",
+      "Capo",
+      "Procuratore",
+      "Donna"
+    ]
+  },
+  {
+    "word": "ROSPO",
+    "taboo": [
+      "Anfibio",
+      "Rana",
+      "Brutto",
+      "Verruca",
+      "Principe"
+    ]
+  },
+  {
+    "word": "SAFARI",
+    "taboo": [
+      "Caccia",
+      "Africa",
+      "Fotografico",
+      "Jeep",
+      "Animali"
+    ]
+  },
+  {
+    "word": "RUSCELLO",
+    "taboo": [
+      "Acqua",
+      "Scorrere",
+      "Fiume",
+      "Montagna",
+      "Rivo"
+    ]
+  },
+  {
+    "word": "SCONCIO",
+    "taboo": [
+      "Osceno",
+      "Sporco",
+      "Atto",
+      "Parola",
+      "Vergognoso"
+    ]
+  },
+  {
+    "word": "MALVAGIO",
+    "taboo": [
+      "Cattivo",
+      "Perfido",
+      "Crudele",
+      "Azione",
+      "Persone"
+    ]
+  },
+  {
+    "word": "TELECRONACA",
+    "taboo": [
+      "Commento",
+      "Partita",
+      "Bruno Pizzul",
+      "Descrizione",
+      "Avvenimento"
+    ]
+  },
+  {
+    "word": "SCANNER",
+    "taboo": [
+      "Immagine",
+      "Fotografia",
+      "File",
+      "Elaborare",
+      "Definizione"
+    ]
+  },
+  {
+    "word": "SCARSO",
+    "taboo": [
+      "Abbondante",
+      "Poco",
+      "Insufficiente",
+      "Povero",
+      "Inadeguato"
+    ]
+  },
+  {
+    "word": "TELEDIRIN",
+    "taboo": [
+      "Portatile",
+      "Cercapersone",
+      "Vibrare",
+      "Squillare",
+      "Numero"
+    ]
+  },
+  {
+    "word": "SCATTO",
+    "taboo": [
+      "Molla",
+      "Balzo",
+      "Anzianità",
+      "Slancio",
+      "Telefonico"
+    ]
+  },
+  {
+    "word": "SCARPETTA",
+    "taboo": [
+      "Edoardo",
+      "Diminutivo",
+      "Pane",
+      "Salsa",
+      "Sugo"
+    ]
+  },
+  {
+    "word": "SCELTA",
+    "taboo": [
+      "Opzione",
+      "Decisione",
+      "Assortimento",
+      "Imbarazzo",
+      "Alternativa"
+    ]
+  },
+  {
+    "word": "SCAVALCARE",
+    "taboo": [
+      "Superare",
+      "Valicare",
+      "Ostinato",
+      "Sopra",
+      "Passare"
+    ]
+  },
+  {
+    "word": "FALCE",
+    "taboo": [
+      "Taglio",
+      "Attrezzo",
+      "Agricoltura",
+      "Grano",
+      "Martello"
+    ]
+  },
+  {
+    "word": "SCHERMA",
+    "taboo": [
+      "Spada",
+      "Spada",
+      "Stoccata",
+      "Fioretto",
+      "Sport"
+    ]
+  },
+  {
+    "word": "TARLO",
+    "taboo": [
+      "Legno",
+      "Rodere",
+      "Insetto",
+      "Asillo",
+      "Dubbio"
+    ]
+  },
+  {
+    "word": "SAPONE",
+    "taboo": [
+      "Bolla",
+      "Bolla",
+      "Liquido",
+      "Bolle",
+      "Baba"
+    ]
+  },
+  {
+    "word": "SCIARADA",
+    "taboo": [
+      "Gioco",
+      "Enigmistico",
+      "Parole",
+      "Risolvere",
+      "Unire"
+    ]
+  },
+  {
+    "word": "SCHIZOFRENICO",
+    "taboo": [
+      "Disturbo mentale",
+      "Dissociato",
+      "Folle",
+      "Pazzo",
+      "Delirio"
+    ]
+  },
+  {
+    "word": "SCIOCCHEZZA",
+    "taboo": [
+      "Stoltezza",
+      "Insignificante",
+      "Stupidaggine",
+      "Nonnulla",
+      "Fesseria"
+    ]
+  },
+  {
+    "word": "IRRAZIONALE",
+    "taboo": [
+      "Irridele",
+      "Infinito",
+      "Irreale",
+      "Interment",
+      "Possibile"
+    ]
+  },
+  {
+    "word": "SCIROCCO",
+    "taboo": [
+      "Vento",
+      "Caldo",
+      "Sud-est",
+      "Umido",
+      "Africa"
+    ]
+  },
+  {
+    "word": "SCIOPERO",
+    "taboo": [
+      "Lavoro",
+      "Trasporti",
+      "Sindacato",
+      "Ad oltranza",
+      "Lavoro"
+    ]
+  },
+  {
+    "word": "TROUSSE",
+    "taboo": [
+      "Astuccio",
+      "Trucco",
+      "Borsetta",
+      "Pelle",
+      "Viaggio"
+    ]
+  },
+  {
+    "word": "SCODELLA",
+    "taboo": [
+      "Tazza",
+      "Ciotola",
+      "Minestra",
+      "Bere",
+      "Fondo"
+    ]
+  },
+  {
+    "word": "SCOIATTOLO",
+    "taboo": [
+      "Animale",
+      "Roditore",
+      "Albero",
+      "Coda",
+      "Zampine"
+    ]
+  },
+  {
+    "word": "BORDEAUX",
+    "taboo": [
+      "Vino",
+      "Francese",
+      "Rosso",
+      "Scuro",
+      "Colore"
+    ]
+  },
+  {
+    "word": "WEB",
+    "taboo": [
+      "Siti",
+      "Internet",
+      "Ragnatela",
+      "Collegarsi",
+      "Navigare"
+    ]
+  },
+  {
+    "word": "SCOLIOSI",
+    "taboo": [
+      "Schiena",
+      "Malformazione",
+      "Deviazione",
+      "Colonna vertebrale",
+      "Disordini"
+    ]
+  },
+  {
+    "word": "BANNER",
+    "taboo": [
+      "Inserzione",
+      "Pubblicità",
+      "Pagina web",
+      "Internet",
+      "Sito"
+    ]
+  },
+  {
+    "word": "SCOLLEGARE",
+    "taboo": [
+      "Disunire",
+      "Disgiungere",
+      "Separare",
+      "Cavo",
+      "Sconnettere"
+    ]
+  },
+  {
+    "word": "SCONGIURARE",
+    "taboo": [
+      "Pregare",
+      "Pericolo",
+      "Supplicare",
+      "Chiedere",
+      "Allontanare"
+    ]
+  },
+  {
+    "word": "PASSWORD",
+    "taboo": [
+      "Codice",
+      "Segreto",
+      "Accesso",
+      "Digitare",
+      "Inserire"
+    ]
+  },
+  {
+    "word": "SCOTCH",
+    "taboo": [
+      "Whisky",
+      "Attaccare",
+      "Adesivo",
+      "Post it",
+      "Nastro"
+    ]
+  },
+  {
+    "word": "ARCHETIPO",
+    "taboo": [
+      "Modello",
+      "Ideale",
+      "Filosofico",
+      "Forma",
+      "Pilone"
+    ]
+  },
+  {
+    "word": "SEGNALINO",
+    "taboo": [
+      "Pedina",
+      "Posto",
+      "Casella",
+      "Gioco in scatola",
+      "Percorso"
+    ]
+  },
+  {
+    "word": "BABY BOOM",
+    "taboo": [
+      "Nato",
+      "Aumento",
+      "Esplosione",
+      "Demografica",
+      "Intervallo"
+    ]
+  },
+  {
+    "word": "SEGRETERIA",
+    "taboo": [
+      "Telefonica",
+      "Messaggio",
+      "Ufficio",
+      "Carica",
+      "Presidenza"
+    ]
+  },
+  {
+    "word": "ARRANGIARE",
+    "taboo": [
+      "Sistemare",
+      "Accomodare",
+      "Accompagnare",
+      "Musica",
+      "Cavarsela"
+    ]
+  },
+  {
+    "word": "SEMPLIFICARE",
+    "taboo": [
+      "Chiarire",
+      "Esplicare",
+      "Complicare",
+      "Concetto",
+      "Facilitare"
+    ]
+  },
+  {
+    "word": "CETO",
+    "taboo": [
+      "Classe",
+      "Borghese",
+      "Nobile",
+      "Popolare",
+      "Povero"
+    ]
+  },
+  {
+    "word": "SENSUALE",
+    "taboo": [
+      "Sexy",
+      "Sessuale",
+      "Voce",
+      "Piacere",
+      "Desiderio"
+    ]
+  },
+  {
+    "word": "DEMOCRAZIA",
+    "taboo": [
+      "Voto",
+      "Popolare",
+      "Consenso",
+      "Unanimità",
+      "Assemblea"
+    ]
+  },
+  {
+    "word": "MILIONARIO",
+    "taboo": [
+      "Mille",
+      "I soldi",
+      "Famoso",
+      "Ignoto",
+      "Sconosciuto"
+    ]
+  },
+  {
+    "word": "TRAPEZIO",
+    "taboo": [
+      "Geometria",
+      "Quattro",
+      "Lati",
+      "Circo",
+      "Osso"
+    ]
+  },
+  {
+    "word": "RIFLETTERE",
+    "taboo": [
+      "Pensare",
+      "Mare",
+      "Meditare",
+      "Considerare",
+      "Specchiare"
+    ]
+  },
+  {
+    "word": "SESAMO",
+    "taboo": [
+      "Porta",
+      "Apriti",
+      "Pane",
+      "Olio",
+      "Semi"
+    ]
+  },
+  {
+    "word": "TRAPPOLA",
+    "taboo": [
+      "Topi",
+      "Catturare",
+      "Animali",
+      "Tranello",
+      "Tendere"
+    ]
+  },
+  {
+    "word": "NONNISMO",
+    "taboo": [
+      "Caserma",
+      "Militare",
+      "Matricola",
+      "Reclute",
+      "Soldato"
+    ]
+  },
+  {
+    "word": "SET POINT",
+    "taboo": [
+      "Tennis",
+      "Pallavolo",
+      "Tie break",
+      "Vittoria",
+      "Decisivo"
+    ]
+  },
+  {
+    "word": "SFIORARE",
+    "taboo": [
+      "Sfuggita",
+      "Toccare",
+      "Superficialmente",
+      "Vicino",
+      "Leggermente"
+    ]
+  },
+  {
+    "word": "MOSCA TSÉ-TSÉ",
+    "taboo": [
+      "Insetto",
+      "Risveglio",
+      "Ronzare",
+      "Sonno",
+      "Malaria"
+    ]
+  },
+  {
+    "word": "SFOGLIARE",
+    "taboo": [
+      "Libro",
+      "Giornale",
+      "Rivista",
+      "Margherita",
+      "Scorrere"
+    ]
+  },
+  {
+    "word": "LOOP",
+    "taboo": [
+      "Ripetizione",
+      "Ritorno",
+      "Costante",
+      "Ciclico",
+      "Interrotto"
+    ]
+  },
+  {
+    "word": "SGAMBETTO",
+    "taboo": [
+      "Fare",
+      "Piede",
+      "Inciampare",
+      "Cadere",
+      "Tranello"
+    ]
+  },
+  {
+    "word": "ULTIMATUM",
+    "taboo": [
+      "Scadenza",
+      "Obbligare",
+      "Ingiunzione",
+      "Ultimo",
+      "Dare"
+    ]
+  },
+  {
+    "word": "SGORBIO",
+    "taboo": [
+      "Macchia",
+      "Scarabocchio",
+      "Inchiostro",
+      "Disegno",
+      "Brutto"
+    ]
+  },
+  {
+    "word": "TORERO",
+    "taboo": [
+      "Corrida",
+      "Matador",
+      "Arena",
+      "Spagna",
+      "Dominguín"
+    ]
+  },
+  {
+    "word": "SIBILLINO",
+    "taboo": [
+      "Oscuro",
+      "Misterioso",
+      "Cumana",
+      "Enigmatico",
+      "Oracolo"
+    ]
+  },
+  {
+    "word": "NOMINATION",
+    "taboo": [
+      "Candidatura",
+      "Premio",
+      "Film",
+      "Vincere",
+      "Oscar"
+    ]
+  },
+  {
+    "word": "SICCITA'",
+    "taboo": [
+      "Secchezza",
+      "Arsura",
+      "Calore",
+      "Sete",
+      "Aridità"
+    ]
+  },
+  {
+    "word": "YEN",
+    "taboo": [
+      "Moneta",
+      "Divisa",
+      "Valigia",
+      "Azienda",
+      "Tokyo"
+    ]
+  },
+  {
+    "word": "SIESTA",
+    "taboo": [
+      "Dormita",
+      "Pisolino",
+      "Sonno",
+      "Pennichella",
+      "Riposo"
+    ]
+  },
+  {
+    "word": "TURCHESE",
+    "taboo": [
+      "Pietra",
+      "Colore",
+      "Azzurro",
+      "Prezioso",
+      "Acquamarina"
+    ]
+  },
+  {
+    "word": "TWIST",
+    "taboo": [
+      "Ballo",
+      "Again",
+      "Shout",
+      "Chubby Checker",
+      "Anni 60-70"
+    ]
+  },
+  {
+    "word": "SIGLA",
+    "taboo": [
+      "Targa",
+      "Musicale",
+      "Programma",
+      "Televisivo",
+      "Iniziali"
+    ]
+  },
+  {
+    "word": "VICEVERSA",
+    "taboo": [
+      "Invece",
+      "Opposto",
+      "Contrario",
+      "Inverso",
+      "Piuttosto"
+    ]
+  },
+  {
+    "word": "SIMULAZIONE",
+    "taboo": [
+      "Filmata",
+      "Dissimulazione",
+      "Prova",
+      "Sceneggiata"
+    ]
+  },
+  {
+    "word": "VIDEOCONFERENZA",
+    "taboo": [
+      "Computer",
+      "Fibra ottica",
+      "Telefono",
+      "Vedere",
+      "Collegamento"
+    ]
+  },
+  {
+    "word": "SINTESI",
+    "taboo": [
+      "Breve",
+      "Analisi",
+      "Risultato",
+      "Unità",
+      "Conclusione"
+    ]
+  },
+  {
+    "word": "YETI",
+    "taboo": [
+      "Uomo",
+      "Nevi",
+      "Enorme",
+      "Abominevole",
+      "Himalaya"
+    ]
+  },
+  {
+    "word": "SMAGLIANTE",
+    "taboo": [
+      "Forma",
+      "Brillante",
+      "Ottimo",
+      "Eccellente",
+      "Lucentezza"
+    ]
+  },
+  {
+    "word": "SOCCHIUDERE",
+    "taboo": [
+      "Porta",
+      "Finestra",
+      "Fessura",
+      "Spiraglio",
+      "Aprire"
+    ]
+  },
+  {
+    "word": "SNELLO",
+    "taboo": [
+      "Magro",
+      "Agile",
+      "Sottile",
+      "Svelto",
+      "Slanciato"
+    ]
+  },
+  {
+    "word": "SOFFIARE",
+    "taboo": [
+      "Fiato",
+      "Bocca",
+      "Aria",
+      "Vetro",
+      "Vento"
+    ]
+  },
+  {
+    "word": "SOCCORRERE",
+    "taboo": [
+      "Aiutare",
+      "Intervenire",
+      "Malato",
+      "Ferito",
+      "Pericolo"
+    ]
+  },
+  {
+    "word": "SOGLIOLA",
+    "taboo": [
+      "Pesce",
+      "Mare",
+      "Piatto",
+      "Cibo",
+      "Mangiare"
+    ]
+  },
+  {
+    "word": "SOFTWARE",
+    "taboo": [
+      "Hardware",
+      "Computer",
+      "Programma",
+      "Windows",
+      "Dati"
+    ]
+  },
+  {
+    "word": "SOLLETICO",
+    "taboo": [
+      "Fare",
+      "Ridere",
+      "Soffrire",
+      "Piedi",
+      "Stuzzicare"
+    ]
+  },
+  {
+    "word": "SOLIDARIETA",
+    "taboo": [
+      "Aiuto",
+      "Sostegno",
+      "Appoggio",
+      "Soccorso",
+      "Solido"
+    ]
+  },
+  {
+    "word": "TARTARUGA",
+    "taboo": [
+      "Lento",
+      "Testuggine",
+      "Piano",
+      "Mare",
+      "Guscio"
+    ]
+  },
+  {
+    "word": "SONNIFERO",
+    "taboo": [
+      "Farmaco",
+      "Medicinale",
+      "Pillola",
+      "Dormire",
+      "Camomilla"
+    ]
+  },
+  {
+    "word": "SOTTILETTE",
+    "taboo": [
+      "Kraft",
+      "Fette",
+      "Formaggio",
+      "Fuso",
+      "Toast"
+    ]
+  },
+  {
+    "word": "SOSTA",
+    "taboo": [
+      "Arresto",
+      "Fermata",
+      "Divieto",
+      "Stop",
+      "Pausa"
+    ]
+  },
+  {
+    "word": "SOTTOLINEARE",
+    "taboo": [
+      "Matita",
+      "Penna",
+      "Evidenziare",
+      "Rimarcare",
+      "Rilevare"
+    ]
+  },
+  {
+    "word": "TRIPUDIO",
+    "taboo": [
+      "Festeggiare",
+      "Gioco",
+      "Gioia",
+      "Esultanza",
+      "Festa"
+    ]
+  },
+  {
+    "word": "SOUBRETTE",
+    "taboo": [
+      "Presentatrice",
+      "Ballerina",
+      "Cantante",
+      "Star",
+      "Spettacolo"
+    ]
+  },
+  {
+    "word": "VONGOLA",
+    "taboo": [
+      "Frutto di mare",
+      "Conchiglia",
+      "Mollusco",
+      "Mangiare",
+      "Verace"
+    ]
+  },
+  {
+    "word": "SPACCONE",
+    "taboo": [
+      "Paul Newman",
+      "Gradasso",
+      "Tronfio",
+      "Smargiasso",
+      "Presuntuoso"
+    ]
+  },
+  {
+    "word": "BIBLIOTECARIO",
+    "taboo": [
+      "Libro",
+      "Scaffale",
+      "Silenzio",
+      "Lettura",
+      "Volume"
+    ]
+  },
+  {
+    "word": "TURBOLENZA",
+    "taboo": [
+      "Sballottamento",
+      "Agitazione",
+      "Burrascoso",
+      "Aereo",
+      "Atmosferica"
+    ]
+  },
+  {
+    "word": "SPAVALDO",
+    "taboo": [
+      "Coraggioso",
+      "Stupido",
+      "Scontroso",
+      "Orgoglioso",
+      "Sfrontato"
+    ]
+  },
+  {
+    "word": "SPAVENTAPASSERI",
+    "taboo": [
+      "Fantoccio",
+      "Paglia",
+      "Uccelli",
+      "Volatili",
+      "Campagna"
+    ]
+  },
+  {
+    "word": "WAGNERIANO",
+    "taboo": [
+      "Valchirie",
+      "Tristano",
+      "Classica",
+      "Musica",
+      "Anello"
+    ]
+  },
+  {
+    "word": "SPAZZINO",
+    "taboo": [
+      "Operatore ecologico",
+      "Pulire",
+      "Strade",
+      "Notte",
+      "Netturbino"
+    ]
+  },
+  {
+    "word": "TURBINE",
+    "taboo": [
+      "Vento",
+      "Movimento",
+      "Tromba d'aria",
+      "Polvere",
+      "Vortice"
+    ]
+  },
+  {
+    "word": "VOCAZIONE",
+    "taboo": [
+      "Religione",
+      "Tendenza",
+      "Inclinazione",
+      "Chiamata",
+      "Preferenza"
+    ]
+  },
+  {
+    "word": "SPECULARE",
+    "taboo": [
+      "Simmetrico",
+      "Simmetria",
+      "Struttura",
+      "Specchiare",
+      "Superficie"
+    ]
+  },
+  {
+    "word": "TRATTATO",
+    "taboo": [
+      "Materia",
+      "Dottrina",
+      "Convenzione",
+      "Patto",
+      "Accordo"
+    ]
+  },
+  {
+    "word": "SPIRAGLIO",
+    "taboo": [
+      "Fessura",
+      "Luce",
+      "Speranza",
+      "Barlume",
+      "Possibilità"
+    ]
+  },
+  {
+    "word": "SPORADICO",
+    "taboo": [
+      "Isolato",
+      "Saltuario",
+      "Continuo",
+      "Ripetuto",
+      "Casuale"
+    ]
+  },
+  {
+    "word": "TRATTORE",
+    "taboo": [
+      "Contadino",
+      "Veloce",
+      "Cingolo",
+      "Campagna",
+      "Agricoltura"
+    ]
+  },
+  {
+    "word": "SQUASH",
+    "taboo": [
+      "Sport",
+      "Chiuso",
+      "Pallina",
+      "Racchetta",
+      "Muro"
+    ]
+  },
+  {
+    "word": "TREDICESIMA",
+    "taboo": [
+      "Paga",
+      "Mensilità",
+      "Stipendio",
+      "Retribuzione",
+      "Natale"
+    ]
+  },
+  {
+    "word": "SQUAW",
+    "taboo": [
+      "Donna",
+      "Moglie",
+      "Indiani",
+      "Augh",
+      "Toro seduto"
+    ]
+  },
+  {
+    "word": "MINACCIA",
+    "taboo": [
+      "Pericolo",
+      "Intimidazione",
+      "Vessazione",
+      "Futuro",
+      "Minacciare"
+    ]
+  },
+  {
+    "word": "ZIP",
+    "taboo": [
+      "Cerniera",
+      "Lampo",
+      "Pantaloni",
+      "Patta",
+      "Bottone"
+    ]
+  },
+  {
+    "word": "TACITURNO",
+    "taboo": [
+      "Parlare",
+      "Parole",
+      "Poco",
+      "Riservato",
+      "Silenzioso"
+    ]
+  },
+  {
+    "word": "STAGISTA",
+    "taboo": [
+      "Lewinsky",
+      "Corso",
+      "Addestramento",
+      "Lavoro",
+      "Azienda"
+    ]
+  },
+  {
+    "word": "SREGOLATEZZA",
+    "taboo": [
+      "Disobbedienza",
+      "Comportamento",
+      "Sfrenatezza",
+      "Vizi"
+    ]
+  },
+  {
+    "word": "TAKEAWAY",
+    "taboo": [
+      "Fast Food",
+      "Mangiare",
+      "Cibo",
+      "Cinese",
+      "Ristorante"
+    ]
+  },
+  {
+    "word": "STAMPATELLO",
+    "taboo": [
+      "Lettere",
+      "Alfabeto",
+      "Corsivo",
+      "Maiuscole",
+      "Carattere"
+    ]
+  },
+  {
+    "word": "TAOISMO",
+    "taboo": [
+      "Lao-Tse",
+      "Religione",
+      "Cina",
+      "Filosofia",
+      "Cosmo"
+    ]
+  },
+  {
+    "word": "STATION WAGON",
+    "taboo": [
+      "Automobile",
+      "Giardiniera",
+      "Berlina",
+      "Familiare",
+      "Bagagliaio"
+    ]
+  },
+  {
+    "word": "TERMOSIFONE",
+    "taboo": [
+      "Riscaldamento",
+      "Casa",
+      "Temperatura",
+      "Acqua",
+      "Caldaia"
+    ]
+  },
+  {
+    "word": "STOCK",
+    "taboo": [
+      "Disponibile",
+      "Magazzino",
+      "Scorta",
+      "Merci",
+      "Inventario"
+    ]
+  },
+  {
+    "word": "TESTARDO",
+    "taboo": [
+      "Mulo",
+      "Coccio",
+      "Insistente",
+      "Ostinato",
+      "Caparbio"
+    ]
+  },
+  {
+    "word": "STORTO",
+    "taboo": [
+      "Diritto",
+      "Inclinato",
+      "Sbieco",
+      "Gambe",
+      "Quadro"
+    ]
+  },
+  {
+    "word": "STRADIVARIO",
+    "taboo": [
+      "Violino",
+      "Violoncello",
+      "Strumento",
+      "Musicale",
+      "Accardo"
+    ]
+  },
+  {
+    "word": "STRADARIO",
+    "taboo": [
+      "Percorso",
+      "Città",
+      "Vie",
+      "Strade",
+      "Cartina"
+    ]
+  },
+  {
+    "word": "STRIMPELLARE",
+    "taboo": [
+      "Suonare",
+      "Strumento",
+      "Musicale",
+      "Pianoforte",
+      "Chitarra"
+    ]
+  },
+  {
+    "word": "STRESS",
+    "taboo": [
+      "Fatica",
+      "Lavoro",
+      "Sovraccarico",
+      "Frenesia",
+      "Tensione"
+    ]
+  },
+  {
+    "word": "STUPEFACENTE",
+    "taboo": [
+      "Meraviglia",
+      "Ammirevole",
+      "Incredibile",
+      "Inaspettato",
+      "Piacevole"
+    ]
+  },
+  {
+    "word": "TRENDY",
+    "taboo": [
+      "Attuale",
+      "Moda",
+      "Moderno",
+      "Vogue",
+      "Discoteca"
+    ]
+  },
+  {
+    "word": "SOGGETTIVO",
+    "taboo": [
+      "Assoluto",
+      "Relativo",
+      "Oggettivo",
+      "Personale",
+      "Opinione"
+    ]
+  },
+  {
+    "word": "SUPPLIZIO",
+    "taboo": [
+      "Sofferenza",
+      "Penitenza",
+      "Pena",
+      "Tortura",
+      "Tantalo"
+    ]
+  },
+  {
+    "word": "SURROUND",
+    "taboo": [
+      "Suono",
+      "Stereo",
+      "Audio",
+      "Casse",
+      "Effetto"
+    ]
+  },
+  {
+    "word": "SUSHI",
+    "taboo": [
+      "Cibo",
+      "Piatto",
+      "Giapponese",
+      "Pesce",
+      "Crudo"
+    ]
   }
 ]

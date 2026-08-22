@@ -38,11 +38,25 @@ function updateUI() {
 
   if (elements.teamRossaScore) elements.teamRossaScore.textContent = gameState.teams.rossa.score;
   if (elements.teamBluScore) elements.teamBluScore.textContent = gameState.teams.blu.score;
-  if (elements.time) elements.time.textContent = gameState.timer || 60;
+  if (elements.time) elements.time.textContent = gameState.timer ?? 60;
   if (elements.roundInfo) elements.roundInfo.textContent = `Round ${gameState.roundNumber} di ${gameState.totalRounds}`;
 
   updatePlayersList();
   updateGameView();
+}
+
+function appendTeamPlayers(container, teamPlayers, labelClass, labelText) {
+  const label = document.createElement("span");
+  label.className = "font-bold " + labelClass;
+  label.textContent = labelText;
+  container.appendChild(label);
+
+  teamPlayers.forEach((p) => {
+    const player = gameState.players.find((pl) => pl.id === p.id);
+    const span = document.createElement("span");
+    span.textContent = (player?.name || "Giocatore") + (player?.ready ? " ✓" : "");
+    container.appendChild(span);
+  });
 }
 
 function updatePlayersList() {
@@ -56,30 +70,23 @@ function updatePlayersList() {
   if (squadraRossa && squadraRossa.length > 0) {
     const teamARossaContainer = document.createElement("div");
     teamARossaContainer.className = "flex items-center gap-2 flex-wrap";
-    teamARossaContainer.innerHTML = `<span class="font-bold text-red-500">Squadra Rossa:</span>`;
-    squadraRossa.forEach((p) => {
-      const player = gameState.players.find((pl) => pl.id === p.id);
-      const readyMark = player?.ready ? " ✓" : "";
-      teamARossaContainer.innerHTML += `<span>${player?.name || "Giocatore"}${readyMark}</span>`;
-    });
+    appendTeamPlayers(teamARossaContainer, squadraRossa, "text-red-500", "Squadra Rossa:");
     elements.playersList.appendChild(teamARossaContainer);
   }
 
   if (squadrablu && squadrablu.length > 0) {
     const teamABluContainer = document.createElement("div");
     teamABluContainer.className = "flex items-center gap-2 flex-wrap";
-    teamABluContainer.innerHTML = `<span class="font-bold text-blue-500">Squadra Blu:</span>`;
-    squadrablu.forEach((p) => {
-      const player = gameState.players.find((pl) => pl.id === p.id);
-      const readyMark = player?.ready ? " ✓" : "";
-      teamABluContainer.innerHTML += `<span>${player?.name || "Giocatore"}${readyMark}</span>`;
-    });
+    appendTeamPlayers(teamABluContainer, squadrablu, "text-blue-500", "Squadra Blu:");
     elements.playersList.appendChild(teamABluContainer);
   }
 
   const readyCount = gameState.players.filter((p) => p.ready).length;
   if (readyCount < 4) {
-    elements.playersList.innerHTML += `<p class="text-sm text-gray-500 mt-2">In attesa di altri giocatori... (${readyCount}/4 pronti)</p>`;
+    const waiting = document.createElement("p");
+    waiting.className = "text-sm text-gray-500 mt-2";
+    waiting.textContent = `In attesa di altri giocatori... (${readyCount}/4 pronti)`;
+    elements.playersList.appendChild(waiting);
   }
 }
 
@@ -91,18 +98,24 @@ function updateGameView() {
   if (gameState.gameState === "lobby") {
     if (elements.lobbyArea) elements.lobbyArea.classList.remove("hidden");
     if (elements.gameArea) elements.gameArea.classList.add("hidden");
+    if (elements.victoryArea) elements.victoryArea.classList.add("hidden");
     return;
   }
 
   if (gameState.gameState === "ended") {
+    if (elements.lobbyArea) elements.lobbyArea.classList.add("hidden");
     if (elements.gameArea) elements.gameArea.classList.add("hidden");
     if (elements.victoryArea) elements.victoryArea.classList.remove("hidden");
     elements.victoryRossaScore.textContent = gameState.rossaScore;
     elements.victoryBluScore.textContent = gameState.bluScore;
+    if (elements.winnerText) {
+      elements.winnerText.textContent = gameState.winner || "Partita completata!";
+    }
     return;
   }
 
   if (elements.lobbyArea) elements.lobbyArea.classList.add("hidden");
+  if (elements.victoryArea) elements.victoryArea.classList.add("hidden");
   if (elements.gameArea) elements.gameArea.classList.remove("hidden");
 
   if (!gameState.currentWord) return;
@@ -197,30 +210,21 @@ function updateRoleControls() {
     const pauseIcon = gameState.gameState === "paused" ? "play-outline" : "pause-outline";
     const pauseText = gameState.gameState === "paused" ? "Riprendi" : "Pausa";
     
-    elements.controlsArea.innerHTML += `
+    let extraControls = `
       <div class="flex gap-4 justify-center mt-6">
         <button onclick="handlePause()" class="button pill text-xl">
           <ion-icon name="${pauseIcon}"></ion-icon> ${pauseText}
-        </button>
+        </button>`;
+    if (isDescriptor) {
+      extraControls += `
         <button onclick="handleNextTurn()" class="button pill text-xl">
           <ion-icon name="swap-horizontal-outline"></ion-icon> Fine Turno
-        </button>
+        </button>`;
+    }
+    extraControls += `
       </div>
     `;
-  }
-}
-
-function updatePauseButton() {
-  if (gameState.gameState === "playing") {
-    const pauseBtn = document.getElementById("pauseBtn");
-    if (pauseBtn) {
-      pauseBtn.innerHTML = '<ion-icon name="pause-outline"></ion-icon> Pausa';
-    }
-  } else if (gameState.gameState === "paused") {
-    const pauseBtn = document.getElementById("pauseBtn");
-    if (pauseBtn) {
-      pauseBtn.innerHTML = '<ion-icon name="play-outline"></ion-icon> Riprendi';
-    }
+    elements.controlsArea.innerHTML += extraControls;
   }
 }
 
@@ -242,7 +246,6 @@ function handleSkip() {
 
 function handleTaboo() {
   socket.emit("tabooSignalTaboo", GAME_ID);
-  playSound("wrong");
 }
 
 function handlePause() {
@@ -260,30 +263,29 @@ function handleNextTurn() {
 function setupLobby() {
   if (!elements.playerName) return;
 
-  elements.playerName.addEventListener("change", () => {
-    const name = elements.playerName.value.trim() || "Giocatore";
-    socket.emit("tabooSetName", GAME_ID, name);
-    elements.teamA.disabled = false;
-    elements.teamB.disabled = false;
+  elements.playerName.addEventListener("input", () => {
+    const name = elements.playerName.value.trim();
+    if (name) {
+      socket.emit("tabooSetName", GAME_ID, name);
+      elements.teamA.disabled = false;
+      elements.teamB.disabled = false;
+    } else {
+      elements.teamA.disabled = true;
+      elements.teamB.disabled = true;
+    }
   });
 
   elements.teamA.addEventListener("click", () => {
     if (elements.teamA.disabled) return;
     socket.emit("tabooSetTeam", GAME_ID, "rossa");
     myTeam = "rossa";
-    elements.teamA.classList.add("bg-blue-500");
-    elements.teamB.classList.remove("bg-red-500");
   });
 
   elements.teamB.addEventListener("click", () => {
     if (elements.teamB.disabled) return;
     socket.emit("tabooSetTeam", GAME_ID, "blu");
     myTeam = "blu";
-    elements.teamB.classList.add("bg-red-500");
-    elements.teamA.classList.remove("bg-blue-500");
   });
-  
-  socket.emit("tabooJoinRoom", GAME_ID);
 }
 
 function updateReadyButton() {
@@ -326,6 +328,14 @@ function setupReadyButton() {
   });
 }
 
+function setupRestartButton() {
+  if (!elements.restartBtn) return;
+
+  elements.restartBtn.addEventListener("click", () => {
+    socket.emit("tabooReset", GAME_ID);
+  });
+}
+
 socket.on("connect", () => {
   mySocketId = socket.id;
   // setupLobby();
@@ -341,7 +351,7 @@ socket.on("tabooSetTeamResponse", (team) => {
   updateReadyButton();
 });
 
-socket.on("tabooUpdateState", (state) => {
+socket.on("tabooState", (state) => {
   gameState = state;
 
   const me = state.players.find((p) => p.id === mySocketId);
@@ -351,59 +361,13 @@ socket.on("tabooUpdateState", (state) => {
 
   updateUI();
   updateReadyButton();
-});
-
-socket.on("tabooGameStarted", (state) => {
-  gameState = state;
-  updateUI();
-  playSound("gong");
-});
-
-socket.on("tabooWordSolved", (data) => {
-  gameState.currentWord = data.word;
-  gameState.teams.rossa.score = data.rossaScore;
-  gameState.teams.blu.score = data.bluScore;
-  gameState.timer = data.timer;
-  updateUI();
-  playSound("correct");
-});
-
-socket.on("tabooTabooSignaled", (data) => {
-  gameState.teams.rossa.score = data.rossaScore;
-  gameState.teams.blu.score = data.bluScore;
-  gameState.currentWord = data.word;
-  updateUI();
-  playSound("wrong");
-});
-
-socket.on("tabooTurnChanged", (state) => {
-  gameState = state;
-  updateUI();
-  playSound("gong");
+  if (state.sound) playSound(state.sound);
 });
 
 socket.on("tabooTimerTick", (time) => {
   if (elements.time) {
     elements.time.textContent = time;
   }
-});
-
-socket.on("tabooGamePaused", (state) => {
-  gameState = state;
-  updateUI();
-  updatePauseButton();
-});
-
-socket.on("tabooGameResumed", (state) => {
-  gameState = state;
-  updateUI();
-  updatePauseButton();
-});
-
-socket.on("tabooGameEnded", (state) => {
-  gameState = state;
-  updateUI();
-  playSound("gong");
 });
 
 socket.on("tabooError", (message) => {
@@ -414,5 +378,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   initElements();
   setupLobby();
   setupReadyButton();
+  setupRestartButton();
   socket.emit("tabooJoinRoom", GAME_ID);
 });

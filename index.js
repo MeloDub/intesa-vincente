@@ -12,7 +12,11 @@ const app = express();
 app.use(express.static("public"));
 app.set("view engine", "pug");
 
-PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
+
+process.on("uncaughtException", (err) => {
+  console.error("Uncaught exception:", err);
+});
 
 const httpServer = createServer(app);
 const io = new Server(httpServer);
@@ -69,9 +73,11 @@ function getRandomTabooWord(usedWords) {
   const available = tabooWords.filter((w) => !usedWords.includes(w.word));
   if (available.length === 0) {
     usedWords.length = 0;
-    return tabooWords[Math.floor(Math.random() * tabooWords.length)];
   }
-  return available[Math.floor(Math.random() * available.length)];
+  const pool = available.length === 0 ? tabooWords : available;
+  const word = pool[Math.floor(Math.random() * pool.length)];
+  usedWords.push(word.word);
+  return word;
 }
 
 function initializeTabooRoom(roomID) {
@@ -90,7 +96,9 @@ function initializeTabooRoom(roomID) {
     totalRounds: 4,
     timer: 60,
     timerInterval: null,
-    gameState: "lobby"
+    turnTransitioning: false,
+    gameState: "lobby",
+    winner: null
   });
 }
 
@@ -123,8 +131,17 @@ function serializeRoom(room) {
     roundNumber: room.roundNumber,
     totalRounds: room.totalRounds,
     timer: room.timer,
-    gameState: room.gameState
+    gameState: room.gameState,
+    winner: room.winner,
+    rossaScore: room.teams.rossa.score,
+    bluScore: room.teams.blu.score
   };
+}
+
+function broadcastTabooState(room, sound = null) {
+  const payload = serializeRoom(room);
+  if (sound) payload.sound = sound;
+  io.to(room.roomID).emit("tabooState", payload);
 }
 
 function startServerTimer(roomID, reset = true) {
@@ -167,6 +184,8 @@ function stopServerTimer(room) {
 function handleTurnEnd(roomID) {
   const room = tabooRooms.get(roomID);
   if (!room) return;
+  if (room.turnTransitioning) return;
+  room.turnTransitioning = true;
 
   const previousTurn = room.currentTurn;
   room.currentTurn = previousTurn === "rossa" ? "blu" : "rossa";
@@ -178,33 +197,23 @@ function handleTurnEnd(roomID) {
 
     if (room.roundNumber > room.totalRounds) {
       room.gameState = "ended";
-      
-      const winner = room.teams.rossa.score > room.teams.blu.score 
-        ? encodeURIComponent("Squadra Rossa") 
-        : room.teams.blu.score > room.teams.rossa.score 
-          ? encodeURIComponent("Squadra Blu") 
-          : encodeURIComponent("Pareggio");
+      room.turnTransitioning = false;
 
-      // Reindirizza alla schermata di vittoria
-      io.to(roomID).emit("tabooGameEnded", {
-        ...serializeRoom(room),
-        winner: winner,
-        rossaScore: room.teams.rossa.score,
-        bluScore: room.teams.blu.score
-      });
-      
-      // Reindirizza tutti i giocatori nella stanza alla schermata di vittoria
-      io.to(roomID).emit("tabooRedirectVictory", `/taboo/victory/${room.roomID}/${winner}`);
+      const winner = room.teams.rossa.score > room.teams.blu.score 
+        ? "Squadra Rossa" 
+        : room.teams.blu.score > room.teams.rossa.score 
+          ? "Squadra Blu" 
+          : "Pareggio";
+
+      room.winner = winner;
+      broadcastTabooState(room, "gong");
       return;
     }
   }
 
-  const turnData = startNewTurn(room);
-  io.to(roomID).emit("tabooTurnChanged", {
-    ...serializeRoom(room),
-    currentDescriptorId: turnData.currentDescriptorId
-  });
-  startServerTimer(roomID);
+  startNewTurn(room);
+  room.turnTransitioning = false;
+  broadcastTabooState(room, "gong");
 }
 
 function checkCanStartGame(room) {
@@ -241,47 +250,57 @@ io.on("connection", (socket) => {
     }
 
     const room = tabooRooms.get(roomID);
-    socket.emit("tabooUpdateState", serializeRoom(room));
+    socket.emit("tabooState", serializeRoom(room));
   });
 
   socket.on("tabooSetName", (roomID, name) => {
     const room = tabooRooms.get(roomID);
     if (!room) return;
 
+    const playerName = String(name || "").trim().slice(0, 20) || "Giocatore";
+
     let player = room.players.find((p) => p.id === socket.id);
     if (!player) {
       player = {
         id: socket.id,
-        name: name,
+        name: playerName,
         team: null,
         ready: false
       };
       room.players.push(player);
     } else {
-      player.name = name;
+      player.name = playerName;
     }
 
-    io.to(roomID).emit("tabooUpdateState", serializeRoom(room));
+    broadcastTabooState(room);
   });
 
   socket.on("tabooSetTeam", (roomID, team) => {
     const room = tabooRooms.get(roomID);
     if (!room) return;
+    if (team !== "rossa" && team !== "blu") return;
 
     const player = room.players.find((p) => p.id === socket.id);
     if (!player) return;
 
+    if (room.teams[team].players.length >= 2 && player.team !== team) {
+      socket.emit("tabooError", "La squadra è già piena (max 2 giocatori).");
+      return;
+    }
+
     const previousTeam = player.team;
-    if (previousTeam) {
+    if (previousTeam && previousTeam !== team) {
       room.teams[previousTeam].players = room.teams[previousTeam].players.filter(
         (p) => p.id !== socket.id
       );
     }
 
     player.team = team;
-    room.teams[team].players.push(player);
+    if (!room.teams[team].players.includes(player)) {
+      room.teams[team].players.push(player);
+    }
 
-    io.to(roomID).emit("tabooUpdateState", serializeRoom(room));
+    broadcastTabooState(room);
     
     // Invia la squadra assegnata al client per aggiornare myTeam
     socket.emit("tabooSetTeamResponse", team);
@@ -294,14 +313,14 @@ io.on("connection", (socket) => {
     const player = room.players.find((p) => p.id === socket.id);
     if (!player) return;
 
-    player.ready = ready;
+    player.ready = !!ready;
 
-    io.to(roomID).emit("tabooUpdateState", serializeRoom(room));
+    broadcastTabooState(room);
 
     if (checkCanStartGame(room)) {
       room.gameState = "playing";
       startNewTurn(room);
-      io.to(roomID).emit("tabooGameStarted", serializeRoom(room));
+      broadcastTabooState(room, "gong");
       startServerTimer(roomID);
     }
   });
@@ -309,52 +328,58 @@ io.on("connection", (socket) => {
   socket.on("tabooCorrectAnswer", (roomID) => {
     const room = tabooRooms.get(roomID);
     if (!room || room.gameState !== "playing") return;
+    if (socket.id !== room.currentDescriptorId) {
+      socket.emit("tabooError", "Solo il descrittore può segnare un punto.");
+      return;
+    }
 
     room.teams[room.currentTurn].score++;
 
     const word = getRandomTabooWord(room.usedWords);
     room.currentWord = word;
 
-    io.to(roomID).emit("tabooWordSolved", {
-      word: word,
-      rossaScore: room.teams.rossa.score,
-      bluScore: room.teams.blu.score,
-      timer: room.timer
-    });
+    broadcastTabooState(room, "correct");
   });
 
   socket.on("tabooSkipWord", (roomID) => {
     const room = tabooRooms.get(roomID);
     if (!room || room.gameState !== "playing") return;
+    if (socket.id !== room.currentDescriptorId) {
+      socket.emit("tabooError", "Solo il descrittore può saltare una parola.");
+      return;
+    }
 
     const word = getRandomTabooWord(room.usedWords);
     room.currentWord = word;
 
-    io.to(roomID).emit("tabooWordSkipped", {
-      word: word,
-      timer: room.timer
-    });
+    broadcastTabooState(room);
   });
 
   socket.on("tabooSignalTaboo", (roomID) => {
     const room = tabooRooms.get(roomID);
     if (!room || room.gameState !== "playing") return;
 
+    const player = room.players.find((p) => p.id === socket.id);
+    if (!player || !player.team || player.team === room.currentTurn) {
+      socket.emit("tabooError", "Solo la squadra avversaria può segnalare un taboo.");
+      return;
+    }
+
     room.teams[room.currentTurn].score = Math.max(0, room.teams[room.currentTurn].score - 1);
 
     const word = getRandomTabooWord(room.usedWords);
     room.currentWord = word;
 
-    io.to(roomID).emit("tabooTabooSignaled", {
-      word: word,
-      rossaScore: room.teams.rossa.score,
-      bluScore: room.teams.blu.score
-    });
+    broadcastTabooState(room, "wrong");
   });
 
   socket.on("tabooNextTurn", (roomID) => {
     const room = tabooRooms.get(roomID);
     if (!room || room.gameState !== "playing") return;
+    if (socket.id !== room.currentDescriptorId) {
+      socket.emit("tabooError", "Solo il descrittore può terminare il turno.");
+      return;
+    }
 
     stopServerTimer(room);
     handleTurnEnd(roomID);
@@ -366,22 +391,34 @@ io.on("connection", (socket) => {
 
     stopServerTimer(room);
     room.gameState = "paused";
-    io.to(roomID).emit("tabooGamePaused", serializeRoom(room));
+    broadcastTabooState(room);
   });
 
   socket.on("tabooResume", (roomID) => {
     const room = tabooRooms.get(roomID);
-    if (!room) return;
+    if (!room || room.gameState !== "paused") return;
 
     room.gameState = "playing";
-    io.to(roomID).emit("tabooGameResumed", serializeRoom(room));
+    broadcastTabooState(room);
     startServerTimer(roomID, false);
   });
 
   socket.on("tabooReset", (roomID) => {
-    stopServerTimer(tabooRooms.get(roomID));
+    const oldRoom = tabooRooms.get(roomID);
+    stopServerTimer(oldRoom);
+
+    const players = oldRoom ? oldRoom.players : [];
     initializeTabooRoom(roomID);
-    io.to(roomID).emit("tabooUpdateState", serializeRoom(tabooRooms.get(roomID)));
+
+    const room = tabooRooms.get(roomID);
+    room.players = players.map((p) => ({ ...p, ready: false }));
+    room.players.forEach((p) => {
+      if (p.team) {
+        room.teams[p.team].players.push(p);
+      }
+    });
+
+    broadcastTabooState(room);
   });
 
   socket.on("disconnect", () => {
@@ -401,7 +438,7 @@ io.on("connection", (socket) => {
           room.gameState = "paused";
         }
 
-        io.to(roomID).emit("tabooUpdateState", serializeRoom(room));
+        broadcastTabooState(room);
       }
     });
   });

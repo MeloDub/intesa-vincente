@@ -27,6 +27,16 @@ body {
     @apply opacity-50 cursor-not-allowed;
 }
 
+.input-field {
+    @apply bg-white bg-opacity-60 border-2 border-[#9f5f80] rounded-lg px-6 py-3
+    text-center font-bold text-[#590696] placeholder-[#9f5f80]
+    outline-none transition-all cursor-text;
+}
+
+.input-field:focus {
+    @apply bg-white border-[#A760FF] shadow-solid shadow-[#FC92E3];
+}
+
 .button.pill {
     @apply rounded-full;
 }
@@ -199,6 +209,14 @@ header.small .title {
 
 body.taboo .button {
     @apply bg-red-500 shadow-red-400;
+}
+
+body.taboo #teamA {
+    @apply bg-red-500 shadow-red-400;
+}
+
+body.taboo #teamB {
+    @apply bg-blue-500 shadow-blue-400;
 }
 
 body.taboo header .title {
