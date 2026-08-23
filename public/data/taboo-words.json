@@ -3685,7 +3685,7 @@
       "Nord",
       "Meridionale",
       "Centro",
-      "Dante",
+      "Pianura Padana",
       "Italia"
     ]
   },
@@ -3702,7 +3702,7 @@
   {
     "word": "ANZI",
     "taboo": [
-      "Peraltro",
+      "Piuttosto",
       "Invece",
       "Opposto",
       "Tutto",
@@ -3726,7 +3726,7 @@
       "Muso",
       "Corna",
       "Mammifero",
-      "Pelle"
+      "Pachiderma"
     ]
   },
   {
@@ -3744,9 +3744,9 @@
     "taboo": [
       "Maschera",
       "Napoletana",
-      "Seghero",
+      "Segreto",
       "Buffone",
-      "Alighiero"
+      "Allegro"
     ]
   },
   {
@@ -3785,8 +3785,8 @@
       "Musica",
       "Portogallo",
       "Lisbona",
-      "Malinconia",
-      "Amalia Rodrigues"
+      "Madredeus",
+      "Amalia Rodriguez"
     ]
   },
   {
@@ -3804,9 +3804,9 @@
     "taboo": [
       "Nemico",
       "Eliminare",
-      "Annientare",
       "Sconfiggere",
-      "Trovare"
+      "travolgere",
+      "Avversario"
     ]
   },
   {
@@ -3825,7 +3825,7 @@
       "Cambiare",
       "Canale",
       "Zapping",
-      "Pulsante",
+      "Distanza",
       "Onde"
     ]
   },
@@ -3843,9 +3843,9 @@
     "word": "SCARLATTINA",
     "taboo": [
       "Malattia",
-      "Morbillo",
       "Contagio",
-      "Febbre",
+      "Morbillo",
+      "Varicella",
       "Rosolia"
     ]
   },
@@ -3860,13 +3860,13 @@
     ]
   },
   {
-    "word": "ZERBINOTTO",
+    "word": "ZERBINO",
     "taboo": [
       "Tappeto",
-      "Storno",
+      "Stoino",
+      "Piedi",
       "Entrata",
-      "Ingresso",
-      "Emporio"
+      "Ingresso"
     ]
   },
   {
@@ -3882,11 +3882,11 @@
   {
     "word": "ZEN",
     "taboo": [
-      "Ari",
+      "Arte",
       "Budda",
       "Religione",
-      "Giapponese",
-      "Gingrone"
+      "Cina",
+      "Giappone"
     ]
   },
   {
@@ -3900,17 +3900,17 @@
     ]
   },
   {
-    "word": "EPOPEA",
+    "word": "SCENEGGIATA",
     "taboo": [
-      "Finzione",
-      "Marenovolo",
-      "Miano Meroiola",
+      "Napoletana",
       "Teatro",
-      "Resistenza"
+      "Mario Merola",
+      "Messinscena",
+      "Finzione"
     ]
   },
   {
-    "word": "SPOT",
+    "word": "TARGET",
     "taboo": [
       "Televisione",
       "Canale 5",
@@ -3964,9 +3964,9 @@
     "taboo": [
       "Trasandato",
       "Vestire",
-      "Trascinato",
+      "Trascurato",
       "Abbandonato",
-      "Distratto"
+      "Disordinato"
     ]
   },
   {
@@ -4004,9 +4004,9 @@
     "taboo": [
       "Allegro",
       "Vivace",
-      "Azzurro",
+      "Arzillo",
       "Veloce",
-      "Terso"
+      "Teresa"
     ]
   },
   {
@@ -4015,7 +4015,7 @@
       "Fascio",
       "Raggio",
       "Luce",
-      "CD",
+      "Disc",
       "Stampante"
     ]
   },
@@ -4024,7 +4024,7 @@
     "taboo": [
       "Vigilare",
       "Controllare",
-      "Videosorveglianza",
+      "Sott'occhio",
       "Polizia",
       "Sicurezza"
     ]
@@ -4122,8 +4122,9 @@
   {
     "word": "SEGGIOVIA",
     "taboo": [
-      "Piste",
+      "Montagna",
       "Salire",
+      "Funivia",
       "Trasporto",
       "Impianto"
     ]
@@ -4143,9 +4144,9 @@
     "taboo": [
       "Duro",
       "Inverno",
-      "Impossibile",
+      "Inflessibile",
       "Freddo",
-      "Piegare"
+      "Piegato"
     ]
   },
   {
@@ -4163,7 +4164,7 @@
     "taboo": [
       "Cacciagione",
       "Preda",
-      "Amore",
+      "Animale",
       "Uccello",
       "Mangiare"
     ]
@@ -4181,11 +4182,11 @@
   {
     "word": "IPOCONDRIA",
     "taboo": [
-      "Molière",
-      "Finto",
-      "Immaginaria",
       "Malattia",
-      "Autosuggestione"
+      "Immaginaria",
+      "Autosuggestione",
+      "Finto",
+      "Molière"
     ]
   },
   {
@@ -4195,15 +4196,15 @@
       "Soldato",
       "Vigilare",
       "Custodire",
-      "Avvistare"
+      "Sorvegliare"
     ]
   },
   {
-    "word": "TINTORERIA",
+    "word": "TINTARELLA",
     "taboo": [
-      "Abbonzatura",
+      "Abbronzatura",
       "Colore",
-      "Scatdurare",
+      "Scottatura",
       "Luna",
       "Sole"
     ]
@@ -4222,10 +4223,10 @@
     "word": "SERENATA",
     "taboo": [
       "Cantare",
-      "Amore",
+      "Spasimante",
       "Musica",
       "Balcone",
-      "Sposa"
+      "Amore"
     ]
   },
   {
@@ -4245,7 +4246,7 @@
       "Calore",
       "Incendio",
       "Pompiere",
-      "Tutto"
+      "Tuta"
     ]
   },
   {
@@ -4284,8 +4285,8 @@
       "Acqua",
       "Bere",
       "Caldo",
-      "Lingua",
-      "Arsura"
+      "Siccità",
+      "Estate"
     ]
   },
   {
@@ -4323,7 +4324,7 @@
     "taboo": [
       "Irrompere",
       "Aprire",
-      "Spallancare",
+      "Spalancare",
       "Porta",
       "Successo"
     ]
@@ -4344,7 +4345,7 @@
       "Togliere",
       "Aria",
       "Ridurre",
-      "Pneumatico",
+      "Notizia",
       "Pallone"
     ]
   },
@@ -4361,11 +4362,11 @@
   {
     "word": "SGUARDO",
     "taboo": [
-      "Vipia",
+      "Vista",
       "Primo",
       "Occhiata",
       "Degnare",
-      "Lentura"
+      "Lettura"
     ]
   },
   {
@@ -4384,7 +4385,7 @@
       "Assassino",
       "Uccidere",
       "Killer",
-      "Imbasciare",
+      "Ammazzare",
       "Mandante"
     ]
   },
@@ -4399,13 +4400,13 @@
     ]
   },
   {
-    "word": "IMPRONTA",
+    "word": "SIEPE",
     "taboo": [
-      "Orma",
-      "Piede",
+      "Corsa",
       "Pianta",
-      "Suola",
-      "Terreno"
+      "Ramo",
+      "Giardino",
+      "Ornamentale"
     ]
   },
   {
@@ -4441,11 +4442,11 @@
   {
     "word": "ANTENNA",
     "taboo": [
-      "Portarola",
-      "Teatro",
-      "Confirazzione",
-      "Canali",
-      "Centrale"
+      "Parabola",
+      "Satellite",
+      "Tetto",
+      "Centralizzata",
+      "Canali"
     ]
   },
   {
@@ -4469,7 +4470,7 @@
     ]
   },
   {
-    "word": "SIMULTANEA",
+    "word": "SIMULTANEO",
     "taboo": [
       "Istante",
       "Stesso",
@@ -4479,13 +4480,13 @@
     ]
   },
   {
-    "word": "VIDEOMESSAGGIO",
+    "word": "VIDEONOLEGGIO",
     "taboo": [
+      "Blockbuster",
+      "Prestare",
       "Film",
-      "Registrare",
-      "Vedere",
-      "Inviare",
-      "Blockbuster"
+      "Riportare",
+      "Vedere"
     ]
   },
   {
@@ -4525,7 +4526,7 @@
       "Disgrazia",
       "Mattone",
       "Tetto",
-      "Fotovoltaica"
+      "Rettangolare"
     ]
   },
   {
@@ -4561,10 +4562,10 @@
   {
     "word": "SOLDATINO",
     "taboo": [
-      "Milite",
-      "Plombolo",
+      "Militare",
       "Giocattolo",
       "Piombo",
+      "Plastica",
       "Collezione"
     ]
   },
@@ -4582,9 +4583,9 @@
     "word": "MANGA",
     "taboo": [
       "Fumetto",
-      "Cartoon giappones",
-      "Corrotto amminto",
-      "Erosmo",
+      "Cartone animato",
+      "Giapponese",
+      "Erotismo",
       "Sexy"
     ]
   },
@@ -4614,7 +4615,7 @@
       "Film",
       "Giungla",
       "Liana",
-      "Scimmie",
+      "Cita",
       "Jane"
     ]
   },
@@ -4622,10 +4623,10 @@
     "word": "SOTTOFONDO",
     "taboo": [
       "Terreno",
-      "Musichetta",
-      "Guizcondo",
-      "Comaneno",
-      "Stricio"
+      "Musicale",
+      "Commento",
+      "Effetto",
+      "Strato"
     ]
   },
   {
@@ -4641,11 +4642,11 @@
   {
     "word": "SOTTOTITOLO",
     "taboo": [
+      "Giornale",
+      "Quotidiano",
       "Didascalia",
       "Film",
-      "Non udente",
-      "Giomale",
-      "Gomitolo"
+      "Non udente"
     ]
   },
   {
@@ -4663,9 +4664,9 @@
     "taboo": [
       "Rivoluzionario",
       "Ribelle",
-      "Arcaico",
-      "Sovvertire",
-      "Anarchico"
+      "Anarchico",
+      "Rovesciare",
+      "Fuorilegge"
     ]
   },
   {
@@ -4682,10 +4683,10 @@
     "word": "MADONNA",
     "taboo": [
       "Cantante",
-      "Diva",
+      "Spettacolo",
       "Musica",
-      "Settimo cielo",
-      "Divo"
+      "Diva",
+      "Stati Uniti"
     ]
   },
   {
@@ -4724,7 +4725,7 @@
       "Paura",
       "Timore",
       "Soprassalto",
-      "Incute",
+      "Incutere",
       "Provare"
     ]
   },
@@ -4733,13 +4734,13 @@
     "taboo": [
       "Voce",
       "Attore",
-      "Doppiare",
+      "Doppiatore",
       "Annunciatore",
       "Stadio"
     ]
   },
   {
-    "word": "MIAO",
+    "word": "MICIO",
     "taboo": [
       "Miagolare",
       "Felino",
@@ -4749,20 +4750,20 @@
     ]
   },
   {
-    "word": "SPEDIZIONE",
+    "word": "SPERICOLATO",
     "taboo": [
+      "Vita",
       "Vasco Rossi",
       "Paura",
       "Temerario",
-      "Rischio",
-      "Vita"
+      "Rischio"
     ]
   },
   {
     "word": "METROPOLITANA",
     "taboo": [
       "Treno",
-      "Sotterranea",
+      "Sottoterra",
       "Linea",
       "Rotaie",
       "Trasporto"
@@ -4782,10 +4783,10 @@
     "word": "SPIRALE",
     "taboo": [
       "Anticoncezionale",
-      "Molle",
+      "Molla",
       "Curva",
-      "Cervello",
-      "Violenta"
+      "Cerchi",
+      "Violenza"
     ]
   },
   {
@@ -4802,8 +4803,8 @@
     "word": "SPRUZZARE",
     "taboo": [
       "Acqua",
-      "Getto",
-      "Collona",
+      "Schizzare",
+      "Colonia",
       "Bagnare",
       "Spargere"
     ]
@@ -4821,7 +4822,7 @@
   {
     "word": "SQUATTER",
     "taboo": [
-      "Anarchico",
+      "Centro sociale",
       "Invasore",
       "Occupare",
       "Abusivo",
@@ -4841,7 +4842,7 @@
   {
     "word": "SQUITTIRE",
     "taboo": [
-      "Emblema",
+      "Emettere",
       "Verso",
       "Topo",
       "Roditore",
@@ -4855,7 +4856,7 @@
       "Pianta",
       "Vegetale",
       "Tagliare",
-      "Estrarre"
+      "Estirpare"
     ]
   },
   {
@@ -4902,7 +4903,7 @@
     "word": "VOLUBILE",
     "taboo": [
       "Cambiare",
-      "Variabile",
+      "Cangevole",
       "Mutabile",
       "Instabile",
       "Incostante"
@@ -4921,7 +4922,7 @@
   {
     "word": "VOLVO",
     "taboo": [
-      "Marcia",
+      "Marca",
       "Automobile",
       "Macchina",
       "Svedese",
@@ -4939,9 +4940,9 @@
     ]
   },
   {
-    "word": "CELESTE",
+    "word": "TERSO",
     "taboo": [
-      "Azzurro",
+      "Pulito",
       "Aria",
       "Cielo",
       "Nuvole",
@@ -4949,7 +4950,7 @@
     ]
   },
   {
-    "word": "STORYBOARD",
+    "word": "STORY BOARD",
     "taboo": [
       "Bozzetto",
       "Pubblicità",
@@ -4961,10 +4962,10 @@
   {
     "word": "STRABISMO",
     "taboo": [
-      "Deviazione",
+      "Difetto",
       "Occhi",
       "Vista",
-      "Sguardo",
+      "Venere",
       "Convergente"
     ]
   },
@@ -4982,7 +4983,7 @@
     "word": "MIMO",
     "taboo": [
       "Attore",
-      "Muore",
+      "Muto",
       "Gesti",
       "Imitare",
       "Marcel Marceau"
@@ -5005,7 +5006,7 @@
       "Uccello",
       "Testa",
       "Sabbia",
-      "Piume"
+      "Stomaco"
     ]
   },
   {
@@ -5063,7 +5064,7 @@
     "taboo": [
       "Niente",
       "Tutto",
-      "Mai!",
+      "Mai",
       "Nulla",
       "Negare"
     ]
@@ -5083,7 +5084,7 @@
     "taboo": [
       "Principale",
       "Essenziale",
-      "Contorno",
+      "Marginale",
       "Secondario",
       "Aggiungere"
     ]
@@ -5101,11 +5102,11 @@
   {
     "word": "ACCIUGA",
     "taboo": [
-      "Sottile",
+      "Alice",
       "Magro",
       "Pesce",
-      "Sardina",
-      "Striscia"
+      "Stretto",
+      "Sardina"
     ]
   },
   {
@@ -5122,9 +5123,9 @@
     "word": "ACCUDIRE",
     "taboo": [
       "Casa",
-      "Dedica",
-      "Curare",
-      "Badora",
+      "Dedicarsi",
+      "Badare",
+      "Cura",
       "Assistere"
     ]
   },
@@ -5139,13 +5140,13 @@
     ]
   },
   {
-    "word": "SOLETTA",
+    "word": "ZOLLETTA",
     "taboo": [
       "Terra",
-      "Puzzetto",
-      "Pregatina",
-      "Quadrettino",
-      "Zucchero"
+      "Pezzetto",
+      "Quadratino",
+      "Zucchero",
+      "Dolce"
     ]
   },
   {
@@ -5162,8 +5163,8 @@
     "word": "AGRARIO",
     "taboo": [
       "Campagna",
-      "Universale",
-      "Coltivazione",
+      "Università",
+      "Facoltà",
       "Agricoltura",
       "Consorzio"
     ]
@@ -5199,13 +5200,13 @@
     ]
   },
   {
-    "word": "ALLENARE",
+    "word": "ALLENTARE",
     "taboo": [
-      "Preparare",
-      "Esercitare",
-      "Atleta",
-      "Preparazione",
-      "Tecnico"
+      "Mollare",
+      "Nodo",
+      "Allargare",
+      "Diminuire",
+      "Intensità"
     ]
   },
   {
@@ -5223,8 +5224,8 @@
     "taboo": [
       "Modificare",
       "Cambiare",
-      "Innamorato",
-      "Ployboy",
+      "Innervosire",
+      "Mutare",
       "Irritarsi"
     ]
   },
@@ -5242,7 +5243,7 @@
     "word": "LATIN LOVER",
     "taboo": [
       "Dongiovanni",
-      "Sechutore",
+      "Seduttore",
       "Amatore",
       "Innamorato",
       "Playboy"
@@ -5254,7 +5255,7 @@
       "Sillabare",
       "Lettere",
       "Separare",
-      "Competare",
+      "Compitare",
       "Lentamente"
     ]
   },
@@ -5262,10 +5263,10 @@
     "word": "AMMICCARE",
     "taboo": [
       "Strizzare",
-      "Occhito",
+      "Occhio",
       "Cenno",
-      "Infesta",
-      "Aludere"
+      "Intesa",
+      "Alludere"
     ]
   },
   {
@@ -5279,11 +5280,11 @@
     ]
   },
   {
-    "word": "ANALOGICO",
+    "word": "ANALGESICO",
     "taboo": [
       "Farmaco",
       "Antidolorifico",
-      "Analgesico",
+      "Antalgico",
       "Medicina",
       "Male"
     ]
@@ -5309,7 +5310,7 @@
     ]
   },
   {
-    "word": "ALLARME",
+    "word": "ANTIFURTO",
     "taboo": [
       "Auto",
       "Casa",
@@ -5323,7 +5324,7 @@
     "taboo": [
       "Commissione",
       "Combattere",
-      "Repressione",
+      "Reprimere",
       "Legge",
       "Camorra"
     ]
@@ -5342,7 +5343,7 @@
     "word": "AORTA",
     "taboo": [
       "Ventricolo",
-      "Vene",
+      "Vena",
       "Sangue",
       "Arteria",
       "Cuore"
@@ -5361,11 +5362,11 @@
   {
     "word": "APPARENZA",
     "taboo": [
-      "Esistere",
+      "Esteriore",
       "Forma",
       "Sembianza",
       "Sostanza",
-      "Apparire"
+      "Salvare"
     ]
   },
   {
@@ -5405,7 +5406,7 @@
       "Guardalinee",
       "Fischietto",
       "Rigore",
-      "Fischio"
+      "Imparziale"
     ]
   },
   {
@@ -5424,8 +5425,8 @@
       "Caldo",
       "Sole",
       "Sabbia",
-      "Deserto",
-      "Bruciante"
+      "Camera",
+      "Impetuoso"
     ]
   },
   {
@@ -5465,7 +5466,7 @@
       "Sapore",
       "Odore",
       "Olfatto",
-      "Intenso"
+      "Gusto"
     ]
   },
   {
@@ -5485,7 +5486,7 @@
       "Disegno",
       "Copywriter",
       "Agenzia",
-      "Grafica"
+      "Grafico"
     ]
   },
   {
@@ -5499,13 +5500,13 @@
     ]
   },
   {
-    "word": "SARTORIA",
+    "word": "ASPETTATIVA",
     "taboo": [
-      "Areesa",
+      "Attesa",
       "Lavoratore",
-      "Artigiano",
-      "Moda",
-      "Scortoia"
+      "Periodo",
+      "Chiedere",
+      "Mettersi"
     ]
   },
   {
@@ -5521,11 +5522,11 @@
   {
     "word": "ATELIER",
     "taboo": [
-      "Storia",
-      "Artista",
+      "Sartoria",
+      "Moda",
       "Lavoro",
       "Artigiano",
-      "Mostra"
+      "Artista"
     ]
   },
   {
@@ -5539,13 +5540,13 @@
     ]
   },
   {
-    "word": "ATTIRARE",
+    "word": "ATTRAZIONE",
     "taboo": [
+      "Attirare",
       "Calamita",
-      "Polarità",
+      "Fatale",
       "Magnete",
-      "Fisica",
-      "Forte"
+      "Fisica"
     ]
   },
   {
@@ -5561,7 +5562,7 @@
   {
     "word": "BACKGROUND",
     "taboo": [
-      "Sfondo",
+      "Base",
       "Musicale",
       "Situazione",
       "Substrato",
@@ -5579,30 +5580,30 @@
     ]
   },
   {
-    "word": "AUTOVETTURE",
+    "word": "AUSTERITY",
     "taboo": [
-      "Macchine",
-      "Inquinamento",
-      "Benzina",
       "Limitazione",
-      "Austerity"
+      "Benzina",
+      "Inquinamento",
+      "Autovetture",
+      "Macchine"
     ]
   },
   {
     "word": "SNOB",
     "taboo": [
-      "Cielo",
+      "Ceto",
       "Elevato",
       "Sociale",
       "Nobiltà",
-      "Guanti"
+      "Gusti"
     ]
   },
   {
     "word": "AUTOCONTROLLO",
     "taboo": [
       "Dominio",
-      "Calma",
+      "Azioni",
       "Perdere",
       "Rabbia",
       "Mantenere"
@@ -5644,7 +5645,7 @@
       "Calzature",
       "Scarpa",
       "Comoda",
-      "Pelle",
+      "Maglia",
       "Pantofola"
     ]
   },
@@ -5662,10 +5663,10 @@
     "word": "SEGHERIA",
     "taboo": [
       "Falegnameria",
+      "Segatura",
       "Legno",
-      "Segnale",
       "Stabilimento",
-      "Troco"
+      "Tronco"
     ]
   },
   {
@@ -5681,11 +5682,11 @@
   {
     "word": "BAGNACAUDA",
     "taboo": [
-      "Antipasto",
-      "Piemonte",
-      "Acciughe",
+      "Piatto tipico",
       "Aglio",
-      "Olio"
+      "Acciughe",
+      "Olio",
+      "Piemontese"
     ]
   },
   {
@@ -5705,7 +5706,7 @@
       "Testa a testa",
       "Scrutinio",
       "Maggioritario",
-      "Scrutinio"
+      "Secondo"
     ]
   },
   {
@@ -5723,7 +5724,7 @@
     "taboo": [
       "Aceto",
       "Olio",
-      "Medicinale",
+      "Medicamento",
       "Shampoo",
       "Aromatico"
     ]
@@ -5743,7 +5744,7 @@
     "taboo": [
       "Imbrogliare",
       "Frodare",
-      "Care",
+      "Carte",
       "Poker",
       "Ingannare"
     ]
@@ -5765,7 +5766,7 @@
       "Rosso",
       "Piemontese",
       "Bere",
-      "Pregiato"
+      "Brasato"
     ]
   },
   {
@@ -5783,7 +5784,7 @@
     "taboo": [
       "Piccolo",
       "Cane",
-      "Basso",
+      "Banda",
       "Corto",
       "Johnny"
     ]
@@ -5795,17 +5796,17 @@
       "Lombardia",
       "Città",
       "Atalanta",
-      "Serio"
+      "Sopra"
     ]
   },
   {
     "word": "BENVENUTO",
     "taboo": [
-      "Ospite",
       "Saluto",
+      "Accoglienza",
       "Introduzione",
-      "Nuovo",
-      "Accoglienza"
+      "Inserimento",
+      "Nuovo"
     ]
   },
   {
@@ -5821,11 +5822,11 @@
   {
     "word": "BETA",
     "taboo": [
-      "Greco",
+      "Eta",
       "Alfa",
       "Lettera",
-      "Alfabeto",
-      "Seconda"
+      "Bi",
+      "Greco"
     ]
   },
   {
@@ -5844,7 +5845,7 @@
       "Instabile",
       "Equilibrio",
       "Fili",
-      "Incertezza",
+      "Incerto",
       "Ondeggiare"
     ]
   },
@@ -5864,7 +5865,7 @@
       "Vano",
       "Casa",
       "Due",
-      "Sistema",
+      "Stanza",
       "Abitare"
     ]
   },
@@ -5882,7 +5883,7 @@
     "word": "OPPOSIZIONE",
     "taboo": [
       "Minoranza",
-      "Govemo",
+      "Governo",
       "Maggioranza",
       "Contrasto",
       "Contrario"
@@ -5905,7 +5906,7 @@
       "Stupido",
       "Sciocco",
       "Stolto",
-      "Semplice"
+      "Ingenuo"
     ]
   },
   {
@@ -5941,7 +5942,7 @@
   {
     "word": "BOREALE",
     "taboo": [
-      "Settembrionale",
+      "Settentrionale",
       "Polo Nord",
       "Aurora",
       "Equatore",
@@ -5963,8 +5964,8 @@
     "taboo": [
       "Indiana",
       "Religione",
-      "Arancione",
-      "India",
+      "Arancioni",
+      "Visnù",
       "Setta"
     ]
   },
@@ -5983,7 +5984,7 @@
     "taboo": [
       "Poliziotto",
       "Caccia",
-      "Bello",
+      "Baldo",
       "Quadrupede",
       "Cane"
     ]
@@ -6021,10 +6022,10 @@
   {
     "word": "BRILLANTANTE",
     "taboo": [
-      "Lucido",
+      "Detersivo",
+      "Lavastoviglie",
+      "Luccicare",
       "Pulire",
-      "Luccichio",
-      "Detergente",
       "Bicchieri"
     ]
   },
@@ -6044,8 +6045,8 @@
       "Illegale",
       "Figlio",
       "Valido",
-      "Illegale",
-      "Cessare"
+      "Ingiusto",
+      "Illecito"
     ]
   },
   {
@@ -6062,7 +6063,7 @@
     "word": "BROKER",
     "taboo": [
       "Intermediario",
-      "Assicurazioni",
+      "Assicurazione",
       "Mediatore",
       "Affari",
       "Borsa"
@@ -6081,7 +6082,7 @@
   {
     "word": "POSTER",
     "taboo": [
-      "Cartellone",
+      "Manifesto",
       "Appendere",
       "Foto",
       "Cantante",
@@ -6104,7 +6105,7 @@
       "Pelle",
       "Anche",
       "Foruncolo",
-      "Nero",
+      "Pomata",
       "Neo"
     ]
   },
@@ -6119,17 +6120,17 @@
     ]
   },
   {
-    "word": "BUFFA",
+    "word": "BUFERA",
     "taboo": [
       "Tempesta",
-      "Raffica",
       "Temporale",
-      "Vento",
-      "Pioggia"
+      "Tormenta",
+      "Pioggia",
+      "Uragano"
     ]
   },
   {
-    "word": "DIETETICA",
+    "word": "BULIMIA",
     "taboo": [
       "Ingrassare",
       "Mangiare",
@@ -6149,11 +6150,11 @@
     ]
   },
   {
-    "word": "SCORTESE",
+    "word": "CAFONE",
     "taboo": [
       "Maleducato",
       "Villano",
-      "Zoticco",
+      "Zotico",
       "Comportarsi",
       "Signorile"
     ]
@@ -6182,7 +6183,7 @@
     "word": "CABINA",
     "taboo": [
       "Nave",
-      "Docia",
+      "Doccia",
       "Vano",
       "Telefonica",
       "Elettorale"
@@ -6203,7 +6204,7 @@
     "taboo": [
       "Pianta",
       "Spine",
-      "Grasso",
+      "Grassa",
       "Sempreverde",
       "Deserto"
     ]
@@ -6223,7 +6224,7 @@
     "taboo": [
       "Zorba",
       "Greco",
-      "Bolla",
+      "Ballo",
       "Danza",
       "Musica"
     ]
@@ -6244,8 +6245,8 @@
       "Scossa",
       "Tellurico",
       "Terremoto",
-      "Merelli",
-      "Ternate"
+      "Mercalli",
+      "Tremare"
     ]
   },
   {
@@ -6261,7 +6262,7 @@
   {
     "word": "SLOT MACCHINE",
     "taboo": [
-      "Solidi",
+      "Soldi",
       "Gettone",
       "Gioco",
       "Casinò",
@@ -6283,7 +6284,7 @@
     "taboo": [
       "Tubo",
       "Girare",
-      "Cillindro",
+      "Cilindro",
       "Specchietto",
       "Luce"
     ]
@@ -6304,7 +6305,7 @@
       "Bella",
       "Scrittura",
       "Brutta",
-      "Struttura",
+      "Scrivere",
       "Illeggabile"
     ]
   },
@@ -6322,9 +6323,9 @@
     "word": "CALUNNIA",
     "taboo": [
       "Infamia",
-      "Incollure",
-      "Guerere",
-      "Reatto",
+      "Incolpare",
+      "Querelare",
+      "Reato",
       "Diffamare"
     ]
   },
@@ -6339,7 +6340,7 @@
     ]
   },
   {
-    "word": "CAMELIA",
+    "word": "CAMELIE",
     "taboo": [
       "Signora",
       "Rosso",
@@ -6379,13 +6380,13 @@
     ]
   },
   {
-    "word": "MICRORGANISMO",
+    "word": "MICROBO",
     "taboo": [
       "Batterio",
       "Microganismo",
       "Infezione",
-      "Inferioro",
-      "Battifoglio"
+      "Contagio",
+      "Piccolo"
     ]
   },
   {
@@ -6403,8 +6404,8 @@
     "taboo": [
       "Distinguere",
       "Identificare",
-      "Inferire",
-      "Ammmentare",
+      "Figlio",
+      "Ammettere",
       "Persona"
     ]
   },
@@ -6413,13 +6414,13 @@
     "taboo": [
       "Lavare",
       "Macchia",
-      "Biancare",
+      "Sbiancare",
       "Ace",
       "Varecchina"
     ]
   },
   {
-    "word": "CANDIOTO",
+    "word": "CANDELOTTO",
     "taboo": [
       "Dinamite",
       "Fumogeno",
@@ -6444,8 +6445,8 @@
       "Specchio Segreto",
       "Televisione",
       "Scherzo",
-      "Nervy Loi",
-      "Nascolare"
+      "Nanny Loi",
+      "Nascosto"
     ]
   },
   {
@@ -6479,12 +6480,12 @@
     ]
   },
   {
-    "word": "CAPOLOVORO",
+    "word": "CAPOLAVORO",
     "taboo": [
       "Opera",
       "Migliore",
       "Eccellente",
-      "Preferito",
+      "Massimo",
       "Perfetto"
     ]
   },
@@ -6501,11 +6502,11 @@
   {
     "word": "SMENTIRE",
     "taboo": [
-      "Disobbedire",
+      "Contraddire",
+      "Dimostrare",
+      "Sbugiardare",
       "Falso",
-      "Sbghiardare",
-      "Disturbare",
-      "Contraddire"
+      "Sconfessare"
     ]
   },
   {
@@ -6541,7 +6542,7 @@
   {
     "word": "PASSERELLA",
     "taboo": [
-      "Stilista",
+      "Sfilata",
       "Moda",
       "Teatro",
       "Pedana",
@@ -6563,9 +6564,9 @@
     "taboo": [
       "America",
       "Argentina",
-      "Agostino",
-      "Reglione",
-      "Vento"
+      "Regione",
+      "Vento",
+      "Bruce Chatwin"
     ]
   },
   {
@@ -6584,7 +6585,7 @@
       "Spiegare",
       "Giustificare",
       "Causare",
-      "Incoraggiare",
+      "Incentivare",
       "Stimolare"
     ]
   },
@@ -6604,8 +6605,8 @@
       "Isterica",
       "Nervi",
       "Entrare",
-      "Supersare",
-      "Depresssione"
+      "Superare",
+      "Depressione"
     ]
   },
   {
@@ -6693,7 +6694,7 @@
     "taboo": [
       "Matrimonio",
       "Separazione",
-      "Scligimento",
+      "Scioglimento",
       "Referendum",
       "All'italiana"
     ]
@@ -6703,13 +6704,13 @@
     "taboo": [
       "Buio",
       "Nero",
-      "Oscuro",
-      "Pieno",
+      "Oscurità",
+      "Profondo",
       "Abisso"
     ]
   },
   {
-    "word": "DUAL SIM",
+    "word": "DUAL BAND",
     "taboo": [
       "Cellulare",
       "Telefonino",
@@ -6723,7 +6724,7 @@
     "taboo": [
       "Divertimento",
       "Gioco",
-      "Passeggtime",
+      "Passatempo",
       "Ritrovo",
       "Svago"
     ]
@@ -6782,10 +6783,10 @@
     "word": "EPOCA",
     "taboo": [
       "Era",
-      "Storia",
-      "Tempo",
+      "Passato",
       "Periodo",
-      "Passaggio"
+      "Tempo",
+      "Storia"
     ]
   },
   {
@@ -6802,10 +6803,10 @@
     "word": "INSAZIABILE",
     "taboo": [
       "Goloso",
-      "Avide",
+      "Avido",
       "Mangiare",
       "Fame",
-      "Indigestione"
+      "Inappagabile"
     ]
   },
   {
@@ -6823,7 +6824,7 @@
     "taboo": [
       "Difficoltà",
       "Dormire",
-      "Sveglia",
+      "Sveglio",
       "Notte",
       "Soffrire"
     ]
@@ -6862,7 +6863,7 @@
     "word": "ESCURSIONE",
     "taboo": [
       "Viaggio",
-      "Gioco",
+      "Gita",
       "Ampiezza",
       "Differenza",
       "Termica"
@@ -6879,17 +6880,17 @@
     ]
   },
   {
-    "word": "INTRATTENIMENTO",
+    "word": "INTRANSIGENTE",
     "taboo": [
       "Severo",
-      "Imterreore",
+      "Intollerante",
       "Compromesso",
       "Rigido",
       "Elastico"
     ]
   },
   {
-    "word": "FACOLTA'",
+    "word": "FACOLTÀ",
     "taboo": [
       "Potere",
       "Libertà",
@@ -6922,10 +6923,10 @@
     "word": "TENUTA",
     "taboo": [
       "Possesso",
+      "Capacità",
       "Campagna",
-      "Proprietà",
-      "Campagna",
-      "Buono"
+      "Capienza",
+      "Buona"
     ]
   },
   {
@@ -6941,11 +6942,11 @@
   {
     "word": "LUNA PARK",
     "taboo": [
-      "Attractioni",
+      "Attrazioni",
       "Giostra",
       "Montagne russe",
-      "Divertimento",
-      "Giostre"
+      "Divertimenti",
+      "Ottovolante"
     ]
   },
   {
@@ -6979,11 +6980,11 @@
     ]
   },
   {
-    "word": "COCKTAIL",
+    "word": "TEQUILA",
     "taboo": [
-      "Liquegire",
-      "Mescolare",
-      "Buon buon",
+      "Liquore",
+      "Messico",
+      "Bum bum",
       "Alcolico",
       "Bere"
     ]
@@ -6999,13 +7000,13 @@
     ]
   },
   {
-    "word": "BLATTA",
+    "word": "FELTRINO",
     "taboo": [
       "Sotto",
       "Sedie",
-      "Pallola",
-      "Zolla",
-      "Ragno"
+      "Tavolo",
+      "Mobile",
+      "Rigare"
     ]
   },
   {
@@ -7024,7 +7025,7 @@
       "Moneta",
       "Resto",
       "Cambiare",
-      "Solidi",
+      "Soldi",
       "Lire"
     ]
   },
@@ -7045,7 +7046,7 @@
       "Vetro",
       "Vino",
       "Fischi",
-      "Vasellame"
+      "Fallimento"
     ]
   },
   {
@@ -7064,8 +7065,8 @@
       "Autografo",
       "Sottoscrivere",
       "Nome",
-      "Riconoscere",
-      "Giornalistica"
+      "Raccogliere",
+      "Giornalista"
     ]
   },
   {
@@ -7082,9 +7083,9 @@
     "word": "FOCACCIA",
     "taboo": [
       "Pane",
-      "Genovese",
+      "Schiacciatina",
       "Liguria",
-      "Sottile",
+      "Genovese",
       "Forno"
     ]
   },
@@ -7121,11 +7122,11 @@
   {
     "word": "FORFAIT",
     "taboo": [
-      "Comprensivo",
-      "Compagno",
+      "Compenso",
       "Pagamento",
-      "Circa",
-      "Chifa"
+      "Cifra",
+      "Ritiro",
+      "Rinuncia"
     ]
   },
   {
@@ -7145,7 +7146,7 @@
       "Oscar",
       "Tom Hanks",
       "Panchina",
-      "Americo"
+      "America"
     ]
   },
   {
@@ -7161,10 +7162,10 @@
   {
     "word": "RISARCIMENTO",
     "taboo": [
-      "Ricompensa",
+      "Riparazione",
+      "Compenso",
       "Danno",
       "Morale",
-      "Compagno",
       "Assicurazione"
     ]
   },
@@ -7184,7 +7185,8 @@
       "Pericolo",
       "Danno",
       "Correre",
-      "Improvviso"
+      "Conseguenza",
+      "Imprevisto"
     ]
   },
   {
@@ -7202,7 +7204,7 @@
     "taboo": [
       "Espressione",
       "Periodo",
-      "Fatti",
+      "Fatta",
       "Soggetto",
       "Principale"
     ]
@@ -7218,7 +7220,7 @@
     ]
   },
   {
-    "word": "FREELANCE",
+    "word": "FREE-LANCE",
     "taboo": [
       "Autonomo",
       "Indipendente",
@@ -7242,13 +7244,13 @@
     "taboo": [
       "Andare",
       "Scuola",
-      "Seccare",
+      "Obbligo",
       "Università",
-      "Persone"
+      "Persona"
     ]
   },
   {
-    "word": "FUGACE",
+    "word": "MOMENTANEO",
     "taboo": [
       "Passeggero",
       "Breve",
@@ -7263,14 +7265,14 @@
       "Azienda",
       "Automobile",
       "Consenso",
-      "Compenso",
+      "Assicurazione",
       "Telefonino"
     ]
   },
   {
-    "word": "DENTE",
+    "word": "MOLARE",
     "taboo": [
-      "Molare",
+      "Dente",
       "Posteriore",
       "Incisivo",
       "Canino",
@@ -7280,9 +7282,9 @@
   {
     "word": "FRITTURA",
     "taboo": [
-      "Fritta",
-      "Bollente",
+      "Cottura",
       "Olio",
+      "Bollente",
       "Pesce",
       "Mista"
     ]
@@ -7304,7 +7306,7 @@
       "Suono",
       "Significato",
       "Riprodurre",
-      "D'amanzo"
+      "D'Annunzio"
     ]
   },
   {
@@ -7364,7 +7366,7 @@
       "Festeggiare",
       "Ricorrenza",
       "Auguri",
-      "Sembra"
+      "Santo"
     ]
   },
   {
@@ -7381,9 +7383,9 @@
     "word": "GAFFE",
     "taboo": [
       "Sbaglio",
-      "Battere inferte",
+      "Battuta infelice",
       "Intempestiva",
-      "Inopportune",
+      "Inopportuna",
       "Errore"
     ]
   },
@@ -7401,8 +7403,8 @@
     "word": "PATITO",
     "taboo": [
       "Soffrire",
-      "Deferito",
-      "Sicupolo",
+      "Deperito",
+      "Sciupato",
       "Tifoso",
       "Appassionato"
     ]
@@ -7420,11 +7422,11 @@
   {
     "word": "PATATINA",
     "taboo": [
-      "Frita",
+      "Fritta",
       "Ketchup",
       "Croccante",
-      "Sgocciolato",
-      "Sgarrnoccchiare"
+      "Sacchetto",
+      "Sgranocchiare"
     ]
   },
   {
@@ -7462,7 +7464,7 @@
     "taboo": [
       "Maldestro",
       "Impacciato",
-      "Imbarazzato",
+      "Imbranato",
       "Sgraziato",
       "Movimento"
     ]
@@ -7478,13 +7480,13 @@
     ]
   },
   {
-    "word": "RUOLA",
+    "word": "RUCOLA",
     "taboo": [
       "Erba",
-      "Aromatica",
+      "Verde",
       "Insalata",
       "Verdura",
-      "Epoca"
+      "Aromatica"
     ]
   },
   {
@@ -7504,7 +7506,7 @@
       "Avanzamento",
       "Evoluzione",
       "Società",
-      "Terminologica"
+      "Tecnologia"
     ]
   },
   {
@@ -7544,14 +7546,14 @@
       "Scherzi",
       "Festa",
       "Zucche",
-      "Revenant"
+      "Fantasmi"
     ]
   },
   {
-    "word": "GPS",
+    "word": "GSM",
     "taboo": [
-      "Telefono",
-      "Taxis",
+      "Telefonino",
+      "Tacs",
       "Omnitel",
       "Tim",
       "Banda"
@@ -7561,10 +7563,10 @@
     "word": "GURU",
     "taboo": [
       "Capo",
-      "Indio",
+      "India",
       "Carismatico",
       "Spirituale",
-      "Soprane"
+      "Santone"
     ]
   },
   {
@@ -7578,10 +7580,10 @@
     ]
   },
   {
-    "word": "HARD DISCOUNT",
+    "word": "SCONTO",
     "taboo": [
       "Supermercato",
-      "Marcio",
+      "Marca",
       "Economico",
       "Prezzi",
       "Risparmiare"
@@ -7602,7 +7604,7 @@
     "taboo": [
       "Passatempo",
       "Sport",
-      "Sfogo",
+      "Svago",
       "Tempo libero",
       "Lettura"
     ]
@@ -7623,7 +7625,7 @@
       "Automobile",
       "Macchina",
       "Volante",
-      "Ottional",
+      "Optional",
       "Parcheggiare"
     ]
   },
@@ -7638,13 +7640,13 @@
     ]
   },
   {
-    "word": "INDIGENTE",
+    "word": "INDECENTE",
     "taboo": [
-      "Povero",
-      "Bisognoso",
-      "Misero",
-      "Bisogno",
-      "Denaro"
+      "Osceno",
+      "Abito",
+      "Immorale",
+      "Sporco",
+      "Proposta"
     ]
   },
   {
@@ -7678,13 +7680,13 @@
     ]
   },
   {
-    "word": "INFElice",
+    "word": "INFELICE",
     "taboo": [
       "Triste",
       "Sventurato",
       "Depresso",
       "Avvilito",
-      "Sfortunato"
+      "Momento"
     ]
   },
   {
@@ -7701,9 +7703,9 @@
     "word": "CAFFEINA",
     "taboo": [
       "Sostanza",
-      "Caffè",
+      "Eccitante",
       "Alcaloide",
-      "Hg",
+      "Hag",
       "Stimolante"
     ]
   },
@@ -7721,10 +7723,10 @@
     "word": "INTRIGO",
     "taboo": [
       "Macchinazione",
-      "Trama",
+      "Garbuglio",
       "Segreto",
-      "Rivale",
-      "Macchinazione"
+      "Cacciarsi",
+      "Internazionale"
     ]
   },
   {
@@ -7740,8 +7742,8 @@
   {
     "word": "KARMA",
     "taboo": [
-      "Indi",
-      "Buddhismo",
+      "India",
+      "Buddismo",
       "Religione",
       "Reincarnazione",
       "Vita"
@@ -7762,7 +7764,7 @@
     "taboo": [
       "Elettrodomestico",
       "Pulire",
-      "Aspirare",
+      "Passare",
       "Pavimento",
       "Sacco"
     ]
@@ -7782,7 +7784,7 @@
     "taboo": [
       "Dimensione",
       "Profondità",
-      "Distesa",
+      "Densità",
       "Consistenza",
       "Culturale"
     ]
@@ -7808,11 +7810,11 @@
     ]
   },
   {
-    "word": "FARI",
+    "word": "LAMPEGGIARE",
     "taboo": [
       "Luci",
       "Cielo",
-      "Strada",
+      "Fari",
       "Abbaglianti",
       "Segnalare"
     ]
@@ -7832,19 +7834,19 @@
     "taboo": [
       "Pilota",
       "Giapponese",
-      "Sacrificio",
-      "Missione",
+      "Suicida",
+      "Banzai",
       "Guerra mondiale"
     ]
   },
   {
     "word": "LAMBADA",
     "taboo": [
+      "Ballo",
       "Danza",
       "Sudamericana",
-      "Danza",
-      "Sensuale",
-      "Balla"
+      "Sinuosa",
+      "Sensuale"
     ]
   },
   {
@@ -7862,7 +7864,7 @@
     "taboo": [
       "America",
       "Maniche corte",
-      "Maglietta",
+      "Girocollo",
       "Cotone",
       "Fruit of the Loom"
     ]
@@ -7882,9 +7884,9 @@
     "taboo": [
       "Grasso",
       "Maiale",
-      "Pancetta",
-      "Salume",
-      "Sottile"
+      "Palla",
+      "Gatta",
+      "Zampino"
     ]
   },
   {
@@ -7902,7 +7904,7 @@
     "taboo": [
       "Cane",
       "Sciogliere",
-      "Inseguire",
+      "Calcagna",
       "Liberare",
       "Ricercare"
     ]
@@ -7942,7 +7944,7 @@
     "taboo": [
       "Fratello",
       "Gemello",
-      "Giallo",
+      "Unito",
       "Felino",
       "Gatto"
     ]
@@ -7960,10 +7962,10 @@
   {
     "word": "LOGORIO",
     "taboo": [
+      "Deterioramento",
       "Consumare",
       "Usare",
-      "Consumo",
-      "Consumare",
+      "Utilizzare",
       "Tempo"
     ]
   },
@@ -7980,7 +7982,7 @@
   {
     "word": "MACHO",
     "taboo": [
-      "Maschile",
+      "Maschio",
       "Uomo",
       "Sexy",
       "Energumeno",
@@ -8023,7 +8025,7 @@
       "Anni",
       "Cinque",
       "Lucente",
-      "Pulire",
+      "Pulito",
       "Dare"
     ]
   },
@@ -8038,13 +8040,13 @@
     ]
   },
   {
-    "word": "TAVUTOLOGIA",
+    "word": "TAUTOLOGIA",
     "taboo": [
+      "Ridondante",
       "Ripetizione",
+      "Significato",
       "Parola",
-      "Concetto",
-      "Ridondanza",
-      "Significato"
+      "Concetto"
     ]
   },
   {
@@ -8062,8 +8064,8 @@
     "taboo": [
       "Appoggio",
       "Legno",
-      "Assse",
-      "Riposo",
+      "Asse",
+      "Ripiano",
       "Supporto"
     ]
   },
@@ -8083,12 +8085,12 @@
       "Casuale",
       "Fortuito",
       "Imprevisto",
-      "Sfortuna",
+      "Sorte",
       "Principale"
     ]
   },
   {
-    "word": "ROVO",
+    "word": "MIRTILLO",
     "taboo": [
       "Frutto",
       "Bosco",
@@ -8120,11 +8122,11 @@
   {
     "word": "MISERERE",
     "taboo": [
-      "Perdono",
+      "Salmo",
       "Zucchero",
       "Pavarotti",
       "Latino",
-      "Salmo"
+      "Perdono"
     ]
   },
   {
@@ -8141,7 +8143,7 @@
     "word": "NOLEGGIO",
     "taboo": [
       "Affitto",
-      "Gioco",
+      "Blockbuster",
       "Locazione",
       "Film",
       "Videocassetta"
@@ -8160,18 +8162,18 @@
   {
     "word": "MOSCA CIECA",
     "taboo": [
+      "Gioco",
       "Bambini",
       "Ragazzi",
       "Bendati",
-      "Cercare",
-      "Rincorrersi"
+      "Cercare"
     ]
   },
   {
     "word": "CODINO",
     "taboo": [
       "Treccia",
-      "Capelli",
+      "Capello",
       "Cavallo",
       "Baggio",
       "Fiorello"
@@ -8200,10 +8202,10 @@
   {
     "word": "ONIRICO",
     "taboo": [
+      "Interpretazione",
       "Dormire",
-      "Sogno",
       "Sonno",
-      "Sogni",
+      "Sogno",
       "Freud"
     ]
   },
@@ -8222,9 +8224,9 @@
     "taboo": [
       "Vendetta",
       "Giustizia",
-      "Vendicarsi",
-      "Suprema",
-      "Caduta"
+      "Riparare",
+      "Storia",
+      "Successi"
     ]
   },
   {
@@ -8300,7 +8302,7 @@
   {
     "word": "MENISCO",
     "taboo": [
-      "Carffigine",
+      "Cartilagine",
       "Legamento",
       "Ginocchiote",
       "Operazione",
@@ -8324,7 +8326,7 @@
       "Poco",
       "Piccolo",
       "Liquido",
-      "Tutti"
+      "Tutto"
     ]
   },
   {
@@ -8343,7 +8345,7 @@
       "Rettile",
       "Serpente",
       "Galleggiante",
-      "Strisciare",
+      "Stritolare",
       "Segnalare"
     ]
   },
@@ -8360,21 +8362,21 @@
   {
     "word": "BOLGIA",
     "taboo": [
-      "Infemo",
-      "Cacia",
-      "Pressa",
-      "Folla",
-      "Confustione"
+      "Inferno",
+      "Calca",
+      "Ressa",
+      "Confusione",
+      "Folla"
     ]
   },
   {
-    "word": "TIFO",
+    "word": "RAUCO",
     "taboo": [
+      "Voce",
       "Raffreddore",
       "Basso",
       "Debole",
-      "Partita",
-      "Stadio"
+      "Sandro Ciotti"
     ]
   },
   {
@@ -8382,18 +8384,18 @@
     "taboo": [
       "Legge",
       "Politica",
-      "Elegante",
-      "Uggagliosma",
-      "Perdita"
+      "Uguaglianza",
+      "Elezioni",
+      "Parità"
     ]
   },
   {
-    "word": "RETTANGOL",
+    "word": "RECLAMO",
     "taboo": [
-      "Protests",
+      "Protesta",
       "Lamentela",
       "Contestazione",
-      "Lamente",
+      "Lagnanza",
       "Presentatore"
     ]
   },
@@ -8402,7 +8404,7 @@
     "taboo": [
       "Scarpa",
       "Piede",
-      "Pianoforte",
+      "Pantofola",
       "Stivale",
       "Sandalo"
     ]
@@ -8418,13 +8420,13 @@
     ]
   },
   {
-    "word": "PARECCHIA",
+    "word": "PARCELLA",
     "taboo": [
       "Professionista",
       "Onorario",
       "Pagare",
-      "Fattura",
-      "Competenza"
+      "Presentare",
+      "Competenze"
     ]
   },
   {
@@ -8438,13 +8440,13 @@
     ]
   },
   {
-    "word": "INDEBITA",
+    "word": "INFEDELTÀ",
     "taboo": [
       "Tradimento",
       "Moglie",
       "Coppia",
-      "Mezza verità",
-      "Amore"
+      "Amante",
+      "Menzogna"
     ]
   },
   {
@@ -8460,11 +8462,11 @@
   {
     "word": "PAVESE",
     "taboo": [
-      "Provincia",
+      "Città",
+      "Scrittore",
       "Padano",
-      "Piemonte",
       "Lombardia",
-      "Case"
+      "Cesare"
     ]
   },
   {
@@ -8481,7 +8483,7 @@
     "word": "STRATEGGEMMA",
     "taboo": [
       "Soluzione",
-      "Scappatoio",
+      "Scappatoia",
       "Accorgimento",
       "Escamotage",
       "Astuzia"
@@ -8522,7 +8524,7 @@
     "taboo": [
       "Atletica",
       "Correre",
-      "Maratoneta",
+      "Marciatore",
       "Sprint",
       "Sport"
     ]
@@ -8558,7 +8560,7 @@
     ]
   },
   {
-    "word": "PRANZOTERAPIA",
+    "word": "PRANOTERAPIA",
     "taboo": [
       "Calore",
       "Mani",
@@ -8598,13 +8600,13 @@
     ]
   },
   {
-    "word": "ANGELETTO",
+    "word": "ANGELICO",
     "taboo": [
       "Beato",
       "Puro",
       "Dolce",
       "Viso",
-      "Aii!"
+      "Ali"
     ]
   },
   {
@@ -8621,9 +8623,9 @@
     "word": "RICREAZIONE",
     "taboo": [
       "Puasa",
-      "Interrvalla",
+      "Intervallo",
       "Scuola",
-      "Svuoto",
+      "Svago",
       "Distrazione"
     ]
   },
@@ -8643,7 +8645,7 @@
       "Difendere",
       "Coprire",
       "Favorire",
-      "Presentare",
+      "Preservare",
       "Riparare"
     ]
   },
@@ -8661,10 +8663,10 @@
     "word": "PUMA",
     "taboo": [
       "Felino",
-      "Gatto",
+      "Felpato",
       "Snello",
-      "Felope",
-      "Cacciatore"
+      "Cacciatore",
+      "Agile"
     ]
   },
   {
@@ -8672,7 +8674,7 @@
     "taboo": [
       "Maggioranza",
       "Elezione",
-      "Voti",
+      "Votanti",
       "Raggiungere",
       "Assemblea"
     ]
@@ -8681,8 +8683,8 @@
     "word": "PIOTTA",
     "taboo": [
       "Moneta",
-      "Quattrino",
       "Roma",
+      "Supercafone",
       "Er",
       "Cento Lire"
     ]
@@ -8722,9 +8724,9 @@
     "taboo": [
       "Topo",
       "Rapina",
-      "Sequestri",
-      "Topi",
-      "Velenoso"
+      "Sequestro",
+      "Sabine",
+      "Veloce"
     ]
   },
   {
@@ -8740,9 +8742,9 @@
   {
     "word": "RINNOVARE",
     "taboo": [
-      "Ristrutturare",
+      "Restaurare",
       "Abbonamento",
-      "Confermato",
+      "Contratto",
       "Ripetere",
       "Modernizzare"
     ]
@@ -8760,7 +8762,7 @@
   {
     "word": "FRODE",
     "taboo": [
-      "Cavallo",
+      "Raggiro",
       "Imbroglio",
       "Truffa",
       "Fiscale",
@@ -8780,10 +8782,10 @@
   {
     "word": "RITMO",
     "taboo": [
+      "Fiat",
+      "Successione",
       "Musica",
       "Suono",
-      "Successione",
-      "Fiar",
       "Cadenza"
     ]
   },
@@ -8803,7 +8805,7 @@
       "Anfibio",
       "Rana",
       "Brutto",
-      "Verruca",
+      "Stagno",
       "Principe"
     ]
   },
@@ -8820,11 +8822,11 @@
   {
     "word": "RUSCELLO",
     "taboo": [
-      "Acqua",
+      "Rivolo",
       "Scorrere",
+      "Acqua",
       "Fiume",
-      "Montagna",
-      "Rivo"
+      "Montagna"
     ]
   },
   {
@@ -8841,10 +8843,10 @@
     "word": "MALVAGIO",
     "taboo": [
       "Cattivo",
+      "Maligno",
       "Perfido",
-      "Crudele",
       "Azione",
-      "Persone"
+      "Persona"
     ]
   },
   {
@@ -8862,8 +8864,8 @@
     "taboo": [
       "Immagine",
       "Fotografia",
-      "File",
       "Elaborare",
+      "File",
       "Definizione"
     ]
   },
@@ -8878,12 +8880,12 @@
     ]
   },
   {
-    "word": "TELEDIRIN",
+    "word": "TELEDRIN",
     "taboo": [
-      "Portatile",
       "Cercapersone",
-      "Vibrare",
+      "Portatile",
       "Squillare",
+      "Vibrare",
       "Numero"
     ]
   },
@@ -8903,7 +8905,7 @@
       "Edoardo",
       "Diminutivo",
       "Pane",
-      "Salsa",
+      "Fare",
       "Sugo"
     ]
   },
@@ -8920,11 +8922,11 @@
   {
     "word": "SCAVALCARE",
     "taboo": [
-      "Superare",
-      "Valicare",
-      "Ostinato",
+      "Passare",
       "Sopra",
-      "Passare"
+      "Ostacolo",
+      "Superare",
+      "Sorpassare"
     ]
   },
   {
@@ -8940,11 +8942,11 @@
   {
     "word": "SCHERMA",
     "taboo": [
-      "Spada",
-      "Spada",
-      "Stoccata",
+      "Sport",
       "Fioretto",
-      "Sport"
+      "Sciabola",
+      "Spada",
+      "Dorina Vaccaroni"
     ]
   },
   {
@@ -8953,18 +8955,18 @@
       "Legno",
       "Rodere",
       "Insetto",
-      "Asillo",
+      "Assillo",
       "Dubbio"
     ]
   },
   {
-    "word": "SAPONE",
+    "word": "SCHIUMA",
     "taboo": [
-      "Bolla",
-      "Bolla",
-      "Liquido",
+      "Barba",
+      "Bagno",
       "Bolle",
-      "Baba"
+      "Liquido",
+      "Sapone"
     ]
   },
   {
@@ -8984,13 +8986,13 @@
       "Dissociato",
       "Folle",
       "Pazzo",
-      "Delirio"
+      "Isterico"
     ]
   },
   {
     "word": "SCIOCCHEZZA",
     "taboo": [
-      "Stoltezza",
+      "Stolteria",
       "Insignificante",
       "Stupidaggine",
       "Nonnulla",
@@ -8998,12 +9000,12 @@
     ]
   },
   {
-    "word": "IRRAZIONALE",
+    "word": "VIRTUALE",
     "taboo": [
-      "Irridele",
-      "Infinito",
       "Irreale",
-      "Interment",
+      "Internet",
+      "Finto",
+      "Potenziale",
       "Possibile"
     ]
   },
@@ -9020,11 +9022,11 @@
   {
     "word": "SCIOPERO",
     "taboo": [
-      "Lavoro",
       "Trasporti",
+      "Lavoro",
       "Sindacato",
       "Ad oltranza",
-      "Lavoro"
+      "Precettare"
     ]
   },
   {
@@ -9060,11 +9062,11 @@
   {
     "word": "BORDEAUX",
     "taboo": [
-      "Vino",
-      "Francese",
+      "Colore",
       "Rosso",
       "Scuro",
-      "Colore"
+      "Vino",
+      "Francese"
     ]
   },
   {
@@ -9083,8 +9085,8 @@
       "Schiena",
       "Malformazione",
       "Deviazione",
-      "Colonna vertebrale",
-      "Disordini"
+      "Sport",
+      "Colonna vertebrale"
     ]
   },
   {
@@ -9100,11 +9102,11 @@
   {
     "word": "SCOLLEGARE",
     "taboo": [
+      "Disconnettere",
       "Disunire",
       "Disgiungere",
       "Separare",
-      "Cavo",
-      "Sconnettere"
+      "Cavo"
     ]
   },
   {
@@ -9142,9 +9144,9 @@
     "taboo": [
       "Modello",
       "Ideale",
-      "Filosofico",
-      "Forma",
-      "Pilone"
+      "Filosofia",
+      "Platone",
+      "Forma"
     ]
   },
   {
@@ -9160,11 +9162,11 @@
   {
     "word": "BABY BOOM",
     "taboo": [
-      "Nato",
-      "Aumento",
-      "Esplosione",
+      "Incremento",
       "Demografica",
-      "Intervallo"
+      "Esplosione",
+      "Aumento",
+      "Crescita"
     ]
   },
   {
@@ -9182,29 +9184,39 @@
     "taboo": [
       "Sistemare",
       "Accomodare",
-      "Accompagnare",
       "Musica",
-      "Cavarsela"
+      "Cavarsela",
+      "Accordarsi"
     ]
   },
   {
     "word": "SEMPLIFICARE",
     "taboo": [
       "Chiarire",
-      "Esplicare",
+      "Esplicitare",
       "Complicare",
       "Concetto",
       "Facilitare"
     ]
   },
   {
-    "word": "CETO",
+    "word": "PLEBEO",
     "taboo": [
-      "Classe",
-      "Borghese",
-      "Nobile",
       "Popolare",
-      "Povero"
+      "Povero",
+      "Nobile",
+      "Patrizio",
+      "Ceto"
+    ]
+  },
+  {
+    "word": "ARRIVEDERCI",
+    "taboo": [
+      "Salutarsi",
+      "Ciao",
+      "Addio",
+      "Concedarsi",
+      "Accomiatarsi"
     ]
   },
   {
@@ -9218,23 +9230,23 @@
     ]
   },
   {
-    "word": "DEMOCRAZIA",
+    "word": "PLEBISCITO",
     "taboo": [
-      "Voto",
       "Popolare",
       "Consenso",
       "Unanimità",
-      "Assemblea"
+      "Assemblea",
+      "Voto"
     ]
   },
   {
-    "word": "MILIONARIO",
+    "word": "IGNOTO",
     "taboo": [
-      "Mille",
-      "I soldi",
+      "Sconosciuto",
+      "Ignorato",
       "Famoso",
-      "Ignoto",
-      "Sconosciuto"
+      "I soliti",
+      "Milite"
     ]
   },
   {
@@ -9250,11 +9262,11 @@
   {
     "word": "RIFLETTERE",
     "taboo": [
-      "Pensare",
-      "Mare",
-      "Meditare",
+      "Specchio",
       "Considerare",
-      "Specchiare"
+      "Meditare",
+      "Mare",
+      "Pensare"
     ]
   },
   {
@@ -9290,11 +9302,11 @@
   {
     "word": "SET POINT",
     "taboo": [
-      "Tennis",
-      "Pallavolo",
-      "Tie break",
+      "Decisivo",
       "Vittoria",
-      "Decisivo"
+      "Tie break",
+      "Pallavolo",
+      "Tennis"
     ]
   },
   {
@@ -9311,10 +9323,10 @@
     "word": "MOSCA TSÉ-TSÉ",
     "taboo": [
       "Insetto",
-      "Risveglio",
       "Ronzare",
       "Sonno",
-      "Malaria"
+      "Malattia",
+      "Volare"
     ]
   },
   {
@@ -9331,10 +9343,10 @@
     "word": "LOOP",
     "taboo": [
       "Ripetizione",
-      "Ritorno",
       "Costante",
+      "Interrotta",
       "Ciclico",
-      "Interrotto"
+      "Continuo"
     ]
   },
   {
@@ -9350,11 +9362,11 @@
   {
     "word": "ULTIMATUM",
     "taboo": [
-      "Scadenza",
-      "Obbligare",
       "Ingiunzione",
-      "Ultimo",
-      "Dare"
+      "Obbligo",
+      "Mandare",
+      "Dare",
+      "Scadenza"
     ]
   },
   {
@@ -9370,11 +9382,11 @@
   {
     "word": "TORERO",
     "taboo": [
+      "Dominguin",
       "Corrida",
-      "Matador",
-      "Arena",
       "Spagna",
-      "Dominguín"
+      "Arena",
+      "Matador"
     ]
   },
   {
@@ -9392,9 +9404,9 @@
     "taboo": [
       "Candidatura",
       "Premio",
-      "Film",
+      "Oscar",
       "Vincere",
-      "Oscar"
+      "Film"
     ]
   },
   {
@@ -9412,8 +9424,8 @@
     "taboo": [
       "Moneta",
       "Divisa",
-      "Valigia",
-      "Azienda",
+      "Valuta",
+      "Giappone",
       "Tokyo"
     ]
   },
@@ -9432,9 +9444,9 @@
     "taboo": [
       "Pietra",
       "Colore",
-      "Azzurro",
       "Prezioso",
-      "Acquamarina"
+      "Azzurro",
+      "Mare"
     ]
   },
   {
@@ -9443,7 +9455,7 @@
       "Ballo",
       "Again",
       "Shout",
-      "Chubby Checker",
+      "Anche",
       "Anni 60-70"
     ]
   },
@@ -9452,9 +9464,9 @@
     "taboo": [
       "Targa",
       "Musicale",
+      "Acronimo",
       "Programma",
-      "Televisivo",
-      "Iniziali"
+      "Televisivo"
     ]
   },
   {
@@ -9470,28 +9482,29 @@
   {
     "word": "SIMULAZIONE",
     "taboo": [
-      "Filmata",
-      "Dissimulazione",
+      "Finta",
+      "Reato",
+      "Fallo",
       "Prova",
-      "Sceneggiata"
+      "Volo"
     ]
   },
   {
     "word": "VIDEOCONFERENZA",
     "taboo": [
       "Computer",
-      "Fibra ottica",
+      "Collegamento",
       "Telefono",
-      "Vedere",
-      "Collegamento"
+      "Fibra ottica",
+      "Vedere"
     ]
   },
   {
     "word": "SINTESI",
     "taboo": [
-      "Breve",
       "Analisi",
-      "Risultato",
+      "Breve",
+      "Riassunto",
       "Unità",
       "Conclusione"
     ]
@@ -9499,10 +9512,10 @@
   {
     "word": "YETI",
     "taboo": [
+      "Abominevole",
       "Uomo",
       "Nevi",
       "Enorme",
-      "Abominevole",
       "Himalaya"
     ]
   },
@@ -9531,9 +9544,9 @@
     "taboo": [
       "Magro",
       "Agile",
-      "Sottile",
+      "Smilzo",
       "Svelto",
-      "Slanciato"
+      "Sottile"
     ]
   },
   {
@@ -9587,13 +9600,13 @@
     ]
   },
   {
-    "word": "SOLIDARIETA",
+    "word": "SOLIDARIETÀ",
     "taboo": [
       "Aiuto",
-      "Sostegno",
+      "Supporto",
       "Appoggio",
-      "Soccorso",
-      "Solido"
+      "Sostegno",
+      "Società"
     ]
   },
   {
@@ -9609,7 +9622,7 @@
   {
     "word": "SONNIFERO",
     "taboo": [
-      "Farmaco",
+      "Tubetto",
       "Medicinale",
       "Pillola",
       "Dormire",
@@ -9631,8 +9644,8 @@
     "taboo": [
       "Arresto",
       "Fermata",
-      "Divieto",
       "Stop",
+      "Divieto",
       "Pausa"
     ]
   },
@@ -9649,11 +9662,11 @@
   {
     "word": "TRIPUDIO",
     "taboo": [
-      "Festeggiare",
-      "Gioco",
-      "Gioia",
+      "Folla",
       "Esultanza",
-      "Festa"
+      "Gioia",
+      "Gaudio",
+      "Visibilio"
     ]
   },
   {
@@ -9671,9 +9684,9 @@
     "taboo": [
       "Frutto di mare",
       "Conchiglia",
+      "Verace",
       "Mollusco",
-      "Mangiare",
-      "Verace"
+      "Mangiare"
     ]
   },
   {
@@ -9691,15 +9704,15 @@
     "taboo": [
       "Libro",
       "Scaffale",
-      "Silenzio",
+      "Volume",
       "Lettura",
-      "Volume"
+      "Silenzio"
     ]
   },
   {
     "word": "TURBOLENZA",
     "taboo": [
-      "Sballottamento",
+      "Torbidezza",
       "Agitazione",
       "Burrascoso",
       "Aereo",
@@ -9710,8 +9723,8 @@
     "word": "SPAVALDO",
     "taboo": [
       "Coraggioso",
-      "Stupido",
-      "Scontroso",
+      "Sicuro",
+      "Tronfio",
       "Orgoglioso",
       "Sfrontato"
     ]
@@ -9730,9 +9743,9 @@
     "word": "WAGNERIANO",
     "taboo": [
       "Valchirie",
-      "Tristano",
-      "Classica",
+      "Nibelunghi",
       "Musica",
+      "Classica",
       "Anello"
     ]
   },
@@ -9749,11 +9762,11 @@
   {
     "word": "TURBINE",
     "taboo": [
+      "Vortice",
       "Vento",
-      "Movimento",
       "Tromba d'aria",
-      "Polvere",
-      "Vortice"
+      "Movimento",
+      "Polvere"
     ]
   },
   {
@@ -9769,21 +9782,21 @@
   {
     "word": "SPECULARE",
     "taboo": [
-      "Simmetrico",
-      "Simmetria",
-      "Struttura",
+      "Studiare",
+      "Sfruttare",
       "Specchiare",
-      "Superficie"
+      "Simmetrico",
+      "Reciproco"
     ]
   },
   {
     "word": "TRATTATO",
     "taboo": [
-      "Materia",
-      "Dottrina",
-      "Convenzione",
+      "Accordo",
       "Patto",
-      "Accordo"
+      "Convenzione",
+      "Dottrina",
+      "Materia"
     ]
   },
   {
@@ -9791,8 +9804,8 @@
     "taboo": [
       "Fessura",
       "Luce",
-      "Speranza",
       "Barlume",
+      "Speranza",
       "Possibilità"
     ]
   },
@@ -9830,8 +9843,8 @@
     "word": "TREDICESIMA",
     "taboo": [
       "Paga",
-      "Mensilità",
       "Stipendio",
+      "Mensilità",
       "Retribuzione",
       "Natale"
     ]
@@ -9849,11 +9862,11 @@
   {
     "word": "MINACCIA",
     "taboo": [
-      "Pericolo",
       "Intimidazione",
-      "Vessazione",
-      "Futuro",
-      "Minacciare"
+      "Pericolo",
+      "Danno",
+      "Male",
+      "Futuro"
     ]
   },
   {
@@ -9870,10 +9883,10 @@
     "word": "TACITURNO",
     "taboo": [
       "Parlare",
-      "Parole",
       "Poco",
-      "Riservato",
-      "Silenzioso"
+      "Parole",
+      "Muto",
+      "Introverso"
     ]
   },
   {
@@ -9889,10 +9902,11 @@
   {
     "word": "SREGOLATEZZA",
     "taboo": [
-      "Disobbedienza",
+      "Vita",
+      "Costumi",
+      "Genio",
       "Comportamento",
-      "Sfrenatezza",
-      "Vizi"
+      "Dissolutezza"
     ]
   },
   {
@@ -9909,9 +9923,9 @@
     "word": "STAMPATELLO",
     "taboo": [
       "Lettere",
-      "Alfabeto",
-      "Corsivo",
       "Maiuscole",
+      "Corsivo",
+      "Alfabeto",
       "Carattere"
     ]
   },
@@ -9929,10 +9943,10 @@
     "word": "STATION WAGON",
     "taboo": [
       "Automobile",
-      "Giardiniera",
+      "Giardinetta",
       "Berlina",
       "Familiare",
-      "Bagagliaio"
+      "Portellone"
     ]
   },
   {
@@ -9948,29 +9962,29 @@
   {
     "word": "STOCK",
     "taboo": [
+      "Merce",
       "Disponibile",
       "Magazzino",
-      "Scorta",
-      "Merci",
-      "Inventario"
+      "Inventario",
+      "Negozio"
     ]
   },
   {
     "word": "TESTARDO",
     "taboo": [
       "Mulo",
-      "Coccio",
+      "Cocciuto",
       "Insistente",
       "Ostinato",
-      "Caparbio"
+      "Rinunciatario"
     ]
   },
   {
     "word": "STORTO",
     "taboo": [
-      "Diritto",
+      "Dritto",
       "Inclinato",
-      "Sbieco",
+      "Piegato",
       "Gambe",
       "Quadro"
     ]
@@ -9982,17 +9996,17 @@
       "Violoncello",
       "Strumento",
       "Musicale",
-      "Accardo"
+      "Accordo"
     ]
   },
   {
     "word": "STRADARIO",
     "taboo": [
-      "Percorso",
-      "Città",
+      "Cartina",
+      "Elenco",
       "Vie",
-      "Strade",
-      "Cartina"
+      "Città",
+      "Percorso"
     ]
   },
   {
@@ -10008,11 +10022,11 @@
   {
     "word": "STRESS",
     "taboo": [
-      "Fatica",
       "Lavoro",
+      "Fatica",
       "Sovraccarico",
-      "Frenesia",
-      "Tensione"
+      "Tensione",
+      "Frenesia"
     ]
   },
   {
@@ -10031,28 +10045,28 @@
       "Attuale",
       "Moda",
       "Moderno",
-      "Vogue",
+      "Voga",
       "Discoteca"
     ]
   },
   {
-    "word": "SOGGETTIVO",
+    "word": "SUPERLATIVO",
     "taboo": [
       "Assoluto",
       "Relativo",
-      "Oggettivo",
-      "Personale",
-      "Opinione"
+      "Aggettivo",
+      "Avverbio",
+      "Massimo"
     ]
   },
   {
     "word": "SUPPLIZIO",
     "taboo": [
-      "Sofferenza",
-      "Penitenza",
+      "Tantalo",
       "Pena",
+      "Tormento",
       "Tortura",
-      "Tantalo"
+      "Sofferenza"
     ]
   },
   {
