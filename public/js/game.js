@@ -13,6 +13,7 @@ const removePointButton = document.getElementById("removepoint");
 const passButton = document.getElementById("pass");
 const doubleButton = document.getElementById("double");
 const resetButton = document.getElementById("reset");
+const removeTimeButton = document.getElementById("removetime");
 
 const buttonAudio = document.getElementById("buttonAudio");
 const wrongAudio = document.getElementById("wrongAudio");
@@ -30,8 +31,14 @@ let timer;
 let timerGoing = false;
 let canPerformActions = false;
 
+updateRemoveTimeVisibility();
+
 function setRemainTime(time) {
   remainTime = time >= 0 ? (time <= DEFAULT_TIME ? time : DEFAULT_TIME) : 0;
+}
+
+function updateRemoveTimeVisibility() {
+  removeTimeButton.classList.toggle("hidden", currentWord !== DEFAULT_WORD);
 }
 
 function setScore(score) {
@@ -148,6 +155,7 @@ socket.on("setGameStatus", (data) => {
     scoreStatus.innerText = totalScore;
     updatePasses(remainPasses);
     updateDoubles(remainDoubles);
+    updateRemoveTimeVisibility();
   }
 });
 
@@ -180,6 +188,10 @@ resetButton.addEventListener("click", () => {
   updateStatus("resetGame", null, true);
 });
 
+removeTimeButton.addEventListener("click", () => {
+  if (currentWord === DEFAULT_WORD) updateStatus("removeTime", null, true);
+});
+
 doubleButton.addEventListener("click", () => {
   if (remainDoubles > 0 && !timerGoing) play(true);
 });
@@ -195,10 +207,16 @@ function updateStatus(command, data = null, emit = false) {
     updateDoubles(remainDoubles);
 
     startTimer();
+    updateRemoveTimeVisibility();
   }
 
   if (command == "stopGame") {
     stopTimer();
+  }
+
+  if (command == "removeTime") {
+    setRemainTime(remainTime - 5 < 10 ? 10 : remainTime - 5);
+    remainTimeStatus.innerText = remainTime;
   }
 
   if (command == "addPoint") {
@@ -248,6 +266,7 @@ function updateStatus(command, data = null, emit = false) {
     scoreStatus.innerText = totalScore;
     updatePasses(remainPasses);
     updateDoubles(remainDoubles);
+    updateRemoveTimeVisibility();
   }
 
   if (emit) {
