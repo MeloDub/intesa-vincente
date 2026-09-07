@@ -172,19 +172,58 @@ header.small .title {
 }
 
 .word-display {
-    @apply bg-white rounded-xl px-8 py-4 border-4 border-gray-300 shadow-lg;
+    @apply bg-white rounded-xl px-4 sm:px-8 py-4 border-4 border-gray-300 shadow-lg;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: clamp(1.75rem, 9vw, 4.5rem);
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+    min-width: 0;
+}
+
+#wordArea {
+    max-width: 100%;
+    width: 100%;
+    min-width: 0;
+}
+
+#word,
+#wordText {
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    white-space: normal;
 }
 
 .taboo-list {
     @apply bg-white rounded-lg p-4 border-2 border-red-400;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .taboo-list .subtitle {
     @apply text-red-500 text-xl;
 }
 
+.taboo-words {
+    max-width: 100%;
+    min-width: 0;
+}
+
 .taboo-word {
-    @apply bg-red-100 text-red-600 px-3 py-1 rounded-full font-bold text-lg;
+    @apply bg-red-100 text-red-600 px-3 py-1 rounded-full font-bold;
+    font-size: clamp(0.875rem, 4vw, 1.125rem);
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    white-space: normal;
+    text-align: center;
 }
 
 .button.success {

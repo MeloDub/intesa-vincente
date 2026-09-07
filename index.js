@@ -80,6 +80,8 @@ function getRandomTabooWord(usedWords) {
   return word;
 }
 
+const TABOO_LOBBY_GRACE_MS = 120 * 1000;
+
 function initializeTabooRoom(roomID) {
   tabooRooms.set(roomID, {
     roomID,
@@ -94,12 +96,112 @@ function initializeTabooRoom(roomID) {
     usedWords: [],
     roundNumber: 1,
     totalRounds: 4,
-    timer: 60,
+    timer: 120,
     timerInterval: null,
     turnTransitioning: false,
     gameState: "lobby",
-    winner: null
+    pauseReason: null,
+    winner: null,
+    // socket.id -> playerId persistente (per socket non ancora associati a un player)
+    pendingPlayerIds: {},
+    // playerId -> timeout di cleanup (solo lobby/ended)
+    cleanupTimers: {}
   });
+}
+
+function getPlayerBySocket(room, socketId) {
+  if (!room || !socketId) return null;
+  return room.players.find((p) => p.socketId === socketId) || null;
+}
+
+function getPlayerById(room, playerId) {
+  if (!room || !playerId) return null;
+  return room.players.find((p) => p.id === playerId) || null;
+}
+
+// True se il socket risulta ancora vivo sul server (per evitare steal tra tab aperti).
+function isTabooSocketAlive(socketId) {
+  try {
+    if (!socketId) return false;
+    const m = io && io.sockets && io.sockets.sockets;
+    if (!m) return false;
+    if (typeof m.has === "function") return m.has(socketId);
+    if (typeof m.get === "function") return !!m.get(socketId);
+    return !!m[socketId];
+  } catch (e) {
+    return false;
+  }
+}
+
+// Risolve il player della connessione corrente: prima per socketId,
+// poi per playerId esplicito del client, poi per pending map.
+// Non ruba mai una sessione ancora viva: in quel caso ritorna null
+// così il secondo tab potrà essere trattato come nuovo giocatore.
+function resolveTabooPlayer(room, socket, clientPlayerId) {
+  if (!room) return null;
+  let player = getPlayerBySocket(room, socket.id);
+  if (player) return player;
+  const pendingId = room.pendingPlayerIds
+    ? room.pendingPlayerIds[socket.id]
+    : null;
+  const wantedId = clientPlayerId || pendingId;
+  if (wantedId) {
+    player = getPlayerById(room, wantedId);
+    if (player) {
+      if (
+        player.connected &&
+        player.socketId &&
+        player.socketId !== socket.id &&
+        isTabooSocketAlive(player.socketId)
+      ) {
+        return null;
+      }
+      // Ricollega socket se il player era offline (last-socket-wins)
+      clearTabooCleanupTimer(room, player.id);
+      player.socketId = socket.id;
+      player.connected = true;
+      player.disconnectedAt = null;
+      return player;
+    }
+  }
+  return null;
+}
+
+function clearTabooCleanupTimer(room, playerId) {
+  if (room.cleanupTimers && room.cleanupTimers[playerId]) {
+    clearTimeout(room.cleanupTimers[playerId]);
+    delete room.cleanupTimers[playerId];
+  }
+}
+
+function scheduleTabooLobbyCleanup(roomID, playerId) {
+  const room = tabooRooms.get(roomID);
+  if (!room) return;
+  // Nessun purge durante la partita: lo slot resta riservato fino a tabooReset.
+  if (room.gameState === "playing" || room.gameState === "paused") return;
+  clearTabooCleanupTimer(room, playerId);
+  room.cleanupTimers[playerId] = setTimeout(() => {
+    const r = tabooRooms.get(roomID);
+    if (!r) return;
+    // Se nel frattempo è iniziata la partita, non purgare.
+    if (r.gameState === "playing" || r.gameState === "paused") {
+      delete r.cleanupTimers[playerId];
+      return;
+    }
+    const player = getPlayerById(r, playerId);
+    if (!player || player.connected) {
+      delete r.cleanupTimers[playerId];
+      return;
+    }
+    if (player.team && r.teams[player.team]) {
+      r.teams[player.team].players = r.teams[player.team].players.filter(
+        (p) => p.id !== playerId
+      );
+    }
+    r.players = r.players.filter((p) => p.id !== playerId);
+    delete r.cleanupTimers[playerId];
+    broadcastTabooState(r);
+  }, TABOO_LOBBY_GRACE_MS);
 }
 
 function getCurrentDescriptorId(room) {
@@ -113,17 +215,24 @@ function startNewTurn(room) {
   room.currentDescriptorId = getCurrentDescriptorId(room);
   const word = getRandomTabooWord(room.usedWords);
   room.currentWord = word;
-  room.timer = 60;
+  room.timer = 120;
   return { currentDescriptorId: room.currentDescriptorId, currentWord: word };
 }
 
 function serializeRoom(room) {
+  const serializePlayer = (p) => ({
+    id: p.id,
+    name: p.name,
+    team: p.team,
+    ready: p.ready,
+    connected: p.connected !== false
+  });
   return {
     roomID: room.roomID,
-    players: room.players.map((p) => ({ id: p.id, name: p.name, team: p.team, ready: p.ready })),
+    players: room.players.map(serializePlayer),
     teams: {
-      rossa: { score: room.teams.rossa.score, players: room.teams.rossa.players.map((p) => ({ id: p.id, name: p.name, team: p.team, ready: p.ready })) },
-      blu: { score: room.teams.blu.score, players: room.teams.blu.players.map((p) => ({ id: p.id, name: p.name, team: p.team, ready: p.ready })) }
+      rossa: { score: room.teams.rossa.score, players: room.teams.rossa.players.map(serializePlayer) },
+      blu: { score: room.teams.blu.score, players: room.teams.blu.players.map(serializePlayer) }
     },
     currentTurn: room.currentTurn,
     currentDescriptorId: room.currentDescriptorId,
@@ -132,6 +241,7 @@ function serializeRoom(room) {
     totalRounds: room.totalRounds,
     timer: room.timer,
     gameState: room.gameState,
+    pauseReason: room.pauseReason || null,
     winner: room.winner,
     rossaScore: room.teams.rossa.score,
     bluScore: room.teams.blu.score
@@ -153,7 +263,7 @@ function startServerTimer(roomID, reset = true) {
   }
 
   if (reset) {
-    room.timer = 60;
+    room.timer = 120;
   }
 
   room.timerInterval = setInterval(() => {
@@ -175,6 +285,7 @@ function startServerTimer(roomID, reset = true) {
 }
 
 function stopServerTimer(room) {
+  if (!room) return;
   if (room.timerInterval) {
     clearInterval(room.timerInterval);
     room.timerInterval = null;
@@ -211,7 +322,12 @@ function handleTurnEnd(roomID) {
     }
   }
 
+  // Nuovo turno: parola preparata ma nascosta, gioco in pausa finché
+  // il nuovo descrittore preme "Riprendi". Il timer parte solo al resume.
+  stopServerTimer(room);
   startNewTurn(room);
+  room.gameState = "paused";
+  room.pauseReason = "turnChange";
   room.turnTransitioning = false;
   broadcastTabooState(room, "gong");
 }
@@ -220,9 +336,14 @@ function checkCanStartGame(room) {
   if (room.gameState !== "lobby") return false;
   if (room.players.length !== 4) return false;
 
+  // Tutti devono essere connessi: i player offline restano in lista
+  // per il grace period ma non devono far partire la partita.
+  const allConnected = room.players.every((p) => p.connected !== false);
+  if (!allConnected) return false;
+
   const allReady = room.players.every((p) => p.ready);
-  const rossaCount = room.teams.rossa.players.length;
-  const bluCount = room.teams.blu.players.length;
+  const rossaCount = room.teams.rossa.players.filter((p) => p.connected !== false).length;
+  const bluCount = room.teams.blu.players.filter((p) => p.connected !== false).length;
 
   return allReady && rossaCount === 2 && bluCount === 2;
 }
@@ -241,49 +362,123 @@ io.on("connection", (socket) => {
     socket.to(gameID).emit("updateStatus", command, data);
   });
 
-  socket.on("tabooJoinRoom", (roomID) => {
+  socket.on("tabooJoinRoom", (roomID, persistedPlayerId) => {
+    if (!roomID) return;
     socket.join(roomID);
-    socket.emit("tabooRoomJoined", { roomID, socketId: socket.id });
 
     if (!tabooRooms.has(roomID)) {
       initializeTabooRoom(roomID);
     }
 
     const room = tabooRooms.get(roomID);
+    const cleanPersistedId =
+      typeof persistedPlayerId === "string" && persistedPlayerId.trim()
+        ? persistedPlayerId.trim().slice(0, 64)
+        : null;
+
+    let player = cleanPersistedId ? getPlayerById(room, cleanPersistedId) : null;
+
+    if (player) {
+      // Se la sessione è ancora viva su un altro socket (secondo tab stesso browser),
+      // non rubare l'identità: assegna un nuovo id a questo socket.
+      if (
+        player.connected &&
+        player.socketId &&
+        player.socketId !== socket.id &&
+        isTabooSocketAlive(player.socketId)
+      ) {
+        const freshId = uuidv4();
+        room.pendingPlayerIds[socket.id] = freshId;
+        socket.emit("tabooRoomJoined", {
+          roomID,
+          socketId: socket.id,
+          playerId: freshId
+        });
+        socket.emit("tabooState", serializeRoom(room));
+        return;
+      }
+      // Rejoin: ricollega il nuovo socket all'identità persistente (last-socket-wins).
+      // Non toccare timer/gameState: il gioco continua senza pause automatiche.
+      clearTabooCleanupTimer(room, player.id);
+      player.socketId = socket.id;
+      player.connected = true;
+      player.disconnectedAt = null;
+      room.pendingPlayerIds[socket.id] = player.id;
+      socket.emit("tabooRoomJoined", {
+        roomID,
+        socketId: socket.id,
+        playerId: player.id
+      });
+      // Notifica anche gli altri: il badge offline deve sparire per tutti.
+      broadcastTabooState(room);
+      return;
+    }
+    // Prima connessione (o id sconosciuto): genera l'id sul server.
+    // Se il client ha inviato un id mai visto (es. room appena creata),
+    // lo adottiamo per stabilità; altrimenti ne generiamo uno nuovo.
+    const assignedId = cleanPersistedId || uuidv4();
+    room.pendingPlayerIds[socket.id] = assignedId;
+    socket.emit("tabooRoomJoined", {
+      roomID,
+      socketId: socket.id,
+      playerId: assignedId
+    });
     socket.emit("tabooState", serializeRoom(room));
   });
 
-  socket.on("tabooSetName", (roomID, name) => {
+  socket.on("tabooSetName", (roomID, name, clientPlayerId) => {
     const room = tabooRooms.get(roomID);
     if (!room) return;
 
     const playerName = String(name || "").trim().slice(0, 20) || "Giocatore";
 
-    let player = room.players.find((p) => p.id === socket.id);
+    let player = resolveTabooPlayer(room, socket, clientPlayerId);
     if (!player) {
+      const pendingId = room.pendingPlayerIds[socket.id];
+      const wantedId =
+        (typeof clientPlayerId === "string" && clientPlayerId.trim()) ||
+        pendingId ||
+        uuidv4();
+      const cleanId = String(wantedId).slice(0, 64);
+      if (room.players.length >= 4 && !getPlayerById(room, cleanId)) {
+        socket.emit("tabooError", "La stanza è piena (max 4 giocatori).");
+        return;
+      }
       player = {
-        id: socket.id,
+        id: cleanId,
+        socketId: socket.id,
         name: playerName,
         team: null,
-        ready: false
+        ready: false,
+        connected: true,
+        disconnectedAt: null
       };
       room.players.push(player);
+      room.pendingPlayerIds[socket.id] = player.id;
     } else {
       player.name = playerName;
+      player.socketId = socket.id;
+      player.connected = true;
+      player.disconnectedAt = null;
+      clearTabooCleanupTimer(room, player.id);
     }
 
     broadcastTabooState(room);
   });
 
-  socket.on("tabooSetTeam", (roomID, team) => {
+  socket.on("tabooSetTeam", (roomID, team, clientPlayerId) => {
     const room = tabooRooms.get(roomID);
     if (!room) return;
     if (team !== "rossa" && team !== "blu") return;
 
-    const player = room.players.find((p) => p.id === socket.id);
+    const player = resolveTabooPlayer(room, socket, clientPlayerId);
     if (!player) return;
 
-    if (room.teams[team].players.length >= 2 && player.team !== team) {
+    // Conta solo i connessi + chi è in grace period con slot riservato:
+    // lo slot di un player offline resta riservato, un nuovo player non può rubarlo.
+    const teamPlayers = room.teams[team].players;
+    const occupiedByOthers = teamPlayers.filter((p) => p.id !== player.id).length;
+    if (occupiedByOthers >= 2 && player.team !== team) {
       socket.emit("tabooError", "La squadra è già piena (max 2 giocatori).");
       return;
     }
@@ -291,26 +486,26 @@ io.on("connection", (socket) => {
     const previousTeam = player.team;
     if (previousTeam && previousTeam !== team) {
       room.teams[previousTeam].players = room.teams[previousTeam].players.filter(
-        (p) => p.id !== socket.id
+        (p) => p.id !== player.id
       );
     }
 
     player.team = team;
-    if (!room.teams[team].players.includes(player)) {
+    if (!room.teams[team].players.some((p) => p.id === player.id)) {
       room.teams[team].players.push(player);
     }
 
     broadcastTabooState(room);
-    
+
     // Invia la squadra assegnata al client per aggiornare myTeam
     socket.emit("tabooSetTeamResponse", team);
   });
 
-  socket.on("tabooSetReady", (roomID, ready) => {
+  socket.on("tabooSetReady", (roomID, ready, clientPlayerId) => {
     const room = tabooRooms.get(roomID);
     if (!room) return;
 
-    const player = room.players.find((p) => p.id === socket.id);
+    const player = resolveTabooPlayer(room, socket, clientPlayerId);
     if (!player) return;
 
     player.ready = !!ready;
@@ -325,10 +520,11 @@ io.on("connection", (socket) => {
     }
   });
 
-  socket.on("tabooCorrectAnswer", (roomID) => {
+  socket.on("tabooCorrectAnswer", (roomID, clientPlayerId) => {
     const room = tabooRooms.get(roomID);
     if (!room || room.gameState !== "playing") return;
-    if (socket.id !== room.currentDescriptorId) {
+    const actor = resolveTabooPlayer(room, socket, clientPlayerId);
+    if (!actor || actor.id !== room.currentDescriptorId) {
       socket.emit("tabooError", "Solo il descrittore può segnare un punto.");
       return;
     }
@@ -341,10 +537,11 @@ io.on("connection", (socket) => {
     broadcastTabooState(room, "correct");
   });
 
-  socket.on("tabooSkipWord", (roomID) => {
+  socket.on("tabooSkipWord", (roomID, clientPlayerId) => {
     const room = tabooRooms.get(roomID);
     if (!room || room.gameState !== "playing") return;
-    if (socket.id !== room.currentDescriptorId) {
+    const actor = resolveTabooPlayer(room, socket, clientPlayerId);
+    if (!actor || actor.id !== room.currentDescriptorId) {
       socket.emit("tabooError", "Solo il descrittore può saltare una parola.");
       return;
     }
@@ -355,11 +552,11 @@ io.on("connection", (socket) => {
     broadcastTabooState(room);
   });
 
-  socket.on("tabooSignalTaboo", (roomID) => {
+  socket.on("tabooSignalTaboo", (roomID, clientPlayerId) => {
     const room = tabooRooms.get(roomID);
     if (!room || room.gameState !== "playing") return;
 
-    const player = room.players.find((p) => p.id === socket.id);
+    const player = resolveTabooPlayer(room, socket, clientPlayerId);
     if (!player || !player.team || player.team === room.currentTurn) {
       socket.emit("tabooError", "Solo la squadra avversaria può segnalare un taboo.");
       return;
@@ -373,10 +570,11 @@ io.on("connection", (socket) => {
     broadcastTabooState(room, "wrong");
   });
 
-  socket.on("tabooNextTurn", (roomID) => {
+  socket.on("tabooNextTurn", (roomID, clientPlayerId) => {
     const room = tabooRooms.get(roomID);
     if (!room || room.gameState !== "playing") return;
-    if (socket.id !== room.currentDescriptorId) {
+    const actor = resolveTabooPlayer(room, socket, clientPlayerId);
+    if (!actor || actor.id !== room.currentDescriptorId) {
       socket.emit("tabooError", "Solo il descrittore può terminare il turno.");
       return;
     }
@@ -388,32 +586,53 @@ io.on("connection", (socket) => {
   socket.on("tabooPause", (roomID) => {
     const room = tabooRooms.get(roomID);
     if (!room) return;
+    if (room.gameState !== "playing") return;
 
     stopServerTimer(room);
     room.gameState = "paused";
+    room.pauseReason = "manual";
     broadcastTabooState(room);
   });
 
-  socket.on("tabooResume", (roomID) => {
+  socket.on("tabooResume", (roomID, clientPlayerId) => {
     const room = tabooRooms.get(roomID);
     if (!room || room.gameState !== "paused") return;
 
+    // Pausa da cambio turno: solo il nuovo descrittore può far partire
+    // il timer e mostrare la parola. Pausa manuale: chiunque può riprendere.
+    if (room.pauseReason === "turnChange") {
+      const actor = resolveTabooPlayer(room, socket, clientPlayerId);
+      if (!actor || actor.id !== room.currentDescriptorId) {
+        socket.emit("tabooError", "Solo il descrittore può avviare il turno.");
+        return;
+      }
+    }
+
     room.gameState = "playing";
+    room.pauseReason = null;
     broadcastTabooState(room);
     startServerTimer(roomID, false);
   });
 
   socket.on("tabooReset", (roomID) => {
     const oldRoom = tabooRooms.get(roomID);
-    stopServerTimer(oldRoom);
+    if (oldRoom) {
+      stopServerTimer(oldRoom);
+      Object.values(oldRoom.cleanupTimers || {}).forEach(clearTimeout);
+    }
 
     const players = oldRoom ? oldRoom.players : [];
     initializeTabooRoom(roomID);
 
     const room = tabooRooms.get(roomID);
-    room.players = players.map((p) => ({ ...p, ready: false }));
+    // Preserva identità persistente; riconnetti lo stato socket se ancora online.
+    room.players = players.map((p) => ({
+      ...p,
+      ready: false,
+      connected: p.connected !== false ? true : false
+    }));
     room.players.forEach((p) => {
-      if (p.team) {
+      if (p.team && room.teams[p.team]) {
         room.teams[p.team].players.push(p);
       }
     });
@@ -423,19 +642,21 @@ io.on("connection", (socket) => {
 
   socket.on("disconnect", () => {
     tabooRooms.forEach((room, roomID) => {
-      const playerIndex = room.players.findIndex((p) => p.id === socket.id);
-      if (playerIndex !== -1) {
-        const player = room.players[playerIndex];
-        if (player.team) {
-          room.teams[player.team].players = room.teams[player.team].players.filter(
-            (p) => p.id !== socket.id
-          );
-        }
-        room.players.splice(playerIndex, 1);
+      if (room.pendingPlayerIds && room.pendingPlayerIds[socket.id]) {
+        delete room.pendingPlayerIds[socket.id];
+      }
+      const player = getPlayerBySocket(room, socket.id);
+      if (player) {
+        // Niente pausa automatica e niente rimozione immediata:
+        // il gioco continua, il timer resta attivo, lo slot resta riservato.
+        player.connected = false;
+        player.disconnectedAt = Date.now();
+        player.socketId = null;
 
-        if (room.gameState === "playing") {
-          stopServerTimer(room);
-          room.gameState = "paused";
+        // Solo in lobby/ended lo slot si libera dopo il grace period.
+        // In playing/paused: nessun purge, si attende il rejoin o il reset.
+        if (room.gameState !== "playing" && room.gameState !== "paused") {
+          scheduleTabooLobbyCleanup(roomID, player.id);
         }
 
         broadcastTabooState(room);

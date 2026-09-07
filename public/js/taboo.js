@@ -2,7 +2,62 @@ const socket = io();
 
 let gameState = null;
 let mySocketId = null;
+let myPlayerId = null;
 let myTeam = null;
+
+function getPlayerStorageKey() {
+  try {
+    return "taboo:" + GAME_ID + ":playerId";
+  } catch (e) {
+    return null;
+  }
+}
+
+function getStoredPlayerId() {
+  try {
+    const key = getPlayerStorageKey();
+    return key ? localStorage.getItem(key) : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+function storePlayerId(id) {
+  if (!id) return;
+  myPlayerId = id;
+  try {
+    const key = getPlayerStorageKey();
+    if (key) localStorage.setItem(key, id);
+  } catch (e) {
+    // storage non disponibile (es. privacy mode): si continua in memoria
+  }
+}
+
+function joinTabooRoom() {
+  const storedId = myPlayerId || getStoredPlayerId();
+  socket.emit("tabooJoinRoom", GAME_ID, storedId || null);
+}
+
+function ensureConnectionBanner() {
+  let banner = document.getElementById("connectionBanner");
+  if (!banner) {
+    banner = document.createElement("div");
+    banner.id = "connectionBanner";
+    banner.className =
+      "hidden fixed top-2 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-full text-sm font-bold shadow";
+    banner.textContent = "Connessione persa, riconnessione...";
+    document.body.appendChild(banner);
+  }
+  return banner;
+}
+
+function setConnectionBanner(visible, text) {
+  const banner = ensureConnectionBanner();
+  if (text) banner.textContent = text;
+  banner.classList.toggle("hidden", !visible);
+  banner.classList.toggle("bg-yellow-400", visible);
+  banner.classList.toggle("text-black", visible);
+}
 
 const elements = {};
 
@@ -38,7 +93,7 @@ function updateUI() {
 
   if (elements.teamRossaScore) elements.teamRossaScore.textContent = gameState.teams.rossa.score;
   if (elements.teamBluScore) elements.teamBluScore.textContent = gameState.teams.blu.score;
-  if (elements.time) elements.time.textContent = gameState.timer ?? 60;
+  if (elements.time) elements.time.textContent = gameState.timer ?? 120;
   if (elements.roundInfo) elements.roundInfo.textContent = `Round ${gameState.roundNumber} di ${gameState.totalRounds}`;
 
   updatePlayersList();
@@ -52,9 +107,14 @@ function appendTeamPlayers(container, teamPlayers, labelClass, labelText) {
   container.appendChild(label);
 
   teamPlayers.forEach((p) => {
-    const player = gameState.players.find((pl) => pl.id === p.id);
+    const player = gameState.players.find((pl) => pl.id === p.id) || p;
     const span = document.createElement("span");
-    span.textContent = (player?.name || "Giocatore") + (player?.ready ? " ✓" : "");
+    const offline = player && player.connected === false;
+    span.textContent =
+      (player?.name || "Giocatore") +
+      (player?.ready ? " ✓" : "") +
+      (offline ? " (offline)" : "");
+    if (offline) span.className = "opacity-50 italic";
     container.appendChild(span);
   });
 }
@@ -91,8 +151,9 @@ function updatePlayersList() {
 }
 
 function updateGameView() {
+  const myId = myPlayerId || mySocketId;
   const isMyTeamPlaying = myTeam === gameState.currentTurn;
-  const isDescriptor = gameState.currentDescriptorId === mySocketId;
+  const isDescriptor = gameState.currentDescriptorId === myId;
   const isGuesser = isMyTeamPlaying && !isDescriptor;
 
   if (gameState.gameState === "lobby") {
@@ -118,7 +179,28 @@ function updateGameView() {
   if (elements.victoryArea) elements.victoryArea.classList.add("hidden");
   if (elements.gameArea) elements.gameArea.classList.remove("hidden");
 
-  if (!gameState.currentWord) return;
+  if (!gameState.currentWord) {
+    updateRoleControls();
+    return;
+  }
+
+  // Tra un turno e l'altro (o in pausa manuale) la parola resta nascosta
+  // a tutti finché il descrittore preme "Riprendi".
+  if (gameState.gameState === "paused") {
+    if (elements.currentTurn) {
+      elements.currentTurn.textContent =
+        (gameState.currentTurn === "rossa" ? "Turno Squadra Rossa" : "Turno Squadra Blu") +
+        " — In pausa";
+    }
+    if (elements.word) elements.word.textContent = "⏸ PAUSA";
+    if (elements.wordText) elements.wordText.textContent = "⏸ PAUSA";
+    if (elements.tabooList) elements.tabooList.classList.add("hidden");
+    if (elements.wordArea) {
+      elements.wordArea.classList.remove("border-yellow-400", "border-4");
+    }
+    updateRoleControls();
+    return;
+  }
 
   if (elements.currentTurn) {
     elements.currentTurn.textContent = gameState.currentTurn === "rossa"
@@ -158,12 +240,28 @@ function updateGameView() {
 }
 
 function updateRoleControls() {
+  const myId = myPlayerId || mySocketId;
   const isMyTeamPlaying = myTeam === gameState.currentTurn;
-  const isDescriptor = gameState.currentDescriptorId === mySocketId;
+  const isDescriptor = gameState.currentDescriptorId === myId;
   const isGuesser = isMyTeamPlaying && !isDescriptor;
+  const isPaused = gameState.gameState === "paused";
+  const isTurnChange = isPaused && gameState.pauseReason === "turnChange";
 
   if (elements.roleIndicator) {
-    if (isMyTeamPlaying) {
+    if (isPaused) {
+      if (isDescriptor) {
+        elements.roleIndicator.textContent = isTurnChange
+          ? "Tocca a te! Premi Riprendi quando la squadra è pronta"
+          : "Gioco in pausa — Premi Riprendi per continuare";
+        elements.roleIndicator.className = "text-purple-500 font-bold text-xl";
+      } else if (isMyTeamPlaying) {
+        elements.roleIndicator.textContent = "In attesa che il descrittore avvii il turno...";
+        elements.roleIndicator.className = "text-gray-600 font-bold text-xl";
+      } else {
+        elements.roleIndicator.textContent = "Turno avversario in preparazione...";
+        elements.roleIndicator.className = "text-yellow-600 font-bold text-xl";
+      }
+    } else if (isMyTeamPlaying) {
       if (isDescriptor) {
         elements.roleIndicator.textContent = "Sei il DESCRITTORE";
         elements.roleIndicator.className = "text-purple-500 font-bold text-xl";
@@ -179,6 +277,23 @@ function updateRoleControls() {
 
   if (elements.controlsArea) {
     elements.controlsArea.innerHTML = "";
+
+    if (isPaused) {
+      // Parola nascosta: niente Corretto/Salta/TABOO finché non si riprende.
+      if (isDescriptor) {
+        const label = isTurnChange ? "Avvia turno" : "Riprendi";
+        elements.controlsArea.innerHTML = `
+          <button onclick="handlePause()" class="button success text-2xl py-4 px-12">
+            <ion-icon name="play-outline"></ion-icon> ${label}
+          </button>
+        `;
+      } else {
+        elements.controlsArea.innerHTML = `
+          <p class="text-xl text-gray-600">Aspetta che il descrittore prema Riprendi...</p>
+        `;
+      }
+      return;
+    }
 
     if (isMyTeamPlaying && isDescriptor) {
       elements.controlsArea.innerHTML = `
@@ -207,13 +322,10 @@ function updateRoleControls() {
       `;
     }
 
-    const pauseIcon = gameState.gameState === "paused" ? "play-outline" : "pause-outline";
-    const pauseText = gameState.gameState === "paused" ? "Riprendi" : "Pausa";
-    
     let extraControls = `
       <div class="flex gap-4 justify-center mt-6">
         <button onclick="handlePause()" class="button pill text-xl">
-          <ion-icon name="${pauseIcon}"></ion-icon> ${pauseText}
+          <ion-icon name="pause-outline"></ion-icon> Pausa
         </button>`;
     if (isDescriptor) {
       extraControls += `
@@ -237,36 +349,51 @@ function playSound(sound) {
 }
 
 function handleCorrect() {
-  socket.emit("tabooCorrectAnswer", GAME_ID);
+  socket.emit("tabooCorrectAnswer", GAME_ID, myPlayerId || null);
 }
 
 function handleSkip() {
-  socket.emit("tabooSkipWord", GAME_ID);
+  socket.emit("tabooSkipWord", GAME_ID, myPlayerId || null);
 }
 
 function handleTaboo() {
-  socket.emit("tabooSignalTaboo", GAME_ID);
+  socket.emit("tabooSignalTaboo", GAME_ID, myPlayerId || null);
 }
 
 function handlePause() {
   if (gameState.gameState === "playing") {
     socket.emit("tabooPause", GAME_ID);
   } else if (gameState.gameState === "paused") {
-    socket.emit("tabooResume", GAME_ID);
+    socket.emit("tabooResume", GAME_ID, myPlayerId || getStoredPlayerId());
   }
 }
 
 function handleNextTurn() {
-  socket.emit("tabooNextTurn", GAME_ID);
+  socket.emit("tabooNextTurn", GAME_ID, myPlayerId || null);
 }
 
 function setupLobby() {
   if (!elements.playerName) return;
 
+  // Ripristina nome già scelto in questo browser per agevolare il rejoin manuale
+  try {
+    const savedName = localStorage.getItem("taboo:" + GAME_ID + ":name");
+    if (savedName && !elements.playerName.value) {
+      elements.playerName.value = savedName;
+    }
+    if (elements.playerName.value.trim()) {
+      elements.teamA.disabled = false;
+      elements.teamB.disabled = false;
+    }
+  } catch (e) {}
+
   elements.playerName.addEventListener("input", () => {
     const name = elements.playerName.value.trim();
     if (name) {
-      socket.emit("tabooSetName", GAME_ID, name);
+      try {
+        localStorage.setItem("taboo:" + GAME_ID + ":name", name);
+      } catch (e) {}
+      socket.emit("tabooSetName", GAME_ID, name, myPlayerId || getStoredPlayerId());
       elements.teamA.disabled = false;
       elements.teamB.disabled = false;
     } else {
@@ -277,13 +404,13 @@ function setupLobby() {
 
   elements.teamA.addEventListener("click", () => {
     if (elements.teamA.disabled) return;
-    socket.emit("tabooSetTeam", GAME_ID, "rossa");
+    socket.emit("tabooSetTeam", GAME_ID, "rossa", myPlayerId || getStoredPlayerId());
     myTeam = "rossa";
   });
 
   elements.teamB.addEventListener("click", () => {
     if (elements.teamB.disabled) return;
-    socket.emit("tabooSetTeam", GAME_ID, "blu");
+    socket.emit("tabooSetTeam", GAME_ID, "blu", myPlayerId || getStoredPlayerId());
     myTeam = "blu";
   });
 }
@@ -300,7 +427,8 @@ function updateReadyButton() {
       elements.readyBtn.innerHTML = 'Aspetta 2 giocatori in squadra';
     } else {
       elements.readyBtn.disabled = false;
-      const player = gameState.players.find((p) => p.id === mySocketId);
+      const myId = myPlayerId || mySocketId;
+      const player = gameState.players.find((p) => p.id === myId);
       if (player?.ready) {
         elements.readyBtn.dataset.ready = "true";
         elements.readyBtn.innerHTML = '<ion-icon name="close-outline"></ion-icon> Non Pronto';
@@ -324,7 +452,7 @@ function setupReadyButton() {
 
   readyBtn.addEventListener("click", () => {
     const isReady = readyBtn.dataset.ready === "true";
-    socket.emit("tabooSetReady", GAME_ID, !isReady);
+    socket.emit("tabooSetReady", GAME_ID, !isReady, myPlayerId || getStoredPlayerId());
   });
 }
 
@@ -338,25 +466,70 @@ function setupRestartButton() {
 
 socket.on("connect", () => {
   mySocketId = socket.id;
-  // setupLobby();
+  setConnectionBanner(false);
+  // Rejoin automatico: rientra nella room Socket.io e ricollega il playerId persistente.
+  // Copre sia il primo connect che ogni reconnect (rete mobile instabile).
+  joinTabooRoom();
+});
+
+socket.on("disconnect", () => {
+  setConnectionBanner(true, "Connessione persa, riconnessione...");
+});
+
+socket.io.on("reconnect_attempt", () => {
+  setConnectionBanner(true, "Connessione persa, riconnessione...");
 });
 
 socket.on("tabooRoomJoined", (data) => {
-  mySocketId = data.socketId;
+  mySocketId = data.socketId || socket.id;
+  if (data.playerId) {
+    storePlayerId(data.playerId);
+  }
 });
 
 // Handler per la conferma dell'assegnazione della squadra
 socket.on("tabooSetTeamResponse", (team) => {
   myTeam = team;
+  try {
+    localStorage.setItem("taboo:" + GAME_ID + ":team", team);
+  } catch (e) {}
   updateReadyButton();
 });
 
 socket.on("tabooState", (state) => {
   gameState = state;
+  setConnectionBanner(false);
 
-  const me = state.players.find((p) => p.id === mySocketId);
+  const myId = myPlayerId || getStoredPlayerId() || mySocketId;
+  const me = state.players.find((p) => p.id === myId);
   if (me) {
+    if (!myPlayerId) myPlayerId = me.id;
     myTeam = me.team;
+    try {
+      if (me.team) localStorage.setItem("taboo:" + GAME_ID + ":team", me.team);
+    } catch (e) {}
+    // Se il nome salvato localmente è vuoto ma il server ne ha uno, precompila l'input
+    if (elements.playerName && !elements.playerName.value && me.name) {
+      elements.playerName.value = me.name;
+    }
+  } else {
+    if (myId && mySocketId && myId !== mySocketId) {
+      // Fallback per compatibilità con stati vecchi basati su socket.id
+      const legacyMe = state.players.find((p) => p.id === mySocketId);
+      if (legacyMe) myTeam = legacyMe.team;
+    }
+    // Server riavviato o slot scaduto in lobby: ri-registra automaticamente
+    // nome/team salvati con lo stesso playerId persistente.
+    try {
+      const savedName = localStorage.getItem("taboo:" + GAME_ID + ":name");
+      const savedTeam = localStorage.getItem("taboo:" + GAME_ID + ":team");
+      if (savedName && state.gameState === "lobby" && state.players.length < 4) {
+        socket.emit("tabooSetName", GAME_ID, savedName, myId);
+        if (savedTeam === "rossa" || savedTeam === "blu") {
+          socket.emit("tabooSetTeam", GAME_ID, savedTeam, myId);
+        }
+      }
+    } catch (e) {}
   }
 
   updateUI();
@@ -368,6 +541,7 @@ socket.on("tabooTimerTick", (time) => {
   if (elements.time) {
     elements.time.textContent = time;
   }
+  if (gameState) gameState.timer = time;
 });
 
 socket.on("tabooError", (message) => {
@@ -376,8 +550,10 @@ socket.on("tabooError", (message) => {
 
 document.addEventListener("DOMContentLoaded", async () => {
   initElements();
+  myPlayerId = getStoredPlayerId();
   setupLobby();
   setupReadyButton();
   setupRestartButton();
-  socket.emit("tabooJoinRoom", GAME_ID);
+  ensureConnectionBanner();
+  joinTabooRoom();
 });

@@ -56,24 +56,24 @@ html(lang="it")
               .score#teamBluScore 0
 
           #timerDisplay.text-center
-            h2.text-6xl.font-bold#time 60
+            h2.text-6xl.font-bold#time 120
             p.text-lg#currentTurn Turno Squadra Rossa
 
           #roundInfo.text-gray-600 Round 1 di 4
 
           #roleIndicator.text-xl.mt-4
 
-          #wordArea.text-center.mt-6
-            h2.word-display.text-7xl.font-bold.uppercase#word
+          #wordArea.text-center.mt-6.w-full.max-w-full.min-w-0
+            h2.word-display.font-bold.uppercase#word
               span#wordText ??????
             
-            .taboo-list.mt-6
+            .taboo-list.mt-6.w-full.max-w-full.min-w-0
               h3.subtitle Parole Taboo
-              .taboo-words.flex.flex-wrap.gap-2.justify-center.mt-2
+              .taboo-words.flex.flex-wrap.gap-2.justify-center.mt-2.w-full.max-w-full
                 each _, i in Array(5)
                   span.taboo-word(id="taboo" + i) --------
 
-          #controlsArea.mt-8
+          #controlsArea.mt-8.w-full.max-w-full
 
       #victoryArea.hidden
         .flex.flex-col.items-center.gap-6.w-full.max-w-md.px-4
