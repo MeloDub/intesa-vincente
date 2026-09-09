@@ -25,7 +25,23 @@ const tabooWords = JSON.parse(
   fs.readFileSync(path.join(__dirname, "public/data/taboo-words.json"), "utf8")
 );
 
+let ruotaFrasi = [];
+try {
+  ruotaFrasi = JSON.parse(
+    fs.readFileSync(path.join(__dirname, "public/data/ruota-frasi.json"), "utf8")
+  );
+} catch (e) {
+  console.error("Impossibile caricare ruota-frasi.json:", e.message);
+  ruotaFrasi = [];
+}
+if (!Array.isArray(ruotaFrasi) || ruotaFrasi.length === 0) {
+  ruotaFrasi = [
+    { titolo: "IL PESCE NAPOLEONE", frase: "GOBBA SULLA TESTA CHE RICORDA IL SUO CAPPELLO" }
+  ];
+}
+
 const tabooRooms = new Map();
+const ruotaRooms = new Map();
 
 app.param("mode", (req, res, next, mode) => {
   if (mode == "default" || mode == "buttons") {
@@ -63,6 +79,15 @@ app.use("/taboo/:uuid/", (req, res) => {
 app.use("/taboo", (_, res) => {
   const roomID = uuidv4();
   res.redirect("/taboo/" + roomID);
+});
+
+app.use("/ruota/:uuid/", (req, res) => {
+  res.render("ruota/game", { gameID: req.params.uuid });
+});
+
+app.use("/ruota", (_, res) => {
+  const roomID = uuidv4();
+  res.redirect("/ruota/" + roomID);
 });
 
 app.use("/", (_, res) => {
@@ -346,6 +371,289 @@ function checkCanStartGame(room) {
   const bluCount = room.teams.blu.players.filter((p) => p.connected !== false).length;
 
   return allReady && rossaCount === 2 && bluCount === 2;
+}
+
+// ==================== RUOTA DELLA FORTUNA ====================
+
+const RUOTA_VOWELS = ["A", "E", "I", "O", "U"];
+const RUOTA_VOWEL_COST = 500;
+const RUOTA_TOTAL_ROUNDS = 4;
+const RUOTA_MIN_ROUND_PRIZE = 1000;
+
+// Ruota fissa da 24 caselle:
+// pos 0 e 12 = BANCAROTTA (opposte), pos 6 e 18 = PASSAMANO (opposte),
+// pos 1 = SPECIALE (accanto a bancarotta pos 0, valore 1000*round).
+const RUOTA_WHEEL_BASE = [
+  { type: "bancarotta" }, // 0
+  { type: "special" }, // 1
+  { type: "money", value: 100 }, // 2
+  { type: "money", value: 300 }, // 3
+  { type: "money", value: 200 }, // 4
+  { type: "money", value: 500 }, // 5
+  { type: "passamano" }, // 6
+  { type: "money", value: 400 }, // 7
+  { type: "money", value: 200 }, // 8
+  { type: "money", value: 600 }, // 9
+  { type: "money", value: 300 }, // 10
+  { type: "money", value: 500 }, // 11
+  { type: "bancarotta" }, // 12
+  { type: "money", value: 700 }, // 13
+  { type: "money", value: 200 }, // 14
+  { type: "money", value: 800 }, // 15
+  { type: "money", value: 300 }, // 16
+  { type: "money", value: 600 }, // 17
+  { type: "passamano" }, // 18
+  { type: "money", value: 500 }, // 19
+  { type: "money", value: 400 }, // 20
+  { type: "money", value: 700 }, // 21
+  { type: "money", value: 100 }, // 22
+  { type: "money", value: 800 } // 23
+];
+
+function ruotaIsLetter(ch) {
+  return /[A-ZÀ-Þ]/i.test(ch || "");
+}
+
+function ruotaNormalizeText(s) {
+  return String(s || "")
+    .toUpperCase()
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function ruotaGetPhrase(roundNumber) {
+  const idx = (roundNumber - 1) % ruotaFrasi.length;
+  const raw = ruotaFrasi[idx] || ruotaFrasi[0];
+  const titolo = String(raw.titolo || "FRASE MISTERIOSA").toUpperCase();
+  let frase = String(raw.frase || "").toUpperCase();
+  // Sicurezza: max 52 caratteri inclusi spazi per non sforare il tabellone
+  if (frase.length > 52) frase = frase.slice(0, 52);
+  return { titolo, frase };
+}
+
+function ruotaBuildRevealed(frase) {
+  return Array.from(frase).map((ch) => !ruotaIsLetter(ch));
+}
+
+function ruotaCountUnrevealed(room) {
+  let n = 0;
+  const frase = room.phrase.frase;
+  for (let i = 0; i < frase.length; i++) {
+    if (ruotaIsLetter(frase[i]) && !room.revealed[i]) n++;
+  }
+  return n;
+}
+
+function ruotaRevealLetter(room, letter) {
+  const frase = room.phrase.frase;
+  let count = 0;
+  for (let i = 0; i < frase.length; i++) {
+    if (frase[i] === letter && !room.revealed[i]) {
+      room.revealed[i] = true;
+      count++;
+    }
+  }
+  return count;
+}
+
+function ruotaGetWheelLabels(roundNumber) {
+  const specialValue = roundNumber * 1000;
+  return RUOTA_WHEEL_BASE.map((c, index) => {
+    if (c.type === "bancarotta") return { index, type: "bancarotta", label: "BANCAROTTA" };
+    if (c.type === "passamano") return { index, type: "passamano", label: "PASSA" };
+    if (c.type === "special") return { index, type: "money", special: true, value: specialValue, label: String(specialValue) };
+    return { index, type: "money", value: c.value, label: String(c.value) };
+  });
+}
+
+function initializeRuotaRoom(roomID) {
+  ruotaRooms.set(roomID, {
+    roomID,
+    players: [],
+    currentPlayerIndex: 0,
+    starterIndex: 0,
+    roundNumber: 1,
+    totalRounds: RUOTA_TOTAL_ROUNDS,
+    phrase: ruotaGetPhrase(1),
+    revealed: ruotaBuildRevealed(ruotaGetPhrase(1).frase),
+    calledLetters: [],
+    pendingValue: null,
+    pendingSpinIndex: null,
+    lastSpin: null,
+    spinNonce: 0,
+    lastBanked: null,
+    phase: "lobby",
+    winner: null,
+    pendingPlayerIds: {},
+    cleanupTimers: {}
+  });
+}
+
+function ruotaGetPlayerBySocket(room, socketId) {
+  if (!room || !socketId) return null;
+  return room.players.find((p) => p.socketId === socketId) || null;
+}
+
+function ruotaGetPlayerById(room, playerId) {
+  if (!room || !playerId) return null;
+  return room.players.find((p) => p.id === playerId) || null;
+}
+
+function ruotaResolvePlayer(room, socket, clientPlayerId) {
+  if (!room) return null;
+  let player = ruotaGetPlayerBySocket(room, socket.id);
+  if (player) return player;
+  const pendingId = room.pendingPlayerIds ? room.pendingPlayerIds[socket.id] : null;
+  const wantedId = clientPlayerId || pendingId;
+  if (wantedId) {
+    player = ruotaGetPlayerById(room, wantedId);
+    if (player) {
+      if (player.connected && player.socketId && player.socketId !== socket.id && isTabooSocketAlive(player.socketId)) {
+        return null;
+      }
+      ruotaClearCleanupTimer(room, player.id);
+      player.socketId = socket.id;
+      player.connected = true;
+      player.disconnectedAt = null;
+      return player;
+    }
+  }
+  return null;
+}
+
+function ruotaClearCleanupTimer(room, playerId) {
+  if (room.cleanupTimers && room.cleanupTimers[playerId]) {
+    clearTimeout(room.cleanupTimers[playerId]);
+    delete room.cleanupTimers[playerId];
+  }
+}
+
+function ruotaScheduleLobbyCleanup(roomID, playerId) {
+  const room = ruotaRooms.get(roomID);
+  if (!room) return;
+  if (room.phase === "playing" || room.phase === "roundEnd") return;
+  ruotaClearCleanupTimer(room, playerId);
+  room.cleanupTimers[playerId] = setTimeout(() => {
+    const r = ruotaRooms.get(roomID);
+    if (!r) return;
+    if (r.phase === "playing" || r.phase === "roundEnd") {
+      delete r.cleanupTimers[playerId];
+      return;
+    }
+    const player = ruotaGetPlayerById(r, playerId);
+    if (!player || player.connected) {
+      delete r.cleanupTimers[playerId];
+      return;
+    }
+    r.players = r.players.filter((p) => p.id !== playerId);
+    if (r.currentPlayerIndex >= r.players.length) r.currentPlayerIndex = 0;
+    if (r.starterIndex >= r.players.length) r.starterIndex = 0;
+    delete r.cleanupTimers[playerId];
+    broadcastRuotaState(r);
+  }, TABOO_LOBBY_GRACE_MS);
+}
+
+function ruotaAdvanceTurn(room) {
+  if (room.players.length === 0) return;
+  room.pendingValue = null;
+  room.pendingSpinIndex = null;
+  room.currentPlayerIndex = (room.currentPlayerIndex + 1) % room.players.length;
+}
+
+function ruotaStartRound(room, roundNumber, starterIndex) {
+  room.roundNumber = roundNumber;
+  room.starterIndex = starterIndex % Math.max(1, room.players.length);
+  room.currentPlayerIndex = room.starterIndex;
+  room.phrase = ruotaGetPhrase(roundNumber);
+  room.revealed = ruotaBuildRevealed(room.phrase.frase);
+  room.calledLetters = [];
+  room.pendingValue = null;
+  room.pendingSpinIndex = null;
+  room.lastSpin = null;
+  room.lastBanked = null;
+  room.phase = "playing";
+  room.winner = null;
+  room.players.forEach((p) => {
+    p.roundPot = 0;
+  });
+}
+
+// Accredita il montepremi del round nella banca del giocatore:
+// chi vince il round porta a casa almeno RUOTA_MIN_ROUND_PRIZE.
+// Registra l'importo in room.lastBanked per mostrarlo nella UI.
+function ruotaBankRoundPot(room, actor) {
+  const banked = Math.max(actor.roundPot || 0, RUOTA_MIN_ROUND_PRIZE);
+  actor.totalPot = (actor.totalPot || 0) + banked;
+  actor.roundPot = 0;
+  room.lastBanked = { amount: banked, playerId: actor.id, playerName: actor.name, round: room.roundNumber };
+  return banked;
+}
+
+function ruotaComputeWinner(room) {
+  if (room.players.length === 0) return null;
+  let best = room.players[0];
+  let tie = false;
+  for (let i = 1; i < room.players.length; i++) {
+    if (room.players[i].totalPot > best.totalPot) {
+      best = room.players[i];
+      tie = false;
+    } else if (room.players[i].totalPot === best.totalPot) {
+      tie = true;
+    }
+  }
+  if (tie) {
+    const top = Math.max(...room.players.map((p) => p.totalPot));
+    const names = room.players.filter((p) => p.totalPot === top).map((p) => p.name);
+    return { tie: true, names, totalPot: top, text: "Pareggio tra " + names.join(", ") };
+  }
+  return { tie: false, playerId: best.id, name: best.name, totalPot: best.totalPot, text: best.name };
+}
+
+function serializeRuotaRoom(room) {
+  return {
+    roomID: room.roomID,
+    players: room.players.map((p) => ({
+      id: p.id,
+      name: p.name,
+      ready: !!p.ready,
+      connected: p.connected !== false,
+      roundPot: p.roundPot || 0,
+      totalPot: p.totalPot || 0
+    })),
+    currentPlayerId: room.players.length > 0 ? room.players[room.currentPlayerIndex % room.players.length].id : null,
+    roundNumber: room.roundNumber,
+    totalRounds: room.totalRounds,
+    titolo: room.phrase.titolo,
+    fraseLength: room.phrase.frase.length,
+    // La frase viene inviata a tutti: il tabellone è visibile a tutti i giocatori
+    frase: room.phrase.frase,
+    revealed: room.revealed,
+    calledLetters: room.calledLetters,
+    pendingValue: room.pendingValue,
+    pendingSpinIndex: room.pendingSpinIndex,
+    lastSpin: room.lastSpin,
+    lastBanked: room.lastBanked,
+    wheel: ruotaGetWheelLabels(room.roundNumber),
+    specialValue: room.roundNumber * 1000,
+    vowelCost: RUOTA_VOWEL_COST,
+    phase: room.phase,
+    winner: room.winner
+  };
+}
+
+function broadcastRuotaState(room, sound = null) {
+  const payload = serializeRuotaRoom(room);
+  if (sound) payload.sound = sound;
+  io.to(room.roomID).emit("ruotaState", payload);
+}
+
+function checkRuotaCanStart(room) {
+  if (room.phase !== "lobby") return false;
+  if (room.players.length < 2 || room.players.length > 4) return false;
+  const allConnected = room.players.every((p) => p.connected !== false);
+  if (!allConnected) return false;
+  const allReady = room.players.every((p) => p.ready && p.name);
+  return allReady;
 }
 
 io.on("connection", (socket) => {
@@ -640,6 +948,278 @@ io.on("connection", (socket) => {
     broadcastTabooState(room);
   });
 
+  // ---------- RUOTA DELLA FORTUNA ----------
+  socket.on("ruotaJoinRoom", (roomID, persistedPlayerId) => {
+    if (!roomID) return;
+    socket.join(roomID);
+    if (!ruotaRooms.has(roomID)) initializeRuotaRoom(roomID);
+    const room = ruotaRooms.get(roomID);
+    const cleanPersistedId =
+      typeof persistedPlayerId === "string" && persistedPlayerId.trim()
+        ? persistedPlayerId.trim().slice(0, 64)
+        : null;
+    let player = cleanPersistedId ? ruotaGetPlayerById(room, cleanPersistedId) : null;
+    if (player) {
+      if (
+        player.connected &&
+        player.socketId &&
+        player.socketId !== socket.id &&
+        isTabooSocketAlive(player.socketId)
+      ) {
+        const freshId = uuidv4();
+        room.pendingPlayerIds[socket.id] = freshId;
+        socket.emit("ruotaRoomJoined", { roomID, socketId: socket.id, playerId: freshId });
+        socket.emit("ruotaState", serializeRuotaRoom(room));
+        return;
+      }
+      ruotaClearCleanupTimer(room, player.id);
+      player.socketId = socket.id;
+      player.connected = true;
+      player.disconnectedAt = null;
+      room.pendingPlayerIds[socket.id] = player.id;
+      socket.emit("ruotaRoomJoined", { roomID, socketId: socket.id, playerId: player.id });
+      broadcastRuotaState(room);
+      return;
+    }
+    const assignedId = cleanPersistedId || uuidv4();
+    room.pendingPlayerIds[socket.id] = assignedId;
+    socket.emit("ruotaRoomJoined", { roomID, socketId: socket.id, playerId: assignedId });
+    socket.emit("ruotaState", serializeRuotaRoom(room));
+  });
+
+  socket.on("ruotaSetName", (roomID, name, clientPlayerId) => {
+    const room = ruotaRooms.get(roomID);
+    if (!room || room.phase !== "lobby") return;
+    const playerName = String(name || "").trim().slice(0, 20) || "Giocatore";
+    let player = ruotaResolvePlayer(room, socket, clientPlayerId);
+    if (!player) {
+      const pendingId = room.pendingPlayerIds[socket.id];
+      const wantedId = (typeof clientPlayerId === "string" && clientPlayerId.trim()) || pendingId || uuidv4();
+      const cleanId = String(wantedId).slice(0, 64);
+      if (room.players.length >= 4 && !ruotaGetPlayerById(room, cleanId)) {
+        socket.emit("ruotaError", "La stanza è piena (max 4 giocatori).");
+        return;
+      }
+      player = { id: cleanId, socketId: socket.id, name: playerName, ready: false, connected: true, disconnectedAt: null, roundPot: 0, totalPot: 0 };
+      room.players.push(player);
+      room.pendingPlayerIds[socket.id] = player.id;
+    } else {
+      player.name = playerName;
+      player.socketId = socket.id;
+      player.connected = true;
+      player.disconnectedAt = null;
+      ruotaClearCleanupTimer(room, player.id);
+    }
+    broadcastRuotaState(room);
+  });
+
+  socket.on("ruotaSetReady", (roomID, ready, clientPlayerId) => {
+    const room = ruotaRooms.get(roomID);
+    if (!room || room.phase !== "lobby") return;
+    const player = ruotaResolvePlayer(room, socket, clientPlayerId);
+    if (!player) return;
+    player.ready = !!ready;
+    broadcastRuotaState(room);
+    if (checkRuotaCanStart(room)) {
+      ruotaStartRound(room, 1, 0);
+      broadcastRuotaState(room);
+    }
+  });
+
+  socket.on("ruotaSpin", (roomID, clientPlayerId) => {
+    const room = ruotaRooms.get(roomID);
+    if (!room || room.phase !== "playing") return;
+    const actor = ruotaResolvePlayer(room, socket, clientPlayerId);
+    if (!actor) return;
+    const current = room.players[room.currentPlayerIndex % room.players.length];
+    if (!current || actor.id !== current.id) {
+      socket.emit("ruotaError", "Non è il tuo turno.");
+      return;
+    }
+    if (room.pendingValue !== null) {
+      socket.emit("ruotaError", "Hai già girato: chiama una consonante.");
+      return;
+    }
+    const spinIndex = Math.floor(Math.random() * RUOTA_WHEEL_BASE.length);
+    const labels = ruotaGetWheelLabels(room.roundNumber);
+    const outcome = labels[spinIndex];
+    room.spinNonce += 1;
+    if (outcome.type === "bancarotta") {
+      actor.roundPot = 0;
+      actor.totalPot = 0;
+      room.lastSpin = { index: spinIndex, type: "bancarotta", label: "BANCAROTTA", nonce: room.spinNonce };
+      room.pendingValue = null;
+      room.pendingSpinIndex = null;
+      broadcastRuotaState(room);
+      ruotaAdvanceTurn(room);
+      broadcastRuotaState(room);
+      return;
+    }
+    if (outcome.type === "passamano") {
+      room.lastSpin = { index: spinIndex, type: "passamano", label: "PASSA", nonce: room.spinNonce };
+      room.pendingValue = null;
+      room.pendingSpinIndex = null;
+      broadcastRuotaState(room);
+      ruotaAdvanceTurn(room);
+      broadcastRuotaState(room);
+      return;
+    }
+    room.pendingValue = outcome.value;
+    room.pendingSpinIndex = spinIndex;
+    room.lastSpin = { index: spinIndex, type: "money", value: outcome.value, label: outcome.label, nonce: room.spinNonce, special: !!outcome.special };
+    broadcastRuotaState(room);
+  });
+
+  socket.on("ruotaCallLetter", (roomID, rawLetter, clientPlayerId) => {
+    const room = ruotaRooms.get(roomID);
+    if (!room || room.phase !== "playing") return;
+    const actor = ruotaResolvePlayer(room, socket, clientPlayerId);
+    if (!actor) return;
+    const current = room.players[room.currentPlayerIndex % room.players.length];
+    if (!current || actor.id !== current.id) {
+      socket.emit("ruotaError", "Non è il tuo turno.");
+      return;
+    }
+    const letter = ruotaNormalizeText(rawLetter).charAt(0);
+    if (!letter || !/[A-Z]/.test(letter)) {
+      socket.emit("ruotaError", "Lettera non valida.");
+      return;
+    }
+    if (room.calledLetters.includes(letter)) {
+      socket.emit("ruotaError", "Lettera già chiamata.");
+      return;
+    }
+    const isVowel = RUOTA_VOWELS.includes(letter);
+    if (isVowel) {
+      if (room.pendingValue !== null) {
+        socket.emit("ruotaError", "Dopo aver girato devi chiamare una consonante. Compra la vocale prima di girare.");
+        return;
+      }
+      if ((actor.roundPot || 0) < RUOTA_VOWEL_COST) {
+        socket.emit("ruotaError", "Montepremi del round insufficiente per comprare una vocale (500€).");
+        return;
+      }
+      actor.roundPot -= RUOTA_VOWEL_COST;
+      room.calledLetters.push(letter);
+      const count = ruotaRevealLetter(room, letter);
+      if (count === 0) {
+        broadcastRuotaState(room);
+        ruotaAdvanceTurn(room);
+        broadcastRuotaState(room);
+      } else {
+        if (ruotaCountUnrevealed(room) === 0) {
+          ruotaBankRoundPot(room, actor);
+          room.pendingValue = null;
+          room.pendingSpinIndex = null;
+          if (room.roundNumber >= room.totalRounds) {
+            room.phase = "ended";
+            room.winner = ruotaComputeWinner(room);
+          } else {
+            room.phase = "roundEnd";
+          }
+          broadcastRuotaState(room);
+        } else {
+          broadcastRuotaState(room);
+        }
+      }
+      return;
+    }
+    // Consonante: richiede spin previo
+    if (room.pendingValue === null) {
+      socket.emit("ruotaError", "Gira prima la ruota per chiamare una consonante.");
+      return;
+    }
+    room.calledLetters.push(letter);
+    const count = ruotaRevealLetter(room, letter);
+    const gained = count * room.pendingValue;
+    if (count === 0) {
+      room.pendingValue = null;
+      room.pendingSpinIndex = null;
+      broadcastRuotaState(room);
+      ruotaAdvanceTurn(room);
+      broadcastRuotaState(room);
+    } else {
+      actor.roundPot = (actor.roundPot || 0) + gained;
+      room.pendingValue = null;
+      room.pendingSpinIndex = null;
+      if (ruotaCountUnrevealed(room) === 0) {
+        ruotaBankRoundPot(room, actor);
+        if (room.roundNumber >= room.totalRounds) {
+          room.phase = "ended";
+          room.winner = ruotaComputeWinner(room);
+        } else {
+          room.phase = "roundEnd";
+        }
+      }
+      broadcastRuotaState(room);
+    }
+  });
+
+  socket.on("ruotaSolve", (roomID, rawText, clientPlayerId) => {
+    const room = ruotaRooms.get(roomID);
+    if (!room || room.phase !== "playing") return;
+    const actor = ruotaResolvePlayer(room, socket, clientPlayerId);
+    if (!actor) return;
+    const current = room.players[room.currentPlayerIndex % room.players.length];
+    if (!current || actor.id !== current.id) {
+      socket.emit("ruotaError", "Non è il tuo turno.");
+      return;
+    }
+    // La soluzione si può dare solo prima di girare la ruota: dopo lo
+    // spin bisogna prima chiamare la consonante. Il bottone Risolvi è
+    // disabilitato in quel caso, quindi una solve inattesa si ignora
+    // silenziosamente senza messaggi di errore.
+    if (room.pendingValue !== null) {
+      return;
+    }
+    const attempt = ruotaNormalizeText(rawText);
+    if (!attempt) {
+      socket.emit("ruotaError", "Inserisci una soluzione.");
+      return;
+    }
+    const target = ruotaNormalizeText(room.phrase.frase);
+    if (attempt === target) {
+      room.revealed = room.revealed.map(() => true);
+      ruotaBankRoundPot(room, actor);
+      room.pendingValue = null;
+      room.pendingSpinIndex = null;
+      if (room.roundNumber >= room.totalRounds) {
+        room.phase = "ended";
+        room.winner = ruotaComputeWinner(room);
+      } else {
+        room.phase = "roundEnd";
+      }
+      broadcastRuotaState(room);
+    } else {
+      room.pendingValue = null;
+      room.pendingSpinIndex = null;
+      broadcastRuotaState(room);
+      ruotaAdvanceTurn(room);
+      broadcastRuotaState(room);
+    }
+  });
+
+  socket.on("ruotaNextRound", (roomID) => {
+    const room = ruotaRooms.get(roomID);
+    if (!room || room.phase !== "roundEnd") return;
+    if (room.roundNumber >= room.totalRounds) return;
+    const nextStarter = (room.starterIndex + 1) % Math.max(1, room.players.length);
+    ruotaStartRound(room, room.roundNumber + 1, nextStarter);
+    broadcastRuotaState(room);
+  });
+
+  socket.on("ruotaReset", (roomID) => {
+    const oldRoom = ruotaRooms.get(roomID);
+    const players = oldRoom ? oldRoom.players : [];
+    Object.values((oldRoom && oldRoom.cleanupTimers) || {}).forEach(clearTimeout);
+    initializeRuotaRoom(roomID);
+    const room = ruotaRooms.get(roomID);
+    room.players = players.map((p) => ({ ...p, ready: false, roundPot: 0, totalPot: 0, connected: p.connected !== false }));
+    if (room.currentPlayerIndex >= room.players.length) room.currentPlayerIndex = 0;
+    room.starterIndex = 0;
+    broadcastRuotaState(room);
+  });
+
   socket.on("disconnect", () => {
     tabooRooms.forEach((room, roomID) => {
       if (room.pendingPlayerIds && room.pendingPlayerIds[socket.id]) {
@@ -660,6 +1240,21 @@ io.on("connection", (socket) => {
         }
 
         broadcastTabooState(room);
+      }
+    });
+    ruotaRooms.forEach((room, roomID) => {
+      if (room.pendingPlayerIds && room.pendingPlayerIds[socket.id]) {
+        delete room.pendingPlayerIds[socket.id];
+      }
+      const player = ruotaGetPlayerBySocket(room, socket.id);
+      if (player) {
+        player.connected = false;
+        player.disconnectedAt = Date.now();
+        player.socketId = null;
+        if (room.phase !== "playing" && room.phase !== "roundEnd") {
+          ruotaScheduleLobbyCleanup(roomID, player.id);
+        }
+        broadcastRuotaState(room);
       }
     });
   });

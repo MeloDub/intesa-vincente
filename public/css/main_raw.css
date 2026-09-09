@@ -273,3 +273,218 @@ body.taboo header .title {
 #gameStatus {
     @apply bg-white rounded-lg p-4 text-sm text-gray-600;
 }
+
+/* ---------- Ruota della Fortuna ---------- */
+
+body.ruota header .title {
+    @apply text-[#A760FF];
+}
+
+body.ruota .button:not(.success):not(.error):not(.warning) {
+    @apply bg-[#A760FF] shadow-[#FC92E3];
+}
+
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(14, minmax(0, 1fr));
+    gap: 4px;
+    width: 100%;
+}
+
+.board-cell {
+    aspect-ratio: 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    line-height: 1;
+    border: 2px solid #9f5f80;
+    background: #fff;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.board-covered {
+    background: #fff;
+}
+
+.board-revealed {
+    background: #d1fae5;
+    border-color: #059669;
+}
+
+.board-space,
+.board-empty {
+    background: transparent;
+    border-style: dashed;
+    border-color: #d6c7bd;
+}
+
+.board-symbol {
+    background: #fef3c7;
+}
+
+@media (max-width: 640px) {
+    .board-grid {
+        gap: 3px;
+    }
+    .board-box {
+        padding: 0.5rem;
+    }
+}
+
+#wheelWrap {
+    position: relative;
+    width: min(80vw, 320px);
+    height: min(80vw, 320px);
+    margin: 0 auto;
+}
+
+#wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 9999px;
+    border: 6px solid #590696;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+#wheelPointer {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.4rem;
+    line-height: 1;
+    color: #E11D48;
+    text-shadow: -1px 0 #fff, 1px 0 #fff, 0 -1px #fff, 0 1px #fff, -1px -1px #fff, 1px 1px #fff, -1px 1px #fff, 1px -1px #fff;
+    z-index: 10;
+}
+
+#wheelCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72px;
+    height: 72px;
+    border-radius: 9999px;
+    background: #590696;
+    color: #fff;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 3px solid #fff;
+    z-index: 5;
+    font-size: 0.9rem;
+}
+
+.wheel-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+}
+
+.wheel-digits {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.05;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.wheel-digits.wheel-word {
+    font-size: 0.6rem;
+    line-height: 1;
+}
+
+.wheel-digits.wheel-bancarotta {
+    font-size: 0.65rem;
+}
+
+.wheel-digits.wheel-passa {
+    font-size: 1rem;
+}
+
+.wheel-digits .wheel-euro {
+    font-size: 0.7rem;
+}
+
+@media (max-width: 400px) {
+    .wheel-digits {
+        font-size: 0.85rem;
+    }
+    .wheel-digits.wheel-word {
+        font-size: 0.5rem;
+    }
+    .wheel-digits.wheel-bancarotta {
+        font-size: 0.55rem;
+    }
+    .wheel-digits.wheel-passa {
+        font-size: 0.85rem;
+    }
+}
+
+.keyboard-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 6px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .keyboard-grid {
+        grid-template-columns: repeat(9, minmax(0, 1fr));
+    }
+}
+
+.key-btn {
+    @apply bg-white border-2 border-[#9f5f80] rounded-lg font-bold py-2;
+    font-size: clamp(0.9rem, 4vw, 1.15rem);
+    min-width: 0;
+}
+
+.key-btn:disabled {
+    @apply opacity-40 cursor-not-allowed;
+}
+
+.key-btn.key-called {
+    background: #e5e7eb;
+    text-decoration: line-through;
+}
+
+.key-btn.key-vowel {
+    background: #fef3c7;
+    border-color: #f59e0b;
+}
+
+.key-btn.key-consonant {
+    background: #ecfdf5;
+}
+
+.key-btn.key-active {
+    box-shadow: 2px 3px 0px #9f5f80;
+}
+
+#solveModal .box {
+    text-align: center;
+}
+
+#spinResult {
+    min-height: 2rem;
+}

@@ -1,0 +1,109 @@
+- var baseSite = process.env.BASE_SITE || "https://intesa-vincente.on.shiper.app"
+
+doctype html
+html(lang="it")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    meta(name="description" content="WebApp del gioco Ruota della Fortuna.")
+    meta(name="keywords" content="ruota della fortuna,gioco,webapp")
+
+    title Ruota della Fortuna
+    link(rel="stylesheet" href="/css/main.css")
+
+    link(rel="icon" href="/images/icons/icon-72x72.png" type="image/png")
+    link(rel="manifest" href="/manifest.json")
+    script(src="/service.js")
+
+    script const GAME_ID = "#{gameID}";
+
+  body.ruota
+    header.flex.flex-col.gap-10.small
+      a.button.pill.back(href="/")
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      h1.title Ruota della Fortuna
+
+    .flex-1.flex.flex-col.items-center
+      #lobbyArea
+        .flex.flex-col.items-center.gap-6.w-full.max-w-md.px-4
+          h2.subtitle Unisciti alla partita (2-4 giocatori)
+
+          .flex.flex-col.items-center.gap-4.w-full
+            input#playerName.input-field.w-full(type="text" placeholder="Il tuo nome" autocomplete="off" maxlength="20")
+
+            button#readyBtn.button.pill.w-full(disabled data-ready="false")
+              <ion-icon name="checkmark-outline"></ion-icon>
+              |  Pronto
+
+          #lobbyInfo.mt-6.w-full
+            h3.subtitle.text-lg Giocatori nella stanza
+            #playersList.flex.flex-col.gap-2.mt-3
+            p.text-sm.text-gray-500.mt-2 Servono almeno 2 giocatori pronti per iniziare. 4 round, vince il montepremi totale più alto.
+
+      #gameArea.hidden
+        .flex.flex-col.items-center.gap-4.w-full.max-w-3xl.px-2(class="sm:px-4")
+          #roundInfo.text-gray-600 Round 1 di 4
+          #playersScore.grid.grid-cols-2.md-grid-cols-4.gap-2.w-full
+
+          .box.board-box.w-full.text-center
+            p.text-sm.text-gray-500.uppercase Argomento
+            h2#phraseTitle.subtitle.text-xl.font-bold
+            #board.board-grid.mt-3(aria-label="Tabellone")
+
+          #turnInfo.text-xl.font-bold.mt-2
+
+          #wheelSection.flex.flex-col.items-center.gap-2.w-full
+            #wheelWrap
+              #wheelPointer ▼
+              #wheel
+              #wheelCenter GIRA
+            #spinResult.text-lg.font-bold.min-h-8
+            #pendingValueInfo.text-sm.text-gray-600
+
+          #controlsArea.flex.flex-wrap.gap-3.justify-center.w-full
+            button#spinBtn.button.pill.text-xl Gira la ruota
+            button#solveBtn.button.pill.text-xl Risolvi
+
+          #keyboardHint.text-sm.text-gray-500.mt-2 Dopo aver girato chiama una CONSONANTE. Le VOCALI (500€) si comprano prima di girare.
+          #keyboard.keyboard-grid.mt-1
+
+      #roundEndArea.hidden
+        .flex.flex-col.items-center.gap-6.w-full.max-w-md.px-4
+          h2.subtitle Round completato!
+          p#roundEndText.text-lg.text-center
+          #roundEndScores.flex.flex-col.gap-2.w-full
+          button#nextRoundBtn.button.pill.text-xl.w-full Prossimo round
+
+      #victoryArea.hidden
+        .flex.flex-col.items-center.gap-6.w-full.max-w-md.px-4
+          h2.subtitle.text-5xl.font-bold.mt-8 Partita completata!
+          #victoryScores.flex.flex-col.gap-2.w-full.mt-4
+          h1.text-4xl.font-bold.mt-4
+            #winnerText Vittoria!
+          button#restartBtn.button.pill.text-xl.w-full.mt-4
+            <ion-icon name="refresh-outline"></ion-icon> Nuova partita
+
+      #solveModal.hidden.fixed.inset-0.z-50.flex.items-center.justify-center.p-4
+        #solveBackdrop.absolute.inset-0.bg-black.bg-opacity-50
+        .box.relative.w-full.max-w-md.flex.flex-col.gap-4
+          h3.subtitle Dai la soluzione
+          input#solveInput.input-field.w-full(type="text" placeholder="Scrivi la frase completa" autocomplete="off")
+          .flex.gap-3.justify-center
+            button#solveConfirm.button.success Conferma
+            button#solveCancel.button Cancel
+
+    .mt-16.flex-1.flex.flex-col.items-center
+      footer.mt-16.text-left.box
+        h2.subtitle 📢 Condividi il link!
+        .flex.items-center.gap-2.justify-center
+          img.qrcode(src="https://api.qrserver.com/v1/create-qr-code/?ecc=M&margin=10&data=" + baseSite + "/ruota/" + gameID, alt=gameID)
+        p.mt-4.flex.justify-center
+          a.link.font-bold(href="/ruota/" + gameID) Clicca qui per aprire in un altro dispositivo
+
+    script(src="/socket.io/socket.io.min.js")
+    script(src="/js/ruota.js")
+
+    script(type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js")
+    script(nomodule, src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js")
