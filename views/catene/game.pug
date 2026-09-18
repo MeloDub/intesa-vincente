@@ -1,0 +1,75 @@
+- var baseSite = process.env.BASE_SITE || "https://intesa-vincente.on.shiper.app"
+
+doctype html
+html(lang="it")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    meta(name="description" content="WebApp del gioco Catene.")
+    meta(name="keywords" content="catene,reazione a catena,gioco,webapp")
+
+    title Catene
+    link(rel="stylesheet" href="/css/main.css")
+
+    link(rel="icon" href="/images/icons/icon-72x72.png" type="image/png")
+    link(rel="manifest" href="/manifest.json")
+    script(src="/service.js")
+
+  body.catene
+    header.flex.flex-col.gap-10.small
+      a.button.pill.back(href="/")
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      h1.title Catene
+
+    .flex-1.flex.flex-col.items-center
+      #loadingArea
+        .flex.flex-col.items-center.gap-6.w-full.max-w-md.px-4
+          h2.subtitle Caricamento catene...
+
+      #errorArea.hidden
+        .flex.flex-col.items-center.gap-6.w-full.max-w-md.px-4
+          h2.subtitle Errore
+          p#errorText.text-lg.text-center Non è stato possibile caricare le catene.
+          button#retryBtn.button.pill.text-xl.w-full
+            <ion-icon name="refresh-outline"></ion-icon> Riprova
+
+      #gameArea.hidden
+        .flex.flex-col.items-center.gap-4.w-full.max-w-2xl.px-4
+          p#progressText.text-gray-600 Parola 2 di 7
+          p#scoreText.text-gray-600 Indovinate: 0 · Rivelate: 0
+
+          #timerWrap.w-full.max-w-md.text-center
+            p#timerText.timer-text ⏱ 10s
+            #timerBarOuter.timer-bar-outer
+              #timerBar.timer-bar
+            p.text-sm.text-gray-500 Il timer è solo un riferimento: puoi continuare a provare anche a tempo scaduto.
+
+          #chainList.catene-list.w-full
+
+          #controlsArea.flex.flex-col.items-center.gap-3.w-full.max-w-md.mt-2
+            input#guessInput.input-field.w-full(type="text" placeholder="Scrivi la parola" autocomplete="off")
+            button#guessBtn.button.pill.text-xl.w-full Conferma
+
+          #continueArea.hidden.flex.flex-col.items-center.gap-3.w-full.max-w-md.mt-2
+            button#continueBtn.button.pill.text-xl.w-full Prossima parola →
+
+          p#feedbackText.text-lg.font-bold.min-h-8.text-center
+
+          .box.w-full.max-w-md.text-left.mt-2
+            h3.subtitle.text-lg Come si gioca
+            p.text-sm.mt-2 La prima parola è già visibile. Indovina ogni parola successiva partendo dalla prima lettera (la lunghezza resta nascosta, senza puntini): se sbagli, si rivela una lettera in più da sinistra. Quando completi una parola, indovinata o rivelata che sia, viene mostrata per intero e decidi tu quando avanzare con l'apposito bottone. Il countdown di 10 secondi si azzera a ogni tentativo ed è solo un riferimento.
+
+      #victoryArea.hidden
+        .flex.flex-col.items-center.gap-6.w-full.max-w-md.px-4
+          h2.subtitle.text-5xl.font-bold.mt-8 Catena completata!
+          p#victorySummary.text-lg.text-center
+          #victoryChain.catene-list.w-full
+          button#nextChainBtn.button.pill.text-xl.w-full.mt-4
+            <ion-icon name="refresh-outline"></ion-icon> Nuova catena
+
+    script(src="/js/catene.js")
+
+    script(type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js")
+    script(nomodule, src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js")

@@ -90,6 +90,10 @@ app.use("/ruota", (_, res) => {
   res.redirect("/ruota/" + roomID);
 });
 
+app.use("/catene", (_, res) => {
+  res.render("catene/game");
+});
+
 app.use("/", (_, res) => {
   res.render("select");
 });

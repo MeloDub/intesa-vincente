@@ -127,6 +127,10 @@ header.small .title {
     @apply bg-[#EF4444];
 }
 
+.game-card .icon-wrapper.bg-green {
+    @apply bg-[#22C55E];
+}
+
 .game-card h3 {
     @apply text-xl font-bold;
 }
@@ -487,4 +491,103 @@ body.ruota .button:not(.success):not(.error):not(.warning) {
 
 #spinResult {
     min-height: 2rem;
+}
+
+/* ===== Catene (single player) ===== */
+.catene-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.chain-row {
+    @apply bg-white rounded-lg border-2 border-[#9f5f80] px-4 py-2;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.chain-row.is-current {
+    border-color: #A760FF;
+    box-shadow: 2px 3px 0px #A760FF;
+}
+
+.chain-row.is-guessed {
+    border-color: #22C55E;
+}
+
+.chain-row.is-auto {
+    border-color: #F59E0B;
+}
+
+.chain-row.is-waiting {
+    opacity: 0.6;
+}
+
+.chain-num {
+    @apply font-bold text-[#9f5f80];
+    min-width: 1.25rem;
+}
+
+.chain-mask {
+    flex: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.chain-badge {
+    @apply text-sm font-bold px-3 py-1 rounded-full;
+    white-space: nowrap;
+}
+
+.badge-given {
+    @apply bg-blue-100 text-blue-600;
+}
+
+.badge-guessed {
+    @apply bg-green-100 text-green-700;
+}
+
+.badge-auto {
+    @apply bg-yellow-100 text-yellow-700;
+}
+
+.badge-current {
+    @apply bg-purple-100 text-purple-700;
+}
+
+.badge-waiting {
+    @apply bg-gray-100 text-gray-500;
+}
+
+/* ===== Timer Catene (solo riferimento) ===== */
+.timer-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.timer-text.timer-danger {
+    color: #EF4444;
+}
+
+.timer-bar-outer {
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.timer-bar {
+    height: 100%;
+    width: 100%;
+    background: #22C55E;
+    transition: width 1s linear;
+}
+
+.timer-bar.timer-bar-low {
+    background: #EF4444;
 }
