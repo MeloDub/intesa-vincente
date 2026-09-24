@@ -94,6 +94,10 @@ app.use("/catene", (_, res) => {
   res.render("catene/game");
 });
 
+app.use("/catene-finali", (_, res) => {
+  res.render("catene-finali/game");
+});
+
 app.use("/", (_, res) => {
   res.render("select");
 });

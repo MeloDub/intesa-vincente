@@ -4,7 +4,7 @@ if ("serviceWorker" in navigator) {
   });
 }
 
-let CACHE_NAME = 'cache';
+let CACHE_NAME = 'cache-v2';
 let urlsToCache = [
   'css/main.css',
   'images/icons/icon-72x72.png',
@@ -21,6 +21,9 @@ let urlsToCache = [
 ];
 
 self.addEventListener('install', function (event) {
+  // Attiva subito il nuovo worker così gli aggiornamenti (es. main.css)
+  // raggiungono subito le pagine senza dover chiudere tutte le tab.
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function (cache) {
@@ -43,7 +46,7 @@ self.addEventListener('fetch', function (event) {
 });
 
 self.addEventListener('activate', function (event) {
-  var cacheWhitelist = ['pigment'];
+  var cacheWhitelist = ['pigment', CACHE_NAME];
   event.waitUntil(
     caches.keys().then(function (cacheNames) {
       return Promise.all(
@@ -53,6 +56,8 @@ self.addEventListener('activate', function (event) {
           }
         })
       );
+    }).then(function () {
+      return self.clients.claim();
     })
   );
 });

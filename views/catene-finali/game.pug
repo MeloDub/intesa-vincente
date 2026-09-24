@@ -1,0 +1,88 @@
+- var baseSite = process.env.BASE_SITE || "https://intesa-vincente.on.shiper.app"
+
+doctype html
+html(lang="it")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    meta(name="description" content="WebApp del gioco Catene Finali.")
+    meta(name="keywords" content="catene finali,reazione a catena,gioco,webapp")
+
+    title Catene Finali
+    link(rel="stylesheet" href="/css/main.css?v=2")
+
+    link(rel="icon" href="/images/icons/icon-72x72.png" type="image/png")
+    link(rel="manifest" href="/manifest.json")
+    script(src="/service.js")
+
+  body.catene
+    header.flex.flex-col.gap-10.small
+      a.button.pill.back(href="/")
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      h1.title Catene Finali
+
+    .flex-1.flex.flex-col.items-center
+      #loadingArea
+        .flex.flex-col.items-center.gap-6.w-full.max-w-md.px-4
+          h2.subtitle Caricamento catene...
+
+      #errorArea.hidden
+        .flex.flex-col.items-center.gap-6.w-full.max-w-md.px-4
+          h2.subtitle Errore
+          p#errorText.text-lg.text-center Non è stato possibile caricare le catene.
+          button#retryBtn.button.pill.text-xl.w-full
+            <ion-icon name="refresh-outline"></ion-icon> Riprova
+
+      #startArea.hidden
+        .flex.flex-col.items-center.gap-6.w-full.max-w-md.px-4
+          h2.subtitle Montepremi in palio!
+          p#startPrize.text-4xl.font-bold.text-center
+          .box.w-full.text-left
+            h3.subtitle.text-lg Come si gioca
+            p.text-sm.mt-2 Indovina le parole dispari (1, 3, 5, 7, 9, 11): hai 30 secondi per pensare, l'input è sempre attivo. Se sbagli, il montepremi si dimezza e si rivela una lettera; al secondo errore la parola viene rivelata e si passa oltre. Hai 2 jolly (max 1 a parola, solo al primo tentativo, non usabili per la parola finale): rivelano una lettera senza dimezzare, ma poi hai solo 5 secondi per indovinare. Se arrivi all'ultima parola con entrambi i jolly, il terzo elemento viene rivelato gratis. Alla fine (parola 13) hai 100 secondi: se indovini vinci, se sbagli perdi tutto. Puoi comprare il terzo elemento (parola 14) a metà prezzo per vederlo, poi hai 60 secondi per indovinare la 13.
+          button#startBtn.button.pill.text-xl.w-full
+            <ion-icon name="play-outline"></ion-icon> Inizia
+
+      #gameArea.hidden
+        .flex.flex-col.items-center.gap-4.w-full.max-w-2xl.px-4
+          p#prizeText.text-2xl.font-bold Montepremi: —
+
+          #chainList.catene-list.w-full
+
+          #timerWrap.w-full.max-w-md.text-center
+            p#timerText.timer-text ⏱ 30s
+            #timerBarOuter.timer-bar-outer
+              #timerBar.timer-bar
+            p.text-sm.text-gray-500 Il timer è solo un riferimento: puoi rispondere anche a tempo scaduto.
+
+          p#jollyText.text-gray-600
+            | Jolly:
+            <ion-icon name="sparkles" class="jolly-sparkles"></ion-icon>
+            <ion-icon name="sparkles" class="jolly-sparkles"></ion-icon>
+
+          #controlsArea.flex.flex-col.items-center.gap-3.w-full.max-w-md.mt-2
+            input#guessInput.input-field.w-full(type="text" placeholder="Scrivi la parola" autocomplete="off")
+            button#guessBtn.button.pill.text-xl.w-full Conferma
+            .flex.gap-3.w-full
+              button#jollyBtn.button.pill.text-lg.flex-1 Usa jolly
+              button#buyBtn.button.pill.text-lg.flex-1.hidden Compra terzo elemento (½)
+
+          #continueArea.hidden.flex.flex-col.items-center.gap-3.w-full.max-w-md.mt-2
+            button#continueBtn.button.pill.text-xl.w-full Prossima parola →
+
+          p#feedbackText.text-lg.font-bold.text-center.w-full.max-w-md.mx-auto.break-words(class="min-h-[3.5rem]")
+
+      #endArea.hidden
+        .flex.flex-col.items-center.gap-6.w-full.max-w-md.px-4
+          h2#endTitle.subtitle.text-5xl.font-bold.mt-8 Partita finita!
+          p#endSummary.text-lg.text-center
+          #endChain.catene-list.w-full
+          button#nextChainBtn.button.pill.text-xl.w-full.mt-4
+            <ion-icon name="refresh-outline"></ion-icon> Nuova catena
+
+    script(src="/js/catene-finali.js")
+
+    script(type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js")
+    script(nomodule, src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js")

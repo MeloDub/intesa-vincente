@@ -98,6 +98,10 @@ footer {
     @apply text-[#FFAF00];
 }
 
+.jolly-sparkles {
+    color: #A760FF;
+}
+
 header.small {
     @apply flex-row items-center;
 }
@@ -514,10 +518,12 @@ body.ruota .button:not(.success):not(.error):not(.warning) {
 
 .chain-row.is-guessed {
     border-color: #22C55E;
+    box-shadow: 2px 3px 0px #22C55E;
 }
 
 .chain-row.is-auto {
-    border-color: #F59E0B;
+    border-color: #EF4444;
+    box-shadow: 2px 3px 0px #EF4444;
 }
 
 .chain-row.is-waiting {
@@ -538,6 +544,14 @@ body.ruota .button:not(.success):not(.error):not(.warning) {
     overflow-wrap: anywhere;
 }
 
+.chain-final-last {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 0 0.1em;
+    white-space: nowrap;
+}
+
 .chain-badge {
     @apply text-sm font-bold px-3 py-1 rounded-full;
     white-space: nowrap;
@@ -552,7 +566,7 @@ body.ruota .button:not(.success):not(.error):not(.warning) {
 }
 
 .badge-auto {
-    @apply bg-yellow-100 text-yellow-700;
+    @apply bg-red-100 text-red-700;
 }
 
 .badge-current {
