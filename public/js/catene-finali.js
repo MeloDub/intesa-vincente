@@ -9,7 +9,7 @@ var NORMAL_TIME = 30;
 var FINAL_TIME = 100;
 var JOLLY_TIME = 5;
 var BOUGHT_TIME = 60;
-var CATENE_FINALI_URL = "/data/catene-finali.json";
+var CATENE_FINALI_URL = "https://raw.githubusercontent.com/MeloDub/intesa-vincente-words/refs/heads/main/catene-finali.json";
 
 var chains = [];
 var order = [];
@@ -173,11 +173,6 @@ function tickTimer() {
   if (timeLeft > 0) {
     timeLeft -= 1;
     renderTimer();
-    // Allo scadere del timer in finale si abilita il bottone di acquisto:
-    // serve un render per aggiornare il suo stato disabilitato.
-    if (timeLeft === 0 && isFinalPhase() && !boughtThird && !finished) {
-      render();
-    }
   }
 }
 
@@ -249,7 +244,7 @@ function displayFor(i) {
   return "•••••";
 }
 
-// Durante il gioco mostra solo righe passate + attiva, così l'input resta vicino.
+// Durante il gioco mostra solo la terzina attiva [g-1, g, g+1].
 // In finale mostra solo 12, 13 e 14 (14 solo se comprato).
 // A fine partita mostra tutta la catena.
 function isRowVisible(i) {
@@ -259,10 +254,7 @@ function isRowVisible(i) {
     return i >= 12;
   }
   var g = currentGuessIdx();
-  if (i === g) return true;
-  if (i % 2 === 0 && i <= maxVisibleEven()) return true;
-  if (i % 2 === 1 && i < g) return true;
-  return false;
+  return i === g - 1 || i === g || i === g + 1;
 }
 
 // Riga della finale (13) mentre è da indovinare: prime lettere a sinistra,
@@ -340,8 +332,8 @@ function render() {
   if (el.buyBtn) {
     var showBuy = isFinalPhase() && !boughtThird && !finished;
     el.buyBtn.classList.toggle("hidden", !showBuy);
-    // Acquisto disponibile solo allo scadere dei 100 secondi per la 13.
-    el.buyBtn.disabled = timeLeft > 0;
+    // Acquisto sempre disponibile durante la parola finale.
+    el.buyBtn.disabled = locked;
   }
   renderTimer();
 }
@@ -540,10 +532,6 @@ function onJolly() {
 function onBuy() {
   if (finished || waitingContinue || !chain.length) return;
   if (!isFinalPhase() || boughtThird) return;
-  if (timeLeft > 0) {
-    el.feedbackText.textContent = "Il terzo elemento si può comprare solo allo scadere dei 100 secondi.";
-    return;
-  }
   prize = halvePrize(prize);
   boughtThird = true;
   setTimer(BOUGHT_TIME);
